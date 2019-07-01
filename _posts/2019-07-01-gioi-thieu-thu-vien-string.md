@@ -58,7 +58,7 @@ OK để fix thì chúng ta sẽ dùng std::getline() để có thể đọc đ�
 {% endhighlight %}
 Và chạy lại chương trình thì sẽ ra full text như mình mong muốn.
 ### Hiện tượng "trôi dòng"
-Với sự lợi hại của string thì hầu như ai cũng sẽ sử dụng thường xuyên nó và mình cũng vậy, trong quá trình code mình bị 1 lỗi khá "kì quặc" với mình lúc đó. Mình sẽ minh họa lại lỗi bằng ví dụ sau
+Với sự lợi hại của string thì hầu như ai cũng sẽ sử dụng thường xuyên nó và mình cũng vậy, trong quá trình code mình bị 1 lỗi khá "kì quặc" với mình lúc đó. Mình sẽ minh họa lại lỗi bằng ví dụ sau:
 **Yêu cầu:** Cho người dụng chọn số 1 hoặc 2, sau đó người dùng nhập tên và xuất ra thông báo: "Xin chao, {{tên bạn nhập}}, ban da chon {{số mà bạn chọn}}".
 Và đây là phần code (with bug):
 {% highlight cpp %}
