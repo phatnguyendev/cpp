@@ -1,10 +1,16 @@
----
-layout: post
-title:  "Post with no image"
-categories: jekyll update
----
-When there is no image mentioned in the front-matter, default image will be displayed. You can change this image to any other one that suits your needs.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non iaculis risus. Phasellus vitae nunc ac lectus finibus porttitor. Sed vel enim vulputate, euismod neque maximus, tincidunt turpis. Aenean accumsan leo eget dui porta pulvinar. Sed tincidunt, nisi non efficitur tempus, enim lectus aliquam arcu, at dignissim ligula ex eu quam. Suspendisse gravida dapibus ultrices. Vivamus convallis nulla nisl, a imperdiet felis pellentesque in. Nulla facilisi. Integer aliquet sed orci eu tempor. Sed viverra ullamcorper commodo.
-
-Morbi vestibulum sem eget maximus feugiat. Curabitur vehicula magna in molestie dignissim. Nam gravida leo non purus cursus, id accumsan justo tincidunt. Donec accumsan purus mauris, vitae luctus magna faucibus vitae. Nullam tincidunt urna scelerisque, hendrerit mi ac, sagittis ligula. Curabitur convallis eros eu fringilla maximus. Donec lobortis scelerisque enim eu molestie. Duis ac mi quis risus auctor vulputate.
+Hi~! Hôm nay chúng ta sẽ cùng tìm hiểu về 1 trong những thư viện chuẩn (standard library) của C++ được sử dụng phổ biến nhất đó là thư viện **std::string**
+## String là gì?
+Lấy ví dụ 1 chương trình đơn giản cho phép bạn nhập vào họ tên và xuất ra dòng thông báo "xin chào {{tên vừa nhập}}", theo như chúng ta đã học từ bài đầu đến giờ thì sẽ được viết như sau:
+{% highlight cpp [linenos]%}
+#include <iostream>
+using namespace std;
+int main()
+{
+  char HoTen[255];
+  cout << "Nhap ho ten: ";
+  cin.getline(HoTen, 255);
+  cout << "Ho Ten cua ban la " << HoTen << endl;
+  return 0;
+}
+{% endhighlight %}
+Và khi chạy chương trình chúng ta nhận được kết quả:
