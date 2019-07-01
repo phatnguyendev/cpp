@@ -58,8 +58,8 @@ OK để fix thì chúng ta sẽ dùng std::getline() để có thể đọc đ�
 {% endhighlight %}
 Và chạy lại chương trình thì sẽ ra full text như mình mong muốn.
 ### Hiện tượng "trôi dòng"
-Với sự lợi hại của string thì hầu như ai cũng sẽ sử dụng thường xuyên nó và mình cũng vậy, trong quá trình code mình bị 1 lỗi khá "kì quặc" với mình lúc đó. Mình sẽ minh họa lại lỗi bằng ví dụ sau:
-**Yêu cầu:** Cho người dụng chọn số 1 hoặc 2, sau đó người dùng nhập tên và xuất ra thông báo: "Xin chao, {{tên bạn nhập}}, ban da chon {{số mà bạn chọn}}".
+Với sự lợi hại của string thì hầu như ai cũng sẽ sử dụng thường xuyên nó và mình cũng vậy, trong quá trình code mình bị 1 lỗi khá "kì quặc" với mình lúc đó. Mình sẽ minh họa lại lỗi bằng ví dụ sau
+  **Yêu cầu:** Cho người dụng chọn số 1 hoặc 2, sau đó người dùng nhập tên và xuất ra thông báo: "Xin chao, {{tên bạn nhập}}, ban da chon {{số mà bạn chọn}}".
 Và đây là phần code (with bug):
 {% highlight cpp %}
 #include <string>
@@ -78,8 +78,8 @@ int main()
 }
 {% endhighlight %}
 Nhìn có vẻ ổn và biên dịch cũng không báo lỗi gì nhưng khi bạn nhập số 1 hoặc 2 cho phần cin đầu tiên thì bạn không có cơ hội để nhập tên nữa và nó sẽ xuất thẳng thông báo với tên trống, tức là nó đã bỏ qua dòng **getline(std::cin, name)** bằng 1 cách nào đó và đó chính là hiện tượng trôi dòng!
-**Giải thích lỗi:** Lỗi này phát sinh do dùng cin, ví dụ bạn nhập giá trị 1 thì lúc này cin sẽ lấy giá trị nhập thực sự là "1\n". "1" sẽ được cho vào biến choice và "\n" sẽ bị kẹt lại trong input stream vì thế nên khi lện getline()thực thi nó sẽ nhận sẵn "\n" đang có trong input stream và đi đến dòng thông báo. Chuyện xảy ra vậy đó!
-**Sửa lỗi:** Có vài lưu ý cho việc fix lỗi trên các bạn nhớ note lại nhé
+  **Giải thích lỗi:** Lỗi này phát sinh do dùng cin, ví dụ bạn nhập giá trị 1 thì lúc này cin sẽ lấy giá trị nhập thực sự là "1\n". "1" sẽ được cho vào biến choice và "\n" sẽ bị kẹt lại trong input stream vì thế nên khi lện getline()thực thi nó sẽ nhận sẵn "\n" đang có trong input stream và đi đến dòng thông báo. Chuyện xảy ra vậy đó!
+  **Sửa lỗi:** Có vài lưu ý cho việc fix lỗi trên các bạn nhớ note lại nhé
   - Khi dùng cin: sau cin bạn nên dùng câu lệnh cin.ignore(32767, '\n');
   - Khi dùng getline(): bạn chú ý phần getline() ban đầu mình dùng getline(**cin >> ws**, {{tên biến}});, và đó là cách fix -> luôn dùng cin >> ws khi sử dụng getline().
 ### Nối các chuỗi trong string
