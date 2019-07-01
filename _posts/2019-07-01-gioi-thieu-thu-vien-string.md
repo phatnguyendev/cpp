@@ -1,0 +1,21 @@
+---
+layout: post
+title: Introduction to string
+img: image-5.png
+---
+Hi~! Hôm nay chúng ta sẽ cùng tìm hiểu về 1 trong những thư viện chuẩn (standard library) của C++ được sử dụng phổ biến nhất đó là thư viện **std::string**
+## String là gì?
+Lấy ví dụ 1 chương trình đơn giản cho phép bạn nhập vào họ tên và xuất ra dòng thông báo "xin chào {{tên vừa nhập}}", theo như chúng ta đã học từ bài đầu đến giờ thì sẽ được viết như sau:
+{% highlight cpp [linenos]%}
+#include <iostream>
+using namespace std;
+int main()
+{
+  char HoTen[255];
+  cout << "Nhap ho ten: ";
+  cin.getline(HoTen, 255);
+  cout << "Ho Ten cua ban la " << HoTen << endl;
+  return 0;
+}
+{% endhighlight %}
+Và khi chạy chương trình chúng ta nhận được kết quả:
