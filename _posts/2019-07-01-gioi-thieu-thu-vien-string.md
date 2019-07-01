@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Giới thiệu thư viện string"
+title: Giới thiệu thư viện string
 categories: cpp
 img: image-4.png
+published: true
 ---
 Hi~! Hôm nay chúng ta sẽ cùng tìm hiểu về 1 trong những thư viện chuẩn (standard library) của C++ được sử dụng phổ biến nhất đó là thư viện **std::string**
 ## Vấn đề mở đầu
@@ -82,7 +83,7 @@ Nhìn có vẻ ổn và biên dịch cũng không báo lỗi gì nhưng khi bạ
   **Sửa lỗi:** Có vài lưu ý cho việc fix lỗi trên các bạn nhớ note lại nhé
   - Khi dùng cin: sau cin bạn nên dùng câu lệnh cin.ignore(32767, '\n');
   - Khi dùng getline(): bạn chú ý phần getline() ban đầu mình dùng getline(**cin >> ws**, {{tên biến}});, và đó là cách fix -> luôn dùng cin >> ws khi sử dụng getline().
-### Nối các chuỗi trong string
+  ### Nối các chuỗi trong string
 Bạn có string Ho và 1 string Ten, bây giờ bạn muốn gộp dữ liệu trong 2 string này lại thì hãy sử dụng toán tử +
 {% highlight cpp %}
 string Ho = "Nguyen";
@@ -94,3 +95,4 @@ String còn hỗ trợ thêm rất nhiều function tiện ích như length() - 
 
 ### Tổng kết
 Thư viện string rất hữu ích trong suốt quá trình code C++ nên các bạn nhớ các nội dung mình đã nói phía trên để tiện dùng nha :) Pie~
+  fdfsdfgfdgdfg
