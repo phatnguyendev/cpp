@@ -1,5 +1,10 @@
 ---
-published: false
+layout: post
+title:  "Giới thiệu thư viện string"
+date:   2019-07-01
+categories: cpp
+img: image-1.png
+categories: [one, two]
 ---
 Hi~! Hôm nay chúng ta sẽ cùng tìm hiểu về 1 trong những thư viện chuẩn (standard library) của C++ được sử dụng phổ biến nhất đó là thư viện **std::string**
 ## String là gì?
