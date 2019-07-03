@@ -14,9 +14,29 @@ Khi chúng ta khai báo 1 biến như sau:
 int bien = 5;
 {% endhighlight %}
 Đến bài học này chắc các bạn sẽ biết được ý nghĩa của câu lệnh trên rồi đúng không? Đơn giản là khởi tạo 1 biến kiểu **int** có tên là ``bien``  và gán giá trị cho nó bằng ``5`` và đây không phải là thứ chúng ta sẽ học trong bài này, mặt khác khi khởi tạo biến ``bien`` thì sẽ được cấp phát 1 địa chỉ của vùng nhớ trống nào đó và giá trị 5 sẽ được lưu tại địa chỉ này, giả sử địa chỉ được cấp phát là ``1365`` vậy tóm lại chúng ta có:
-{% highlight cpp %}
+{% highlight %}
 Tên biến: bien
 Giá trị: 5
 Địa chỉ: 1365
 {% endhighlight %}
-Bất cứ khi nào chương trình thấy biến ``bien`` xuất hiện (trong 1 biểu thức hoặc câu lệnh) thì trình biên dịch sẽ  dịch tên biến này thành địa chỉ bộ nhớ được gán cho nó (theo ví dụ là 1365)
+Bất cứ khi nào chương trình thấy biến ``bien`` xuất hiện (trong 1 biểu thức hoặc câu lệnh) thì trình biên dịch sẽ  dịch tên biến này thành địa chỉ bộ nhớ được gán cho nó (theo ví dụ là 1365) để lấy được giá trị ra dùng. Đọc cũng dễ hiểu mà đúng không? Tiếp nào
+## Một số toán tử liên quan
+### Toán tử &
+Để lấy được chính xác địa chỉ đã được cấp phát cho 1 biến, ta sử dụng toán tử & (The address-of operator)như sau:
+{% highlight cpp %}
+#include <iostream>
+using namespace std;
+int main()
+{
+    int bien = 5;
+    cout << &bien << endl;
+    return 0;
+}
+{% endhighlight %}
+Kết quả khi mình chạy trên [Ideone.com](https://ideone.com/9aFkY5) là:
+{% highlight %}
+0x7ffe3e1f7b1c
+{% endhighlight %}
+### Toán tử *
+Khi chúng ta có được địa chỉ bằng toán tử ``&``, làm sao lấy ra được giá trị từ địa chỉ đó? Câu trả lời là sử dụng toán tử * (The dereference operator)
+
