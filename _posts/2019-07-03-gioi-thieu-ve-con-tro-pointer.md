@@ -102,7 +102,7 @@ int main()
     ptr1 = 0x7ffe3e1f7b1c;
 }
 {% endhighlight %}
-Vấn đề là sao mà nhớ với ghi nổi địa chỉ dài loằng ngoằng vậy nên thường con trỏ sẽ được gán giá trị là địa chỉ của 1 biến nào đó bằng cách:
+Và C++ không cho phép chúng ta gán như vậy, vậy nên thường con trỏ sẽ được gán giá trị là địa chỉ của 1 biến nào đó bằng cách:
 {% highlight cpp %}
     #include <iostream>
     using namespace std;
@@ -133,4 +133,29 @@ Kết quả khi mình chạy trên [Ideone.com](https://ideone.com/gytDuG) là:
 0x7ffeba2929cc
 0x7ffeba2929cc
 {% endhighlight %}
-À ha! Vậy có thể thấy ``ptr`` giống y như ``&a`` vậy, thực thi ``*ptr`` cũng chính là thực thi ``*(&a)`` đúng không nào.
+À ha! Vậy có thể thấy ``ptr`` giống y như ``&a`` vậy, thực thi ``*ptr`` cũng chính là thực thi ``*(&a)`` đúng không nào, các bạn có thể kiểm chứng bằng cách dùng lệnh:
+{% highlight cpp %}
+cout << typedef(&a);
+{% endhighlight %}
+sẽ trả về kết quả là ``int *`` như những gì chúng ta nghĩ.
+  
+**Thực hành tí:** Bây giờ các bạn hãy làm trường hợp: tạo con trỏ ``ptr1`` trỏ đến con trỏ ``ptr`` và xem con trỏ ``ptr1`` sẽ có những gì theo cách mổ xẻ mình mới vừa làm nhé.
+  
+### Thay đổi giá trị biến bằng con trỏ
+``*ptr`` giữ giá trị của ``a`` nên chúng ta cũng có thể thay đổi giá trị của ``*ptr`` bằng 1 giá trị khác, và khi bạn thay đổi giá trị của ``*ptr`` giá trị của biến ``a`` sẽ thay đổi theo tương ứng:
+{% highlight cpp %}
+    #include <iostream>
+    using namespace std;
+     
+    int main() {
+    	int a =  5;
+    	int *ptr = &a;
+    	*ptr = 12;
+  		cout << "Gia tri cua a la " a << endl;
+    	return 0;
+    }
+{% endhighlight %}
+Kết quả chúng ta có được:
+{% highlight cpp %}
+Gia tri cua a la 12
+{% endhighlight %}
