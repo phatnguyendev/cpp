@@ -9,7 +9,7 @@
 title: Learn Cpp
 email: phatnguyen240899@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Blog hướng dẫn Cpp viết bởi Phat Nguyen - Admin TuiTuCode
+  Blog hướng dẫn Cpp viết bởi Admin TuiTuCode
   
   
 baseurl: "/cpp" # the subpath of your site, e.g. /blog
