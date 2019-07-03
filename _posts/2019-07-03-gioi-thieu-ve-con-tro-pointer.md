@@ -159,3 +159,23 @@ Kết quả chúng ta có được:
 {% highlight cpp %}
 Gia tri cua a la 12
 {% endhighlight %}
+### Không kiểm soát được con trỏ
+Trường hợp mất kiểm soát con trỏ là 1 cú "shutdown" cho chương trình của chúng ta, đơn giản nhất là bạn khai báo con trỏ và... để không như thế và sau đó vô tình "xuất" nó ra:
+{% highlight cpp %}
+    #include <iostream>
+    using namespace std;
+     
+    int main() {
+    	int *ptr;
+  
+  		//code thứ gì đó không liên quan dến ptr
+  
+  		cout << *ptr << endl; //bổng xuất ra cho vui
+    }
+{% endhighlight %}
+Lúc này con trỏ đang trỏ đến 1 vùng nhớ nào đó (hay gọi là trỏ đến 1 vùng nhớ rác), đó có thể là vùng nhớ đang trống hoặc là vùng nhớ mà 1 chương trình nào đó đang sử dụng và khi chúng ta xuất ``*ptr`` nó không đơn giản như chúng ta nghĩ là "ở vùng nhớ rác đó có giá trị gì thì xuất đại đi có sao đâu!", thực chất Hệ điều hành sẽ có cơ chế ngăn chặn mọi sự truy cập trái phép đến 1 vùng nhớ nào đó mà nó không được cấp cho ứng dụng đang truy cập. Vậy nên sẽ dẫn đến "crash" ứng dụng.
+
+Kích thước của con trỏ phụ thuộc vào kiến trúc tập lệnh được thực thi (nếu là 32 bit thì con trỏ có kích thước 32bit (4 byte) và là 8 byte nếu sử dụng 64 bit).
+
+## Tổng kết
+Tóm lại bài học thì chắc các bạn vẫn chưa thấy được cái gì đặc sắc từ con trỏ cả đúng không? Các bạn cứ yên tâm nắm được hết trong bài học này để phần "hấp dẫn" phía sau không bị ngất xỉu giữa chừng nhé. Chúng ta sẽ cùng tiếp tục tìm hiểu tiếp về con trỏ ở những bài sau. Pie~
