@@ -1,8 +1,13 @@
 ---
-published: false
+layout: post
+title: Giới thiệu thư viện string
+categories: cpp
+img: image-4.png
+published: true
+excerpt_separator: <!--more-->
 ---
 Bài viết này sẽ hướng dẫn các bạn cách cài đặt và sử dụng một IDE khá quen thuộc để lập trình C++ trên Windows đó là **Visual Studio**
-
+<!--more-->
 ## Tổng quan về Visual Studio
 Có thể nói Visual Studio cung cấp rất đầy đủ những tính năng, tiện ích dành cho việc học tập ngay cả với phiên bản **Miễn phí (Community)**. 
 
