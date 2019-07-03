@@ -37,9 +37,9 @@ Kết quả khi mình chạy trên [Ideone.com](https://ideone.com/9aFkY5) là:
 {% highlight %}
 0x7ffe3e1f7b1c
 {% endhighlight %}
-Nếu các bạn đọc qua bài về ``Function`` để ý thấy có loại truyền tham số vào hàm là tham chiếu cũng có cách khai báo với toán tử ``&`` và mục đích sử dụng mình cũng đã nói ở bài đó, bạn nào chưa xem thì xem tại {Link bài function}
+Nếu các bạn đọc qua bài về ``Function`` để ý thấy có loại truyền tham số vào hàm là tham chiếu cũng có cách khai báo với toán tử **&** và mục đích sử dụng mình cũng đã nói ở bài đó, bạn nào chưa xem thì xem tại {Link bài function}
 ### Toán tử *
-Khi chúng ta có được địa chỉ bằng toán tử ``&``, làm sao lấy ra được giá trị từ địa chỉ đó? Câu trả lời là sử dụng toán tử * (The dereference operator):
+Khi chúng ta có được địa chỉ bằng toán tử **&**, làm sao lấy ra được giá trị từ địa chỉ đó? Câu trả lời là sử dụng toán tử ***** (The dereference operator):
 {% highlight cpp %}
 #include <iostream>
 using namespace std;
@@ -56,5 +56,5 @@ Kết quả khi mình tiếp tục chạy trên [Ideone.com](https://ideone.com/
 Dia chi cua bien la 0x7ffd0899cc3c
 Gia tri tai dia chi cua bien la 5
 {% endhighlight %}
-OK vậy là các bạn đã biết qua cách dùng 2 toán tử ``&`` và ``*``, đồ nghề đã đủ đến lúc chúng ta đi săn "con trỏ" thôi!
+OK vậy là các bạn đã biết qua cách dùng 2 toán tử **&** và *****, đồ nghề đã đủ đến lúc chúng ta đi săn "con trỏ" thôi!
 ## Con trỏ - nổi ám ảnh đến từ C++
