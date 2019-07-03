@@ -34,7 +34,7 @@ int main()
 }
 {% endhighlight %}
 Kết quả khi mình chạy trên [Ideone.com](https://ideone.com/9aFkY5) là:
-{% highlight %}
+{% highlight cpp %}
 0x7ffe3e1f7b1c
 {% endhighlight %}
 Nếu các bạn đọc qua bài về ``Function`` để ý thấy có loại truyền tham số vào hàm là tham chiếu cũng có cách khai báo với toán tử & và mục đích sử dụng mình cũng đã nói ở bài đó, bạn nào chưa xem thì xem tại {Link bài function}
@@ -52,7 +52,7 @@ int main()
 }
 {% endhighlight %}
 Kết quả khi mình tiếp tục chạy trên [Ideone.com](https://ideone.com/9aFkY5) là:
-{% highlight %}
+{% highlight cpp %}
 Dia chi cua bien la 0x7ffd0899cc3c
 Gia tri tai dia chi cua bien la 5
 {% endhighlight %}
