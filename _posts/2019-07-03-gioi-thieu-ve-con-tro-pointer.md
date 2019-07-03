@@ -56,5 +56,5 @@ Kết quả khi mình tiếp tục chạy trên [Ideone.com](https://ideone.com/
 Dia chi cua bien la 0x7ffd0899cc3c
 Gia tri tai dia chi cua bien la 5
 {% endhighlight %}
-OK vậy là các bạn đã biết qua cách dùng 2 toán tử **&** và *****, đồ nghề đã đủ đến lúc chúng ta đi săn "con trỏ" thôi!
+OK vậy là các bạn đã biết qua cách dùng 2 toán tử & và *, đồ nghề đã đủ đến lúc chúng ta đi săn "con trỏ" thôi!
 ## Con trỏ - nổi ám ảnh đến từ C++
