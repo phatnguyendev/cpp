@@ -4,7 +4,6 @@ title: About
 permalink: /about/
 published: true
 ---
-[Webjeda Blog](http://blog.webjeda.com){: target="_blank"}
 
 
 
