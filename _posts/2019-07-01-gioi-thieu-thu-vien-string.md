@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 Hi~! Hôm nay chúng ta sẽ cùng tìm hiểu về 1 trong những thư viện chuẩn (standard library) của C++ được sử dụng phổ biến nhất đó là thư viện **std::string**
 <!--more-->
 ## Vấn đề mở đầu
-Lấy ví dụ 1 chương trình đơn giản cho phép bạn nhập vào họ tên và xuất ra dòng thông báo "xin chào {{tên vừa nhập}}", theo như chúng ta đã học từ bài đầu đến giờ thì sẽ được viết như sau:
+Lấy ví dụ 1 chương trình đơn giản cho phép bạn nhập vào họ tên và xuất ra dòng thông báo "Ho ten cua ban la <Tên bạn nhập>", theo như chúng ta đã học từ bài đầu đến giờ thì sẽ được viết như sau:
 {% highlight cpp %}
 #include <iostream>
 using namespace std;
@@ -63,7 +63,7 @@ Và chạy lại chương trình thì sẽ ra full text như mình mong muốn.
 ### Hiện tượng "trôi dòng"
 Với sự lợi hại của string thì hầu như ai cũng sẽ sử dụng thường xuyên nó và mình cũng vậy, trong quá trình code mình bị 1 lỗi khá "kì quặc" với mình lúc đó. Mình sẽ minh họa lại lỗi bằng ví dụ sau
   
-  **Yêu cầu:** Cho người dụng chọn số 1 hoặc 2, sau đó người dùng nhập tên và xuất ra thông báo: "Xin chao, {{tên bạn nhập}}, ban da chon {{số mà bạn chọn}}".
+  **Yêu cầu:** Cho người dụng chọn số 1 hoặc 2, sau đó người dùng nhập tên và xuất ra thông báo: "Xin chao, <tên bạn nhập>, ban da chon <số mà bạn chọn>".
 Và đây là phần code (with bug):
 {% highlight cpp %}
 #include <string>
@@ -87,7 +87,7 @@ Nhìn có vẻ ổn và biên dịch cũng không báo lỗi gì nhưng khi bạ
   
   **Sửa lỗi:** Có vài lưu ý cho việc fix lỗi trên các bạn nhớ note lại nhé
   - Khi dùng cin: sau cin bạn nên dùng câu lệnh cin.ignore(32767, '\n');
-  - Khi dùng getline(): bạn chú ý phần getline() ban đầu mình dùng getline(**cin >> ws**, {{tên biến}});, và đó là cách fix -> luôn dùng cin >> ws khi sử dụng getline().
+  - Khi dùng getline(): bạn chú ý phần getline() ban đầu mình dùng getline(**cin >> ws**, <tên biến>);, và đó là cách fix -> luôn dùng cin >> ws khi sử dụng getline().
   
 ### Nối các chuỗi trong string
 Bạn có string Ho và 1 string Ten, bây giờ bạn muốn gộp dữ liệu trong 2 string này lại thì hãy sử dụng toán tử +
@@ -101,4 +101,3 @@ String còn hỗ trợ thêm rất nhiều function tiện ích như length() - 
 
 ## Tổng kết
 Thư viện string rất hữu ích trong suốt quá trình code C++ nên các bạn nhớ các nội dung mình đã nói phía trên để tiện dùng nha :) Pie~
-  fdfsdfgfdgdfg
