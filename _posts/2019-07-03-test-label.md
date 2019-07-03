@@ -30,3 +30,5 @@ Nhưng vì quá nhiều tính năng nên **nhược điểm** lớn nhất của
 <div class="alert alert-info">
 Note: việc sử dụng IDE nào để học là phụ thuộc vào cấu hình máy tính của các bạn, series này mình hướng đến người dùng VS nhiều hơn nhưng học một ngôn ngữ lập trình thì không quá quan trọng đến IDE nên bạn nào dùng 1 IDE khác vẫn có thể học được nhé và trong quá trình chạy project có gặp khó khăn gì cứ comment mình sẽ giúp các bạn trong khả năng của mình.
 </div>
+
+viết vài dòng xem cách thế nào
