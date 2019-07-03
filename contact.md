@@ -2,9 +2,8 @@
 layout: page
 title: Contact
 permalink: /contact/
+published: true
 ---
 
 
-Insert your contact details or a contact form here.
-
-Read [How to create a form in Jekyll site](http://blog.webjeda.com/jekyll-contact-form/){: target="_blank"} to implement using formspree.
+Nếu có thắc mắc về web, các bạn liên hệ (inbox) Page facebook: [Tui Tự Code](https://www.facebook.com/shareAboutIT/){: target="_blank"} nhé ;)
