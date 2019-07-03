@@ -4,8 +4,10 @@ title: Giới thiệu thư viện string
 categories: cpp
 img: image-4.png
 published: true
+excerpt_separator: <!--more-->
 ---
 Hi~! Hôm nay chúng ta sẽ cùng tìm hiểu về 1 trong những thư viện chuẩn (standard library) của C++ được sử dụng phổ biến nhất đó là thư viện **std::string**
+<!--more-->
 ## Vấn đề mở đầu
 Lấy ví dụ 1 chương trình đơn giản cho phép bạn nhập vào họ tên và xuất ra dòng thông báo "xin chào {{tên vừa nhập}}", theo như chúng ta đã học từ bài đầu đến giờ thì sẽ được viết như sau:
 {% highlight cpp %}
