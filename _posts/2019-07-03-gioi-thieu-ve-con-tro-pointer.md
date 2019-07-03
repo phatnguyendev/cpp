@@ -58,3 +58,79 @@ Gia tri tai dia chi cua bien la 5
 {% endhighlight %}
 OK vậy là các bạn đã biết qua cách dùng 2 toán tử & và *, đồ nghề đã đủ đến lúc chúng ta đi săn "con trỏ" thôi!
 ## Con trỏ - nổi ám ảnh đến từ C++
+### Định nghĩa
+Con trỏ (pointer) trong C++ là biến mà giá trị của nó chứa địa chỉ bộ nhớ.
+### Cài đặt con trỏ
+Biến con trỏ được khai báo như biến bình thường với dấu * ở phía trước tên (không phải toán tử * đâu nhé chỉ là * để cho dễ phân biệt theo C++ qui định thôi)
+  
+Định nghĩa 1 vài con trỏ như bên dưới:
+{% highlight cpp %}
+#include <iostream>
+using namespace std;
+int main()
+{
+    int *ptr1; // con trỏ kiểu int
+    double *ptr2; // con trỏ kiểu double
+    float* ptr3; // con trỏ kiểu float
+    char * ptr4; //con trỏ kiểu char
+    return 0;
+}
+{% endhighlight %}
+  
+**Chú ý:** việc đặt dấu * ở đâu trong 3 vị trí mình viết ở trên đều được, nhưng để tránh lỗi như thế này:
+{% highlight cpp %}
+#include <iostream>
+using namespace std;
+int main()
+{
+    int* ptr1, ptr2;
+    //ptr1 là con trỏ
+  	//ptr2 không phải là con trỏ
+    return 0;
+}
+{% endhighlight %}
+Thì tốt nhất là thống nhất đặt dấu * ở ngay sau tên biến ``int *ptr1``(trừ trường hợp khai báo con trỏ function).
+  
+### Giá trị của con trỏ là ... địa chỉ?!
+Như đã nói, giá trị của con trỏ là địa chỉ bộ nhớ nên bạn chỉ được gán giá trị là địa chỉ mà thôi:
+{% highlight cpp %}
+#include <iostream>
+using namespace std;
+int main()
+{
+    int* ptr1;
+    ptr1 = 0x7ffe3e1f7b1c;
+}
+{% endhighlight %}
+Vấn đề là sao mà nhớ với ghi nổi địa chỉ dài loằng ngoằng vậy nên thường con trỏ sẽ được gán giá trị là địa chỉ của 1 biến nào đó bằng cách:
+{% highlight cpp %}
+    #include <iostream>
+    using namespace std;
+     
+    int main() {
+    	int a =  5;
+    	int *ptr = &a; //đọc là: con trỏ ptr trỏ đến biến a
+    	return 0;
+    }
+{% endhighlight %}
+Giờ chúng ta sẽ "mổ xẻ" con trỏ 1 chút qua vài dòng code:
+{% highlight cpp %}
+    #include <iostream>
+    using namespace std;
+     
+    int main() {
+    	int a =  5;
+    	int *ptr = &a;
+    	cout << *ptr << endl;
+    	cout << ptr << endl;
+    	cout << &a << endl;
+    	return 0;
+    }
+{% endhighlight %}
+Kết quả khi mình chạy trên [Ideone.com](https://ideone.com/gytDuG) là:
+{% highlight cpp %}
+5
+0x7ffeba2929cc
+0x7ffeba2929cc
+{% endhighlight %}
+À ha! Vậy có thể thấy ``ptr`` giống y như ``&a`` vậy, thực thi ``*ptr`` cũng chính là thực thi ``*(&a)`` đúng không nào.
