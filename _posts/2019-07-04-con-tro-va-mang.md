@@ -1,7 +1,13 @@
 ---
-published: false
+layout: post
+title: Giới thiệu thư viện string
+categories: cpp
+img: image-4.png
+published: true
+excerpt_separator: <!--more-->
 ---
 Trong bài viết này chúng ta sẽ cùng tìm hiểu về mối quan hệ giữa con trỏ và mảng nhé! Let's go.
+<!--more-->
 ## Vài điều về mảng (array)
 Không có điều gì mới cả, chúng ta cùng xét qua đoạn code sau (Các bạn thử đoán kết quả trước khi nhìn kết quả bên dưới nhé):
 {% highlight cpp %}
