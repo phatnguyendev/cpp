@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Giới thiệu thư viện string
+title: Con trỏ và mảng 
 categories: cpp
 img: image-4.png
 published: true
