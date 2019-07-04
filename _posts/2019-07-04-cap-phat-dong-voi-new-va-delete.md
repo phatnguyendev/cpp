@@ -28,4 +28,10 @@ Là việc cấp phát khi chương trình của bạn gửi yêu cầu đến b
 {% endhighlight %}
 Nếu các bài trước các bạn thấy con trỏ luôn phụ thuộc vào 1 biến nào đó (cụ thể là biến mà con trỏ trỏ đến) thì mới có cái nói tiếp (nếu không trỏ thì nó ra sao mình cũng có nói rồi đó) thì lần này con trỏ đã thực sự là chính mình :)
 
-### Giải thích một tí: khi có toán tử ``new`` chương trình sẽ gửi yêu cầu cấp phát động cho bộ nhớ, nếu có thể đáp ứng thì hệ điều hành sẽ trả về địa chỉ bộ nhớ cho chương trình, và từ đây chương trình có thể sử dụng được bộ nhớ này theo ý muốn và đương nhiên có thể trả lại cho hệ điều hành bất cứ lúc nào (cho đến khi thoát chương trình).
+**Giải thích một tí:** khi có toán tử ``new`` chương trình sẽ gửi yêu cầu cấp phát động cho bộ nhớ, nếu có thể đáp ứng thì hệ điều hành sẽ trả về địa chỉ bộ nhớ cho chương trình, và từ đây chương trình có thể sử dụng được bộ nhớ này theo ý muốn và đương nhiên có thể trả lại cho hệ điều hành bất cứ lúc nào (cho đến khi thoát chương trình).
+
+Để trả lại vùng nhớ cho hệ điều hành, hãy sử dụng toán tử ``delete`` như sau:
+{% highlight cpp %}
+	delete ptr;
+{% endhighlight %}
+Sau khi sử dụng toán tử ``delete``, con trỏ bây giờ trở thành **dangling pointer** sau đó nếu bạn cố truy xuất đến giá trị của nó hoặc xóa nó lần nữa có thể bị lỗi **undefined behavior**. Nếu 1 con trỏ đang ở trạng thái "dangling" có nghĩa là mọi con trỏ khác trỏ đến nó (VD: int *ptr1 = ptr;) cũng sẽ lập tức biến thành dangling pointer.
