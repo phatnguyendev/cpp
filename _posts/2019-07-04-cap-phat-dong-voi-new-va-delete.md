@@ -7,6 +7,7 @@ published: true
 excerpt_separator: <!--more-->
 ---
 Bonjour! Hôm nay chúng ta sẽ cùng nhau tìm hiểu một thứ hay ho nữa (thật sự hay) mà con trỏ làm được đó là cấp phát động với con trỏ, phần này khá quan trọng các bạn chú ý nhé.
+<!--more-->
 ## Vấn đề cấp phát bộ nhớ
 Đầu tiên chúng ta cùng xem qua về cách cấp phát bộ nhớ trong C++:
  - **Cấp phát bộ nhớ tĩnh:** cấp phát cho các biến ``static`` và biến ``global``, sẽ cấp phát 1 lần duy nhất khi chương trình được chạy và được thu hồi tự động.
