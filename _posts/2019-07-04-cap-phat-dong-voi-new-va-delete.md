@@ -15,3 +15,13 @@ Khi bạn không mặn mà với việc ngồi nghĩ ra bao nhiêu size thì đ�
 Là việc cấp phát khi chương trình của bạn gửi yêu cầu đến bộ nhớ, và bộ nhớ này trên ``heap`` chứ không phải ``stack`` "hẹp hòi" như các loại cấp phát khác (để hiểu ``heap`` và ``stack`` là gì các bạn có thể xem bài {link bài}).
 ### Con trỏ và cấp phát động
 Để cấp phát động, chúng ta dùng toán tử ``new`` với con trỏ như sau:
+{% highlight cpp %}
+	#include <iostream>
+  	using namespace std;
+  	int main()
+  	{
+  		int *ptr = new int; //cấp phát địa chỉ bộ nhớ cho con trỏ.
+  		*ptr = 10;		  //gán giá trị 10 vào địa chỉ bộ nhớ 
+  							//mà con trỏ được cấp. 
+  	}
+{% endhighlight %}
