@@ -35,3 +35,28 @@ Nếu các bài trước các bạn thấy con trỏ luôn phụ thuộc vào 1 
 	delete ptr;
 {% endhighlight %}
 Sau khi sử dụng toán tử ``delete``, con trỏ bây giờ trở thành **dangling pointer** sau đó nếu bạn cố truy xuất đến giá trị của nó hoặc xóa nó lần nữa có thể bị lỗi **undefined behavior**. Nếu 1 con trỏ đang ở trạng thái "dangling" có nghĩa là mọi con trỏ khác trỏ đến nó (VD: int *ptr1 = ptr;) cũng sẽ lập tức biến thành dangling pointer.
+### Trường hợp không cấp phát được
+Một số trường hợp hiếm hoi rằng không có bộ nhớ trống nào trên heap để cấp phát cho chương trình của chúng ta, lúc này 1 ngoại lệ ``bad_alloc`` được trả ra và bạn không làm gì thì chương trình tự end :) and so we end.
+
+Nếu bạn không muốn việc bị ném vào chương trình cái ngoại lệ như vậy thì nên sử dụng thêm hằng số std::nothrow như sau:
+{% highlight cpp %}
+	int *ptr = new (std::nothrow) int;
+{% endhighlight %}
+Thay vì ném ngoại lệ, nó sẽ trả về cho bạn 1 con trỏ null, và việc xử lý với con trỏ null thì lại dễ dàng hơn nhiều với vài dòng code nữa mà không bị crash chương trình:
+{% highlight cpp %}
+	int *ptr = new (std::nothrow) int;
+  	if(!ptr) {
+  		// lỗi xuất hiện => do something here!
+  	}
+{% endhighlight %}
+
+<div class="alert alert-info">Con trỏ null (null pointer): 1 con trỏ giữ giá trị null (null value) - 1 giá trị đặc biệt cho biết con trỏ này không trỏ đến đâu cả.</div>
+### Sử dụng cấp phát động an toàn
+An toàn hay không nằm ở chỗ chúng ta "delete" con trỏ như thế nào, chú ý mấy điều sau:
+  - Nếu bạn dùng cách khai báo với ``nothrow``, cứ việc dùng delete là đủ (delete 1 null pointer không có gì xảy ra cả).
+  - Nếu bạn khai báo thông thường, trước khi delete, hãy chắc chắn rằng nó "alive":
+{% highlight cpp %}
+	if(ptr) {
+  		delete ptr;
+  	}
+{% endhighlight %}
