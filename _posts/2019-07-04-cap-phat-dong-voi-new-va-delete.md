@@ -82,5 +82,10 @@ Con trỏ có thể được cấp phát động dưới dạng mảng như sau:
 	int *ptr = new int[5]; //cấp phát mảng 5 phần tử
 {% endhighlight %}
 Và sau đó bạn có thể dùng như mình đã dùng ở bài trước mà không cần phải tạo mảng rồi cho con trỏ trỏ đến nữa.
+  
+**Lưu ý:** Để delete với con trỏ mảng thì các bạn phải dùng:
+{% highlight cpp %}
+	delete[] ptr;
+{% endhighlight %}
 ## Tổng kết
 Phù ~ Phần này khá quan trọng nhưng cũng không quá khó khăn và còn có thể thấy được sức mạnh mới của con trỏ nữa nên các bạn nhớ chú ý kĩ nhé. Pie~
