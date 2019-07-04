@@ -20,7 +20,7 @@ Là việc cấp phát khi chương trình của bạn gửi yêu cầu đến b
   	using namespace std;
   	int main()
   	{
-  		int *ptr = new int; //cấp phát địa chỉ bộ nhớ cho con trỏ.
+  		int *ptr = new int; //cấp phát bộ nhớ cho con trỏ.
   		*ptr = 10;		  //gán giá trị 10 vào địa chỉ bộ nhớ 
   							//mà con trỏ được cấp. 
   		return 0;
@@ -28,4 +28,4 @@ Là việc cấp phát khi chương trình của bạn gửi yêu cầu đến b
 {% endhighlight %}
 Nếu các bài trước các bạn thấy con trỏ luôn phụ thuộc vào 1 biến nào đó (cụ thể là biến mà con trỏ trỏ đến) thì mới có cái nói tiếp (nếu không trỏ thì nó ra sao mình cũng có nói rồi đó) thì lần này con trỏ đã thực sự là chính mình :)
 
-### Giải thích một tí:
+### Giải thích một tí: khi có toán tử ``new`` chương trình sẽ gửi yêu cầu cấp phát động cho bộ nhớ, nếu có thể đáp ứng thì hệ điều hành sẽ trả về địa chỉ bộ nhớ cho chương trình, và từ đây chương trình có thể sử dụng được bộ nhớ này theo ý muốn và đương nhiên có thể trả lại cho hệ điều hành bất cứ lúc nào (cho đến khi thoát chương trình).
