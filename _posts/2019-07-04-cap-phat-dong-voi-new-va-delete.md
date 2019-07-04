@@ -65,3 +65,22 @@ An toàn hay không nằm ở chỗ chúng ta "delete" con trỏ như thế nào
   		delete ptr;
   	}
 {% endhighlight %}
+Hiện tượng **Memory Leak**: nói đơn giản, đó là khi chương trình "lạc mất" địa chỉ của bộ nhớ được cấp phát cho con trỏ, ví dụ:
+{% highlight cpp %}
+	#include <iostream>
+  	using namespace std;
+  	int main() {
+  		int *ptr = new int;
+  		int b = 12;
+  		ptr = &b; // warning!
+  	}
+{% endhighlight %}
+Khi các bạn đã tạo cấp phát động, nhưng sau đó lại trỏ con trỏ đến 1 vùng nhớ khác (như trỏ đến biến b) thì lúc này vùng nhớ động được cấp phát thực sự chưa mất và cũng chưa được giải phóng (cần toán tử delete) và địa chỉ của vùng nhớ này đã biến mất khỏi chương trình, và vì chưa được giải phóng nên hệ điều hành cũng không thể sử dụng và ngay cả chương trình của chúng ta cũng không thể xóa chúng khi kết thúc. Để tránh vấn đề này, hãy chắc chắn đã delete con trỏ khi bạn có ý định thay đổi vùng nhớ nó đang trỏ đến.
+### Cấp phát động cho mảng
+Con trỏ có thể được cấp phát động dưới dạng mảng như sau:
+{% highlight cpp %}
+	int *ptr = new int[5]; //cấp phát mảng 5 phần tử
+{% endhighlight %}
+Và sau đó bạn có thể dùng như mình đã dùng ở bài trước mà không cần phải tạo mảng rồi cho con trỏ trỏ đến nữa.
+## Tổng kết
+Phù ~ Phần này khá quan trọng nhưng cũng không quá khó khăn và còn có thể thấy được sức mạnh mới của con trỏ nữa nên các bạn nhớ chú ý kĩ nhé. Pie~
