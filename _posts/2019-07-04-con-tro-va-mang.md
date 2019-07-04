@@ -78,11 +78,8 @@ Xem thêm 1 đoạn code sau nữa để thấy được đôi điều thú vị
       	
       	//cout << sizeof(ptr) << endl;
       	//cout << sizeof(array) << endl;
-      	
-      	for(int i =0; i < 4; i++)
-      	{
-      		cout <<ptr[i] << endl;
-      	}
+		
+        
       	
       	cout << ptr[0] << endl;
       	
@@ -91,4 +88,9 @@ Xem thêm 1 đoạn code sau nữa để thấy được đôi điều thú vị
     	return 0;
     }
 {% endhighlight %}
-Các bạn tự chạy và xem kết quả như thế nào nhé
+
+Các bạn tự chạy và xem kết quả như thế nào nhé.
+### Tạo cách duyệt mảng với con trỏ
+
+## Tổng kết
+Sau khi thấy được vài điều hay ho giữa con trỏ và mảng thì
