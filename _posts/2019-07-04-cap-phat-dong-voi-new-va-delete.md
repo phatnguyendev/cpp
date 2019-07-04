@@ -23,5 +23,9 @@ Là việc cấp phát khi chương trình của bạn gửi yêu cầu đến b
   		int *ptr = new int; //cấp phát địa chỉ bộ nhớ cho con trỏ.
   		*ptr = 10;		  //gán giá trị 10 vào địa chỉ bộ nhớ 
   							//mà con trỏ được cấp. 
+  		return 0;
   	}
 {% endhighlight %}
+Nếu các bài trước các bạn thấy con trỏ luôn phụ thuộc vào 1 biến nào đó (cụ thể là biến mà con trỏ trỏ đến) thì mới có cái nói tiếp (nếu không trỏ thì nó ra sao mình cũng có nói rồi đó) thì lần này con trỏ đã thực sự là chính mình :)
+
+### Giải thích một tí:
