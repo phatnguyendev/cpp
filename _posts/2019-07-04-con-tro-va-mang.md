@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Con trỏ và mảng 
+title: Con trỏ và mảng
 categories: cpp
 img: image-4.png
 published: true
@@ -124,10 +124,10 @@ Thông thường khi muốn duyệt qua các phần tử trong mảng, bạn s�
 Chương trình sẽ in ra:
 {% highlight cpp %}
 	1
-    2
-    3
-    4                            
-    5                            
+	2
+	3
+	4                            
+	5                            
 {% endhighlight %}
 Vậy là chúng ta đã có thêm 1 cách duyệt mảng nữa đúng không nào, các bạn hãy tìm hiểu cơ chế hoạt động của nó nhé!
 ## Tổng kết
