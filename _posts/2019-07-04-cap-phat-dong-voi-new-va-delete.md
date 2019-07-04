@@ -1,5 +1,10 @@
 ---
-published: false
+layout: post
+title: Cấp phát động với new và delete
+categories: cpp
+img: image-4.png
+published: true
+excerpt_separator: <!--more-->
 ---
 Bonjour! Hôm nay chúng ta sẽ cùng nhau tìm hiểu một thứ hay ho nữa (thật sự hay) mà con trỏ làm được đó là cấp phát động với con trỏ, phần này khá quan trọng các bạn chú ý nhé.
 ## Vấn đề cấp phát bộ nhớ
