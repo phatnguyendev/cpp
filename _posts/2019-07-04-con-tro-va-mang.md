@@ -79,7 +79,10 @@ Xem thêm 1 đoạn code sau nữa để thấy được đôi điều thú vị
       	//cout << sizeof(ptr) << endl;
       	//cout << sizeof(array) << endl;
 		
-        
+      	for(int i =0; i < 4; i++)
+      	{
+      		cout <<ptr[i] << endl;
+      	}  
       	
       	cout << ptr[0] << endl;
       	
@@ -91,6 +94,35 @@ Xem thêm 1 đoạn code sau nữa để thấy được đôi điều thú vị
 
 Các bạn tự chạy và xem kết quả như thế nào nhé.
 ### Tạo cách duyệt mảng với con trỏ
-
+Thông thường khi muốn duyệt qua các phần tử trong mảng, bạn sẽ dựa vào index (cho vòng for chạy với biến i) để truy xuất vào mảng theo dạng ``array[i]`` và với con trỏ chúng ta sẽ có 1 cách truy xuất khá fun như sau:
+{% highlight cpp %}
+    #include <iostream>
+    using namespace std;
+     
+    int main() {
+     
+    	//khởi tạo mảng
+    	int array[5] = { 1, 2, 3, 4, 5 };
+     
+    	//cho biết trước số phần tử trong mảng (length)
+    	int length = 5;
+     
+     
+    	for(int *ptr = array; ptr < array + length; ptr++)
+    	{
+    		cout << *ptr << endl;
+    	}
+    	return 0;
+    }  
+{% endhighlight %}
+Chương trình sẽ in ra:
+{% highlight cpp %}
+	1
+    2
+    3
+    4                            
+    5                            
+{% endhighlight %}
+Vậy là chúng ta đã có thêm 1 cách duyệt mảng nữa đúng không nào, các bạn hãy tìm hiểu cơ chế hoạt động của nó nhé!
 ## Tổng kết
-Sau khi thấy được vài điều hay ho giữa con trỏ và mảng thì
+Sau khi thấy được vài điều hay ho giữa con trỏ và mảng thì chắc các bạn đã nắm được phần nào về con trỏ rồi đúng không, tiếp tục giữ phong độ cho những bài sau nh. Pie~
