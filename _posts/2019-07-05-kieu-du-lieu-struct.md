@@ -77,7 +77,7 @@ và khi chúng ta muốn truy xuất thuộc tính trong struct Giay như ``ten`
     };
     int main() {
     	//có thể khởi tạo g như sau:
-    	//Girl g {{"giay the thao","Adidas","20000"},"Quan ao"}
+    	//Girl g { {"giay the thao","Adidas","20000"},"Quan ao"}
     	Girl g;
     	g.giay.ten = "giay the thao";
      
