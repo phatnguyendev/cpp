@@ -1,9 +1,9 @@
 ---
-published: true
 layout: post
-title: Giới thiệu thư viện string
+title: Đọc ghi file 
 categories: cpp
 img: image-4.png
+published: true
 excerpt_separator: <!--more-->
 ---
 Yo~ Trong bài này chúng ta sẽ cùng nhau tìm hiểu cách C++ tương tác với các file như thế nào nhé. Let's go!<!--more-->
