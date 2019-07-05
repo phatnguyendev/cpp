@@ -106,8 +106,9 @@ Giải thích 1 chút về cách tổ chức trong enum: mỗi phần tử trong
 {% endhighlight %}
   - Không gán enum này với giá trị là phần tử trong enum khác, cũng như tên phần tử trong 1 enum là độc nhất (enum khác không được xài lại).
   - Khi dùng ``cout`` enum sẽ xuất ra giá trị là thứ tự của phần tử đó trong enum.
+ 
+
 ### Khi nào nên dùng enum
 Enum thực sự rất hữu ích và luôn luôn có thể ứng dụng được tùy vào khả năng sáng tạo của bạn, cứ việc phát huy nó nhé.
 ## Tổng kết
 Vậy là chúng ta đã được biết đến 1 kiểu dữ liệu đơn giản mà lại very useful trong C++ đó là ``enum``, các bạn code lâu dài sẽ phản xạ được ngay lúc nào nên dùng kiểu enum, good luck! Pie~
-  
