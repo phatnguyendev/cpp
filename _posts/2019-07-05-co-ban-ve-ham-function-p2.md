@@ -136,7 +136,7 @@ Kết quả của chương trình trên là
 {% endhighlight %}
 mà phải là
 {% highlight cpp %}
-	int TinhTong(int a;int b=0)
+	int TinhTong(int b;int a=0)
 {% endhighlight %}
 Một lưu ý khác đó là khi bạn sử dụng prototype (xem ở bài trước) các bạn chỉ cần đặt giá trị mặc định ở prototype, không được đặt ở cả prototype và phần định nghĩa phía sau, phần code sau sẽ gây ra lỗi:
 {% highlight cpp %}
