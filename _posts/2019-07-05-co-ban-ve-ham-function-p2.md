@@ -10,8 +10,8 @@ excerpt_separator: <!--more-->
 ## Các loại tham số
 Đầu tiên mình sẽ giới thiệu trước về các loại tham số chúng ta sẽ tìm hiểu trong bài này:
 - Truyền tham trị
-- Tham số mặc định
 - Truyền tham chiếu
+- Tham số mặc định
 ### Truyền tham trị
 Tham trị là loại tham số truyền theo kiểu bình thường, xét đoạn code sau
 {% highlight cpp %}
@@ -104,3 +104,4 @@ Kết quả thu được là địa chỉ biến tương ứng trong 2 hàm gi�
 	Dia chi bien b trong main la 0x7fff402725ac
 {% endhighlight %}
 **Lưu ý:** khi bạn truyền tham số vào hàm là mảng, mặc định nó là kiểu truyền theo tham chiếu nên mọi thứ bạn thay đổi trong mảng sẽ ảnh hưởng trực tiếp đến mảng.
+  
