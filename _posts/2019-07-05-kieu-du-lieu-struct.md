@@ -6,6 +6,86 @@ categories: cpp
 img: image-4.png
 excerpt_separator: <!--more-->
 ---
-## A New Post
+Bài trước chúng ta đã biết đến 1 kiểu dữ liệu tự định nghĩa rất hữu dụng và dễ dùng là enum và hôm nay chúng ta sẽ tiếp tục đến với 1 kiểu dữ liệu tự định nghĩa khác "phê" hơn nữa, đó là struct. Let's go!
+<!--more-->
+## Mở đầu là khi..
+Khi bạn nghe được crush than rằng: "có cách nào để lưu lại được thông tin của các loại giày mà mình thích không nhỉ? Nhiều quá chả thể nhớ hết, mỗi đôi giày có nào là tên rồi nhãn hiệu rồi giá tiền... OMG!" Và thế là bạn quyết định sẽ store lại đống thông tin đó và mỗi khi crush cần thì bật ngay cửa sổ console cool ngầu lên cho ẻm chọn :)
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+Và khi bạn bắt đầu với những dòng code đầu tiên bạn chợt bối rối vì không biết phải lưu những thông tin của những đôi giày đó như thế nào là hợp lí, khai báo chục cái biến? hay khai báo mảng cho từng loại thông tin trong giày? chắc chắn là những đoạn code kinh dị rồi và TuiTuCode xuất hiện và tặng cho bạn vài kí tự: s-t-r-u-c-t.
+## Struct là gì và "super power" của nó
+Struct là 1 kiểu dữ liệu tổng hợp do người dùng tự định nghĩa (user-defined aggregate data types), với 1 thể hiện (instance) kiểu struct bạn sẽ có được đầy đủ thông tin bên trong mà mình muốn hay nói cách khác, struct sẽ nhóm các biến của các loại dữ liệu khác nhau thành 1 đơn vị duy nhất.
+
+Chúng ta sẽ viết 1 struct cho đề bài mở đầu như sau:
+{% highlight cpp %}
+struct Giay {
+	string ten;
+	string nhanhieu;
+	string gia;
+}
+{% endhighlight %}
+Có thể thấy trong struct chúng ta có 3 kiểu string lần lượt chứa thôn tin tên giày, nhãn hiệu và giá của đôi giày đó, nhìn rất clear đúng không nào, Chúng ta sẽ tạo 1 biến kiểu ``Giay`` và gán giá trị cho nó
+{% highlight cpp %}
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    struct Giay {
+    	string ten;
+    	string nhanhieu;
+    	string gia;
+    };
+    int main() {
+    	Giay giay1;
+    	giay1.ten = "Giay the thao";
+    	giay1.nhanhieu = "Adidas";
+    	giay1.gia = "20000";
+     
+    	cout << "Ten giay: " << giay1.ten << endl;
+    	return 0;
+    }
+{% endhighlight %}
+Cách khai báo struct trong hàm main cũng khá đơn giản, và để truy xuất 1 phần tử trong struct các bạn dùng toán tử . (member selection operator), ở đây chúng ta truy xuất 3 phần tử có trong struct Giay và lần lượt gán giá trị cho nó, kết quả cout ta được
+{% highlight cpp %}
+	Ten giay: Giay the thao
+{% endhighlight %}
+Nhìn code rất sáng sủa đúng không nào. 1 cách khai báo khác nữa có phần nhanh hơn nhưng khó nhìn hơn 1 chút là
+{% highlight cpp %}
+	Giay giay1 {"Giay the thao", "Adidas", "20000"};
+{% endhighlight %}
+### Đưa struct vào 1 struc khác
+Vì struct chứa được các kiểu dữ liệu khác nhau và kể cả struct nên chúng ta có thể đem 1 struct vào để giúp code tốt hơn, chúng ta sẽ đem struct Giay vào struct Girl như sau:
+{% highlight cpp %}
+	struct Girl
+  	{
+  		...
+  		Giay giay;
+  		...
+  	}
+{% endhighlight %}
+và khi chúng ta muốn truy xuất thuộc tính trong struct Giay như ``ten`` thông qua struct Girl ta sẽ dùng nhiêu hơn 1 toán tử .
+{% highlight cpp %}
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    struct Giay {
+    	string ten;
+    	string nhanhieu;
+    	string gia;
+    };
+    struct Girl {
+    	Giay giay;
+    	string quanAo;
+    };
+    int main() {
+    	//có thể khởi tạo g như sau:
+    	// Girl g {{"giay the thao","Adidas","20000"},"Quan ao"}
+    	Girl g;
+    	g.giay.ten = "giay the thao";
+     
+    	cout << "Ten giay cua co gai: " << g.giay.ten << endl;
+    	return 0;
+    }
+{% endhighlight %}
+### Mảng các struct
+Các bạn có thể dùng mảng (array) để lưu trữ các struct lại hoặc dùng danh sách liên kết (phần này liên quan đến Cấu trúc giải thuật & dữ liệu)
+## Struct và con trỏ
+Struct cũng như 1 mảng chứa các phần tử bên trong nó, nếu các bạn xuất địa chỉ của struct và địa chỉ của phần tử đầu tiên các bạn sẽ thấy nó trùng khớp nhau! Mà đã nói địa chỉ bộ nhớ thì con trỏ xuất hiện :)
