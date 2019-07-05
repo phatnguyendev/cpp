@@ -98,3 +98,5 @@ Ví dụ mới mode ``app`` trong trường hợp các bạn mở 1 file đã c�
   //sử dụng mode app (append)
 	ofstream outf("sample.txt", ios::app);
 {% endhighlight%}
+## Tổng kết
+Vậy là chúng ta đã biết cách đọc ghi file trong C++, các bạn nhớ chú ý ghi nhớ để tận dụng trong quá trình code nhé. Pie~
