@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Đọc ghi file 
+title: Đọc ghi file
 categories: cpp
 img: image-4.png
 published: true
@@ -93,6 +93,7 @@ Sau khi đóng bằng close, các bạn vẫn có thể dùng open để mở fi
 ## Một số mode đọc ghi file
 C++ hỗ trợ chúng ta 1 số mode sau:
 ![](https://raw.githubusercontent.com/nguyenchiemminhvu/CPP-Tutorial/master/10-files-streams/10-3-mot-so-thao-tac-ghi-du-lieu-vao-file-trong-cpp/0.png)
+
 Ví dụ mới mode ``app`` trong trường hợp các bạn mở 1 file đã có dữ liệu và muốn ghi tiếp vào file đó thì chúng ta phải dùng mode này (bằng không chúng ta sẽ ghi đè lên toàn bộ dữ liệu cũ). Để sử dụng mode các bạn thêm tham số mode như sau:
 {% highlight cpp %}
   //sử dụng mode app (append)
