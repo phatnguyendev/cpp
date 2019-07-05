@@ -88,4 +88,56 @@ và khi chúng ta muốn truy xuất thuộc tính trong struct Giay như ``ten`
 ### Mảng các struct
 Các bạn có thể dùng mảng (array) để lưu trữ các struct lại hoặc dùng danh sách liên kết (phần này liên quan đến Cấu trúc giải thuật & dữ liệu)
 ## Struct và con trỏ
-Struct cũng như 1 mảng chứa các phần tử bên trong nó, nếu các bạn xuất địa chỉ của struct và địa chỉ của phần tử đầu tiên các bạn sẽ thấy nó trùng khớp nhau! Mà đã nói địa chỉ bộ nhớ thì con trỏ xuất hiện :)
+Struct cũng như 1 mảng chứa các phần tử bên trong nó, nếu các bạn xuất địa chỉ của struct và địa chỉ của phần tử đầu tiên các bạn sẽ thấy nó trùng khớp nhau! Mà đã nói địa chỉ bộ nhớ thì con trỏ xuất hiện :) Để trỏ đến 1 struct, ta sẽ làm như trỏ đến bao biến khác:
+{% highlight cpp %}
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    struct Giay {
+    	string ten;
+    	string nhanhieu;
+    	string gia;
+    };
+     
+    int main() {
+     
+    	Giay giay1 {"theo thao", "adidas", "20000"};
+     
+    	Giay *pGiay = &giay1;
+     
+    	return 0;
+    }
+{% endhighlight %}
+Hoặc chúng ta có thể dùng cấp phát động với struct
+{% highlight cpp %}
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    struct Giay {
+    	string ten;
+    	string nhanhieu;
+    	string gia;
+    };
+     
+    int main() {
+     
+    	//Giay giay1 {"theo thao", "adidas", "20000"};
+     
+    	Giay *pGiay = new Giay;
+  		*pGiay = {"di hoc", "batin", "2000"};
+     
+    	return 0;
+    }
+{% endhighlight %}
+**Chú ý:** các bạn hoặc là cấp phát động cho con trỏ hoặc là trỏ nó đến 1 biến struct rồi mới đổ dữ liệu vào con trỏ nhé, nếu không giá trị của con trỏ mặc định chỉ là địa chỉ nên không nhận giá trị chúng ta đưa vào.
+
+Để truy xuất đến các thuộc tính bên trong struct bằng con trỏ, chúng ta không sử dụng toán tử ``.`` mà dùng ``->``
+{% highlight cpp %}
+	string tenGiay = pGiay->ten;
+  //nhưng nếu con trỏ trỏ đến struct Girl và bạn muốn
+  // truy xuất thuộc tính tên giày trong struct Giay thì làm như sau
+  	string tenGiay = pGirl->Giay.ten;
+{% endhighlight %}
+Thật sự các bạn sẽ thấy con trỏ phát huy trong struct như nào nếu các bạn học về danh sách liên kết, còn bài viết này mình chỉ giới thiệu vài nét thôi nên vấn đề cũng chỉ trên lý thuyết :) nhưng nắm được nó thì càng OK chứ sao
+## Tổng kết
+Vậy là chúng ta đã cùng vọc vạch 1 kiểu dữ liệu tự định nghĩa nữa là struct, với struct code nhìn sẽ sáng sủa và "sạch" hơn rất nhiều. Hẹn gặp lại trong các bài sau. Pie~
