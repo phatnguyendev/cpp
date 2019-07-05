@@ -51,7 +51,7 @@ Nhìn code rất sáng sủa đúng không nào. 1 cách khai báo khác nữa c
 {% highlight cpp %}
 	Giay giay1 {"Giay the thao", "Adidas", "20000"};
 {% endhighlight %}
-### Đưa struct vào 1 struc khác
+### Đưa struct vào 1 struct khác
 Vì struct chứa được các kiểu dữ liệu khác nhau và kể cả struct nên chúng ta có thể đem 1 struct vào để giúp code tốt hơn, chúng ta sẽ đem struct Giay vào struct Girl như sau:
 {% highlight cpp %}
 	struct Girl
