@@ -1,8 +1,13 @@
 ---
-published: false
+layout: post
+title: Kiểu dữ liệu enum
+categories: cpp
+img: image-4.png
+published: true
+excerpt_separator: <!--more-->
 ---
 
-Hi~! Với bài này các bạn sẽ học 1 kiểu dữ liệu rất tiện lợi trong C++ đó là kiểu **enum**, cùng xem nhé!
+Hi~! Với bài này các bạn sẽ học 1 kiểu dữ liệu rất tiện lợi trong C++ đó là kiểu **enum**, cùng xem nhé!<!--more-->
 ## Vấn đề xảy ra khi ...
 Giả sử các bạn đang làm 1 con game, trong game nhân vật của bạn có nhiều vũ khí như: kiếm, súng, phi tiêu, bom, ... và mỗi vũ khí sẽ có 1 mức sát thương khác nhau, giờ bạn viết 1 đoạn chương trình để tính sát thương của các loại vũ khí lên quái thì sẽ có dạng như sau:
 {% highlight cpp %}
