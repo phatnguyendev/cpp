@@ -64,4 +64,15 @@ Các bạn có thể tìm hiểu thêm về 1 số quy định cho việc overlo
 **Giải thích:** hơi khó để giải thích bằng văn viết, mình sẽ nêu từng đoạn rõ ràng luôn nhé:
 - Lần gọi 1 (tại hàm main): n = 3 => vô else => ketqua = 3 + (gọi lại TinhTong với n = 3 - 1)
 - Lần gọi 2 (tại else): n = 2 => vô else => ketqua = 2  + (gọi lại TinhTong với n = 2 - 1)
-- lần gọi 3 (tại else): n = 1
+- Lần gọi 3 (tại else): n = 1 => vô else => ketqua = 1 + (gọi lại TinhTong với n = 1 - 1)
+- Lần gọi 4 (tại else): n = 0 => vô if => trả về 0
+
+OK bây giờ hãy thay thế giá trị bên phải dấu cộng (các lần gọi) bằng kết quả của lần gọi sau nó ta được (giờ ta đi từ lần gọi 4 về lần gọi 1 nhé):
+- Lần gọi 4: trả về 0
+- Lần gọi 3: trả về 1 + 0 = 1
+- Lần gọi 2: trả về 1 + 2 = 3
+- Lần gọi 1: trả về 3 + 3 = 6
+
+Và kết quả ta được là 6. Đấy đệ quy là vậy đó nếu bạn nào chưa hiểu cứ việc ăn miếng bánh uống miếng nước rồi nghiên cứu sau nha :) search trên mạng có khá nhiều bài đệ qui khác cho các bạn thích tìm tòi đó.
+## Tổng kết
+Vậy là đã kết thúc bài viết với khá nhiều sự hack não đến từ đệ quy nhưng không sao lập trình mà, nghệ thuật cả đấy chứ. Chúc các bạn học tập tốt Pie~
