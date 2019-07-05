@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 Trong phần này chúng ta sẽ tìm hiểu về function overloading và đệ quy (recursion) - những thứ hay ho khác đến từ hàm trong C++.
 ## Function overloading
 Nói đơn giản, các bạn có nhiều function với tên giống nhau nhưng khác nhau vê số lượng tham số hoặc kiểu giá trị của tham số. Ví dụ bạn có các hàm cùng tên ``double`` với chức năng trả về giá trị gấp 2 lần giá trị tham số truyền vào theo 2 kiểu dữ liệu trả về khác nhau
-{% highhight cpp %}
+{% highlight cpp %}
     #include <iostream>
     using namespace std;
     int doubleX(int a)
@@ -28,7 +28,7 @@ Nói đơn giản, các bạn có nhiều function với tên giống nhau nhưn
     }
 {% endhighlight %}
 Kết quả trả về là
-{% highhight cpp %}
+{% highlight cpp %}
 	4
 	4.4
 {% endhighlight %} 
@@ -37,7 +37,7 @@ Nếu ở lần cout thứ 2, doubleX là hàm kiểu int thì kết quả trả
 Các bạn có thể tìm hiểu thêm về 1 số quy định cho việc overloading trên mạng nhé, trong bài viết này mình chỉ giới thiệu cơ bản thôi.
 ## Đệ quy (recursion)
 Đệ quy thực chất là 1 hàm có thể gọi lại chính nó, xét ví dụ: tính tổng S = 0 + 1 + 2 + ... + n với n tùy ý. Các bạn hãy code bài trên bằng cách các bạn hiểu, ở đây mình sẽ dùng đệ quy như sau
-{% highhight cpp %}
+{% highlight cpp %}
     #include <iostream>
     using namespace std;
     int TinhTong(int n)
