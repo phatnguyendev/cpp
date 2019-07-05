@@ -85,8 +85,8 @@ Việc khai báo prototype rất đơn giản và dễ nhớ, đặc biệt tron
     }  
 {% endhighlight %}
 Trong hàm void XinChao mình có in ra 1 câu xin chào với tên (là tham số kiểu string được truyền vào). Bạn hãy chú ý vài điều sau về hàm void:
-	- Nếu bỏ comment câu lệnh ``return;`` thì khi chạy đến lệnh ``return;`` hàm sẽ nhận biết và kết thúc hàm ngay tại đó (đồng nghĩa với việc không chạy xuống được lệnh cout).
-  	- Hàm void không có giá trị trả về, vậy nên tốt nhất khi gọi hàm hãy để cho nó 1 dòng riêng.
-  	- nếu bạn đổi hàm main thành kiểu void, bạn không cần lệnh return 0 nữa :)
+- Nếu bỏ comment câu lệnh ``return;`` thì khi chạy đến lệnh ``return;`` hàm sẽ nhận biết và kết thúc hàm ngay tại đó (đồng nghĩa với việc không chạy xuống được lệnh cout).
+- Hàm void không có giá trị trả về, vậy nên tốt nhất khi gọi hàm hãy để cho nó 1 dòng riêng.
+- nếu bạn đổi hàm main thành kiểu void, bạn không cần lệnh return 0 nữa :)
 ## Tổng kết
 Qua bài này các bạn đã biết được những thứ cơ bản về hàm rồi đúng không nào, chúng ta sẽ cùng nhau tìm hiểu sâu hơn về những kĩ thuật truyền tham số vào hàm qua bài sau. Pie~
