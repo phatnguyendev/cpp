@@ -63,7 +63,7 @@ Cách gọi hàm khá đơn giản như mình đã gọi hàm TinhTong trong hà
   		return a + b;
     }   
 {% endhighlight %}
- Nếu bạn muốn cho hàm main gọi 1 hàm được khai báo bên dưới hàm main, trình biên dịch sẽ báo lỗi nếu bạn không dùng prototype, với prototype trình biên dịch sẽ "tin tưởng" rằng sẽ có 1 hàm TinhTong được khởi tạo và vì thế chương trình sẽ không gặp vấn đề gì cả. Thực tế bạn sẽ dùng prototype khi làm việc với file .h (sẽ được học ở phần sau).
+ Nếu bạn muốn cho hàm main gọi 1 hàm được khai báo bên dưới hàm main, trình biên dịch sẽ báo lỗi nếu bạn không dùng prototype, với prototype trình biên dịch sẽ "tin tưởng" rằng sẽ có 1 hàm TinhTong được định nghĩa sau và vì thế chương trình sẽ không gặp vấn đề gì cả. Thực tế bạn sẽ dùng prototype khi làm việc với file .h (sẽ được học ở phần sau).
   
 Việc khai báo prototype rất đơn giản và dễ nhớ, đặc biệt trong phần tham số truyền vào bạn không cần thiết phải đặt tên cho tham số đó (như mình chỉ ghi mỗi int,int).
 ### Hàm void
