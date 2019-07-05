@@ -104,4 +104,56 @@ Kết quả thu được là địa chỉ biến tương ứng trong 2 hàm gi�
 	Dia chi bien b trong main la 0x7fff402725ac
 {% endhighlight %}
 **Lưu ý:** khi bạn truyền tham số vào hàm là mảng, mặc định nó là kiểu truyền theo tham chiếu nên mọi thứ bạn thay đổi trong mảng sẽ ảnh hưởng trực tiếp đến mảng.
-  
+### Tham số mặc định
+Ta xét ví dụ sau
+{% highlight cpp %}
+    #include <iostream>
+    using namespace std;
+     
+    int TinhTong(int a =1, int b=0) {
+    	// thực hiện việc tính tổng
+    	return a + b;
+    }
+     
+    int main() {
+    	// your code goes here
+    	float a {5.44};
+    	float b {6.14};
+    	cout << TinhTong() << endl;
+    	return 0;
+    }
+{% endhighlight %}
+Kết quả của chương trình trên là
+{% highlight cpp %}
+	1
+{% endhighlight %}
+Để ý thấy ở hàm main, mình không truyền gì vào hàm TinhTong cả nhưng kết quả ta vẫn nhận được là 1. Đó là vì mình đã đặt giá trị mặc định cho 2 tham số a và b bằng cách như đoạn code mình làm, tham số a và b lúc này được gọi là tham số mặc định.
+
+**Lưu ý:** nếu các bạn chỉ muốn đặt a làm tham số mặc định, các bạn phải để nó ở sau cùng, các khai báo bên dưới sẽ không hợp lệ
+{% highlight cpp %}
+	int TinhTong(int a=0;int b)
+{% endhighlight %}
+mà phải là
+{% highlight cpp %}
+	int TinhTong(int a;int b=0)
+{% endhighlight %}
+Một lưu ý khác đó là khi bạn sử dụng prototype (xem ở bài trước) các bạn chỉ cần đặt giá trị mặc định ở prototype, không được đặt ở cả prototype và phần định nghĩa phía sau, phần code sau sẽ gây ra lỗi:
+{% highlight cpp %}
+    #include <iostream>
+    using namespace std;
+     
+    int TinhTong(int=1, int=0);
+     
+    int main() {
+    	// your code goes here
+    	float a {5.44};
+    	float b {6.14};
+    	cout << TinhTong() << endl;
+    	return 0;
+    }
+  	
+    int TinhTong(int a =1, int b=0) { //khai báo giá trị mặc định 1 lần nữa sẽ gây ra lỗi
+    	// thực hiện việc tính tổng
+    	return a + b;
+    }  	
+{% endhighlight %}
