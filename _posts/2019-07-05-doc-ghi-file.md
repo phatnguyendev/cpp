@@ -78,7 +78,7 @@ int main()
 }
 {% endhighlight%}
 Và màn hình console khi chạy sẽ xuất ra 2 dòng trong file của chúng ta.
-## Vấn đề với close()
+## Open và Close
 Ngoài cách truyền tên file trực tiếp vào, chúng ta có thể dùng hàm ``open()``
 {% highlight cpp %}
   	//ofstream outf("sample.txt");
