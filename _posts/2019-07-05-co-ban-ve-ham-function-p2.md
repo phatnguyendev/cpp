@@ -12,6 +12,7 @@ excerpt_separator: <!--more-->
 - Truyền tham trị
 - Truyền tham chiếu
 - Tham số mặc định
+
 ### Truyền tham trị
 Tham trị là loại tham số truyền theo kiểu bình thường, xét đoạn code sau
 {% highlight cpp %}
