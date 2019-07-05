@@ -157,3 +157,5 @@ Một lưu ý khác đó là khi bạn sử dụng prototype (xem ở bài trư�
     	return a + b;
     }  	
 {% endhighlight %}
+## Tổng kết
+Hãy take note phần này nhé, khi các bạn code về sau sẽ hữu dụng rất nhiều đó. Pie~
