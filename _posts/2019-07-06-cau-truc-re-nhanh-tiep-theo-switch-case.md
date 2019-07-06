@@ -30,7 +30,7 @@ Sau khi các bạn đã xem hình, hãy xem qua cấu trúc mã giả của nó:
   }
 {% endhighlight %}
 Rồi giờ là phần giải thích, lệnh switch-case sẽ đánh giá biểu thức đưa vào (**expression**) và thực thi  khối lệnh ở **case** tương ứng với giá trị của expression đó và nếu không tìm được giá trị case nào phù hợp, khối lệnh ở **default** sẽ được thực thi (tương tự như cách dùng điều kiện else if ở bài if-else statement). Mình sẽ giải thích rõ hơn ở từng câu chữ trong lệnh:
-- **<expression>**: đây là biểu thức cần đánh giá, thường sử dụng nhất là đưa vào 1 **biến (variable)** và giá trị của biến đó sẽ quyết định xem nên thực hiện khối lệnh ở case nào.
+- **\<expression\>**: đây là biểu thức cần đánh giá, thường sử dụng nhất là đưa vào 1 **biến (variable)** và giá trị của biến đó sẽ quyết định xem nên thực hiện khối lệnh ở case nào.
 - **case 1**: chương trình sẽ thực thi khối lệnh 1 khi **giá trị** của expression là 1. VD: bạn có 1 expression kiểu char và muốn khi nó là chữ 'a' thì thực hiện lệnh abc gì đó thì sẽ tạo case như sau: case 'a': <khối lệnh abc> break;
         
 	Lưu ý: giá trị của case phải là duy nhất (không thể có 2 case 1)
