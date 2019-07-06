@@ -21,3 +21,17 @@ Thư viện iostream là 1 trong những thư viện thuộc **thư viện chu�
 //EXAMPLE: thêm thư viện iostream vào
 #include <iostream>
 {% endhighlight %}
+Nhớ là phải viết đúng tên thư viện nhé 😄 Và tiếp theo mình sẽ giới thiệu một số chức năng hữu ích và rất hay dùng khi code trong thư viện này.
+
+### std::cout
+Đây là 1 biến được thư viện iostream định nghĩa trước rất quen thuộc khi lập trình C++ console, chức năng của nó là gửi dữ liệu đến console để in ra dạng text trên màn hình và là từ viết tắt của **character output**. Cách sử dụng đơn giản, ví dụ để in chữ "Have a nice day!" các bạn viết như sau:
+{% highlight cpp %}
+std::cout << "Have a nice day!\n";
+{% endhighlight %}
+<div class="alert alert-info">
+Lưu ý: nhớ phải có đủ phần khai báo thư viện iostream, hàm main() nữa thì mới chạy, nếu quên các bạn có thể xem lại bài 2 để coi cấu trúc của một chương trình C++ đơn giản nhé.
+</div>
+Ngoài xuất kiểu chuỗi kí tự như trên, std::cout còn cho phép bạn xuất hầu hết kiểu dữ liệu khác như các kiểu số học: int, float, double.. kí tự char và đối với kiểu bool mặc đính nó sẽ xuất ra 1(true) hoặc 0(false) kiểu int nếu các bạn muốn xuất ra chữ true hoặc false thì thêm dòng
+{% highlight cpp %}
+std::cout << boolalpha;
+{% endhighlight %}
