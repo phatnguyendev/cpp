@@ -105,7 +105,7 @@ Một cách sử dụng câu lệnh if else ngắn gọn chỉ với 1 dòng đ�
 Cách này tương tự như cấu trúc cơ bản nhưng ở phần lệnh thực thi bạn chỉ thưc thi được 1 lệnh duy nhất (cấu trúc cơ bản có thể thực thi nhiều lệnh trong khối lệnh).
 
 ## Bài toán thực tế
-Sau khi học xong thì hãy ôn tập kiến thức qua bài toán dưới đây nhé:
+Sau khi học xong thì hãy ôn tập kiến thức qua bài toán dưới đây nhé.
 **Bài toán trả lương:** một công ty trả lương cho nhân viên theo cách sau:
 - Nhân viên sơ cấp: lương += thưởng mức 1
 - Nhân viên trung cấp: lương += thưởng mức 2
