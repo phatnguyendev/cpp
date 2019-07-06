@@ -32,6 +32,11 @@ Mình sẽ giải thích qua một ví dụ cụ thể luôn để các bạn nh
 **Phân tích bài toán:**
 Nếu dùng câu lệnh **if...else** để giải quyết thì phải tạo ra **<điều kiện>** trong ngoặc của **if** trước, dự theo yêu cầu ta thấy được điều kiện ở đây là có hoặc không có thẻ thành viên nên chúng ta sẽ tạo 1 biến **bool** _isMember_ để làm điều kiện.
 <div class="alert alert-info">
-\<điều kiện\>: là một mệnh đề chỉ trả ra kết quả đúng hoặc sai, có thể dùng biến bool, toán tử so sánh: ==
+"điều kiện": là một mệnh đề chỉ trả ra kết quả đúng hoặc sai, có thể dùng biến bool, toán tử so sánh: ==
 Chúng ta có thể kết hợp nhiều mệnh đề với nhau thông qua toán tử && (và), || (hoặc).
 </div>
+Ta sẽ có: khi người dùng nhập vào 1: isMember = true và nhập vào 0: isMember = false
+Sau khi đã giải quyết điều kiện, chúng ta xét đến những gì cần làm khi điều kiện đúng hoặc sai, đó là những lệnh nằm trong khối lệnh if và khối lệnh else. Đối với bài toán trên ta nhận thấy:
+> if(isMember) giá vé = 45k else giá vé = 60k 
+
+
