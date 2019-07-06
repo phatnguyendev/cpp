@@ -69,3 +69,28 @@ int main()
   return 0;
 }
 {% endhighlight %}
+
+## Mở rộng
+### Điều kiện else if
+Ngoài cấu trúc cơ bản như trên chúng ta còn có cấu trúc sau:
+{% highlight cpp %}
+  if(<điều kiện 1>)
+  {
+      //khối lệnh 1
+      <thực hiện lệnh gì đó>;
+      <thực hiện thêm lệnh nữa>;
+      ...
+  }
+  else if(<điều kiện 2>)
+  {
+      //khối lệnh 2
+      <thực hiện lệnh 2>;
+      <thực hiện thêm lệnh 3>;
+  }
+  else 
+  {
+      //khối lệnh 3
+      <thực hiện lệnh nè>;
+      <thực hiện tiếp nữa nè>;
+  }
+{% endhighlight %}
