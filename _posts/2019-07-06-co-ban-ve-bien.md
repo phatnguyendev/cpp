@@ -19,9 +19,7 @@ Trong bài này, mình sẽ cùng các bạn đi tìm hiểu về kiểu dữ li
 <kieu_du_lieu> <ten_bien>; //định nghĩa 1 biến
 <kieu_du_lieu> <danh_sach_bien>; //định nghĩa nhiều biến
 {% endhighlight %}
-
-- Cú pháp khai báo và khởi tạo giá trị cho biến
-
+Cú pháp khai báo và khởi tạo giá trị cho biến
 {% highlight cpp %}
 <kieu_du_lieu> <ten_bien> = <gia_tri>; //khai báo và khởi tạo giá trị 1 biến
 {% endhighlight %}
@@ -47,4 +45,20 @@ int main()
   system("pause");
   return 0;
 }
+{% endhighlight %}
+Khi định nghĩa nhiều biến, có hai lỗi phổ biến mà các lập trình viên mới có xu hướng mắc phải (Không quan trọng lắm vì trình biên dịch sẽ phát hiện lỗi và yêu cầu bạn sửa chúng)
+→ **Lỗi đầu tiên** là:
+  {% highlight cpp %}
+int a, int b;  //Sai (compiler error)
+int a, b;  //corect
+{% endhighlight %}
+→ **Lỗi thứ hai** là đặt hai biến có kiểu dữ liệu khác nhau trên cùng một câu lệnh. Điều này không được phép, các biến có kiểu dữ liệu khác nhau phải được xác định trong hai câu lệnh riêng biệt. 
+   {% highlight cpp %}
+int a, double b;  //Sai (compiler error)
+
+int a; double b;  //Đúng (không nên dùng)
+
+//Đúng và nên dùng
+int a;
+double b;
 {% endhighlight %}
