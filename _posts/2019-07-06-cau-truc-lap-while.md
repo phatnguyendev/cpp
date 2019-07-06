@@ -48,3 +48,23 @@ Cùng xem kết quả chương trình:
 ![](https://3.bp.blogspot.com/-SBqzItebP9o/XHwBDNhHPtI/AAAAAAAAD8c/U1ZWtafCEqck44CrlzowjZzQwTyNMIYmgCLcBGAs/s1600/WHILE1.PNG)
   
 Ở ví dụ trên, khi biến ChuSo không còn thỏa điều kiện (ChuSo <  5) nữa thì vòng lặp while mới kết thúc. Nên ta thấy khi số nhập vào là 6, chương trình in ra dòng "Ket thuc.", tức là mệnh đề (ChuSo <  5) được xem xét là false, vòng lặp ngừng thực thi ngay sau đó.
+<div class="alert alert-info">
+Với vòng lặp while, ta không biết trước số lần lặp lại khối công việc. Ta chỉ biết nó sẽ ngừng thực thi khi nào biểu thức điều kiện trong while cho giá trị false.
+</div>
+## Vòng lặp vô hạn (Infinite loops)
+Mặt khác, nếu biểu thức điều kiện while luôn luôn đúng, vòng lặp while sẽ được thực thi mãi mãi. Đây được gọi là vòng lặp vô hạn. 
+Ví dụ:
+{% highlight cpp %}
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+    int count = 0;
+    while (count < 10) // dieu kien nay luon dung
+    {
+        cout << count << " "; // cau lenh nay se duoc lap mai mai
+ 	}
+    return 0; // cau lenh nay se ko duoc thuc thi. Chuong trinh khong ket thuc.
+}
+{% endhighlight %}
