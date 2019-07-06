@@ -96,3 +96,27 @@ Một chương trình có thể có biến toàn cục và biến cục bộ cù
 Dưới đây là hai bảng mô tả một số kiểu dữ liệu cơ bản trong C++, kích thước bộ nhớ nó dùng để lưu trữ giá trị trong bộ nhớ và khoảng giá trị mà kiểu dữ liệu đó có thể lưu trữ:
 ![](https://2.bp.blogspot.com/-ylUVrJfbiAU/XHgLYnxmxUI/AAAAAAAAD5U/U69d_Rk7rDwJmvSxxHR2YOqe2tv9SlSsACLcBGAs/s1600/KDL.PNG)
 ![](https://2.bp.blogspot.com/-Si86771FYhA/XHgP_LorHtI/AAAAAAAAD5s/e4uTtMRK3wAV7iISy6BHmONPJ2YQkBunACLcBGAs/s1600/KDL1.png)
+Kích cỡ của kiểu dữ liệu bên trên chỉ là kích thước nhỏ nhất có thể của kiểu dữ liệu đó. Thực tế thì kích thước này phụ thuộc vào từng Compiler và kiến trúc máy tính của bạn và bạn cũng không cần phải nhớ chi cho mệt . Nếu bạn muốn xác định kích thước của các kiểu dữ liệu trên máy tính của bạn, C++ cung cấp một toán tử có tên là sizeof(). Đây là toán tử cho phép nhận một kiểu hoặc một biến và trả về kích thước của nó. Bạn có thể biên dịch và chạy chương trình sau để biết kích thước các kiểu dữ liệu của máy tính bạn:
+{% highlight cpp %}
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+    cout << "bool:\t\t" << sizeof(bool) << " bytes" << endl;
+    cout << "char:\t\t" << sizeof(char) << " bytes" << endl;
+    cout << "wchar_t:\t" << sizeof(wchar_t) << " bytes" << endl;
+    cout << "char16_t:\t" << sizeof(char16_t) << " bytes" << endl; // C++11, may not be supported by your compiler
+    cout << "char32_t:\t" << sizeof(char32_t) << " bytes" << endl; // C++11, may not be supported by your compiler
+    cout << "short:\t\t" << sizeof(short) << " bytes" << endl;
+    cout << "int:\t\t" << sizeof(int) << " bytes" << endl;
+    cout << "long:\t\t" << sizeof(long) << " bytes" << endl;
+    cout << "long long:\t" << sizeof(long long) << " bytes" << endl; // C++11, may not be supported by your compiler
+    cout << "float:\t\t" << sizeof(float) << " bytes" << endl;
+    cout << "double:\t\t" << sizeof(double) << " bytes" << endl;
+    cout << "long double:\t" << sizeof(long double) << " bytes" << endl;
+  
+    system("pause") //giữ cửa sổ chương trình đang chạy hỗ trợ cho Visual Studio
+    return 0;
+}
+{% endhighlight %}
