@@ -87,3 +87,10 @@ int main()
   return 0;
 }
 {% endhighlight %}
+<div class="alert alert-info">
+Một chương trình có thể có biến toàn cục và biến cục bộ cùng tên nhau nhưng trong một hàm thì giá trị của biến cục bộ sẽ được ưu tiên.
+</div>
+## Kiểu dữ liệu
+  
+  **Kiểu dữ liệu** là thành phần bắt buộc khi khai báo biến. Dựa trên kiểu dữ liệu của một biến, hệ thống sẽ cấp phát bộ nhớ và giúp chương trình xác định giới hạn giá trị mà biến đó có thể lưu trữ.
+Dưới đây là hai bảng mô tả một số kiểu dữ liệu cơ bản trong C++, kích thước bộ nhớ nó dùng để lưu trữ giá trị trong bộ nhớ và khoảng giá trị mà kiểu dữ liệu đó có thể lưu trữ:
