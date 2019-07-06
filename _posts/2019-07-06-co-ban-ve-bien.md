@@ -56,9 +56,7 @@ int a, b;  //corect
 → **Lỗi thứ hai** là đặt hai biến có kiểu dữ liệu khác nhau trên cùng một câu lệnh. Điều này không được phép, các biến có kiểu dữ liệu khác nhau phải được xác định trong hai câu lệnh riêng biệt. 
    {% highlight cpp %}
 int a, double b;  //Sai (compiler error)
-
 int a; double b;  //Đúng (không nên dùng)
-
 //Đúng và nên dùng
 int a;
 double b;
