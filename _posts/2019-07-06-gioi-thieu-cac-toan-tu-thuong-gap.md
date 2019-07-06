@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Cài đặt visual studio 2015
+title: Giới thiệu các toán tử thường gặp trong C++
 categories: cpp
 img: image-4.png
 excerpt_separator: <!--more-->
