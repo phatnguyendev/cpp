@@ -73,3 +73,33 @@ cout <<"Dùng kí tự khi thêm trong text\n";
 <div class="alert alert-info">
 Nếu các bạn thấy bất tiện khi mỗi lần dùng đều phải ghi thêm std:: vào trước (chẳn hạn std::cout) thì hãy dùng đoạn code using namspace std trước hàm main() nhé, còn nó là gì thì ở bài sau các bạn sẽ được hiểu rõ hơn 😁
 </div>
+
+## Một số vấn đề về nhập xuất và cách giải quyết
+### Kiểm tra việc nhập vào sai kiểu giá trị
+Giả sử bạn muốn user chỉ nhập vào giá trị từ 1 đến 10, nếu nhập bất cứ kí tự gì khác ngoài số thì bắt nhập lại các bạn làm như sau:
+{% highlight cpp %}
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+    int number = 0;
+    do
+    {
+        std::cout << "Nhập số trong khoảng từ 1 đến 10: ";
+        std::cin >> number;
+ 
+        // if the user entered an invalid character
+        if (std::cin.fail())
+            std::cin.clear(); // reset any error flags
+ 
+        std::cin.ignore(32767, '\n'); // ignore any extra characters in the input buffer
+ 
+    } while (number < 1 || number > 10);
+  return 0;
+}
+{% endhighlight %}
+  
+## Tổng kết
+Vậy là chúng ta đã tìm hiểu qua 3 chức năng cơ bản có trong thư viện iostream thông qua **cin, cout** và **endl** ngoài ra còn có kí tự xuống dòng **'\n'**. Trong bài tiếp theo chúng ta sẽ tìm hiểu thêm một số thư viện rất hữu dụng khác có sẵn trong C++ và **namespace**, hẹn gặp lại các bạn ở các bài tiếp theo.
+Có thắc mắc về bài học các bạn để lại bình luận bên dưới để được giải đáp ngay và đừng quên theo dõi page Tui Tự Code để cập nhật các bài viết mới nhé. Pie~
