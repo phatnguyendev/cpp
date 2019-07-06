@@ -56,3 +56,15 @@ Ngoài ra còn có các loại so sánh: **>, <, >=, <=** với công dụng tư
 **Logic NOT (!):** trả về giá trị đối lập với giá trị hiện thời chẳng hạn !true = false và !false = true
 - ExNOT1: !(1<2) trả về true (vì (1<2) trả về false)
 - ExNOT2: !(3>1) trả về false (vì (3>1) trả về true)
+
+## Toán tử gán
+Được dùng để gán giá trị vào biến gồm có: =, +=, -=, *=, /=
+
+Trên đây là 6 loại toán tử thường gặp nhất trong C++, ngoài ra trong khi lập trình các bạn có thể gặp thêm nhiều loại toán tử khác như **sizeof(), con trỏ (), [index], toán tử phạm vi (::)...**
+
+**Độ ưu tiên toán tử**
+Các toán tử dùng trong 1 biểu thức sẽ có độ ưu tiên khác nhau để việc tính toán giá trị theo thứ tự nhất định như khi đi học chúng ta thường nhẩm "nhân chia trước cộng trừ sau" vậy đó. Để xem các toán tử trong C++ có độ ưu tiên như thế nào, các bạn truy cập vào link [C++ Operator Precedence (English)](http://www.enseignement.polytechnique.fr/informatique/INF478/docs/Cpp/en/cpp/language/operator_precedence.html)
+
+## Tổng kết
+Chúng ta đã cùng nhau tìm hiểu về các loại toán tử thường hay gặp nhất trong C++, các bạn hãy truy cập vào Series hướng dẫn lập trình C++ by TuiTuCode để học tiếp những bài thú vị khác nhé.
+Có thắc mắc về bài học các bạn để lại bình luận bên dưới để được giải đáp ngay và đừng quên theo dõi page Tui Tự Code để cập nhật các bài viết mới nhé. Pie~
