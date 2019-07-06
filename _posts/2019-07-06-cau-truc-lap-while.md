@@ -7,6 +7,7 @@ img: image-4.png
 excerpt_separator: <!--more-->
 ---
 Trong C++, 2 cấu trúc điều khiển tiêu biểu và hay sử dụng nhất là cấu trúc rẽ nhánh mà mình đã tìm hiểu ở các bài trước và cấu trúc lặp. Để bắt tay vào tìm hiểu cấu trúc lặp, chúng ta sẽ đi tìm hiểu về **cấu trúc WHILE** đầu tiên vì nó là dạng cấu trúc đơn giản nhất trong cấu trúc lặp mà C++ cung cấp và nó có định nghĩa rất giống với câu lệnh IF.
+<!--more-->
 <div class="alert alert-info">
 Cấu trúc lặp (Loops) sẽ làm cho chương trình thực hiện lặp đi lặp lại một chuỗi các câu lệnh cho đến khi không còn thỏa mãn một điều kiện nào đó.
 </div>
