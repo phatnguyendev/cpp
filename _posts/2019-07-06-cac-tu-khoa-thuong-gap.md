@@ -86,7 +86,7 @@ Khi chạy chương trình chúng ta nhận được kết quả tương tự
 Ở mức độ cơ bản, chúng ta sử dụng cách dùng goto-lablel hoặc while-break đều không có quá nhiều khác biệt, khi đụng đến bài tập các bạn nhớ được ít nhất 1 cách là OK!
 
 <div class="alert alert-info">
-Cần phân biệt tác dụng của break và return: break giúp thoát khỏi vòng lặp hiện tại và thực thi câu lệnh đầu tiên phía dưới vòng lặp còn return sẽ thoát khỏi toàn bộ chương trình của chúng ta.
+Cần phân biệt tác dụng của break và return: break giúp thoát khỏi vòng lặp hiện tại và thực thi câu lệnh đầu tiên phía dưới vòng lặp còn return sẽ thoát khỏi hàm thực thi nó.
 </div>
 
 ## Continue statement
