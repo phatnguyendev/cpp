@@ -53,3 +53,10 @@ int main()
 {% endhighlight %}
 Hãy xem kết quả của đoạn chương trình trên: 
 ![](https://1.bp.blogspot.com/-LzEOh2H5jvI/XH-Ia8BzwkI/AAAAAAAAD-U/W6Z-sIBJAMQmVE-ONYDyAQHpkaHDRjb0wCLcBGAs/s1600/DO2.PNG)
+  
+Một điều thú vị về ví dụ trên là biến **choose** phải được khai báo bên ngoài khối **do**. Tại sao lại như vậy? Nếu biến **choose** được khai báo bên trong khối **do**, nó sẽ bị hủy khi khối do kết thúc, điều này xảy ra trước khi điều kiện while được thực thi. Nhưng chúng ta cần biến **choose** để kiểm tra điều kiện trong **while**. Do đó, biến **choose** phải được khai báo bên ngoài khối **do**.
+
+## Tổng kết
+
+Chúng ta đã cùng nhau tìm hiểu về **vòng lặp DO - WHILE...**Hãy lưu ý là vòng lặp do - while sẽ thực thi câu lệnh trước rồi mới kiểm tra điều kiện, còn lại thì nó tương tự như vòng lặp while. Các bạn hãy luyện tập code lại các ví dụ trong bài để nắm và hiểu rõ hơn về cách hoạt động của nó nhé.😉
+Các bạn hãy truy cập vào Series hướng dẫn lập trình C++ by TuiTuCode để học tiếp những bài thú vị khác nữa. Nếu có thắc mắc về bài học các bạn để lại bình luận bên dưới để được giải đáp ngay và đừng quên theo dõi page Tui Tự Code để cập nhật các bài viết mới. Pie~😘
