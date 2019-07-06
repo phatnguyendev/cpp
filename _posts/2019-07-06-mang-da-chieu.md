@@ -17,4 +17,18 @@ Nhìn cũng khá dễ hiểu đúng không? Ở mảng bình thường chúng ta
 - 3: đây là số cột (column) của chúng ta, ở đây ta có mỗi hàng sẽ có 3 cột.
 
 Các bạn có thể hình dung mảng 2 chiều như một ma trận tương tự như bàn cờ vua vậy đó và ma trận ở ví dụ trên là ma trận 2x3 có thể được mô tả như hình sau:
+![](https://4.bp.blogspot.com/-o7xkJGrY2bc/XH-Sa4TnMzI/AAAAAAAAAhc/7wHgqcF8GcAgUq3xsN4KB5ZPmLQMczp_QCK4BGAYYCw/s1600/bai_5.2.PNG)
+<div class="alert alert-info">
+Luôn nhớ index của chúng ta đều bắt đầu từ 0 nhé.
+</div>
 
+Trong lập trình ma trận đa chiều hay sử dụng nhất chính là ma trận 2 chiều và 2 index tượng trưng cho hàng (row) và cột (col) lần lượt là i và j.
+
+Một số cách khai báo thông dụng của mảng đa chiều thường gặp
+{% highlight cpp %}
+int darr[2][3] =
+{
+ {1, 2, 3}, // giá trị 3 cột hàng 1
+ {4, 5, 6} // giá trị 3 cột hàng 2
+}
+{% endhighlight %}
