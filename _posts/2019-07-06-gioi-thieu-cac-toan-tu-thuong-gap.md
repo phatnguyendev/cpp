@@ -59,6 +59,7 @@ Ngoài ra còn có các loại so sánh: **>, <, >=, <=** với công dụng tư
 **Logic OR (||):** trả về giá trị true nếu 1 trong 2 điều kiện thỏa mãn, ngược lại nếu cả 2 điều kiện đều không thỏa mãn trả về false.
 - ExOR1: (5<1) || (3 >2) trả về giá trị true vì vế phải đúng.
 - ExOR2: (1>2) || (2>2) trả về giá trị false vì cả 2 vế đều sai.
+
 ## Toán tử gán
 Được dùng để gán giá trị vào biến gồm có: =, +=, -=, *=, /=
 
