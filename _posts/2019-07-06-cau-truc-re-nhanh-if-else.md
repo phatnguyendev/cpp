@@ -32,7 +32,7 @@ Mình sẽ giải thích qua một ví dụ cụ thể luôn để các bạn nh
 
 **Phân tích bài toán:**
 
-Nếu dùng câu lệnh **if...else** để giải quyết thì phải tạo ra "điều kiện" trong ngoặc của **if** trước, dự theo yêu cầu ta thấy được điều kiện ở đây là có hoặc không có thẻ thành viên nên chúng ta sẽ tạo 1 biến **bool** _isMember_ để làm điều kiện.
+Nếu dùng câu lệnh **if...else** để giải quyết thì phải tạo ra <điều kiện> trong ngoặc của **if** trước, dự theo yêu cầu ta thấy được điều kiện ở đây là có hoặc không có thẻ thành viên nên chúng ta sẽ tạo 1 biến **bool** _isMember_ để làm điều kiện.
 <div class="alert alert-info">
 "điều kiện": là một mệnh đề chỉ trả ra kết quả đúng hoặc sai, có thể dùng biến bool, toán tử so sánh: ==
 Chúng ta có thể kết hợp nhiều mệnh đề với nhau thông qua toán tử && (và), || (hoặc).
