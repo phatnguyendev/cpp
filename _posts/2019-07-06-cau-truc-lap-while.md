@@ -62,9 +62,7 @@ int main()
 {
     int count = 0;
     while (count < 10) // dieu kien nay luon dung
-    {
         cout << count << " "; // cau lenh nay se duoc lap mai mai
- 	}
     return 0; // cau lenh nay se ko duoc thuc thi. Chuong trinh khong ket thuc.
 }
 {% endhighlight %}
