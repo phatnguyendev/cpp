@@ -52,3 +52,21 @@ int main()
   return 0;
 }
 {% endhighlight %}
+Các bạn thấy sự khác biệt giữa 2 vòng lặp chứ 😁 với vòng lặp for chúng ta có được code đơn giản và dễ nhìn nữa và chắc qua ví dụ này cùng với kiến thức ở bài vòng lặp while thì các bạn đã hiểu được cách dùng vòng lặp for rồi đúng không nào.
+## Vòng lặp đôi
+Vòng lặp đôi là việc bạn sử dụng nhiều hơn 1 biến lặp để quản lí vòng lặp này, mình sẽ viết 1 chương trình in 2 dãy số: dãy 1 là từ 1 đến 10, dãy 2 là từ 10 đến 20,  các bạn xem bên dưới:
+{% highlight cpp %}
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  for(int i=1,j=10;i<=10,j<=20;i++;j++)
+  {
+    cout << i <<"\t"<< j << endl;
+  }
+  return 0;
+}
+{% endhighlight %}
+Và chúng ta có được kết quả
+![](https://3.bp.blogspot.com/-WBbll8HaEZM/XHzltnUGqmI/AAAAAAAAAfs/zv_ATDX-z3UFOGToXzKF4snV1--lqUMOwCK4BGAYYCw/s640/bai_3.5.2.PNG)
