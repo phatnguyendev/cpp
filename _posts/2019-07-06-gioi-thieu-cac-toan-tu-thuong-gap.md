@@ -13,6 +13,7 @@ Giống như chúng ta viết trên giấy, chẳng hạn bạn muốn có số 
 ## Toán tử tăng giảm
 Đây là loại toán tử khá đặc biệt, các bạn hãy xem qua ví dụ sau:
 ![](https://2.bp.blogspot.com/-sPF9w7-uiwg/XHgSDeEq5JI/AAAAAAAAAcw/tYW9qnRGfB0FfD_K832alVDkxaEqvM3eQCK4BGAYYCw/s1600/bai5_1.png)
+
 Các bạn có thấy 3 dòng Input trong phần execution không? Nhìn có vẻ lạ so với code nhỉ (mà nhìn cả toán tử cũng lạ nữa 😂) OK mình sẽ giải thích cả 3 dòng cout và kết quả từng dòng cho các bạn hiểu:
 
 - x++: (postfix decrement) ngay lúc thực thi dòng lệnh có sử dụng toán tử này, giá trị của biến x vẫn là 5 và sau khi xuống dòng lệnh tiếp theo giá trị của x sẽ được tăng lên 1 đơn vị (tức x= 6).
