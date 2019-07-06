@@ -85,3 +85,6 @@ cin.getline(cstring, 20);
 ``strcmp()`` - So sánh hai chuỗi (trả về 0 nếu bằng nhau).
   
 ``strncmp()`` - So sánh hai chuỗi với một số ký tự cụ thể (trả về 0 nếu bằng nhau).
+## Tổng kết
+Chúng ta đã cùng nhau tìm hiểu về mảng kí tự (C-style strings) trong C++, các bạn hãy truy cập vào Series hướng dẫn lập trình C++ by TuiTuCode để học tiếp những bài thú vị khác nhé.
+Có thắc mắc về bài học các bạn để lại bình luận bên dưới để được giải đáp ngay và đừng quên theo dõi page [Tui Tự Code](https://www.facebook.com/shareAboutIT) để cập nhật các bài viết mới nhé. Pie~
