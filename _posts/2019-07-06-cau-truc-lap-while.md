@@ -112,3 +112,20 @@ Cách tốt nhất là sử dụng số nguyên có dấu (signed int) cho các 
 ## Vòng lặp lồng nhau (Nested loops)
 Tương tự như các cấu trúc khác, chúng ta có thể đặt các vòng lặp while bên trong các vòng lặp while khác. Xem ví dụ để hình dung rõ hơn:
 ![](https://4.bp.blogspot.com/-WYg09PyVFGQ/XH4h8BCZmSI/AAAAAAAAD9M/CaSystmU2eMl09FJ50Mn-wWPxKJuPzCQACLcBGAs/s1600/WHILE2.PNG)
+<div class="alert alert-info">
+Lưu ý: Bởi vì thân vòng lặp (WHILE/DO-WHILE/FOR) thường là một khối và bởi vì khối đó bắt đầu và kết thúc với mỗi lần lặp nên bất kỳ biến nào được khai báo bên trong thân vòng lặp đều được tạo và sau đó bị hủy với mỗi lần lặp.
+</div>
+## Bài tập:
+1. Thay đổi ví dụ Nested loops để in ra kiểu dưới đây:
+{% highlight cpp %}
+5 4 3 2 1
+4 3 2 1
+3 2 1
+2 1
+1
+{% endhighlight %}
+2. Tính tổng các số chẵn từ 0 đến n (với n nhập từ bàn phím) và in kết quả ra màn hình. 
+
+## Tổng kết
+Chúng ta đã cùng nhau tìm hiểu về **vòng lặp WHILE**...Các bạn hãy luyện tập code lại các ví dụ trong bài để nắm và hiểu rõ hơn về cách hoạt động của nó nhé.😉
+Các bạn hãy truy cập vào Series hướng dẫn lập trình C++ by TuiTuCode để học tiếp những bài thú vị khác nữa. Nếu có thắc mắc về bài học các bạn để lại bình luận bên dưới để được giải đáp ngay và đừng quên theo dõi page Tui Tự Code để cập nhật các bài viết mới. Pie~😘
