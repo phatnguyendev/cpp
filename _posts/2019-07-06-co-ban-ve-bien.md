@@ -158,7 +158,7 @@ Chúng ta sẽ hay gặp trường hợp này trong lập trình và thường x
 ![](https://4.bp.blogspot.com/-SdTA_OjIFic/XHkRqGrkiYI/AAAAAAAAD6k/R34ai_nqSlEgTQJqUd0ckr7sPmN9fhoPwCLcBGAs/s1600/KDL3.PNG)
 
   <div class="alert alert-info">
-C++ mặc định độ chính xác sau dấy phẩy là 6 chữ số, nhưng bạn có thể thay đổi độ chính xác này bằng cách sử dụng hàm **setprecision()** thuộc thư viện <iomanip>.
+C++ mặc định độ chính xác sau dấy phẩy là 6 chữ số, nhưng bạn có thể thay đổi độ chính xác này bằng cách sử dụng hàm **setprecision()** thuộc thư viện **iomanip**.
 </div>
   
 ## Hằng (Constant)
