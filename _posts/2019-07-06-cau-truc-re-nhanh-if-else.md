@@ -12,7 +12,7 @@ Một trong những cấu trúc điều khiển đơn giản và phổ biến nh
 ## Cấu trúc cơ bản
 Dưới đây là cấu trúc cơ bản nhất của cặp lệnh **if...else**:
 {% highlight cpp %}
-if(<điều kiện>)
+  if(<điều kiện>)
   {
       //khối lệnh if
       <thực hiện lệnh gì đó>;
@@ -41,4 +41,7 @@ Ta sẽ có: khi người dùng nhập vào 1: isMember = true và nhập vào 0
 Sau khi đã giải quyết điều kiện, chúng ta xét đến những gì cần làm khi điều kiện đúng hoặc sai, đó là những lệnh nằm trong khối lệnh if và khối lệnh else. Đối với bài toán trên ta nhận thấy:
 > if(isMember) giá vé = 45k else giá vé = 60k 
 
+vậy chúng ta chỉ cần tạo biến giá vé để lưu trị giá là xong. OK vậy là đã giải quyết xong bài toán của chúng ta. Dưới đây là code toàn bộ chương trình:
+{% highlight cpp %}
 
+{% endhighlight %}
