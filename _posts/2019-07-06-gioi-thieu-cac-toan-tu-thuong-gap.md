@@ -49,14 +49,13 @@ Ngoài ra còn có các loại so sánh: **>, <, >=, <=** với công dụng tư
 - ExAND1: (5>3) && (4<5) trả về giá trị true vì cả 2 vế đều đúng.
 - ExAND2: (3>4) && (5>4) trả về giá trị false vì điều kiện bên trái sai.
 
-**Logic OR (||):** trả về giá trị true nếu 1 trong 2 điều kiện thỏa mãn, ngược lại nếu cả 2 điều kiện đều không thỏa mãn trả về false.
-- ExOR1: (5<1) || (3 >2) trả về giá trị true vì vế phải đúng.
-- ExOR2: (1>2) || (2>2) trả về giá trị false vì cả 2 vế đều sai.
-
 **Logic NOT (!):** trả về giá trị đối lập với giá trị hiện thời chẳng hạn !true = false và !false = true
 - ExNOT1: !(1<2) trả về true (vì (1<2) trả về false)
 - ExNOT2: !(3>1) trả về false (vì (3>1) trả về true)
 
+**Logic OR (||):** trả về giá trị true nếu 1 trong 2 điều kiện thỏa mãn, ngược lại nếu cả 2 điều kiện đều không thỏa mãn trả về false.
+- ExOR1: (5<1) || (3 >2) trả về giá trị true vì vế phải đúng.
+- ExOR2: (1>2) || (2>2) trả về giá trị false vì cả 2 vế đều sai.
 ## Toán tử gán
 Được dùng để gán giá trị vào biến gồm có: =, +=, -=, *=, /=
 
