@@ -121,10 +121,12 @@ Cho nhân viên nhập vào cấp độ (sơ - trung - siêu cấp) và loại v
 - Nếu có thẻ thành viên:
         
     ⇨ Tháng 2: giảm giá 10%
+        
     ⇨ Các tháng còn lại: giảm 20%
 - Không có thẻ thành viên:
         
     ⇨ Giá gốc
+        
     ⇨ Nếu đăng kí thành viên: giảm 50% (một lần duy nhất khi đăng kí)
 Giá gốc mỗi phần cơm là 20k. Hãy xác nhận thành viên và tính tiền giá cơm cho người dùng.
 
