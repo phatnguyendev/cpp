@@ -19,7 +19,8 @@ Trong bài này, mình sẽ cùng các bạn đi tìm hiểu về kiểu dữ li
 <kieu_du_lieu> <ten_bien>; //định nghĩa 1 biến
 <kieu_du_lieu> <danh_sach_bien>; //định nghĩa nhiều biến
 {% endhighlight %}
-Cú pháp khai báo và khởi tạo giá trị cho biến
+- Cú pháp khai báo và khởi tạo giá trị cho biến
+
 {% highlight cpp %}
 <kieu_du_lieu> <ten_bien> = <gia_tri>; //khai báo và khởi tạo giá trị 1 biến
 {% endhighlight %}
