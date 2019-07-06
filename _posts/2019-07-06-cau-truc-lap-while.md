@@ -106,7 +106,6 @@ int main()
   return 0;  
 }
 {% endhighlight %}
-                             
 <div class="alert alert-info">
 Cách tốt nhất là sử dụng số nguyên có dấu (signed int) cho các biến vòng lặp. Sử dụng số nguyên không dấu (unsigned int) có thể dẫn đến các vấn đề không mong muốn.
 </div>
