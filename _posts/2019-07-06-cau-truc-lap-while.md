@@ -109,3 +109,6 @@ int main()
 <div class="alert alert-info">
 Cách tốt nhất là sử dụng số nguyên có dấu (signed int) cho các biến vòng lặp. Sử dụng số nguyên không dấu (unsigned int) có thể dẫn đến các vấn đề không mong muốn.
 </div>
+## Vòng lặp lồng nhau (Nested loops)
+Tương tự như các cấu trúc khác, chúng ta có thể đặt các vòng lặp while bên trong các vòng lặp while khác. Xem ví dụ để hình dung rõ hơn:
+![](https://4.bp.blogspot.com/-WYg09PyVFGQ/XH4h8BCZmSI/AAAAAAAAD9M/CaSystmU2eMl09FJ50Mn-wWPxKJuPzCQACLcBGAs/s1600/WHILE2.PNG)
