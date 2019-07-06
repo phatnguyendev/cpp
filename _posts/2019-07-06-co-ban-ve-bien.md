@@ -159,6 +159,7 @@ Chúng ta sẽ hay gặp trường hợp này trong lập trình và thường x
 <div class="alert alert-info">
 C++ mặc định độ chính xác sau dấy phẩy là 6 chữ số, nhưng bạn có thể thay đổi độ chính xác này bằng cách sử dụng hàm **setprecision()** thuộc thư viện <iomanip>
 </div>
+  
 ![](https://4.bp.blogspot.com/-3e2jPXNmLWM/XHkUUE2MU4I/AAAAAAAAD68/PdyTfE3wyYUuY-SaiDs1xYd7G8e3ykrBgCEwYBhgL/s1600/KDL4.PNG)
 ## Hằng (Constant)
 Đôi khi lập trình C++, có một số giá trị ta chỉ muốn khởi tạo một lần duy nhất và giữ nguyên giá trị đó trong suốt thời gian chương trình hoạt động như PI = 3,14....Những giá trị đó gọi là hằng số. Hằng số tương tự như biến chỉ khác ở chỗ giá trị của chúng không thể thay đổi sau khi định nghĩa. Có 2 cách định nghĩa hằng trong C++:
