@@ -17,7 +17,7 @@
             <ul class="nav navbar-nav navbar-right">
         <li><a href="{{site.baseurl}}/about/">About</a></li>
         <li><a href="{{site.baseurl}}/contact/">Contact</a></li>
-        <li><a id="mode" href="#" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'light') === 'light' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')">Dark mode</a></li>
+        <li><a id="mode" href="#" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'light') === 'light' ? 'dark' : 'light'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')">Dark mode</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
