@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 Trong bài này chúng ta sẽ học về các toán tử thường gặp trong lập trình C++ ngoài các toán tử tính toán số học bình thường mình sẽ cung cấp thêm cho các bạn nhiều nhất có thể về những toán tử bạn có thể và dễ gặp trong quá trình code để bạn không phải thắc mắc tốn time khi gặp phải nhá. Nào bắt đầu thôi
 <!--more-->
