@@ -52,6 +52,7 @@ int main()
 }
 {% endhighlight %}
 Hãy xem kết quả của đoạn chương trình trên: 
+  
 ![](https://1.bp.blogspot.com/-LzEOh2H5jvI/XH-Ia8BzwkI/AAAAAAAAD-U/W6Z-sIBJAMQmVE-ONYDyAQHpkaHDRjb0wCLcBGAs/s1600/DO2.PNG)
   
 Một điều thú vị về ví dụ trên là biến **choose** phải được khai báo bên ngoài khối **do**. Tại sao lại như vậy? Nếu biến **choose** được khai báo bên trong khối **do**, nó sẽ bị hủy khi khối do kết thúc, điều này xảy ra trước khi điều kiện while được thực thi. Nhưng chúng ta cần biến **choose** để kiểm tra điều kiện trong **while**. Do đó, biến **choose** phải được khai báo bên ngoài khối **do**.
