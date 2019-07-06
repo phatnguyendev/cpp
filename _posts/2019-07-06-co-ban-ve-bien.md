@@ -242,7 +242,7 @@ Dong 2
 - Trong một khối lệnh {} không được có 2 biến trùng nhau.
   
 ## Tổng kết
-Chúng ta đã cùng nhau tìm hiểu về **định nghĩa, chức năng, cú pháp của biến, kiểu dữ liệu, hằng số, cách ép kiểu, cách comment và các quy ước đặt tên là như thế nào...**Các bạn hãy luyện tập code lại các ví dụ trong bài để nắm và hiểu rõ hơn về cách hoạt động của nó nhé.😉
+Chúng ta đã cùng nhau tìm hiểu về **_định nghĩa, chức năng, cú pháp của biến, kiểu dữ liệu, hằng số, cách ép kiểu, cách comment và các quy ước đặt tên là như thế nào..._**Các bạn hãy luyện tập code lại các ví dụ trong bài để nắm và hiểu rõ hơn về cách hoạt động của nó nhé.😉
   
 **Bài tập nho nhỏ:**
 Tạo hai biến và khởi tạo giá trị cho nó theo ý của bạn, sau đó in ra kết quả các phép toán +, -, *, / của hai biến đó ra màn hình.
