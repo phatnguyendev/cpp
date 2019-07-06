@@ -157,3 +157,87 @@ Chúng ta sẽ hay gặp trường hợp này trong lập trình và thường x
 C++ mặc định độ chính xác sau dấy phẩy là 6 chữ số, nhưng bạn có thể thay đổi độ chính xác này bằng cách sử dụng hàm **setprecision()** thuộc thư viện <iomanip>
 </div>
 ![](https://4.bp.blogspot.com/-3e2jPXNmLWM/XHkUUE2MU4I/AAAAAAAAD68/PdyTfE3wyYUuY-SaiDs1xYd7G8e3ykrBgCEwYBhgL/s1600/KDL4.PNG)
+## Hằng (Constant)
+Đôi khi lập trình C++, có một số giá trị ta chỉ muốn khởi tạo một lần duy nhất và giữ nguyên giá trị đó trong suốt thời gian chương trình hoạt động như PI = 3,14....Những giá trị đó gọi là hằng số. Hằng số tương tự như biến chỉ khác ở chỗ giá trị của chúng không thể thay đổi sau khi định nghĩa. Có 2 cách định nghĩa hằng trong C++:
+- Sử dụng từ khóa const:
+  
+	Cú pháp:
+  {% highlight cpp %}
+const <kieu_du_lieu> <ten_bien> = <gia_tri>;
+{% endhighlight %}
+  <div class="alert alert-info">
+* Lưu ý: Bạn phải khởi tạo giá trị cho hằng số ngay khi định nghĩa nếu không biên dịch chương trình sẽ bị lỗi.
+</div>
+  Ví dụ:
+  {% highlight cpp %}
+#include <iostream>
+using namespace std;
+
+const int CHIEUDAI = 5;
+const int CHIEURONG  = 3;
+const char NEW_LINE = '\n';
+
+int main()
+{
+  int dientich = CHIEUDAI * CHIEURONG; 
+  cout << dientich << NEW_LINE;
+  
+  system("pause");
+  return 0;
+}
+{% endhighlight %}
+- Sử dụng bộ tiền xử lý #define:
+  
+	Cú pháp:
+  {% highlight cpp %}
+#define <ten_bien> <gia_tri>;
+{% endhighlight %}
+  Ví dụ:
+  {% highlight cpp %}
+#include <iostream>
+using namespace std;
+
+#define CHIEUDAI  5;
+#define CHIEURONG   3;
+#define NEW_LINE  '\n';
+
+int main()
+{
+  int dientich = CHIEUDAI * CHIEURONG; 
+  cout << dientich << NEW_LINE;
+  
+  system("pause");
+  return 0;
+}
+{% endhighlight %}
+## Comment
+Khi lập trình, hầu hết các lập trình viên đều sử dụng comment để ghi chú lại các lời diễn giải hoặc điều mình muốn nói về đoạn code đó. Điều này giúp mình có thể hiểu được code của chính mình vào ngày hôm sau nhìn lại hoặc cũng giúp bất kỳ ai đọc source code dễ dàng hơn (vì càng sau này thì tần suất làm nhóm càng cao nên việc comment là cần thiết cho các đoạn code phức tạp).
+Có 2 kiểu chủ yếu để comment:
+- Một dòng comment sẽ đứng sau hai dấu //.
+  
+   {% highlight cpp %}
+cout<<"Tui tu code"<<end; //in ra man hinh dong chu Tui tu code
+{% endhighlight %}
+- Một đoạn comment sẽ nằm trong cặp dấu /* */
+  
+   {% highlight cpp %}
+/* Day la mot doan comment
+Dong 1
+Dong 2
+...
+*/
+{% endhighlight %}
+## Qui ước đặt tên
+→ Hằng số nên được đặt bằng chữ in hoa. Ví dụ: PI, CHIEUDAI, CHIEURONG...
+→ Biến:
+- Tên biến không được bắt đầu bằng ký tự số.
+- Nên viết hoa từng chữ cái đầu dòng. Ví dụ: int SoLuong, int HoTen...
+- Nên đặt tên biến sao cho ngắn gọn nhưng thể hiện được ý nghĩa của biến
+- Có thể sử dụng ký tự gạch chân khi đặt tên biến. Ví dụ: int So_Luong, int Ho_Ten...
+- C++ không phân biệt chữ hoa và chữ thường nên hai biến sau int count và int Count là hai biến khác nhau.
+- Trong một khối lệnh {} không được có 2 biến trùng nhau.
+## Tổng kết
+Chúng ta đã cùng nhau tìm hiểu về định nghĩa, chức năng, cú pháp của biến, kiểu dữ liệu, hằng số, cách ép kiểu, cách comment và các quy ước đặt tên là như thế nào...Các bạn hãy luyện tập code lại các ví dụ trong bài để nắm và hiểu rõ hơn về cách hoạt động của nó nhé.😉
+Bài tập nho nhỏ:
+Tạo hai biến và khởi tạo giá trị cho nó theo ý của bạn, sau đó in ra kết quả các phép toán +, -, *, / của hai biến đó ra màn hình.
+Các bạn hãy truy cập vào Series hướng dẫn lập trình C++ by TuiTuCode để học tiếp những bài thú vị khác nữa. Nếu có thắc mắc về bài học các bạn để lại bình luận bên dưới để được giải đáp ngay và đừng quên theo dõi page Tui Tự Code để cập nhật các bài viết mới. Pie~😘
