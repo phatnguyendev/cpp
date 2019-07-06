@@ -7,9 +7,9 @@
             {% endif %}
         </div>
             
-        
+        {% if page.layout == 'post' %}
         <div class="mt10 recent">
-            <h4>Recent articles</h4>        
+            <h4>Dad</h4>        
              <ul>
                 {% for post in site.related_posts limit:3 %}
 
@@ -20,11 +20,11 @@
                 {% endfor %}
               </ul>
         </div>
-        {% if site.fb-like-box %}
+        {% endif %}
         <div class="mt10">
+           <h4>Find us on facebook</h4>  
            <div class="fb-page" data-href="https://www.facebook.com/shareAboutIT" data-width="400" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/shareAboutIT" class="fb-xfbml-parse-ignore"><a href="{{site.fb-page-url}}">{{site.fb-page-title}}</a></blockquote></div>
         </div>
-        {% endif %}
         <br>
 
 </div>
