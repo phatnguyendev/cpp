@@ -6,7 +6,7 @@ categories: cpp
 img: image-2.png
 excerpt_separator: <!--more-->
 ---
-Hi~! Chúng ta đã cùng học qua về mảng trong những bài trước, bài này chúng ta sẽ tìm hiểu về loại mảng hỗ trợ cho chuỗi kí tự đó là C-style strings. Nào bắt đầu thôi!
+Hi~! Chúng ta đã cùng học qua về mảng trong những bài trước, bài này chúng ta sẽ tìm hiểu về loại mảng hỗ trợ cho chuỗi kí tự đó là C-style strings. Nào bắt đầu thôi!<!--more-->
 ## C-style trings là gì?
 Là một kiểu mảng chứa các kí tự và được kết thúc bằng '\0' (kí tự kết thúc hay null terminator, có mã ascii là 0). Để định nghĩa một c-style string chúng ta thực hiện khai báo sau:
 {% highlight cpp %}
