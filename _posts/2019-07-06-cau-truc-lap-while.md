@@ -66,3 +66,16 @@ int main()
     return 0; // cau lenh nay se ko duoc thuc thi. Chuong trinh khong ket thuc.
 }
 {% endhighlight %}
+Chúng ta cũng có thể cố ý khai báo một vòng lặp vô hạn như sau:
+{% highlight cpp %}
+while (true) //dieu kien luon dung
+{
+    statements; //cac cau lenh
+}
+{% endhighlight %}
+→ Cách duy nhất để thoát khỏi một vòng lặp vô hạn là thông qua câu lệnh return, câu lệnh break, câu lệnh exit, câu lệnh goto, một ngoại lệ được ném hoặc người dùng dừng chương trình. 
+
+## Loop variables
+Thông thường, khi ta muốn vòng lặp thực hiện công việc một số lần nhất định, ta thường sử dụng một biến vòng lặp (loop variables), thường được gọi là bộ đếm. Biến vòng lặp là biến số nguyên được khai báo cho mục đích duy nhất là đếm số lần vòng lặp đã thực hiện. 
+Các biến vòng lặp thường được đặt tên đơn giản, chẳng hạn như i, j hoặc k. Một ý tưởng tốt hơn nữa là sử dụng tên biến "thực", chẳng hạn như đếm/count hoặc tên gợi nhớ chi tiết hơn về những gì bạn đang đếm.
+Ví dụ: Tính tổng các số từ 1 đến n với n nhập từ bàn phím.
