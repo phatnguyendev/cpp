@@ -233,6 +233,7 @@ Dong 2
 {% endhighlight %}
 ## Qui ước đặt tên
 → Hằng số nên được đặt bằng chữ in hoa. Ví dụ: PI, CHIEUDAI, CHIEURONG...
+  
 → Biến:
 - Tên biến không được bắt đầu bằng ký tự số.
 - Nên viết hoa từng chữ cái đầu dòng. Ví dụ: int SoLuong, int HoTen...
