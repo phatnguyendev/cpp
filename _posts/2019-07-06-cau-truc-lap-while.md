@@ -79,3 +79,30 @@ while (true) //dieu kien luon dung
 Thông thường, khi ta muốn vòng lặp thực hiện công việc một số lần nhất định, ta thường sử dụng một biến vòng lặp (loop variables), thường được gọi là bộ đếm. Biến vòng lặp là biến số nguyên được khai báo cho mục đích duy nhất là đếm số lần vòng lặp đã thực hiện. 
 Các biến vòng lặp thường được đặt tên đơn giản, chẳng hạn như i, j hoặc k. Một ý tưởng tốt hơn nữa là sử dụng tên biến "thực", chẳng hạn như đếm/count hoặc tên gợi nhớ chi tiết hơn về những gì bạn đang đếm.
 Ví dụ: Tính tổng các số từ 1 đến n với n nhập từ bàn phím.
+{% highlight cpp %}
+#include <iostream> 
+using namespace std;
+ 
+int main() 
+{
+  // nhap n
+  int n;
+  cout<<"n = ";
+  cin>>n;
+  
+  // tinh tong
+  int s = 0;
+  int i = 0; //loop variable
+  while (i <= n)
+  {
+      s = s+i;
+      i++;
+  }
+  
+  // in ket qua
+  cout<<"\n Tong = "<<s<<endl;
+ 
+  system("pause");
+  return 0;  
+}
+{% endhighlight %}
