@@ -96,6 +96,7 @@ Một chương trình có thể có biến toàn cục và biến cục bộ cù
 Dưới đây là hai bảng mô tả một số kiểu dữ liệu cơ bản trong C++, kích thước bộ nhớ nó dùng để lưu trữ giá trị trong bộ nhớ và khoảng giá trị mà kiểu dữ liệu đó có thể lưu trữ:
 ![](https://2.bp.blogspot.com/-ylUVrJfbiAU/XHgLYnxmxUI/AAAAAAAAD5U/U69d_Rk7rDwJmvSxxHR2YOqe2tv9SlSsACLcBGAs/s1600/KDL.PNG)
 ![](https://2.bp.blogspot.com/-Si86771FYhA/XHgP_LorHtI/AAAAAAAAD5s/e4uTtMRK3wAV7iISy6BHmONPJ2YQkBunACLcBGAs/s1600/KDL1.png)
+  
 Kích cỡ của kiểu dữ liệu bên trên chỉ là kích thước nhỏ nhất có thể của kiểu dữ liệu đó. Thực tế thì kích thước này phụ thuộc vào từng Compiler và kiến trúc máy tính của bạn và bạn cũng không cần phải nhớ chi cho mệt . Nếu bạn muốn xác định kích thước của các kiểu dữ liệu trên máy tính của bạn, C++ cung cấp một toán tử có tên là sizeof(). Đây là toán tử cho phép nhận một kiểu hoặc một biến và trả về kích thước của nó. Bạn có thể biên dịch và chạy chương trình sau để biết kích thước các kiểu dữ liệu của máy tính bạn:
 {% highlight cpp %}
 #include <iostream>
