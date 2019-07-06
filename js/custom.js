@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 })
 
 document.getElementById("mode").addEventListener("click", {
-  if((localStorage.getItem('mode') || 'light') === 'dark')
+  var mode;
+  ((localStorage.getItem('mode') || 'light') === 'light') ? mode = 'light' : mode ='dark'
+  if(mode === 'dark')
     this.innerHTML = "Light mode";
   else
     this.innerHTML = "Dark mode";
