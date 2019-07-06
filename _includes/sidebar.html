@@ -9,13 +9,20 @@
             
         {% if page.layout == 'post' %}
         <div class="mt10 recent">
-            <h4>Dad</h4>        
+            <h4>Danh sách bài học</h4>        
              <ul>
-                {% for post in site.related_posts limit:3 %}
+                {% for post in site.posts %}
 
+                      {% if(post.url == page.url) %}
+                      <li class="active">
+                      <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small></p>
+                      </li>
+                      {% else %}
                       <li>
                       <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small></p>
                       </li>
+                      {% endif %}
+                
 
                 {% endfor %}
               </ul>
