@@ -20,10 +20,10 @@ for(<khởi tạo giá trị lặp i>;<điều kiện lặp>;<thay đổi giá t
 }
 {% endhighlight %}
 Mô hình này tương tự như while nhưng phức tạp hơn trong cặp ngoặc (), đầu tiên chúng ta cần thiết lâp 3 thứ vào trong for:
-- **<khởi tạo giá trị lặp i>**: tại đây chúng ta sẽ khởi tạo giá trị i để so sánh với biểu thức điều kiện, việc này chỉ được thực thi duy nhất 1 lần trong quá trình vòng lặp for được thực thi và có thể khởi tạo trước vòng lặp hoặc ngay tại đây cũng được.
+- **\<khởi tạo giá trị lặp i\>**: tại đây chúng ta sẽ khởi tạo giá trị i để so sánh với biểu thức điều kiện, việc này chỉ được thực thi duy nhất 1 lần trong quá trình vòng lặp for được thực thi và có thể khởi tạo trước vòng lặp hoặc ngay tại đây cũng được.
 	Lưu ý: khi bạn khởi tạo biến trong for thì biến sẽ bị hủy ngay sau khi kết thúc vòng lặp.
-- **<điều kiện lặp>**: điều kiện để tiếp tục hoặc thoát khỏi vòng lặp.
-- **<thay đổi giá trị i>**: chúng ta sẽ cần thay đổi giá trị của i để tạo sự linh hoạt cho vòng lặp.
+- **\<điều kiện lặp\>**: điều kiện để tiếp tục hoặc thoát khỏi vòng lặp.
+- **\<thay đổi giá trị i\>**: chúng ta sẽ cần thay đổi giá trị của i để tạo sự linh hoạt cho vòng lặp.
 
 Đọc thì có vẻ khó hiểu nên mình sẽ tiến hành "công nghệ siêu tốc" là cho các bạn 1 ví dụ cụ thể, chúng ta có đề bài đơn giản: "in ra các số từ 1 đến 10".
 Nhân tiện mình sẽ làm bài này bằng cả while và for cho các bạn so sánh 2 vòng lặp này nhá, chúng ta có code dưới đây:
@@ -70,6 +70,7 @@ int main()
 {% endhighlight %}
 Và chúng ta có được kết quả
 ![](https://3.bp.blogspot.com/-WBbll8HaEZM/XHzltnUGqmI/AAAAAAAAAfs/zv_ATDX-z3UFOGToXzKF4snV1--lqUMOwCK4BGAYYCw/s640/bai_3.5.2.PNG)
+  
 Khá tiện lợi đúng không nào nhưng nhớ nhìn cẩn thận kẻo lại rơi vào lỗi fix mãi không ra đấy.
 ### Vòng lặp lồng nhau
 Trong vòng lặp bạn vẫn có thể kết hợp 1 hoặc nhiều vòng lặp khác nhau nữa để giải quyết bài toán, việc sử dụng dạng này các bạn làm bài tập nhiều sẽ đụng đến và nó tùy thuộc vào logic mà bạn sử dụng cho chương trình của mình nên mình không xét thêm về loại này.
@@ -77,6 +78,7 @@ Trong vòng lặp bạn vẫn có thể kết hợp 1 hoặc nhiều vòng lặp
 ### Lỗi "Off-by-one"
 Đây là lỗi logic khi chúng ta dùng vòng lặp for, ví dụ bạn cần in ra số từ 1 đến 10 nhưng điều kiện trong for của bạn là
 > for( int i=1; i < 10; i++ )
+                       
 Nhìn thì có vẻ đúng và chạy chương trình cũng không lỗi nhưng khi ra kết quả thì nó chỉ in ra đến số 9 là dừng trong khi đề bài cần in đến số 10 đây chính là lỗi "Off-by-one" khi số vòng lặp của chúng ta bị thiếu hoặc bị thừa (thường là dư hoặc thừa 1 lần), các bạn nhớ chú ý đến vấn đề này nhé.
 
 ### Lỗi lặp vô hạn (infinity loop)
@@ -98,6 +100,7 @@ int main()
 {% endhighlight %}
 Nhìn giống như bạn đang dùng for như vòng lặp while vậy nhưng nó cũng không sao, quan trọng là nếu bạn tối ưu đến mức không có 1 điều kiện gì trong for như
 > for(;;)
+  
 Vâng và nó sẽ trở thành 1 vòng lặp vô hạn với sự ngắn gọn này 😂
 
 ## Tổng kết
