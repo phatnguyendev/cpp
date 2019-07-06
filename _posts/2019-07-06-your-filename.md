@@ -41,3 +41,17 @@ Giờ hãy tìm hiểu chi tiết các thành phần cần thiết của một c
 - **Lệnh endl:** cho phép ta xuống dòng. Cách khác: cout<<"Hello World \n";
 - **Lệnh return 0:** kết thúc hàm main và trả về một giá trị. Ở đây ta trả về 0. Đây là giá trị thường được sử dụng để làm giá trị trả về của hàm int main().
 - **//**: dùng để ghi chú trong chương trình
+
+## Tổng kết
+Cấu trúc của một chương trình C++ cơ bản gồm:
+
+- Thêm các thư viện và không gian tên cần thiết
+- Hàm main (bắt buộc phải có)
+	- Kiểu trả về: int
+	- Tên hàm: main
+	- Thân hàm main: {}
+- Giá trị trả về của hàm main: 0 hoặc một số khác kiểu int.
+- Các dòng lệnh bên trong hàm main và phải được kết thúc bằng dấu ;
+- // dùng cho ghi chú (có thể có hoặc không).
+
+Bài viết tiếp theo mình sẽ làm quen với các kiểu dữ liệu, hằng, biến, macro, quy ước tên. Nếu có thắc mắc, lỗi các bạn cứ bình luận bên dưới để mình giải đáp. Theo dõi page: [Tui Tự Code](https://www.facebook.com/shareAboutIT/) để cập nhật các bài viết mới nhé.😘
