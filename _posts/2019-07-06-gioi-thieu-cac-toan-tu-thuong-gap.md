@@ -19,3 +19,15 @@ Các bạn có thấy 3 dòng Input trong phần execution không? Nhìn có v�
 - ++x: (prefix decrement) ngay lúc thực thi dòng lệnh có sử dụng toán tử này, giá trị của biến x tăng lên 1 đơn vị (x=6+1=7) nên khi cout dòng thứ 9 thì giá trị x = 7.
 - x: lúc này giá trị x không thay đổi và vẫn bằng 7 thôi (cho vào cho các bạn bớt khó hiểu).
 Đến đây chắc các bạn cũng hình dung được qua cách dùng toán tử tăng giảm rồi chứ còn công dụng của nó thì các bạn học sau này ắt sẽ dụng đến thôi vì đây là những toán tử hay gặp nhất mà.
+
+## Toán tử đại số
+Các dạng toán thân quen của 12 năm đại học như +, - , *, / thì không có gì là lạ với các bạn rồi đúng không nào. Chúng ta hãy cùng xem qua ví dụ sau đây:
+![](https://2.bp.blogspot.com/-NKl3ZUODS6s/XHi-9DK3UGI/AAAAAAAAAc8/jeoYqeSZ8eo2RnMtfvI-q8T_P3_TOBzfQCK4BGAYYCw/s1600/bai5_2.PNG)
+Ở đây có 2 điểm đặc biệt các bạn cần chú ý, đó là ở phép chia ('/') và phép chia lấy dư ('%') như sau:
+
+**Phép chia bình thường:** để ý rằng khi chia 2 kiểu số nguyên (int) thì kết quả trả về là 1 số nguyên vậy nên kết quả 5/3 = 1 là hợp lí nhưng nếu các bạn muốn ra con số chính xác nhất như toán học bình thường (tức là 5/3 = 1.666..(kiểu **float**)) thì các bạn dùng 1 trong 2 cách như sau:
+- Cách 1: sử dụng **static_cast<>(<kiểu dữ liệu>)** cụ thể mình sẽ ép kiểu của số bị chia (5) thành kiểu **float** để ra được thương là 1 kiểu float.
+- Cách 2: một cách đơn giản nhất để ép kiểu float cho một số là nhân nó cho 1.0
+
+Sau đây là code trình bày theo 2 cách và kết quả:
+![](https://1.bp.blogspot.com/-Ls7IETPpKE4/XHjCyAxiSwI/AAAAAAAAAdc/-pdC3PbcKkA0eu0iDsqzLZgP7WHfV_UeQCK4BGAYYCw/s1600/bai5_3.PNG)
