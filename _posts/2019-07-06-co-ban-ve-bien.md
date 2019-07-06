@@ -95,3 +95,4 @@ Một chương trình có thể có biến toàn cục và biến cục bộ cù
   **Kiểu dữ liệu** là thành phần bắt buộc khi khai báo biến. Dựa trên kiểu dữ liệu của một biến, hệ thống sẽ cấp phát bộ nhớ và giúp chương trình xác định giới hạn giá trị mà biến đó có thể lưu trữ.
 Dưới đây là hai bảng mô tả một số kiểu dữ liệu cơ bản trong C++, kích thước bộ nhớ nó dùng để lưu trữ giá trị trong bộ nhớ và khoảng giá trị mà kiểu dữ liệu đó có thể lưu trữ:
 ![](https://2.bp.blogspot.com/-ylUVrJfbiAU/XHgLYnxmxUI/AAAAAAAAD5U/U69d_Rk7rDwJmvSxxHR2YOqe2tv9SlSsACLcBGAs/s1600/KDL.PNG)
+![](https://2.bp.blogspot.com/-Si86771FYhA/XHgP_LorHtI/AAAAAAAAD5s/e4uTtMRK3wAV7iISy6BHmONPJ2YQkBunACLcBGAs/s1600/KDL1.png)
