@@ -243,6 +243,8 @@ Dong 2
   
 ## Tổng kết
 Chúng ta đã cùng nhau tìm hiểu về định nghĩa, chức năng, cú pháp của biến, kiểu dữ liệu, hằng số, cách ép kiểu, cách comment và các quy ước đặt tên là như thế nào...Các bạn hãy luyện tập code lại các ví dụ trong bài để nắm và hiểu rõ hơn về cách hoạt động của nó nhé.😉
+  
 Bài tập nho nhỏ:
+  
 Tạo hai biến và khởi tạo giá trị cho nó theo ý của bạn, sau đó in ra kết quả các phép toán +, -, *, / của hai biến đó ra màn hình.
 Các bạn hãy truy cập vào Series hướng dẫn lập trình C++ by TuiTuCode để học tiếp những bài thú vị khác nữa. Nếu có thắc mắc về bài học các bạn để lại bình luận bên dưới để được giải đáp ngay và đừng quên theo dõi page Tui Tự Code để cập nhật các bài viết mới. Pie~😘
