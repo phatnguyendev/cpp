@@ -48,6 +48,7 @@ int main()
 }
 {% endhighlight %}
 Khi định nghĩa nhiều biến, có hai lỗi phổ biến mà các lập trình viên mới có xu hướng mắc phải (Không quan trọng lắm vì trình biên dịch sẽ phát hiện lỗi và yêu cầu bạn sửa chúng)
+  
 → **Lỗi đầu tiên** là:
   {% highlight cpp %}
 int a, int b;  //Sai (compiler error)
