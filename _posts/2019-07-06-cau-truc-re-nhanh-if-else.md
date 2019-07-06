@@ -94,3 +94,40 @@ Ngoài cấu trúc cơ bản như trên chúng ta còn có cấu trúc sau:
       <thực hiện tiếp nữa nè>;
   }
 {% endhighlight %}
+Cách hoạt động như sau: khi điều kiện 1 không thỏa nó sẽ xét đến else và nó sẽ xét tiếp điều kiện 2 trong else đó, nếu điều kiện 2 không thỏa nữa thì thực hiện khối lệnh 3 nằm trong else cuối cùng.
+
+
+### Toán tử 3 ngôi
+Một cách sử dụng câu lệnh if else ngắn gọn chỉ với 1 dòng đó là dùng toán tử 3 ngôi như sau:
+{% highlight cpp %}
+  (<điều kiện>)? <thực hiện khi đúng> : <thực hiện khi sai>;
+{% endhighlight %}
+Cách này tương tự như cấu trúc cơ bản nhưng ở phần lệnh thực thi bạn chỉ thưc thi được 1 lệnh duy nhất (cấu trúc cơ bản có thể thực thi nhiều lệnh trong khối lệnh).
+
+## Bài toán thực tế
+Sau khi học xong thì hãy ôn tập kiến thức qua bài toán dưới đây nhé:
+**Bài toán trả lương:** một công ty trả lương cho nhân viên theo cách sau:
+- Nhân viên sơ cấp: lương += thưởng mức 1
+- Nhân viên trung cấp: lương += thưởng mức 2
+- Nhân viên siêu cấp: lương += thưởng mức 3
+        
+Nếu trong quá trình làm, nhân viên bị phạt sẽ tính trừ vào lương như sau:
+- Vi phạm cơ bản: lương -= phạt mức 1
+- Đại tội: lương -= phạt mức 2
+       
+Mức lương ban đầu là 10.000.000 (10 triệu)
+Cho nhân viên nhập vào cấp độ (sơ - trung - siêu cấp) và loại vi phạm, tính lương cho nhân viên đó.
+**Bài toán bán hàng:** một quán cơm cần tạo chương trình thanh toán tiền cơm như sau:
+- Nếu có thẻ thành viên:
+        
+    ⇨ Tháng 2: giảm giá 10%
+    ⇨ Các tháng còn lại: giảm 20%
+- Không có thẻ thành viên:
+        
+    ⇨ Giá gốc
+    ⇨ Nếu đăng kí thành viên: giảm 50% (một lần duy nhất khi đăng kí)
+Giá gốc mỗi phần cơm là 20k. Hãy xác nhận thành viên và tính tiền giá cơm cho người dùng.
+
+## Tổng kết
+Chúng ta đã cùng nhau tìm hiểu về cấu trúc rẽ nhánh if-else trong C++, các bạn hãy truy cập vào Series hướng dẫn lập trình C++ by TuiTuCode để học tiếp những bài thú vị khác nhé.
+Có thắc mắc về bài học các bạn để lại bình luận bên dưới để được giải đáp ngay và đừng quên theo dõi page Tui Tự Code để cập nhật các bài viết mới nhé. Pie~
