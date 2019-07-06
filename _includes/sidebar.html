@@ -14,8 +14,8 @@
                 {% for post in site.posts %}
 
                       {% if(post.url == page.url) %}
-                      <li class="active">
-                      <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small></p>
+                      <li>
+                      <p><a href="{{ post.url | prepend: site.baseurl }}" style="color:red">{{ post.title }}</a><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small></p>
                       </li>
                       {% else %}
                       <li>
