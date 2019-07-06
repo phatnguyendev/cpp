@@ -32,7 +32,7 @@ int main()
 {% endhighlight %}
 Giờ hãy tìm hiểu chi tiết các thành phần cần thiết của một chương trình:
 
-- **#include <iostream> ** : là một chỉ thị tiền xử lý chứa nội dung của tập tin header chuẩn của C++. <iostream> là một tập tin header/thư viện chuẩn của C++ chứa các định nghĩa cho các dòng xuất/nhập, đầu vào/đầu ra tiêu chuẩn của chương trình. Các định nghĩa này được bao gồm trong namespace std.
+- **#include <iostream> :** là một chỉ thị tiền xử lý chứa nội dung của tập tin header chuẩn của C++. <iostream> là một tập tin header/thư viện chuẩn của C++ chứa các định nghĩa cho các dòng xuất/nhập, đầu vào/đầu ra tiêu chuẩn của chương trình. Các định nghĩa này được bao gồm trong namespace std.
 - **using namespace std:** thông báo cho complier là mình đang sử dụng std namespace. Thay vì các bạn phải khai báo std:: trước mỗi lần sử dụng cout hoặc cin... (ví dụ: std::cout<<"Hello World!"<<std::endl;) thì đây là cách mà có thể tiết kiệm thời gian và tránh việc thiếu sót khi các bạn sử dụng các thành phần trong std namespace.
 - **Hàm main():** là hàm chính, nơi sự thực thi chương trình bắt đầu, bắt buộc phải có và chỉ có một hàm main duy nhất trong chương trình và ở đây do int đứng trước main() nên nó phải luôn trả về một kiểu số int. Có nhiều cách khai báo hàm main. Đối với các bạn mới học C++ mình khuyến khích các bạn sử dụng cách khai báo hàm main như trên.
 - **int:** được gọi là kiểu trả về của hàm. Hàm sẽ không yêu cầu giá trị trả về nếu nó là hàm void
