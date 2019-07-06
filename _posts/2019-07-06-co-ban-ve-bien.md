@@ -62,3 +62,28 @@ int a; double b;  //Đúng (không nên dùng)
 int a;
 double b;
 {% endhighlight %}
+### Phạm vi biến
+  Trong C++, không phải biến nào cũng được sử dụng mọi lúc mọi nơi. Có 2 loại biến:
+- Biến toàn cục:  được đặt bên ngoài tất cả các hàm, khối lệnh, có ảnh hưởng tới toàn bộ chương trình, có thể sử dụng ở mọi nơi. Biến không bị hủy sau khi hàm kết thúc, biến chỉ bị hủy khi chương trình đã dừng.
+- Biến cục bộ: được đặt bên trong hàm, khối lệnh, chỉ có ảnh hưởng nội bộ bên trong hàm, cấu trúc đó, tính đến cặp dấu ngoặc nhọn {} gần nhất. Biến sẽ bị hủy sau khi hàm thực hiện xong công việc của mình
+  
+Hãy xem ví dụ bên dưới để hiểu rõ hơn về phạm vi của biến:
+{% highlight cpp %}
+#include <iostream>
+using namespace std;
+
+int b = 0;
+
+int main()
+{
+  if(true)
+  {
+      int a = 10;
+      cout << b << endl; //OK! vi bien "b" duoc khai bao toan cuc
+  }
+  cout << a << endl; //error: bien "a" chi duoc dung trong cap if{}
+  cout << b << endl; //OK! vi bien "b" duoc khai bao toan cuc
+  
+  return 0;
+}
+{% endhighlight %}
