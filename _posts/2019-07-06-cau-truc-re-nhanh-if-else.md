@@ -43,5 +43,29 @@ Sau khi đã giải quyết điều kiện, chúng ta xét đến những gì c�
 
 vậy chúng ta chỉ cần tạo biến giá vé để lưu trị giá là xong. OK vậy là đã giải quyết xong bài toán của chúng ta. Dưới đây là code toàn bộ chương trình:
 {% highlight cpp %}
-
+#include <iostream>
+using namespace std;
+int main()
+{
+  // khai báo các biến
+  int Input;
+  bool isMember;
+  int price;
+  
+  cout << "Bạn là thành viên? Nhập 1(có) hoặc 0(không): ";
+  cin >>Input;
+  
+  isMember = (bool)Input;
+  
+  // sử dụng biến bool
+  if(isMember)
+    price = 45000;
+  else
+    price = 60000;
+  
+  cout << "Giá 1 vé của bạn là: " << price << endl;
+  // dùng để dừng màn hình trong Visual Studio
+  system("pause");
+  return 0;
+}
 {% endhighlight %}
