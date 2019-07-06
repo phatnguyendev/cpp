@@ -48,13 +48,11 @@ int main()
 }
 {% endhighlight %}
 Khi định nghĩa nhiều biến, có hai lỗi phổ biến mà các lập trình viên mới có xu hướng mắc phải (Không quan trọng lắm vì trình biên dịch sẽ phát hiện lỗi và yêu cầu bạn sửa chúng)
-  
 → **Lỗi đầu tiên** là:
   {% highlight cpp %}
 int a, int b;  //Sai (compiler error)
 int a, b;  //corect
 {% endhighlight %}
-  
 → **Lỗi thứ hai** là đặt hai biến có kiểu dữ liệu khác nhau trên cùng một câu lệnh. Điều này không được phép, các biến có kiểu dữ liệu khác nhau phải được xác định trong hai câu lệnh riêng biệt. 
    {% highlight cpp %}
 int a, double b;  //Sai (compiler error)
