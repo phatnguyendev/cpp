@@ -31,3 +31,28 @@ Các dạng toán thân quen của 12 năm đại học như +, - , *, / thì kh
 
 Sau đây là code trình bày theo 2 cách và kết quả:
 ![](https://1.bp.blogspot.com/-Ls7IETPpKE4/XHjCyAxiSwI/AAAAAAAAAdc/-pdC3PbcKkA0eu0iDsqzLZgP7WHfV_UeQCK4BGAYYCw/s1600/bai5_3.PNG)
+**Phép chia lấy dư:** phép chia này có thể khá mới với nhiều bạn, đối với ví dụ của chúng ta khi chia số học đầy đủ sẽ là: "5 / 3 = 1 dư 2" cho nên phép chia lấy dư ('%') sẽ trả về kết quả là 2 (khá hữu ích đấy chứ).
+
+## Toán tử so sánh
+Là một dạng toán tử k trả về giá trị true hoặc false rất quen thuộc với toán thông thường, gồm có:
+**So sánh bằng (==)**: dùng để so sánh giá trị 2 vế có bằng nhau hay không, lưu ý tránh nhầm lẫn với toán tử gán (=).
+- ExComEqual1: (3==3) trả về giá trị true
+- ExComEqual2: (3==1) trả vế giá trị false
+
+**So sánh khác (!=):** ngược lại với so sánh bằng, khá dễ hiểu nên mình lướt nhẹ qua.
+
+Ngoài ra còn có các loại so sánh: **>, <, >=, <=** với công dụng tương tự như trong toán thông thường.
+## Toán tử logic
+Đây là dạng toán tử khác cũng trả về kiểu **đúng (true)** hoặc **sai (false)** hay được sử dụng để biến đổi các điều kiện 1 cách linh hoạt. Những toán tử logic hay gặp nhất là:
+
+**Logic AND (&&):** trả về giá trị true khi cả điều kiện bên trái và phải đều thỏa mãn, ngược lại nếu 1 trong 2 không thỏa mãn trả về false.
+- ExAND1: (5>3) && (4<5) trả về giá trị true vì cả 2 vế đều đúng.
+- ExAND2: (3>4) && (5>4) trả về giá trị false vì điều kiện bên trái sai.
+
+**Logic OR (||):** trả về giá trị true nếu 1 trong 2 điều kiện thỏa mãn, ngược lại nếu cả 2 điều kiện đều không thỏa mãn trả về false.
+- ExOR1: (5<1) || (3 >2) trả về giá trị true vì vế phải đúng.
+- ExOR2: (1>2) || (2>2) trả về giá trị false vì cả 2 vế đều sai.
+
+**Logic NOT (!):** trả về giá trị đối lập với giá trị hiện thời chẳng hạn !true = false và !false = true
+- ExNOT1: !(1<2) trả về true (vì (1<2) trả về false)
+- ExNOT2: !(3>1) trả về false (vì (3>1) trả về true)
