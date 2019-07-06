@@ -37,8 +37,8 @@ std::cout << boolalpha;
 {% endhighlight %}
 vào trước dòng cần xuất giá trị bool là OK!
 
-Nếu các bạn muốn in ra nhiều dữ liệu trên 1 dòng thì chỉ cần đặt thêm toán tử chèn (<<) vào giữa những dữ liệu đó là được.
+Nếu các bạn muốn in ra nhiều dữ liệu trên 1 dòng thì chỉ cần đặt thêm **toán tử chèn (<<)** vào giữa những dữ liệu đó là được.
 
-std::cin
-Khác với std::cout, std::cin (character input) được sử dụng để đọc dữ liệu từ bàn phím thông qua toán tử khai thác (>>), phía sau toán tử >> phải là 1 biến được định nghĩa để hứng giá trị từ bàn phím nhập vào.
+### std::cin
+Khác với std::cout, std::cin (**character input**) được sử dụng để đọc dữ liệu từ bàn phím thông qua **toán tử khai thác (>>)**, phía sau toán tử >> phải là 1 biến được định nghĩa để hứng giá trị từ bàn phím nhập vào.
 Khi chạy chươn trình và gặp std::cin, chương trình sẽ dừng lại và đợi người dùng nhập giá trị vào, nếu các bạn lỡ bấm enter mà chưa nhập giá trị gì thì nó sẽ vẫn tiếp tục đợi cho đến khi có giá trị được nhập vào và nếu bạn nhập mà không nhấn enter thì cũng không có cách nào để chấp nhận dữ liệu bạn nhập vào cả (trừ khi dùng thư viện bên thứ 3). Cách sử dụng std::cin như sau:
