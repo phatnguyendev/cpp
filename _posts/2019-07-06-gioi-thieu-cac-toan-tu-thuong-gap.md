@@ -23,6 +23,7 @@ Các bạn có thấy 3 dòng Input trong phần execution không? Nhìn có v�
 ## Toán tử đại số
 Các dạng toán thân quen của 12 năm đại học như +, - , *, / thì không có gì là lạ với các bạn rồi đúng không nào. Chúng ta hãy cùng xem qua ví dụ sau đây:
 ![](https://2.bp.blogspot.com/-NKl3ZUODS6s/XHi-9DK3UGI/AAAAAAAAAc8/jeoYqeSZ8eo2RnMtfvI-q8T_P3_TOBzfQCK4BGAYYCw/s1600/bai5_2.PNG)
+
 Ở đây có 2 điểm đặc biệt các bạn cần chú ý, đó là ở phép chia ('/') và phép chia lấy dư ('%') như sau:
 
 **Phép chia bình thường:** để ý rằng khi chia 2 kiểu số nguyên (int) thì kết quả trả về là 1 số nguyên vậy nên kết quả 5/3 = 1 là hợp lí nhưng nếu các bạn muốn ra con số chính xác nhất như toán học bình thường (tức là 5/3 = 1.666..(kiểu **float**)) thì các bạn dùng 1 trong 2 cách như sau:
@@ -31,6 +32,7 @@ Các dạng toán thân quen của 12 năm đại học như +, - , *, / thì kh
 
 Sau đây là code trình bày theo 2 cách và kết quả:
 ![](https://1.bp.blogspot.com/-Ls7IETPpKE4/XHjCyAxiSwI/AAAAAAAAAdc/-pdC3PbcKkA0eu0iDsqzLZgP7WHfV_UeQCK4BGAYYCw/s1600/bai5_3.PNG)
+
 **Phép chia lấy dư:** phép chia này có thể khá mới với nhiều bạn, đối với ví dụ của chúng ta khi chia số học đầy đủ sẽ là: "5 / 3 = 1 dư 2" cho nên phép chia lấy dư ('%') sẽ trả về kết quả là 2 (khá hữu ích đấy chứ).
 
 ## Toán tử so sánh
