@@ -29,6 +29,7 @@ if(<điều kiện>)
 
 Mình sẽ giải thích qua một ví dụ cụ thể luôn để các bạn nhìn thấy cách đặt nó như thế nào trong 1 file cpp nhé.
 **Bài toán thực tế:** một rạp xem phim có chế độ ưu đãi cho thành viên như sau: nếu bạn có thẻ thành viên thì giá vé xem phim là 45k còn không có thì giá vé sẽ là 60k. Cho người dùng nhập vào số 1(là thành viên) hoặc 0 (không là thành viên) và tính ra giá vé.
+
 **Phân tích bài toán:**
 
 Nếu dùng câu lệnh **if...else** để giải quyết thì phải tạo ra **<điều kiện>** trong ngoặc của **if** trước, dự theo yêu cầu ta thấy được điều kiện ở đây là có hoặc không có thẻ thành viên nên chúng ta sẽ tạo 1 biến **bool** _isMember_ để làm điều kiện.
