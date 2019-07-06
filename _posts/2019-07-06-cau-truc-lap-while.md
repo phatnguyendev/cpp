@@ -45,3 +45,4 @@ int main()
 {% endhighlight %}
 Cùng xem kết quả chương trình:
 ![](https://3.bp.blogspot.com/-SBqzItebP9o/XHwBDNhHPtI/AAAAAAAAD8c/U1ZWtafCEqck44CrlzowjZzQwTyNMIYmgCLcBGAs/s1600/WHILE1.PNG)
+Ở ví dụ trên, khi biến ChuSo không còn thỏa điều kiện (ChuSo <  5) nữa thì vòng lặp while mới kết thúc. Nên ta thấy khi số nhập vào là 6, chương trình in ra dòng "Ket thuc.", tức là mệnh đề (ChuSo <  5) được xem xét là false, vòng lặp ngừng thực thi ngay sau đó.
