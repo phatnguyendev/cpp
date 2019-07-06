@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-  ((localStorage.getItem('mode') || 'light') === 'dark') ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')
+  ((localStorage.getItem('mode') || 'light') === 'light') ? document.querySelector('body').classList.remove('dark') : document.querySelector('body').classList.add('dark')
 })
 
 document.getElementById("mode").addEventListener("click", {
