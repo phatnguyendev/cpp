@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   ((localStorage.getItem('mode') || 'light') === 'dark') ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark');
-  var mode = ((localStorage.getItem('mode') || 'light') === 'light') ? 'light' : 'dark';  
-  if(mode === 'dark')
+  if($('body').hasClass("mode"))
     this.innerHTML = "Light mode";
   else
     this.innerHTML = "Dark mode";
