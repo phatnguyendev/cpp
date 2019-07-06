@@ -8,7 +8,7 @@ excerpt_separator: <!--more-->
 ---
 Trong C++, 2 cấu trúc điều khiển tiêu biểu và hay sử dụng nhất là cấu trúc rẽ nhánh mà mình đã tìm hiểu ở các bài trước và cấu trúc lặp. Để bắt tay vào tìm hiểu cấu trúc lặp, chúng ta sẽ đi tìm hiểu về **cấu trúc WHILE** đầu tiên vì nó là dạng cấu trúc đơn giản nhất trong cấu trúc lặp mà C++ cung cấp và nó có định nghĩa rất giống với câu lệnh IF.
 <div class="alert alert-info">
-**Cấu trúc lặp (Loops)** sẽ làm cho chương trình thực hiện lặp đi lặp lại một chuỗi các câu lệnh cho đến khi không còn thỏa mãn một điều kiện nào đó.
+Cấu trúc lặp (Loops) sẽ làm cho chương trình thực hiện lặp đi lặp lại một chuỗi các câu lệnh cho đến khi không còn thỏa mãn một điều kiện nào đó.
 </div>
 Đầu tiên hãy cùng xem qua cách hoạt động của lệnh while bằng mô hình dưới đây:
 ![](https://4.bp.blogspot.com/-u36r5lEHYtA/XHvvKX7lnEI/AAAAAAAAD7s/CdoadZ09gRs0Wa2Sw_-rJ0b-5ma-fWT2ACLcBGAs/s400/WHILE.PNG)
@@ -44,5 +44,7 @@ int main()
 }
 {% endhighlight %}
 Cùng xem kết quả chương trình:
+  
 ![](https://3.bp.blogspot.com/-SBqzItebP9o/XHwBDNhHPtI/AAAAAAAAD8c/U1ZWtafCEqck44CrlzowjZzQwTyNMIYmgCLcBGAs/s1600/WHILE1.PNG)
+  
 Ở ví dụ trên, khi biến ChuSo không còn thỏa điều kiện (ChuSo <  5) nữa thì vòng lặp while mới kết thúc. Nên ta thấy khi số nhập vào là 6, chương trình in ra dòng "Ket thuc.", tức là mệnh đề (ChuSo <  5) được xem xét là false, vòng lặp ngừng thực thi ngay sau đó.
