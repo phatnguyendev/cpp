@@ -98,7 +98,7 @@ Dưới đây là hai bảng mô tả một số kiểu dữ liệu cơ bản tr
 ![](https://2.bp.blogspot.com/-Si86771FYhA/XHgP_LorHtI/AAAAAAAAD5s/e4uTtMRK3wAV7iISy6BHmONPJ2YQkBunACLcBGAs/s1600/KDL1.png)
 Kích cỡ của kiểu dữ liệu bên trên chỉ là kích thước nhỏ nhất có thể của kiểu dữ liệu đó. Thực tế thì kích thước này phụ thuộc vào từng Compiler và kiến trúc máy tính của bạn và bạn cũng không cần phải nhớ chi cho mệt . Nếu bạn muốn xác định kích thước của các kiểu dữ liệu trên máy tính của bạn, C++ cung cấp một toán tử có tên là sizeof(). Đây là toán tử cho phép nhận một kiểu hoặc một biến và trả về kích thước của nó. Bạn có thể biên dịch và chạy chương trình sau để biết kích thước các kiểu dữ liệu của máy tính bạn:
 {% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
  
 int main()
@@ -120,3 +120,14 @@ int main()
     return 0;
 }
 {% endhighlight %}
+Đây là kích thước các kiểu dữ liệu của máy mình:
+![](https://4.bp.blogspot.com/-oLY2v0Khgys/XHjwO1EIs5I/AAAAAAAAD6I/RtDiECdVHSY5jwfkkNDp8R9Z_zQI--dfgCEwYBhgL/s1600/KDL2.PNG)
+Trong ví dụ Example.cpp, biến a của chúng ta được đưa ra kiểu int, có nghĩa là biến a sẽ đại diện cho một giá trị nguyên. Một số nguyên là một số có thể được viết mà không có thành phần phân số như 4, -2, 0 ... Nói tóm lại, chúng ta có thể nói rằng **a là một biến số nguyên**.
+Trong C++, kiểu dữ liệu của biến phải được biết tại thời điểm chương trình được biên dịch và nó không thể thay đổi nếu không biên dịch lại chương trình. Điều này có nghĩa là một biến số nguyên chỉ lưu giữ các giá trị nguyên. Nếu bạn muốn lưu trữ một loại giá trị khác, bạn sẽ cần sử dụng một biến khác.
+C++ cũng cho phép bạn tự tạo một kiểu dữ liệu do bạn định nghĩa bằng cách sử dụng **typedef**. Cú pháp đơn giản như sau: 
+{% highlight cpp %}
+typedef <kieu_du_lieu> <ten_kieu_du_lieu_moi>;
+//example
+typedef int SoNguyen;
+SoNguyen SoHocSinh;
+{% endhighlight %} 
