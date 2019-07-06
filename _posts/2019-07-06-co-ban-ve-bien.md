@@ -131,3 +131,25 @@ typedef <kieu_du_lieu> <ten_kieu_du_lieu_moi>;
 typedef int SoNguyen;
 SoNguyen SoHocSinh;
 {% endhighlight %} 
+Ở ví dụ trên ta tạo một kiểu dữ liệu mới có tên là SoNguyen thuộc kiểu int. Ta khai báo biến SoHocSinh có kiểu dữ liệu là SoNguyen.
+### Ép kiểu dữ liệu
+Chúng ta thực hiện ép kiểu dữ liệu (casting) trong trường hợp ta muốn biểu diễn giá trị dưới những định dạng kiểu dữ liệu khác nhau hay nói cách khác là chuyển đổi qua lại giữa các kiểu dữ liệu hoặc trong một số trường hợp tính toán cụ thể. Với ngôn ngữ C++, có 2 loại ép kiểu:
+- Ép kiểu ngầm định (implicit type conversion)
+  
+{% highlight cpp %}
+float value = 1 //khởi tạo giá trị của biến số thực là giá trị nguyên 1
+{% endhighlight %}
+Trong ví dụ trên, Complier sẽ chuyển giá trị nguyên 1 thành số thực 1.0 sau đó gán giá trị 1.0 cho biến value. 
+- Ép kiểu tường minh (explicit type conversion): là việc chuyển đổi dữ liệu một cách tường mình theo yêu cầu của lập trình viên. Có nhiều loại ép kiểu tường minh nhưng mình sẽ hướng dẫn cách phổ biến nhất.
+  
+{% highlight cpp %}
+//Cach 1:
+int a = 10;
+float b = (float)a;
+
+//Cach 2:
+int a = 10;
+float b = float(b);
+{% endhighlight %}
+Chúng ta sẽ hay gặp trường hợp này trong lập trình và thường xảy ra kết quả sai đó là hai số nguyên chia nhau nhưng kết quả lại ra một số nguyên. Giờ bạn muốn kết quả là số thực để ra kết quả đúng bạn phải thực hiện ép kiểu. Hãy xem đoạn code dưới đây để hiểu rõ hơn:
+![](https://4.bp.blogspot.com/-SdTA_OjIFic/XHkRqGrkiYI/AAAAAAAAD6k/R34ai_nqSlEgTQJqUd0ckr7sPmN9fhoPwCLcBGAs/s1600/KDL3.PNG)
