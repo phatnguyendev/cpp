@@ -240,6 +240,7 @@ Dong 2
 - Có thể sử dụng ký tự gạch chân khi đặt tên biến. Ví dụ: int So_Luong, int Ho_Ten...
 - C++ không phân biệt chữ hoa và chữ thường nên hai biến sau int count và int Count là hai biến khác nhau.
 - Trong một khối lệnh {} không được có 2 biến trùng nhau.
+  
 ## Tổng kết
 Chúng ta đã cùng nhau tìm hiểu về định nghĩa, chức năng, cú pháp của biến, kiểu dữ liệu, hằng số, cách ép kiểu, cách comment và các quy ước đặt tên là như thế nào...Các bạn hãy luyện tập code lại các ví dụ trong bài để nắm và hiểu rõ hơn về cách hoạt động của nó nhé.😉
 Bài tập nho nhỏ:
