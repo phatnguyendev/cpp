@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Cấu trúc lặp WHILE (while statement)
 categories: cpp
-img: image-4.png
+img: bai8.png
 excerpt_separator: <!--more-->
 ---
 Trong C++, 2 cấu trúc điều khiển tiêu biểu và hay sử dụng nhất là cấu trúc rẽ nhánh mà mình đã tìm hiểu ở các bài trước và cấu trúc lặp. Để bắt tay vào tìm hiểu cấu trúc lặp, chúng ta sẽ đi tìm hiểu về **cấu trúc WHILE** đầu tiên vì nó là dạng cấu trúc đơn giản nhất trong cấu trúc lặp mà C++ cung cấp và nó có định nghĩa rất giống với câu lệnh IF.
