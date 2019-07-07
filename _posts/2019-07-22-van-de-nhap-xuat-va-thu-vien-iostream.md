@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Vấn đề nhập xuất và thư viện iostream
 categories: cpp
-img: image-4.png
+img: bai5.png
 excerpt_separator: <!--more-->
 ---
 Trong bài này chúng ta sẽ tìm hiểu về **std::cout, std::cin, std::endl** nằm trong chương trình Hello World! ở bài 02. Mục đích là giúp các bạn hiểu hơn về cách hiển thị dữ liệu lên màn hình console, cách lấy dữ liệu nhập vào từ người dùng. Nào bắt đầu nhé!
