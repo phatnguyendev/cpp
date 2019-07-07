@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Cấu trúc lặp FOR (for statement)
 categories: cpp
-img: image-4.png
+img: bai10.png
 excerpt_separator: <!--more-->
 ---
 Chúng ta đã cùng nhau tìm hiểu về 2 loại cấu trúc lặp là while và do-while rất thích hợp dùng khi số vòng lặp chưa biết trước và hôm nay chúng ta sẽ cùng nhau tìm hiểu về 1 cấu trúc lặp có thể coi là phổ biến nhất trong C++ dùng để sử dụng khi biết trước số vòng lặp đó là cấu trúc lặp for (hay gọi đơn giản là vòng lặp for). Nào bắt đầu thôi!
@@ -106,5 +106,3 @@ Vâng và nó sẽ trở thành 1 vòng lặp vô hạn với sự ngắn gọn 
 ## Tổng kết
 Chúng ta đã cùng nhau tìm hiểu về một cấu trúc lặp cực kì phổ biến trong C++ là vòng lặp for, các bạn hãy truy cập vào Series hướng dẫn lập trình C++ by TuiTuCode để học tiếp những bài thú vị khác nhé.
 Có thắc mắc về bài học các bạn để lại bình luận bên dưới để được giải đáp ngay và đừng quên theo dõi page Tui Tự Code để cập nhật các bài viết mới nhé. Pie~
-
-
