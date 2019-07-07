@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Chuỗi kí tự (C-style string)
 categories: cpp
-img: image-2.png
+img: bai17.png
 excerpt_separator: <!--more-->
 ---
 Hi~! Chúng ta đã cùng học qua về mảng trong những bài trước, bài này chúng ta sẽ tìm hiểu về loại mảng hỗ trợ cho chuỗi kí tự đó là C-style strings. Nào bắt đầu thôi!<!--more-->
