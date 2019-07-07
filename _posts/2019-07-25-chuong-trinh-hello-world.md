@@ -7,7 +7,35 @@ img: image-3.png
 excerpt_separator: <!--more-->
 ---
 Đầu tiên, mình sẽ làm quen cách viết một chương trình cơ bản và tìm hiểu các điều cần có trong chương trình để chương trình thực thi được thông qua một chương trình Hello World đơn giản.<!--more-->
+## Tạo project mới trong Visual Studio 2015
+Trước khi bắt đầu vào phần code, chúng ta sẽ cùng tìm hiểu qua các tạo 1 project mới trong visual studio 2015.
 
+Đầu tiên các bạn mở VS lên và sẽ thấy giao diện:
+![](http://3.bp.blogspot.com/-6gri2LiPedw/XSGtevfF0EI/AAAAAAAAAjU/wx0nbnvdpVIPcaQgT9fguE_v9TlN0WHnQCK4BGAYYCw/s1600/Capture.PNG)
+
+Các bạn click vào dòng "New project...", một cửa sổ hiện ra như sau:
+![](http://4.bp.blogspot.com/-vYju9m_I3Ic/XSGthZlX2-I/AAAAAAAAAjc/oaWeF2yLqQkd6uI8mivNxCMOMC5sZTOSgCK4BGAYYCw/s1600/2.PNG)
+
+Các bạn chú ý các con số và vùng đỏ tương ứng, mình giải thích sơ như sau:
+- Vùng 1: Khi bạn code ngôn ngữ C++, hãy chọn Visual C++
+- Vùng 2: Chọn Empty Project (nên chọn cái này khi code)
+- Vùng 3: Ở đâu chúng ta có các trường:
+	- Name: đặt tên cho project của bạn
+    - Location: nơi lưu solution (gồm cả project) của bạn
+    - Solution: đặt tên cho solution (chứa các project bên trong)
+- Vùng 4: Sau khi hoàn tất các bước trên, ấn OK để tạo project
+
+Sau khi tạo xong project, bạn sẽ có được như hình
+![](http://1.bp.blogspot.com/-0Y95r08mCYY/XSGtjqZXN0I/AAAAAAAAAjk/miuO4Hy_rZgEIYrfmJVCPghkoRGA1ni6gCK4BGAYYCw/s1600/3.PNG)
+
+Để có thể code được, chúng ta sẽ tạo file .cpp bằng cách chuột phải vào **Source Files** -> Add ->New Item... Hoặc ấn tổ hợp phím Crtl + Shift + A để tạo nhanh
+![](http://4.bp.blogspot.com/-8-8I20zFar0/XSGtmgA-gJI/AAAAAAAAAjs/xMT2sVzuA48rYL9sHJtRMm_5dVzDQEDZACK4BGAYYCw/s1600/4.PNG)
+
+Các bạn chọn đuôi file .cpp như hình và đặt tên (Name) cho file hoặc để mặc định là Source.cpp cũng được. Ấn OK Và sau đó chúng ta đã có thể viết code trên file này
+![](http://1.bp.blogspot.com/-cBPfjIDY804/XSGto782MGI/AAAAAAAAAj0/WYp9GC3GSeoN0UHqRq7Jk4lLztZqmiFzQCK4BGAYYCw/s1600/5.PNG)
+
+**Chú ý:** Sau khi code xong để thực thi chương trình các bạn ấn F5 hoặc Ctrl + F5 để build nhé :) OK đơn giản là vậy thôi, bây giờ vào phần code nào
+## Chương trình "Hello World"
 **Yêu cầu:** Viết chương trình in ra màn hình "Hello World!"
 
 **Code**
