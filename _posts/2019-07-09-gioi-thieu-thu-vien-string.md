@@ -2,7 +2,7 @@
 layout: post
 title: Giới thiệu thư viện string
 categories: cpp
-img: image-4.png
+img: bai18.png
 published: true
 excerpt_separator: <!--more-->
 ---
