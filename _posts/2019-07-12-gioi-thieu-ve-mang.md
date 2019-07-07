@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Giới thiệu về mảng (array)
 categories: cpp
-img: image-2.png
+img: bai15.png
 excerpt_separator: <!--more-->
 ---
 Hi~! Hôm nay chúng ta sẽ tìm hiểu về mảng - một kiểu dữ liệu tổng hợp giúp chúng ta truy cập đế nhiều biến có cùng kiểu dữ liệu thông qua 1 biến duy nhất, mảng là 1 phần vô cùng quan trọng trong lập trình vì vậy các bạn hãy xem bài viết này thật kĩ nhé. Nào bắt đầu thôi. <!--more-->
@@ -77,4 +77,3 @@ Mảng chúng ta đang dùng trong bài viết này là mảng cố định vớ
 Chúng ta đã cùng nhau tìm hiểu về mảng (array) trong C++, các bạn hãy truy cập vào Series hướng dẫn lập trình C++ by TuiTuCode để học tiếp những bài thú vị khác nhé.
 
 Có thắc mắc về bài học các bạn để lại bình luận bên dưới để được giải đáp ngay và đừng quên theo dõi page [Tui Tự Code](https://www.facebook.com/shareAboutIT) để cập nhật các bài viết mới nhé. Pie~
-
