@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Cơ bản về biến
 categories: cpp
-img: image-4.png
+img: bai3.png
 excerpt_separator: <!--more-->
 ---
 Trong bài này, mình sẽ cùng các bạn đi tìm hiểu về kiểu dữ liệu, hằng, biến, các cách tạo ghi chú cùng với các quy ước đặt tên trong C++. 
