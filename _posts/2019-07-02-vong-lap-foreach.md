@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Vòng lặp foreach
 categories: cpp
-img: image-4.png
+img: bai25.png
 excerpt_separator: <!--more-->
 ---
 Nếu các bạn đã học struct, foreach là 1 sự tuyệt vời khi các bạn duyệt mảng struct. Let's go :) <!--more-->
