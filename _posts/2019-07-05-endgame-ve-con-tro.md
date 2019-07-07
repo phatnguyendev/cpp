@@ -2,7 +2,7 @@
 layout: post
 title: Endgame về con trỏ
 categories: cpp
-img: image-4.png
+img: bai22.png
 published: true
 excerpt_separator: <!--more-->
 ---
