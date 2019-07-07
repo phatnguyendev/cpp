@@ -2,7 +2,7 @@
 layout: post
 title: Đọc ghi file
 categories: cpp
-img: image-4.png
+img: bai26.png
 published: true
 excerpt_separator: <!--more-->
 ---
