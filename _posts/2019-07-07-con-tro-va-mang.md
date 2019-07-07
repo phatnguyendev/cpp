@@ -2,7 +2,7 @@
 layout: post
 title: Con trỏ và mảng
 categories: cpp
-img: image-4.png
+img: bai20.png
 published: true
 excerpt_separator: <!--more-->
 ---
