@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Cơ bản về hàm phần 2
 categories: cpp
-img: image-4.png
+img: bai13.png
 excerpt_separator: <!--more-->
 ---
 Ở phần đầu chúng ta đã cùng tìm hiểu sơ qua về hàm, các kiểu khai báo..v.v Và trong bài hôm nay ta sẽ đi sâu hơn 1 chút về các tham số truyền vào hàm, nào Let's go!
