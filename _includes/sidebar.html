@@ -17,11 +17,11 @@
 
                       {% if(post.url == page.url) %}
                       <li class="list-group-item list-group-item-info">
-                      <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small></p>
+                      <p class ="baihoc"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small></p>
                       </li>
                       {% else %}
                       <li class="list-group-item">
-                      <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small></p>
+                      <p class="baihoc"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small></p>
                       </li>
                       {% endif %}
                 
