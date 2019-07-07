@@ -19,7 +19,7 @@ Các bạn click vào dòng "New project...", một cửa sổ hiện ra như sa
 Các bạn chú ý các con số và vùng đỏ tương ứng, mình giải thích sơ như sau:
 - Vùng 1: Khi bạn code ngôn ngữ C++, hãy chọn Visual C++
 - Vùng 2: Chọn Empty Project (nên chọn cái này khi code)
-- Vùng 3: Ở đâu chúng ta có các trường:
+- Vùng 3: Ở đây chúng ta có các trường:
 	- Name: đặt tên cho project của bạn
     - Location: nơi lưu solution (gồm cả project) của bạn
     - Solution: đặt tên cho solution (chứa các project bên trong)
