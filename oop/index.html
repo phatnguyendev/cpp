@@ -6,8 +6,7 @@ layout: default
  
   
     <div class="row pack">
-    	<!--
-        {% for post in site.posts %}   
+        {% for post in site.categories.oop %}   
             <div class="col-md-4 card">
              <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">    
                 <div class="panel panel-default">
@@ -30,10 +29,6 @@ layout: default
             </div>
         
           {% endfor %}
-      	-->
-      	{% for post in site.categories.oop %}
-      		 <h3 class="panel-title pull-left">{{ post.title | truncate: 25 }}</h3>
-      	{% endfor %}
 
     </div> 
     
