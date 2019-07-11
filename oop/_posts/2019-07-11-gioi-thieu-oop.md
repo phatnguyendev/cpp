@@ -28,3 +28,5 @@ Sau khi học xong khóa C++ cơ bản, các bạn đã trả qua 1 số phươn
 - **Lập trình hướng đối tượng:** sẽ là chủ đề chính của series này, hỗ trợ công nghệ hướng đối tượng. Đơn giản chúng ta sẽ "đối tượng hóa" mọi thứ chúng ta nghĩ được, sau đó chúng ta sẽ code dựa trên những đối tượng này.
 
 ## Lập trình hướng đối tượng (OOP)
+Xét ví dụ sau: Viết chương trình cho nhập vào thông tin của sinh viên (Họ tên, CMND, lớp) và mỗi sinh viên có thể tự đăng kí 1 môn học yêu thích.
+Như đã học ở series cơ bản, chúng ta sẽ dùng struct để biểu diễn đối tượng sinh viên (vì có thể gom được các thuộc tính của sinh viên chung 1 struct) và 1 function giúp sinh viên có thể đăng kí học phần. Cụ thể như sau:
