@@ -20,6 +20,7 @@ Trong series này chúng ta sẽ cùng đi tìm hiểu chi tiết về 4 tính c
 - Lập trình hướng đối tượng
 - Lập trình hướng chức năng
 - Lập trình Logic
+
 Sau khi học xong khóa C++ cơ bản, các bạn đã trả qua 1 số phương pháp sau:
 - **Lập trình tuần tự:** phương pháp lập trình sơ khai nhất, chúng ta sẽ viết 1 loạt các câu lệnh và chương trình sẽ chạy tuần tự.
 - **Lập trình có cấu trúc:** kết hợp việc lập trình tuần tự với các cấu trúc điều khiển (rẽ nhánh, vòng lặp...) giúp việc lập trình được tối ưu hơn so với lập trình tuần tự.
