@@ -30,3 +30,54 @@ Sau khi học xong khóa C++ cơ bản, các bạn đã trả qua 1 số phươn
 ## Lập trình hướng đối tượng (OOP)
 Xét ví dụ sau: Viết chương trình cho nhập vào thông tin của sinh viên (Họ tên, CMND, lớp) và mỗi sinh viên có thể tự đăng kí 1 môn học yêu thích.
 Như đã học ở series cơ bản, chúng ta sẽ dùng struct để biểu diễn đối tượng sinh viên (vì có thể gom được các thuộc tính của sinh viên chung 1 struct) và 1 function giúp sinh viên có thể đăng kí học phần. Cụ thể như sau:
+{% highlight cpp %}
+    #include <iostream>
+    #include <string>
+    using namespace std;
+     
+    enum MonHoc {
+    	OOP,
+    	DATA,
+    	WEB,
+    	APP
+    };
+     
+    typedef struct SinhVien {
+    	string HoTen;
+    	string CMND;
+    	string Lop;
+    }SV;
+     
+    bool DangKiMonHoc(SV sv);
+     
+    int main() {
+     
+    	int soLuong;
+    	cin >> soLuong; //nhập số lượng sinh viên
+     
+    	SV danhSachSV[soLuong];
+     
+    	for(int i=0;i<soLuong;i++)
+    	{
+    		cout << "Nhap ho ten: ";
+    		getline(cin >> ws, danhSachSV[i].HoTen);
+    		cout << "Nhap CMND: ";
+    		getline(cin >> ws, danhSachSV[i].CMND);
+    		cout << "Nhap Lop: ";
+    		getline(cin >> ws, danhSachSV[i].Lop);
+    	}
+     
+    	// Đăng kí môn học cho từng sinh viên
+    	for(int i=0;i<soLuong;i++)
+    	{
+    		DangKiMonHoc(danhSachSV[i]);
+    	}
+     
+    	return 0;
+    }
+     
+    bool DangKiMonHoc(SV sv) {
+    	// Do something here!
+    	return true;
+    }
+{% endhighlight %}
