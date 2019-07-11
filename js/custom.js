@@ -15,3 +15,8 @@ function changemode() {
   else
     this.innerHTML = "Dark mode";
 }
+
+function checkr() {
+  $('li.linkr.active').removeClass('active');
+  $(this).addClass("active");
+}
