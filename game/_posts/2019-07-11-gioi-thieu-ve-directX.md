@@ -15,6 +15,9 @@ DirectX về thực chất là một hệ thống các giao diện lập trình 
 - Dirext Sound: giúp bạn chèn thêm các hiệu ứng âm thanh hoặc nhạc nền, cho phép tải và chơi một hoặc nhiều file nhạc dạng WAV cũng như toàn bộ khả năng điều khiển quá trình chơi nhạc đó. Tóm lại, Direct Sound sẽ "bao sân" toàn bộ nhu cầu về âm nhạc và âm thanh trên PC.    
 - DirectSetup. Sau khi game của bạn đã hoàn thành, bạn sẽ muốn phát hành. DirectSetup cung cấp cho bạn những chức năng giúp ứng dụng có thể tự động cài đặt những phiên bản DirectX mới nhất lên hệ thống của người sử dụng. 
 
+## Cài đặt
+Nếu trong máy của bạn đã có sẵn cái folder SDK Jun10 như hình bên dưới thì ko cần quan tâm đến phần này.
+![](C:\Users\ThinkPad\AppData\Local\ZaloPC\1998230972653911228\ZaloDownloads\picture\1743216318557140278)
 ## Tài liệu tham khảo
 1.Tài liệu Nhập môn phát triển game – Trường ĐH CNTT – ĐHQG TPHCM
 2.[https://nesmaps.com/maps/NinjaGaiden/NinjaGaiden.html](https://nesmaps.com/maps/NinjaGaiden/NinjaGaiden.html)
