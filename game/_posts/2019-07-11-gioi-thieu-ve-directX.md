@@ -1,5 +1,13 @@
+---
+published: true
+layout: post
+title: Giới thiệu về DirectX
+categories: game
+img: bai24.png
+excerpt_separator: <!--more-->
+---
 Trong khóa Game này, chúng ta sẽ tìm hiểu về DirectX, các nền tảng API mà DirectX hỗ trợ, game Ninja Gaiden, cách lập trình game Ninja Gaiden với công cụ hỗ trợ là Visual Studio 2015 và DirectX9 với ngôn ngữ C++.
-
+<!--more-->
 Link game: [Ninja Gaiden (NES) - No Death Walkthrough](https://www.youtube.com/watch?v=ueeKMQSS4bw&feature=youtu.be&fbclid=IwAR0reolyKRosEbMsZcp85G4tFYrQSbl6LlS1R7hrMBqf5PyeRelqMRmgN8E)
 
 ## Mục tiêu
