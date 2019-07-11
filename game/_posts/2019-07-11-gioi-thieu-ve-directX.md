@@ -14,7 +14,8 @@ DirectX về thực chất là một hệ thống các giao diện lập trình 
 - Direct Play: cung cấp giao diện cho các trò chơi mạng hỗ trợ cho cơ chế lobby (nơi game tập trung lại, chat, trao đổi với nhau trước khi vào chơi game).
 - Dirext Sound: giúp bạn chèn thêm các hiệu ứng âm thanh hoặc nhạc nền, cho phép tải và chơi một hoặc nhiều file nhạc dạng WAV cũng như toàn bộ khả năng điều khiển quá trình chơi nhạc đó. Tóm lại, Direct Sound sẽ "bao sân" toàn bộ nhu cầu về âm nhạc và âm thanh trên PC.    
 - DirectSetup. Sau khi game của bạn đã hoàn thành, bạn sẽ muốn phát hành. DirectSetup cung cấp cho bạn những chức năng giúp ứng dụng có thể tự động cài đặt những phiên bản DirectX mới nhất lên hệ thống của người sử dụng. 
+
 ## Tài liệu tham khảo
 1.Tài liệu Nhập môn phát triển game – Trường ĐH CNTT – ĐHQG TPHCM
-2.https://nesmaps.com/maps/NinjaGaiden/NinjaGaiden.html
-3.http://gameprogrammingpatterns.com/spatial-partition.html
+2.[https://nesmaps.com/maps/NinjaGaiden/NinjaGaiden.html](https://nesmaps.com/maps/NinjaGaiden/NinjaGaiden.html)
+3.[http://gameprogrammingpatterns.com/spatial-partition.html](http://gameprogrammingpatterns.com/spatial-partition.html)
