@@ -17,6 +17,7 @@ function changemode() {
 }
 
 function checkr(objb) {
+  alert("dsd");
   $('li.linkr.active').removeClass('active');
   $(objb).addClass('active');
 }
