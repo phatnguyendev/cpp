@@ -17,7 +17,9 @@ DirectX về thực chất là một hệ thống các giao diện lập trình 
 
 ## Cài đặt
 Nếu trong máy của bạn đã có sẵn cái folder SDK Jun10 như hình bên dưới thì ko cần quan tâm đến phần này.
-![](C:\Users\ThinkPad\AppData\Local\ZaloPC\1998230972653911228\ZaloDownloads\picture\1743216318557140278)
+![](https://1.bp.blogspot.com/-QI0jeBcQeD4/XSdPCz_tKlI/AAAAAAAAEB0/muKMMjM-1WIgdu_sMLEc3avFDheaoml_ACLcBGAs/s1600/sdk.jpg)
+Nếu máy bạn chưa có, hãy truy cập link bên dưới để download:
+[Download DirectSDK](https://www.microsoft.com/en-us/download/details.aspx?id=6812)
 ## Tài liệu tham khảo
 1.Tài liệu Nhập môn phát triển game – Trường ĐH CNTT – ĐHQG TPHCM
 2.[https://nesmaps.com/maps/NinjaGaiden/NinjaGaiden.html](https://nesmaps.com/maps/NinjaGaiden/NinjaGaiden.html)
