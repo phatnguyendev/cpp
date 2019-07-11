@@ -12,7 +12,7 @@ Lập trình hướng đối tượng (Objiect-oriented Programming) là phươn
 - Kế thừa (Inheritance)
 - Đóng gói (Encapsulation)
 
-Trong series này chúng ta sẽ cùng đi tìm hiểu chi tiết và 4 tính chất trên và cách áp dụng OOP (để làm game). Nào triển thôi!
+Trong series này chúng ta sẽ cùng đi tìm hiểu chi tiết về 4 tính chất trên và cách áp dụng OOP (để làm game). Nào triển thôi!
 ## Mở đầu
 Để lập trình hiệu quả ngoài việc lựa chọn ngôn ngữ lập trình, các bạn cần phải xác định được phương pháp lập trình hiệu quả. Một số ngôn ngữ lai (hybrid) hỗ trợ nhiều phương pháp lập trình khác nhau, cùng điểm qua 1 số phương pháp lập trình như:
 - Lập trình tuần tự (tuyến tính)
