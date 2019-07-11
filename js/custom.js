@@ -15,9 +15,3 @@ function changemode() {
   else
     this.innerHTML = "Dark mode";
 }
-
-function checkr(objb) {
-  alert("dsd");
-  $('li.linkr.active').removeClass('active');
-  $(objb).addClass('active');
-}
