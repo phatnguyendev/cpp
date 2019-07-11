@@ -16,11 +16,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav">
-          {% if page.url contains 'oop'%}
+	        {% if page.url contains 'oop'%}
           <li><a href="/cpp">C++ basic</a></li>
           <li class="active"><a href="/cpp/oop">Learn OOP</a></li>
           <li><a href="/cpp/game">Make Game</a></li>            
-          {% elseif page.url contains 'game' %}
+          {% elsif page.url contains 'game' %}
           <li><a href="/cpp">C++ basic</a></li>
           <li><a href="/cpp/oop">Learn OOP</a></li>
           <li class="active"><a href="/cpp/game">Make Game</a></li>

@@ -32,6 +32,11 @@ permalink: /:title/
 paginate: 6
 paginate_path: /page:num/
 
+#custom lesson
+lesson:
+  cpp: 'cpp' 
+  oop: 'oop'
+  game: 'game'
 # Tracker
 analytics: UA-143351073-1
 

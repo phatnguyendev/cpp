@@ -15,4 +15,3 @@ function changemode() {
   else
     this.innerHTML = "Dark mode";
 }
-
