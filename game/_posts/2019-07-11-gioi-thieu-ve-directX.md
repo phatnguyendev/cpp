@@ -19,11 +19,11 @@ Nếu chưa:
 ## Tổng quan về DirectX:
 DirectX về thực chất là một hệ thống các giao diện lập trình ứng dụng (API) phục vụ cho quá trình phát triển các game trên nền tảng hệ điều hành Windows. Bản chất nhiệm vụ chính của nó là cung cấp một giao diện (interface) cho phép ứng dụng có thể truy cập trực tiếp đến các tính năng cấp thấp (low – level) của nhiều loại phần cứng – trong đó có card đồ họa – từ đó xây dựng lên một thư viện các hàm thống nhất và ổn định dành cho các game không dựa vào nền tảng Windows API hoặc GDI. Do cho phép ứng dụng truy cập trực tiếp vào phần cứng nên DirectX nhanh hơn đáng kể so với GDI và đây là lí do khiến DirectX rất phù hợp cho game. Hiện nay, phiên bản mới nhất là DirectX 12.
 ### Các thành phần chính của DirectX
-- DirectX Graphic: đảm nhiệm tất cả chức năng kết xuất đồ họa của hệ thống. Nó cung cấp các hàm API để người dùng quản lý quá trình vẽ 2D cũng như 3D. Ngoài ra nó cũng hỗ trợ cả quá trình khởi tạo và xác lập độ phân giải cho game của bạn
-- Direct Input: tất cả những gì người dùng nhập vào sẽ được quản lý bởi các hàm API trong thành phần này, bao gồm khả năng hỗ trợ các thiết bị như bàn phím, chuột, joystick, gamepad…
-- Direct Play: cung cấp giao diện cho các trò chơi mạng hỗ trợ cho cơ chế lobby (nơi game tập trung lại, chat, trao đổi với nhau trước khi vào chơi game).
-- Dirext Sound: giúp bạn chèn thêm các hiệu ứng âm thanh hoặc nhạc nền, cho phép tải và chơi một hoặc nhiều file nhạc dạng WAV cũng như toàn bộ khả năng điều khiển quá trình chơi nhạc đó. Tóm lại, Direct Sound sẽ "bao sân" toàn bộ nhu cầu về âm nhạc và âm thanh trên PC.    
-- DirectSetup. Sau khi game của bạn đã hoàn thành, bạn sẽ muốn phát hành. DirectSetup cung cấp cho bạn những chức năng giúp ứng dụng có thể tự động cài đặt những phiên bản DirectX mới nhất lên hệ thống của người sử dụng. 
+- **DirectX Graphic**: đảm nhiệm tất cả chức năng kết xuất đồ họa của hệ thống. Nó cung cấp các hàm API để người dùng quản lý quá trình vẽ 2D cũng như 3D. Ngoài ra nó cũng hỗ trợ cả quá trình khởi tạo và xác lập độ phân giải cho game của bạn
+- **Direct Input**: tất cả những gì người dùng nhập vào sẽ được quản lý bởi các hàm API trong thành phần này, bao gồm khả năng hỗ trợ các thiết bị như bàn phím, chuột, joystick, gamepad…
+- **Direct Play**: cung cấp giao diện cho các trò chơi mạng hỗ trợ cho cơ chế lobby (nơi game tập trung lại, chat, trao đổi với nhau trước khi vào chơi game).
+- **Dirext Sound**: giúp bạn chèn thêm các hiệu ứng âm thanh hoặc nhạc nền, cho phép tải và chơi một hoặc nhiều file nhạc dạng WAV cũng như toàn bộ khả năng điều khiển quá trình chơi nhạc đó. Tóm lại, Direct Sound sẽ "bao sân" toàn bộ nhu cầu về âm nhạc và âm thanh trên PC.    
+- **DirectSetup**: Sau khi game của bạn đã hoàn thành, bạn sẽ muốn phát hành. DirectSetup cung cấp cho bạn những chức năng giúp ứng dụng có thể tự động cài đặt những phiên bản DirectX mới nhất lên hệ thống của người sử dụng. 
 
 ## Cài đặt
 Nếu trong máy của bạn đã có sẵn cái folder SDK Jun10 như hình bên dưới thì ko cần quan tâm đến phần này.
