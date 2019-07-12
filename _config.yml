@@ -28,7 +28,7 @@ copyright:
 
 # Build settings
 markdown: kramdown
-permalink: /:categories/:title/
+permalink: /:title/
 paginate: 6
 paginate_path: /page:num/
 
