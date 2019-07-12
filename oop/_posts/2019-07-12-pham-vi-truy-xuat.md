@@ -62,7 +62,7 @@ Với việc khai báo phạm vi này, những thuộc tính và phương thức
     	string Class;
   
   		void SetID(string id) {
-  			this.ID = id;
+  			this->ID = id;
   		}
     };
      
@@ -92,7 +92,7 @@ Phạm vi ảnh hưởng của các từ khóa: mọi thuộc tính và phương
     	string Class; //public
   
   		void SetID(string id) { //public
-  			this.ID = id;
+  			this->ID = id;
   		}
     };
 {% endhighlight %}
@@ -101,3 +101,9 @@ Hãy sử dụng quy tắc mặc định như sau: xử dụng public cho phươ
 Tạo phương thức get/set để tương tác với các thuộc tính private.
 
 Còn truy xuất ``protected`` thì sao? Chúng ta sẽ cùng tìm hiểu ở các phần sau.
+## Tính đóng gói (Encapsulation)
+Có thể hiểu đơn giản tính đóng gói là bảo mật các thông tin private. Chúng ta không thể tương tác trực tiếp với thuộc tính private mà phải thông qua các phương thức private (phương thức get/set). Mặt khác đóng gói cũng có nghĩa là gom các dữ liệu và các function thao tác trên dữ liệu đó lại (như những gì chúng ta làm trong class).
+
+Đóng gói đem lại khá nhiều lợi ích (và cũng khá nhọc nhằn) ví dụ như bạn không cần biết class string hoạt động như thế nào, chúng ta sẽ chỉ cần thao tác với các function mà nó cung cấp (và thường rất tường minh và dễ dụng) như strlen,... Nhưng đối với chương trình của chúng ta, để đảm bảo tính đóng gói thì các thuộc tính private sẽ phải có các phương thức public để bên ngoài tương tác với chúng (sẽ rất nhiều get/set đấy :)). Nhưng quy chung hãy tập thói quen tuân thủ tính đóng gói khi bạn mới bắt đầu để giữ thói quen tốt khi lập trình hướng đối tượng nhé.
+## Tổng kết
+Hãy nắm những đặc điểm mình nêu trên để đảm bảo được tính đóng gói (Encapsulation) cho chương trình nhé. Pie~
