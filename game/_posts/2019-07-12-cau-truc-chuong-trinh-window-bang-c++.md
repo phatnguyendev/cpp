@@ -79,3 +79,11 @@ BOOL GetMessage(
 - HWND hWnd: Chứa định danh cửa sổ, cho biết sẽ lấy ra thông điệp của cửa sổ nào. Nếu truyền vào NULL, GetMessage sẽ trả về toàn bộ thông điệp gửi đến instance của chương trình.
 - UNIT wMsgFilterMin, UNIT wMsgFilterMax: Giới hạn hàm GetMessage chỉ lấy ra thông điệp trong một phạm vi nhất định nào đó. Chúng ta sẽ không sử dụng 2 tham số này nên sẽ đặt cả 2 giá trị bằng 0.
 
+<div class="alert alert-info">
+Lời gọi tới hàm GetMessage là dòng code quan trọng nhất của chương trình Windows. Nếu không có dòng này trong WinMain thì ứng dụng sẽ tê liệt vì không thể phản ứng với bất kỳ thao tác nào của người dùng.
+</div>
+- Hàm TranslateMessage: dùng để chuyển đổi thông điệp chứa mã phím ảo sang mã ký tự.
+- Hàm DispatchMessage: trả thông điệp trở lại hệ thống thông điệp
+
+Kết hợp hai hàm này sẽ giúp chương trình lấy ra và chuyển thông điệp đến từ hệ điều hành Windows cho hàm xử lý thông điệp WinProc.
+Vòng lặp thông điệp chỉ cần được viết ra một lần duy nhất và sẽ hầu như không cần sửa đổi về sau.
