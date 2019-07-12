@@ -89,3 +89,4 @@ Hai hàm này dùng để xử lý thông điệp trả ra bởi hàm **GetMessa
 Vòng lặp thông điệp chỉ cần được viết ra một lần duy nhất và sẽ hầu như không cần sửa đổi về sau.
 
 ## Tổng kết
+Chúng ta đã cùng nhau tìm hiểu về cấu trúc của một chương trình Windows…Các bạn hãy luyện tập code lại các ví dụ trong bài để nắm và hiểu rõ hơn về cách hoạt động của nó nhé, hơn thế các đoạn code này về sau sẽ sử dụng rất nhiều đến lúc đó các bạn chỉ cần coppy sử dụng lại thôi.😉 Hãy truy cập vào [Series Make Game - TuiTuCode](https://tuitucode.github.io/cpp/game/) để học tiếp những bài thú vị khác nữa. Nếu có thắc mắc các bạn cứ bình luận bên dưới hoặc gửi thắc mắc về page [TuiTuCode](https://www.facebook.com/shareAboutIT/) để các ad giải đáp. Pie~ 
