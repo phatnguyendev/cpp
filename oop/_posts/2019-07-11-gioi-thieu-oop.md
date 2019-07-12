@@ -46,6 +46,7 @@ Như đã học ở series cơ bản, chúng ta sẽ dùng struct để biểu d
     	string HoTen;
     	string CMND;
     	string Lop;
+  		MonHoc monHoc;
     }SV;
      
     bool DangKiMonHoc(SV sv);
@@ -68,7 +69,7 @@ Như đã học ở series cơ bản, chúng ta sẽ dùng struct để biểu d
     	}
      
     	// Đăng kí môn học cho từng sinh viên
-    	for(int i=0;i<soLuong;i++)
+    	for(int i=0;i <> soLuong;i++)
     	{
     		DangKiMonHoc(danhSachSV[i]);
     	}
@@ -81,3 +82,17 @@ Như đã học ở series cơ bản, chúng ta sẽ dùng struct để biểu d
     	return true;
     }
 {% endhighlight %}
+Chỉ là 1 ví dụ làm nóng người thôi! Tiếp theo chúng ta sẽ học về class, 1 kiểu dữ liệu do người dùng tự định nghĩa tương tự như struct và được sử dụng nhiều trong OOP.
+
+Chúng ta sẽ dùng ``class`` thay cho ``struct``. Về cách khai báo class cũng giống struct với những thứ ưu việt hơn, chúng ta sẽ khai báo class SinhVien như sau:
+{% highlight cpp %}
+	class SinhVien {
+    	string HoTen;
+    	string CMND;
+    	string Lop;
+  		MonHoc monHoc;  		
+  	};
+{% endhighlight %}
+Nhìn khá giống với struct đúng không? Để truy cập đến thuộc tính bên trong class chúng ta cũng dùng toán tử ``.`` tương tự struct. Như với cách khai báo trên khi truy cập đến thuộc tính ``HoTen`` chúng ta sẽ bị báo lỗi - đây là 1 điểm khác biệt so với struct: mọi thuộc tính trong struct mặc định là **public** và có thể được truy cập mọi lúc còn đối với class chúng được mặc định là **private** và không được truy xuất trực tiếp bên ngoài class như vậy.
+### Member function
+Đây là điểm vượt trội so với struct, giống với các thuộc tính, các phương thức (hành vi đối tượng) cũng được viết bên trong class (trong khi struct chỉ đóng gói các thuộc tính)
