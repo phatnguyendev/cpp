@@ -15,3 +15,4 @@ Chúng ta sẽ đề cập đến 3 phạm vi truy xuất phổ biến:
 - Protected
 
 ### Truy xuất public
+Với việc khai báo phạm vi này, những thuộc tính và phương thức trong phạm vi public sẽ được truy cập tùy ý bên ngoài
