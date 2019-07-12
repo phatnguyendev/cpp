@@ -87,3 +87,5 @@ Lời gọi tới hàm GetMessage là dòng code quan trọng nhất của chư�
 
 Hai hàm này dùng để xử lý thông điệp trả ra bởi hàm **GetMessage**. Kết hợp hai hàm này sẽ giúp chương trình lấy ra và chuyển thông điệp đến từ hệ điều hành Windows cho hàm xử lý thông điệp **WinProc**.
 Vòng lặp thông điệp chỉ cần được viết ra một lần duy nhất và sẽ hầu như không cần sửa đổi về sau.
+
+## Tổng kết
