@@ -24,10 +24,10 @@ int WINAPI WinMain(
     int nShowCmd);
 {% endhighlight %}
 Ý nghĩa của các tham số:
-- HINSTANCE hInstance: Tham số này định danh _thể hiện_ của chương trình được nạp và thi hành trên bộ nhớ (vì một chương trình có thể được thực thi nhiều lần, cùng lúc). Kiến trúc của hệ điều hành Windows cho phép các _thể hiện_ dùng chung mã chương trình trong bộ nhớ để tiết kiệm bộ nhớ - trong khi dữ liệu của các _thể hiện_ được lưu trữ riêng lẻ. Tham số hInstance cho phép ta biết mình đang chạy ở _thể hiện_ nào.
-- HINSTANCE hPrevInstance: Tham số này cho biết định danh thể hiện vừa được gọi trước của chương trình. Tham số này thường dùng để đảm bảo chỉ có một thể hiện duy nhất của chương trình. Nếu là thể hiện đầu tiên thì hPrevInstance là NULL, ngược lại khác NULL. Điều này khá hợp với game vì chúng ta thường sẽ không muốn người chơi mở cùng lúc nhiều cửa sổ của cùng một game.
-- LPSTR lpCmdLine: Chuỗi chứa các tham số dòng lệnh truyền cho chương trình. Tham số dòng lệnh thường dùng để thiết lập hoặc truyền thêm dữ liệu gì đó cho chương trình.
-- int nShowCmd: Tham số này gợi ý cho chương trình nên tạo ra cửa sổ thế nào khi thực thi.
+- **HINSTANCE hInstance**: Tham số này định danh _thể hiện_ của chương trình được nạp và thi hành trên bộ nhớ (vì một chương trình có thể được thực thi nhiều lần, cùng lúc). Kiến trúc của hệ điều hành Windows cho phép các _thể hiện_ dùng chung mã chương trình trong bộ nhớ để tiết kiệm bộ nhớ - trong khi dữ liệu của các _thể hiện_ được lưu trữ riêng lẻ. Tham số hInstance cho phép ta biết mình đang chạy ở _thể hiện_ nào.
+- **HINSTANCE hPrevInstance**: Tham số này cho biết định danh thể hiện vừa được gọi trước của chương trình. Tham số này thường dùng để đảm bảo chỉ có một thể hiện duy nhất của chương trình. Nếu là thể hiện đầu tiên thì hPrevInstance là NULL, ngược lại khác NULL. Điều này khá hợp với game vì chúng ta thường sẽ không muốn người chơi mở cùng lúc nhiều cửa sổ của cùng một game.
+- **LPSTR lpCmdLine**: Chuỗi chứa các tham số dòng lệnh truyền cho chương trình. Tham số dòng lệnh thường dùng để thiết lập hoặc truyền thêm dữ liệu gì đó cho chương trình.
+- **int nShowCmd**: Tham số này gợi ý cho chương trình nên tạo ra cửa sổ thế nào khi thực thi.
 
 Giá trị trả về của hàm WinMain là một số nguyên thuộc kiểu int WINAPI. Giá trị trả về bằng 0 là có lỗi, khác 0 là mọi thứ đều bình thường.
 
