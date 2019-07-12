@@ -1,5 +1,13 @@
-
+---
+published: true
+layout: post
+title: Cấu trúc chương trình Windows bằng C++
+categories: game
+img: bai24.png
+excerpt_separator: <!--more-->
+---
 Một chương trình Windows tối thiểu phải có một hàm tên là **WinMain**. Ngoài ra, hầu hết còn có một hàm call back gọi là **WinProc** để xử lý một số các sự kiện do hệ điều hành Windows gửi đến. DirectX hoạt động theo cơ chế "kéo" (polled) - nghĩa là chúng ta đi lấy dữ liệu thay vì chờ nhận dữ liệu gửi đến từ đâu đó. Chẳng hạn: khi làm việc với bàn phím, chúng ta sẽ phải liên tục gọi hàm để biết trạng thái phím nào đã bị thay đổi.
+<!--more-->
 
 ## Tạo một project - Ví dụ Chương trình "Hello World"
 Chúng ta sẽ làm quen với cấu trúc chương trình Windows đơn giản hiển thị một hộp thoại với dòng chữ Hello World. Chương trình này đã bỏ qua các bước khó chịu như tạo cửa sổ, menu, hàm WinProc...
@@ -9,7 +17,7 @@ Tạo một Empty Project C++ và chạy đoạn code sau:
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
 {
-	MessageBox(NULL, "Welcome!", "Hello World", 			MB_OK|MB_ICONEXCLAMATION);
+	MessageBox(NULL, "Welcome!", "Hello World", MB_OK|MB_ICONEXCLAMATION);
     return 0;
 }
 {% endhighlight %}
@@ -18,7 +26,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 Khai báo:
 {% highlight cpp %}
 int WINAPI WinMain(
-	HINSTANCE hInstance, 
+    HINSTANCE hInstance, 
     HINSTANCE hPrevInstance, 
     LPSTR lpCmdLine, 
     int nShowCmd);
