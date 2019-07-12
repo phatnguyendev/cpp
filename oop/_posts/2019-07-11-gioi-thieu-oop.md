@@ -49,7 +49,7 @@ Như đã học ở series cơ bản, chúng ta sẽ dùng struct để biểu d
   		MonHoc monHoc;
     }SV;
      
-    bool DangKiMonHoc(SV sv);
+    void DangKiMonHoc(SV sv);
      
     int main() {
      
@@ -77,13 +77,12 @@ Như đã học ở series cơ bản, chúng ta sẽ dùng struct để biểu d
     	return 0;
     }
      
-    bool DangKiMonHoc(SV sv) {
-    	// Do something here!
-    	return true;
+    void DangKiMonHoc(SV sv) {
+    	sv.monHoc = MonHoc::OOP;
     }
 {% endhighlight %}
-Chỉ là 1 ví dụ làm nóng người thôi! Tiếp theo chúng ta sẽ học về class, 1 kiểu dữ liệu do người dùng tự định nghĩa tương tự như struct và được sử dụng nhiều trong OOP.
-
+Chỉ là 1 ví dụ làm nóng người thôi! Chúng ta đã "đối tượng hóa" sinh viên thông qua struct cùng hành vi (DangKiMonHoc). Tiếp theo chúng ta sẽ học về ``class``, 1 kiểu dữ liệu do người dùng tự định nghĩa tương tự như struct và được sử dụng nhiều trong OOP.
+### class
 Chúng ta sẽ dùng ``class`` thay cho ``struct``. Về cách khai báo class cũng giống struct với những thứ ưu việt hơn, chúng ta sẽ khai báo class SinhVien như sau:
 {% highlight cpp %}
 	class SinhVien {
@@ -93,6 +92,24 @@ Chúng ta sẽ dùng ``class`` thay cho ``struct``. Về cách khai báo class c
   		MonHoc monHoc;  		
   	};
 {% endhighlight %}
-Nhìn khá giống với struct đúng không? Để truy cập đến thuộc tính bên trong class chúng ta cũng dùng toán tử ``.`` tương tự struct. Như với cách khai báo trên khi truy cập đến thuộc tính ``HoTen`` chúng ta sẽ bị báo lỗi - đây là 1 điểm khác biệt so với struct: mọi thuộc tính trong struct mặc định là **public** và có thể được truy cập mọi nơi còn đối với class chúng được mặc định là **private** và không được truy xuất trực tiếp bên ngoài class như vậy.
+Nhìn khá giống với struct đúng không? Để truy cập đến thuộc tính bên trong class chúng ta cũng dùng toán tử ``.`` tương tự struct. Như với cách khai báo trên khi truy cập đến thuộc tính ``HoTen`` chúng ta sẽ bị báo lỗi - đây là 1 điểm khác biệt so với struct: mọi thuộc tính trong struct mặc định là **public** và có thể được truy cập mọi nơi còn đối với class chúng được mặc định là **private** và không được truy xuất trực tiếp bên ngoài class như vậy. Để giải quyết các bạn thêm từ khóa "public".
 ### Member function
-Đây là điểm vượt trội so với struct, giống với các thuộc tính, các phương thức (hành vi đối tượng) cũng được viết bên trong class (trong khi struct chỉ đóng gói các thuộc tính)
+Hay còn gọi là phương thức (Method), tượng trưng cho hành vi của đối tượng (như function DangKiMonHoc). Chúng ta tiến hành khai báo và định nghĩa như sau:
+{% highlight cpp %}
+	class SinhVien {
+  		public: // cho phép bên ngoài truy xuất vào
+    	string HoTen;
+    	string CMND;
+    	string Lop;
+  		MonHoc monHoc;  		
+  		
+  		bool DangKiMonHoc() {
+    	this.monHoc = MonHoc::OOP;
+    	return true;
+    	}
+  	};
+{% endhighlight %}
+Thay vì phải truyền đối tượng sinh viên vào như tham số, ở trong class chúng ta thực hiện truy xuất thuộc tính trực tiếp thông qua ``this`` (khuyến khích dùng). Một điểm cần lưu ý nữa là chúng ta có thể gọi phương thức được định nghĩa bên dưới phương thức gọi (nếu là function bình thường sẽ không được phép).
+
+## Tổng kết
+Chúng ta cũng đã từng làm quen với class ``string`` trong loạt series cơ bản hỗ trợ rất tốt khi chúng ta làm việc với chuỗi. Những bài học sau sẽ dùng rất nhiều đến class, các bạn cố gắng ghi nhớ cách sử dụng nhé! Pie~
