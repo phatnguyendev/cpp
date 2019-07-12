@@ -15,4 +15,35 @@ Chúng ta sẽ đề cập đến 3 phạm vi truy xuất phổ biến:
 - Protected
 
 ### Truy xuất public
-Với việc khai báo phạm vi này, những thuộc tính và phương thức trong phạm vi public sẽ được truy cập tùy ý bên ngoài
+Với việc khai báo phạm vi này, những thuộc tính và phương thức trong phạm vi public sẽ được truy cập tùy ý bên ngoài. Khai báo bằng từ khóa ``public``. Xem ví dụ dưới:
+{% highlight cpp %}
+    #include <iostream>
+    #include <string>
+    using namespace std;
+     
+    class Pupil {
+     
+    	string ID;
+     
+    	public:
+    	string Name;
+    	int Age;
+    	string Class;
+    };
+     
+    int main() {
+     
+    	Pupil a;
+     
+    	a.Name = 'Nguyen A'; //Hợp lí
+    	a.Age = '18';		//Hợp lí
+     
+    	a.ID = '001'; //Không được
+     
+    	return 0;
+    }
+{% endhighlight %}
+Để ý thấy các thuộc tính ``Age`` , ``Name`` nằm dưới từ khóa **public** đều truy xuất được riêng ``ID`` sẽ báo lỗi (nằm trước từ khóa public) vì lúc này ``ID`` đang ở phạm vi **private**.
+### Truy xuất Private
+Với việc khai báo phạm vi này, những thuộc tính và phương thức trong phạm vi private chỉ được truy xuất ở bên trong class. Mặc định mọi thuộc tính và phương thức đều ở trạng thái private
+
