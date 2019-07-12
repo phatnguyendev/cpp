@@ -93,6 +93,6 @@ Chúng ta sẽ dùng ``class`` thay cho ``struct``. Về cách khai báo class c
   		MonHoc monHoc;  		
   	};
 {% endhighlight %}
-Nhìn khá giống với struct đúng không? Để truy cập đến thuộc tính bên trong class chúng ta cũng dùng toán tử ``.`` tương tự struct. Như với cách khai báo trên khi truy cập đến thuộc tính ``HoTen`` chúng ta sẽ bị báo lỗi - đây là 1 điểm khác biệt so với struct: mọi thuộc tính trong struct mặc định là **public** và có thể được truy cập mọi lúc còn đối với class chúng được mặc định là **private** và không được truy xuất trực tiếp bên ngoài class như vậy.
+Nhìn khá giống với struct đúng không? Để truy cập đến thuộc tính bên trong class chúng ta cũng dùng toán tử ``.`` tương tự struct. Như với cách khai báo trên khi truy cập đến thuộc tính ``HoTen`` chúng ta sẽ bị báo lỗi - đây là 1 điểm khác biệt so với struct: mọi thuộc tính trong struct mặc định là **public** và có thể được truy cập mọi nơi còn đối với class chúng được mặc định là **private** và không được truy xuất trực tiếp bên ngoài class như vậy.
 ### Member function
 Đây là điểm vượt trội so với struct, giống với các thuộc tính, các phương thức (hành vi đối tượng) cũng được viết bên trong class (trong khi struct chỉ đóng gói các thuộc tính)
