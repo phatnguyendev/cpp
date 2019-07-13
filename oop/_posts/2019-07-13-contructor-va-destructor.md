@@ -126,4 +126,74 @@ Chúng ta sẽ được kết quả in ra màn hình là: 1/2
         	return 0;
         }
 {% endhighlight %}
-Vậy nên khi đã khởi tạo constructor có tham số các bạn phải viết cả constructor mặc định nhé.
+Vậy nên khi đã khởi tạo constructor có tham số các bạn phải viết cả constructor mặc định nhé. Còn nếu các bạn không định nghĩa constructor nào, 1 constructor mặc định sẽ được ngầm tạo ra (và bên trong thân hàm không có gì cả).
+### Copy constructor
+Chúng ta có thể tạo 1 kiểu hàm thiết lập sao chép để copy 1 số đặc điểm (do chúng ta quyết định) từ đối tượng này sang đối tượng khác.
+{% highlight cpp %}
+        #include <iostream>
+        using namespace std;
+     
+        class PhanSo {
+        	int TuSo;
+        	int MauSo;
+     
+        	public:
+        	PhanSo() { //default constructor
+        		TuSo = 1;
+        		MauSo = 1;
+        	}
+        	PhanSo(int t, int m) {
+        		TuSo = t;
+        		MauSo = m;
+        	}
+        	PhanSo(const PhanSo& ps) {
+        		this->TuSo = ps.TuSo;
+        		this->MauSo = ps.MauSo;
+        	}
+     
+        	int getTuSo() {
+        		return TuSo;
+        	}
+          	int getMauSo() {
+        		return MauSo;
+        	}
+     
+        };
+     
+        int main() {
+        	PhanSo ps; //call constructor
+        	PhanSo ps1(1,2);
+        	PhanSo ps3 (ps1);
+        	cout << ps3.getTuSo() << "/" << ps3.getMauSo() << endl;
+        	return 0;
+        }
+{% endhighlight %}
+Phân số ``ps3`` đã copy TuSo và MauSo từ ``ps2`` thông qua copy constructor.
+## Destructor
+Ngược lại với constructor, hàm hủy - destructor sẽ làm nhiệm vụ dọn dẹp mọi thứ khi lớp bị hủy.
+
+Nếu lớp của bạn chỉ có những thuộc tính đơn giản (không cấp phát động) hoặc các phương thức đơn giản (không thao tác với file, không thao tác cơ sở dữ liệu) thì việc tạo 1 destructor là điều không cần thiết. Ta xét ví dụ dùng destructor khi lớp có cấp phát động như sau:
+{% highlight cpp %}
+    #include <iostream>
+    using namespace std;
+     
+    class Mang {
+    	int *arr;
+    	int lenght;
+     
+    	public:
+    	~Mang() {
+    		if(arr)
+    			delete arr;
+    	}
+    };
+     
+    int main() {
+    	// your code goes here
+    	return 0;
+    }
+{% endhighlight %}
+Destructor cũng có 1 số quy tắc như:
+- Thêm dấu ``~`` trước tên
+- Tên destructor phải trùng tên lớp
+- Không có kiểu trả về (như constructor)
