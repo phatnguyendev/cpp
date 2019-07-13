@@ -71,3 +71,4 @@ Chương trình cho ra kết quả:
 Một số điểm cần lưu ý:
 - Không được gán giá trị ngay lúc khai báo biến (chỉ const static member mới khai báo như vậy).
 - static member function (phương thức thành viên tĩnh) không thể dùng con trỏ this.
+- Chúng ta có thể truy cập trực tiếp biến hoặc phương thức thành viên tĩnh mà không cần thông qua thể hiện của lớp (như ví dụ trên mình dùng toán tử phạm vi ``::``.
