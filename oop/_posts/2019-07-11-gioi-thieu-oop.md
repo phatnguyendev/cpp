@@ -111,7 +111,7 @@ Nhìn khá giống với struct đúng không? Để truy cập đến thuộc t
 	class <ten_lop>
   	{
     	private:
-  		<khai báo thành phần riêng trong từng đối tượng>
+  	<khai báo thành phần riêng trong từng đối tượng>
         protected:
             <khai báo thành phần riêng trong từng đối tượng, có thể truy cập từ lớp dẫn xuất>
         public:
