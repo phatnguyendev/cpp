@@ -132,3 +132,4 @@ Là lớp có thể truy xuất đến các thuộc tính private của lớp kh
 {% endhighlight %}
 Nhìn ví dụ là đủ hiểu rồi đúng không nào :)
 ## Tổng kết
+Thế là chúng ta đã tìm hiểu xong hàm bạn và lớp bạn. Có thắc mắc các bạn bình luận bên dưới nhé. Pie~
