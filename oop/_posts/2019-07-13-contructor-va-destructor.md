@@ -4,6 +4,7 @@ layout: post
 title: Constructor và Destructor
 categories: oop
 img: bai26.png
+lesson: 4
 excerpt_separator: <!--more-->
 ---
 Việc thực hiện các công việc như : khởi tạo giá trị các thuộc tính, cấp phát vùng nhớ cho con trỏ, mở tệp tin hay thu hồi vùng nhớ,... đều được constructor và destructor thực hiện trong OOP<!--more-->
