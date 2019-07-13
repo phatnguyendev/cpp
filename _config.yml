@@ -31,6 +31,8 @@ markdown: kramdown
 permalink: /:title/
 paginate: 6
 paginate_path: /page:num/
+category_dir: "oop"
+category_layout: "index.html"
 
 #custom lesson
 lesson:
