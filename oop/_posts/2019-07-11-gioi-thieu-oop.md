@@ -153,8 +153,8 @@ Thay vì phải truyền đối tượng sinh viên vào như tham số, ở tro
 - Khai báo và tạo đối tượng: <tên lớp> <tên đối tượng>;
 - Gọi hàm thành phần của lớp
 
-<tên đối tượng>.<tên hàm thành phần> (<danh sách tham số nếu có>);
-<tên con trỏ đối tượng>.<tên hàm thành phần> (<danh sách tham số nếu có>);  
+		<tên đối tượng>.<tên hàm thành phần> (<danh sách tham số nếu có>);
+		<tên con trỏ đối tượng>.<tên hàm thành phần> (<danh sách tham số nếu có>);  
            
 ## Ví dụ tổng kết
 **Bài toán:** Định nghĩa lớp Hình chữ nhật
