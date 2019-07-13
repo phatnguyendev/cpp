@@ -121,7 +121,7 @@ Nhìn khá giống với struct đúng không? Để truy cập đến thuộc t
 {% endhighlight %}
 - Thuộc tính: Các thuộc tính được khai báo giống như khai báo biến trong C++.
                
-### Member function
+### Member function - hàm thành phần
 Hay còn gọi là phương thức (Method), tượng trưng cho hành vi của đối tượng (như function DangKiMonHoc). Chúng ta tiến hành khai báo và định nghĩa như sau:
 {% highlight cpp %}
 	class SinhVien {
@@ -145,13 +145,13 @@ Thay vì phải truyền đối tượng sinh viên vào như tham số, ở tro
       	<nội dung>
       }
 {% endhighlight %}
-## Cơ chế tạo lập các lớp
+## Các bước tạo 1 lớp
 - **Xác định các thuộc tính (dữ liệu)**: những gì mà ta biết về đối tượng - giống như một struct.
 - **Xác định các phương thức (hành vi)**: những gì đối tượng có thể làm.
 - **Xác định các quyền truy xuất**: sẽ tìm hiểu kỹ ở bài sau
           
-## Tạo lập đối tượng
-- Khai báo và tạo đối tượng: <tên lớp> <tên đối tượng>;
+## Thao tác với lớp
+- Khai báo và tạo đối tượng: \<tên lớp\> \<tên đối tượng\>;
 - Gọi hàm thành phần của lớp
 
 		<tên đối tượng>.<tên hàm thành phần> (<danh sách tham số nếu có>);
