@@ -4,6 +4,7 @@ layout: post
 title: Làm việc với header file
 categories: oop
 img: bai26.png
+lesson: 3
 excerpt_separator: <!--more-->
 ---
 Trước tiên đi qua những phần quan trọng tiếp theo, chúng ta sẽ cùng tìm hiểu cách tạo file ``.h`` (header file). Let's go!
