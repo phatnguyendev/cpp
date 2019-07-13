@@ -9,11 +9,8 @@ pagination:
  
   
     <div class="row pack">
-         {% if page.paginator %}
-         {% assign paginator = page.paginator %}
-         {% endif %}
-        
-        {% for post in paginator.posts %}
+          {% assign sorted = (site.categories.oop | sort: 'lesson') %}
+          {% for post in sorted %}
             <div class="col-md-4 card">
              <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">    
                 <div class="panel panel-default">
