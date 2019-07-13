@@ -197,3 +197,6 @@ Destructor cũng có 1 số quy tắc như:
 - Thêm dấu ``~`` trước tên
 - Tên destructor phải trùng tên lớp
 - Không có kiểu trả về (như constructor)
+  
+## Tổng kết
+OK vậy là các bạn đã biết thế nào là constructor và destructor cùng cách sử dụng rồi nha! Nếu có thắc mắc các bạn bình luận bên dưới nhé. Pie~
