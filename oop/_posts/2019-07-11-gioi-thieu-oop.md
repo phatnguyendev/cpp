@@ -94,7 +94,7 @@ Chúng ta sẽ dùng ``class`` thay cho ``struct``. Về cách khai báo class c
 {% endhighlight %}
 Một vài điểm lưu ý về lớp (class)
 - Một lớp bao gồm các thành phần dữ liệu (thuộc tính) và các phương thức (hàm thành phần - member function).
--**Lớp là một mô tả trừu tượng của nhóm các đối tượng cùng bản chất**, ngược lại mỗi một đối tượng là một **thể hiện** cụ thể cho những mô tả trừu tượng đó.
+- **Lớp là một mô tả trừu tượng của nhóm các đối tượng cùng bản chất**, ngược lại mỗi một đối tượng là một **thể hiện** cụ thể cho những mô tả trừu tượng đó.
 - Lớp là cái ta thiết kế và lập trình. Đối tượng là cái ta tạo (từ một lớp) tại thời gian chạy chương trình.
   
 Khai báo lớp:
@@ -136,7 +136,13 @@ Hay còn gọi là phương thức (Method), tượng trưng cho hành vi của 
   	};
 {% endhighlight %}
 Thay vì phải truyền đối tượng sinh viên vào như tham số, ở trong class chúng ta thực hiện truy xuất thuộc tính trực tiếp thông qua con trỏ ``this`` (khuyến khích dùng). Một điểm cần lưu ý nữa là chúng ta có thể gọi phương thức được định nghĩa bên dưới phương thức gọi (nếu là function bình thường sẽ không được phép).
+### Định nghĩa các phương thức ở bên ngoài khai báo lớp
+{% highlight cpp %}
+	<
+{% endhighlight %}
 ## Cơ chế tạo lập các lớp
-
+- Xác định các thuộc tính (dữ liệu): những gì mà ta biết về đối tượng - giống như một struct.
+- Xác định các phương thức (hành vi): những gì đối tượng có thể làm.
+- Xác định các quyền truy xuất: sẽ tìm hiểu kỹ ở bài sau
 ## Tổng kết
 Chúng ta cũng đã từng làm quen với class ``string`` trong loạt series cơ bản hỗ trợ rất tốt khi chúng ta làm việc với chuỗi. Những bài học sau sẽ dùng rất nhiều đến class, các bạn cố gắng ghi nhớ cách sử dụng nhé! Pie~
