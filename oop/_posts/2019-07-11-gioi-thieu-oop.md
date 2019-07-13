@@ -4,6 +4,7 @@ layout: post
 title: Giới thiệu OOP
 categories: oop
 img: bai26.png
+lesson: 1
 excerpt_separator: <!--more-->
 ---
 Lập trình hướng đối tượng (Objiect-oriented Programming) là phương pháp lập trình mà mọi dân lập trình đều phải biết, trong các trường đại học đây là 1 trong những môn nền tảng của ngành CNTT. OOP được đặc trưng bởi 4 tính chất (cần nhớ):
