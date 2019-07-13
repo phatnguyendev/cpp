@@ -119,6 +119,7 @@ Nhìn khá giống với struct đúng không? Để truy cập đến thuộc t
   	};
 {% endhighlight %}
 - Thuộc tính: Các thuộc tính được khai báo giống như khai báo biến trong C++.
+               
 ### Member function
 Hay còn gọi là phương thức (Method), tượng trưng cho hành vi của đối tượng (như function DangKiMonHoc). Chúng ta tiến hành khai báo và định nghĩa như sau:
 {% highlight cpp %}
