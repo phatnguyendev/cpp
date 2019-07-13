@@ -101,7 +101,7 @@ Khai báo lớp:
 {% highlight cpp %}
 	class <ten_lop>
   	{
-    	//thuộc tính
+    		//thuộc tính
   		
  		//phương thức - hàm thành phần
   	};
