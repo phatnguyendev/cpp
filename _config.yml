@@ -30,7 +30,7 @@ copyright:
 markdown: kramdown
 permalink: /:title/
 paginate: 6
-paginate_path: /page:num/ | /oop/page:num/
+paginate_path: /page:num/
 
 #custom lesson
 lesson:
