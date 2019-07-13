@@ -44,7 +44,7 @@ Chúng ta cài đặt các lớp như sau:
 {% endhighlight %}
 **Vấn đề:** chúng ta đang có 2 đối tượng, vậy phương thức cộng sẽ thuộc đối tượng nào? Đó là khi chúng ta cần đến hàm bạn (friend function).
 
-## Friend function
+## Friend function - hàm bạn
 Hàm bạn không phải là hàm thành phần của 1 lớp nhưng có quyền truy cập các thuộc tính private của lớp đó.
 
 Đây là cách chúng ta dùng để chia sẻ dữ liệu giữa các đối tượng với hàm tùy ý (friend) trong chương trình, để khai báo hàm bạn chúng ta dùng từ khóa ``friend``. Hàm bạn có thể được khai báo ở nhiều lớp khác nhau.
@@ -100,3 +100,35 @@ Trở lại với bài toán trên, chúng ta sẽ thiết lập các lớp như
     }
 {% endhighlight %}
 Kết quả chương trình trên là: Gia tri = 110.
+## Friend class - lớp bạn
+Là lớp có thể truy xuất đến các thuộc tính private của lớp khác. Chức năng cũng khá tương tự friend function, cùng xem ví dụ sau nhé:
+{% highlight cpp %}
+    #include <iostream>
+    using namespace std;
+    class Husband {
+    	double money;
+     
+    	public:
+    	Husband() {
+    		money = 1000;
+    	}
+    	friend class Wife;
+    };
+     
+    class Wife {
+    	public:
+    	double getHusbandMoney(const Husband& hus) {
+    		return hus.money;
+    	}
+    };
+     
+    int main() {
+    	Husband hus;
+    	Wife wif;
+     
+    	cout << wif.getHusbandMoney(hus) << endl;
+    	return 0;
+    }
+{% endhighlight %}
+Nhìn ví dụ là đủ hiểu rồi đúng không nào :)
+## Tổng kết
