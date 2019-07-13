@@ -83,7 +83,7 @@ Phạm vi ảnh hưởng của các từ khóa: mọi thuộc tính và phương
 {% highlight cpp %}
     class Pupil {
    		
-  		private:
+		private:
     	string ID; //private
    		
     	public:
