@@ -61,5 +61,5 @@ sass:
   style: compressed
 
 # Ruby Gems
-plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-paginate-category]
+plugins: [jekyll-paginate, jekyll-seo-tag, octopress-paginate]
 
