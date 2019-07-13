@@ -186,5 +186,6 @@ int main()
  return 0;
 }
 {% endhighlight %}
+          
 ## Tổng kết
 Chúng ta cũng đã từng làm quen với class ``string`` trong loạt series cơ bản hỗ trợ rất tốt khi chúng ta làm việc với chuỗi. Những bài học sau sẽ dùng rất nhiều đến class, các bạn cố gắng ghi nhớ cách sử dụng nhé! Pie~
