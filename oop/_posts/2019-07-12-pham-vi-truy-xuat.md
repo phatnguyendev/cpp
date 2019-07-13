@@ -53,7 +53,7 @@ Với việc khai báo phạm vi này, những thuộc tính và phương thức
      
     class Pupil {
    		
-  		private: //không cần khai báo như ví dụ trên cũng được
+    	private:
     	string ID;
    		
     	public:
