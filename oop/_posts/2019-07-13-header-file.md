@@ -91,4 +91,6 @@ Chúng ta sẽ đi cụ thể từng class, bắt đầu với **HocSinh.h**:
     	return 0;
     }
 {% endhighlight %}
-  
+**Nhận xét:** việc tổ chức file này nhìn khá rõ ràng và tiện lợi cho việc code, càng thích hợp khi chúng ta dùng với OOP.
+## Tổng kết
+Chúng ta sẽ dùng cách tổ chức file kiểu này cho những bài sau, có thắc mắc các bạn bình luận bên dưới nhé. Pie~
