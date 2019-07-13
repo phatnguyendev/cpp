@@ -139,11 +139,51 @@ Hay còn gọi là phương thức (Method), tượng trưng cho hành vi của 
 Thay vì phải truyền đối tượng sinh viên vào như tham số, ở trong class chúng ta thực hiện truy xuất thuộc tính trực tiếp thông qua con trỏ ``this`` (khuyến khích dùng). Một điểm cần lưu ý nữa là chúng ta có thể gọi phương thức được định nghĩa bên dưới phương thức gọi (nếu là function bình thường sẽ không được phép).
 ### Định nghĩa các phương thức ở bên ngoài khai báo lớp
 {% highlight cpp %}
-	<
+	<tên kiểu giá trị trả về><tên lớp>::<tên hàm> (<danh sách tham số>
+      {
+      	<nội dung>
+      }
 {% endhighlight %}
 ## Cơ chế tạo lập các lớp
 - Xác định các thuộc tính (dữ liệu): những gì mà ta biết về đối tượng - giống như một struct.
 - Xác định các phương thức (hành vi): những gì đối tượng có thể làm.
 - Xác định các quyền truy xuất: sẽ tìm hiểu kỹ ở bài sau
+          
+## Tạo lập đối tượng
+- Khai báo và tạo đối tượng: <tên lớp> <tên đối tượng>;
+- Gọi hàm thành phần của lớp
+
+          <tên đối tượng>.<tên hàm thành phần> (<danh sách tham số nếu có>);
+          <tên con trỏ đối tượng>.<tên hàm thành phần> (<danh sách tham số nếu có>);  
+## Ví dụ tổng kết
+**Bài toán:** Định nghĩa lớp Hình chữ nhật
+{% highlight cpp %}
+//định nghĩa lớp
+class Rectangle
+{
+private:
+ int width, length;
+public:
+ void set (int w, int l);
+ int area() { return width*length; }
+};
+            
+//định nghĩa hàm thành phần
+void Rectangle :: set (int w, int l)
+{
+width = w;
+length = l;
+}
+
+//hàm main - tạo lập đối tượng
+int main()
+{
+ Rectangle r1;
+ r1.set(5, 8);
+ Rectangle *r2 = new Rectangle();
+ r2->set(8,10);
+ return 0;
+}
+{% endhighlight %}
 ## Tổng kết
 Chúng ta cũng đã từng làm quen với class ``string`` trong loạt series cơ bản hỗ trợ rất tốt khi chúng ta làm việc với chuỗi. Những bài học sau sẽ dùng rất nhiều đến class, các bạn cố gắng ghi nhớ cách sử dụng nhé! Pie~
