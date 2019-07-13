@@ -1,6 +1,5 @@
 ---
 layout: default
-paginate_path: "/oop/page:num/"
 ---
 
 <div class="home">
@@ -8,7 +7,7 @@ paginate_path: "/oop/page:num/"
   
     <div class="row pack">
         {% assign sorted = (site.categories.oop | sort: 'lesson') %}
-        {% for post in paginator.posts %}
+        {% for post in paginator.sorted %}
             <div class="col-md-4 card">
              <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">    
                 <div class="panel panel-default">
