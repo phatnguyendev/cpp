@@ -28,6 +28,7 @@ Không thay đổi hàm main, hãy làm chương trình xuất ra dòng chữ:
 {% endhighlight %}
 ### Cách giải quyết
 Chúng ta sẽ ứng dụng constructor và destructor của lớp để giải quyết bài toán sau (với class toàn cục):
+{% highlight cpp %}
     #include <iostream>
     using namespace std;
      
@@ -48,4 +49,5 @@ Chúng ta sẽ ứng dụng constructor và destructor của lớp để giải 
     	cout << "Hello,World." << endl;
     	return 0;
     }
+{% endhighlight %}
 Ta thấy biến dummy được khai báo toàn cục sẽ đồng thời tạo constructor (trong đó có câu lệnh cout) và trước khi chương trình kết thúc cũng là lúc destructor được gọi. Thú vụ đúng không nào :) Hẹn gặp các bạn trong các bài tiếp theo. Pie~
