@@ -7,7 +7,7 @@ img: bai26.png
 lesson: 6
 excerpt_separator: <!--more-->
 ---
-Thành viên tĩnh (static member) áp dụng đặc điểm của biến static để áp dụng cho các thuộc tính và phương thức của lớp.
+Thành viên tĩnh (static member) áp dụng đặc điểm của biến static để áp dụng cho các thuộc tính và phương thức của lớp. <!--more-->
 ## Biến static
 Để hiểu hơn về biến static, chúng ta xét ví dụ sau:
 {% highlight cpp %}
@@ -72,5 +72,6 @@ Một số điểm cần lưu ý:
 - Không được gán giá trị ngay lúc khai báo biến (chỉ const static member mới khai báo như vậy).
 - static member function (phương thức thành viên tĩnh) không thể dùng con trỏ this.
 - Chúng ta có thể truy cập trực tiếp biến hoặc phương thức thành viên tĩnh mà không cần thông qua thể hiện của lớp (như ví dụ trên mình dùng toán tử phạm vi ``::``.
+  
 ## Tổng kết
 Thế là chúng ta đã tìm hiểu qua static member rồi, nêu có thắc mắc các bạn bình luận bên dưới nhé. Pie~
