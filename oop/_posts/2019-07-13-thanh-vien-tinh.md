@@ -7,6 +7,6 @@ img: bai26.png
 lesson: 6
 excerpt_separator: <!--more-->
 ---
-## A New Post
+Thành viên tĩnh (static member) áp dụng đặc điểm của biến static để áp dụng cho các thuộc tính và phương thức của lớp.
+## Biến static
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
