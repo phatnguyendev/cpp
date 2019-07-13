@@ -7,7 +7,7 @@ img: bai26.png
 lesson: 5
 excerpt_separator: <!--more-->
 ---
-Ở bài này chúng ta sẽ hack não bằng 2 khái niệm khá thú vị trong C++ đó là hàm bạn (friend function) và lớp bạn (friend class).
+Ở bài này chúng ta sẽ hack não bằng 2 khái niệm khá thú vị trong C++ đó là hàm bạn (friend function) và lớp bạn (friend class). <!--more-->
 ## Vấn đề mở đầu
 Có 2 loại tiền ảo, Scoin và Gcoin với cách tính như sau:
 - Scoin = giá trị * rate ($)
