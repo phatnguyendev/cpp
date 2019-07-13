@@ -139,7 +139,7 @@ Hay còn gọi là phương thức (Method), tượng trưng cho hành vi của 
 Thay vì phải truyền đối tượng sinh viên vào như tham số, ở trong class chúng ta thực hiện truy xuất thuộc tính trực tiếp thông qua con trỏ ``this`` (khuyến khích dùng). Một điểm cần lưu ý nữa là chúng ta có thể gọi phương thức được định nghĩa bên dưới phương thức gọi (nếu là function bình thường sẽ không được phép).
 ### Định nghĩa các phương thức ở bên ngoài khai báo lớp
 {% highlight cpp %}
-	<tên kiểu giá trị trả về><tên lớp>::<tên hàm> (<danh sách tham số>
+	<tên kiểu giá trị trả về><tên lớp>::<tên hàm> (<danh sách tham số>)
       {
       	<nội dung>
       }
