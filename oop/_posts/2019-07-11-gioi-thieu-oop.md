@@ -145,9 +145,9 @@ Thay vì phải truyền đối tượng sinh viên vào như tham số, ở tro
       }
 {% endhighlight %}
 ## Cơ chế tạo lập các lớp
-- Xác định các thuộc tính (dữ liệu): những gì mà ta biết về đối tượng - giống như một struct.
-- Xác định các phương thức (hành vi): những gì đối tượng có thể làm.
-- Xác định các quyền truy xuất: sẽ tìm hiểu kỹ ở bài sau
+- **Xác định các thuộc tính (dữ liệu)**: những gì mà ta biết về đối tượng - giống như một struct.
+- **Xác định các phương thức (hành vi)**: những gì đối tượng có thể làm.
+- **Xác định các quyền truy xuất**: sẽ tìm hiểu kỹ ở bài sau
           
 ## Tạo lập đối tượng
 - Khai báo và tạo đối tượng: <tên lớp> <tên đối tượng>;
