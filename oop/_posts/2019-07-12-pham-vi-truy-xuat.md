@@ -61,9 +61,9 @@ Với việc khai báo phạm vi này, những thuộc tính và phương thức
     	int Age;
     	string Class;
   
-  		void SetID(string id) {
-  			this->ID = id;
-  		}
+  	    void SetID(string id) {
+			this->ID = id;
+		}
     };
      
     int main() {
