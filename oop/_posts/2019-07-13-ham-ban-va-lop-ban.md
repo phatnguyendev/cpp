@@ -12,7 +12,9 @@ excerpt_separator: <!--more-->
 Có 2 loại tiền ảo, Scoin và Gcoin với cách tính như sau:
 - 1 Scoin = 10$
 - 1 Gcoin = 5$
+
 Tính tổng số tiền 5 Scoin + 10 Gcoin theo Scoin?
+
 **Vấn đề:** chúng ta đang có 2 đối tượng, vậy phương thức cộng sẽ thuộc đối tượng nào? Đó là khi chúng ta cần đến hàm bạn (friend function).
 
 ## Friend function
