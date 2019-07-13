@@ -92,7 +92,33 @@ Chúng ta sẽ dùng ``class`` thay cho ``struct``. Về cách khai báo class c
   		MonHoc monHoc;  		
   	};
 {% endhighlight %}
+Một vài điểm lưu ý về lớp (class)
+- Một lớp bao gồm các thành phần dữ liệu (thuộc tính) và các phương thức (hàm thành phần - member function).
+-**Lớp là một mô tả trừu tượng của nhóm các đối tượng cùng bản chất**, ngược lại mỗi một đối tượng là một **thể hiện** cụ thể cho những mô tả trừu tượng đó.
+- Lớp là cái ta thiết kế và lập trình. Đối tượng là cái ta tạo (từ một lớp) tại thời gian chạy chương trình.
+  
+Khai báo lớp:
+{% highlight cpp %}
+	class <ten_lop>
+  	{
+    	//thuộc tính
+  		
+ 		//phương thức - hàm thành phần
+  	};
+{% endhighlight %}
 Nhìn khá giống với struct đúng không? Để truy cập đến thuộc tính bên trong class chúng ta cũng dùng toán tử ``.`` tương tự struct. Như với cách khai báo trên khi truy cập đến thuộc tính ``HoTen`` chúng ta sẽ bị báo lỗi - đây là 1 điểm khác biệt so với struct: mọi thuộc tính trong struct mặc định là **public** và có thể được truy cập mọi nơi còn đối với class chúng được mặc định là **private** và không được truy xuất trực tiếp bên ngoài class như vậy. Để giải quyết các bạn thêm từ khóa "public".
+{% highlight cpp %}
+	class <ten_lop>
+  	{
+    	private:
+  			<khai báo thành phần riêng trong từng đối tượng>
+        protected:
+            <khai báo thành phần riêng trong từng đối tượng, có thể truy cập từ lớp dẫn xuất>
+        public:
+             <khai báo thành phần công cộng>
+  	};
+{% endhighlight %}
+- Thuộc tính: Các thuộc tính được khai báo giống như khai báo biến trong C++.
 ### Member function
 Hay còn gọi là phương thức (Method), tượng trưng cho hành vi của đối tượng (như function DangKiMonHoc). Chúng ta tiến hành khai báo và định nghĩa như sau:
 {% highlight cpp %}
@@ -110,6 +136,7 @@ Hay còn gọi là phương thức (Method), tượng trưng cho hành vi của 
   	};
 {% endhighlight %}
 Thay vì phải truyền đối tượng sinh viên vào như tham số, ở trong class chúng ta thực hiện truy xuất thuộc tính trực tiếp thông qua con trỏ ``this`` (khuyến khích dùng). Một điểm cần lưu ý nữa là chúng ta có thể gọi phương thức được định nghĩa bên dưới phương thức gọi (nếu là function bình thường sẽ không được phép).
+## Cơ chế tạo lập các lớp
 
 ## Tổng kết
 Chúng ta cũng đã từng làm quen với class ``string`` trong loạt series cơ bản hỗ trợ rất tốt khi chúng ta làm việc với chuỗi. Những bài học sau sẽ dùng rất nhiều đến class, các bạn cố gắng ghi nhớ cách sử dụng nhé! Pie~
