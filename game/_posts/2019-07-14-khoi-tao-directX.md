@@ -1,6 +1,8 @@
 Để lập trình với DirectX, ta cần phải download và cài đặt DirectX SDK (link hướng dẫn: [Tại đây](https://tuitucode.github.io/cpp/gioi-thieu-ve-directX/)). Đồng thời khai báo các thư viện và file header của DirectX: **d3d9.lib** và **d3d9.h**
 
 ![](https://1.bp.blogspot.com/-ey36OUAiHWk/XStMXTTnjtI/AAAAAAAAECw/Rq8_tnNzcygWPTjGCXyKU8gAM4pn7NaKwCLcBGAs/s1600/them%2Bthu%2Bvien1.PNG)
+
+![](https://1.bp.blogspot.com/-eV_5O0X4weg/XStMYreu68I/AAAAAAAAEC0/6AOxL0w_Wt4i4uvfkEpJ4BypQhYPOKmBgCLcBGAs/s1600/them%2Bthu%2Bvien2.PNG)
 ## Direct3D interface
 Để chương trình có thể dùng Direct3D, ta cần phải tạo một biến để giữ một _interface_ của Direct3D và một _interface_ đến lớp thiết bị đồ họa.
 Khai báo:
