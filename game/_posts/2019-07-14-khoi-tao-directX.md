@@ -6,8 +6,9 @@ categories: game
 img: bai25.png
 excerpt_separator: <!--more-->
 ---
-Để lập trình với DirectX, ta cần phải download và cài đặt DirectX SDK (link hướng dẫn: [Tại đây](https://tuitucode.github.io/cpp/gioi-thieu-ve-directX/)). Đồng thời khai báo các thư viện và file header của DirectX: **d3d9.lib** và **d3d9.h**
+Để lập trình với DirectX, ta cần phải download và cài đặt DirectX SDK (link hướng dẫn: [Tại đây](https://tuitucode.github.io/cpp/gioi-thieu-ve-directX/)). Đồng thời khai báo các thư viện và file header của DirectX: **d3d9.lib** và **d3d9.h**.
 <!--more-->
+
 Đầu tiên, click chuột phải vô project chọn Properties. Sau đó ở Include và Library Directories chọn tới DirectX SDK trong máy, như trong hình dưới.
 
 ![](https://1.bp.blogspot.com/-ey36OUAiHWk/XStMXTTnjtI/AAAAAAAAECw/Rq8_tnNzcygWPTjGCXyKU8gAM4pn7NaKwCLcBGAs/s1600/them%2Bthu%2Bvien1.PNG)
@@ -75,6 +76,7 @@ void Game_Run(HWND hwnd)
 Trong đó:
 - Hàm _Clear_ tô toàn bộ _backbuffer_ bằng một màu cho trước, trong đoạn code trên là màu xanh lá. Chúng ta cần phải gọi hàm Clear ứng với mỗi frame để xóa toàn bộ nội dung đã vẽ ở những frame trước, nếu không xóa những hình ảnh của frame trước sẽ còn lại trên màn hình.
 - Hàm _Present_ sẽ "swap" nội dụng backbuffer lên front-buffer để thể hiện frame lên màn hình.
+
 ## Game_End
 {% highlight cpp %}
 void Game_End(HWND hwnd)
@@ -91,17 +93,17 @@ void Game_End(HWND hwnd)
 {% highlight cpp %}
 //Tạo một cửa sổ
 hWnd = CreateWindow(APPTITLE,
-		APPTITLE, //tên lớp cửa sổ
-        APPTITLE, //tiêu đề cửa sổ
-		WS_EX_TOPMOST | WS_VISIBLE | WS_POPUP, //WINDOW STYLE, nếu WS_OVERLAPPED: có thanh ngang cửa sổ
-		CW_USEDEFAULT, //X POSITION OF WINDOW
-		CW_USEDEFAULT, //Y POSITION OF WINDOW
-		SCREEN_WIDTH,
-		SCREEN_HEIGHT,
-		NULL, //PARENT WINDOW
-		NULL, //MENU
-		hInstance, //application instance
-		NULL);
+	APPTITLE, //tên lớp cửa sổ
+    APPTITLE, //tiêu đề cửa sổ
+	WS_EX_TOPMOST | WS_VISIBLE | WS_POPUP, //WINDOW STYLE, nếu WS_OVERLAPPED: có thanh ngang cửa sổ
+	CW_USEDEFAULT, //X POSITION OF WINDOW
+	CW_USEDEFAULT, //Y POSITION OF WINDOW
+	SCREEN_WIDTH,
+	SCREEN_HEIGHT,
+	NULL, //PARENT WINDOW
+	NULL, //MENU
+	hInstance, //application instance
+	NULL);
 //fullscreen
 d3dpp.Windowed = FALSE; //nếu true: chế độ cửa sổ
 d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
