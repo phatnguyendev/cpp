@@ -107,7 +107,8 @@ hWnd = CreateWindow(APPTITLE,
 //fullscreen
 d3dpp.Windowed = FALSE; //nếu true: chế độ cửa sổ
 d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
-d3dpp.BackBufferFormat = D3DFMT_X8R8G8B8;	d3dpp.BackBufferCount = 1;
+d3dpp.BackBufferFormat = D3DFMT_X8R8G8B8;	
+d3dpp.BackBufferCount = 1;
 d3dpp.BackBufferWidth = SCREEN_WIDTH;
 d3dpp.BackBufferHeight = SCREEN_HEIGHT;
 d3dpp.hDeviceWindow = hWnd;
