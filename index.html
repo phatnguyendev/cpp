@@ -32,15 +32,17 @@ layout: default
             </div>
         
           {% endfor %}
-          <nav aria-label="...">
+            <div class="col-md-3 col-md-offset-9">
             <ul class="pager">
               <li class="next"><a href="#">Xem thêm <span aria-hidden="true">&rarr;</span></a></li>
             </ul>
-          </nav>
+            </div>
     </div>
 
     <div class="row pack">
+        <div class="col-md-12">
         <h4>HƯỚNG ĐỐI TƯỢNG (OOP)</h4>
+        </div>
         {% for post in site.categories.oop limit: 3 %}   
             <div class="col-md-4 card">
              <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">    
@@ -64,15 +66,17 @@ layout: default
             </div>
         
           {% endfor %}
-          <nav aria-label="...">
+            <div class="col-md-3 col-md-offset-9">
             <ul class="pager">
               <li class="next"><a href="#">Xem thêm <span aria-hidden="true">&rarr;</span></a></li>
             </ul>
-          </nav>
+            </div>
     </div>
 
     <div class="row pack">
+        <div class="col-md-12">
         <h4>BUILD GAME</h4>
+        </div>
         {% for post in site.categories.game limit: 3 %}   
             <div class="col-md-4 card">
              <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">    
@@ -96,11 +100,11 @@ layout: default
             </div>
         
           {% endfor %}
-          <nav aria-label="...">
+            <div class="col-md-3 col-md-offset-9">
             <ul class="pager">
               <li class="next"><a href="#">Xem thêm <span aria-hidden="true">&rarr;</span></a></li>
             </ul>
-          </nav>
+            </div>
     </div>    
 
 
