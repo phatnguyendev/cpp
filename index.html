@@ -6,8 +6,8 @@ layout: default
  
   
     <div class="row pack">
-
-        {% for post in paginator.posts %}   
+        <h4>C++ BASIC</h4>
+        {% for post in site.categories.cpp limit: 3 %}   
             <div class="col-md-4 card">
              <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">    
                 <div class="panel panel-default">
@@ -30,9 +30,79 @@ layout: default
             </div>
         
           {% endfor %}
+          <nav aria-label="...">
+            <ul class="pager">
+              <li class="next"><a href="#">Xem thêm <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+          </nav>
+    </div>
 
-    </div> 
-    
+    <div class="row pack">
+        <h4>HƯỚNG ĐỐI TƯỢNG (OOP)</h4>
+        {% for post in site.categories.oop limit: 3 %}   
+            <div class="col-md-4 card">
+             <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">    
+                <div class="panel panel-default">
+                  
+                  {% if post.img %}
+                  <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
+                  {% else %}
+                  <img width="100%" src="{{site.baseurl}}/images/webjeda-logo-big.jpg" alt="{{site.title}}">
+                  {% endif %}
+                  
+                  <div class="panel-body">
+                    <h3 class="panel-title pull-left">{{ post.title | truncate: 25 }}</h3><span class="post-meta pull-right"><small>{{ post.date | date: "%b %-d, %Y" }}</small></span>
+                  </div>
+                  
+                  <div class="panel-body"><small>
+                    {{ post.excerpt | strip_html | strip_newlines | truncate: 180 }}</small>
+                  </div>
+                </div>
+                </a>
+            </div>
+        
+          {% endfor %}
+          <nav aria-label="...">
+            <ul class="pager">
+              <li class="next"><a href="#">Xem thêm <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+          </nav>
+    </div>
+
+    <div class="row pack">
+        <h4>BUILD GAME</h4>
+        {% for post in site.categories.game limit: 3 %}   
+            <div class="col-md-4 card">
+             <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">    
+                <div class="panel panel-default">
+                  
+                  {% if post.img %}
+                  <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
+                  {% else %}
+                  <img width="100%" src="{{site.baseurl}}/images/webjeda-logo-big.jpg" alt="{{site.title}}">
+                  {% endif %}
+                  
+                  <div class="panel-body">
+                    <h3 class="panel-title pull-left">{{ post.title | truncate: 25 }}</h3><span class="post-meta pull-right"><small>{{ post.date | date: "%b %-d, %Y" }}</small></span>
+                  </div>
+                  
+                  <div class="panel-body"><small>
+                    {{ post.excerpt | strip_html | strip_newlines | truncate: 180 }}</small>
+                  </div>
+                </div>
+                </a>
+            </div>
+        
+          {% endfor %}
+          <nav aria-label="...">
+            <ul class="pager">
+              <li class="next"><a href="#">Xem thêm <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+          </nav>
+    </div>    
+
+
+ <!--   
 <div class="row">
     <div class="col-md-4">  </div>
     <div class="col-md-4">
@@ -64,5 +134,6 @@ layout: default
 
     </div>
     <div class="col-md-4">  </div>
+  -->
 </div>
 </div>
