@@ -127,7 +127,7 @@ Mình sẽ giải thích thêm như sau:
   - Đối với ++ps: Trước tiên chúng ta sẽ tăng đơn vị theo cách tính mình đã trình bày ở phần nhận xét bằng hàm tăng đơn vị (TangDonVi), sau đó trả về *this (implicit object) để có thể tham gia vào các toán tử khác (vd: ++ps + 2).
   - Đối với ps++: Cũng trả về *this, nhưng lúc này ps chưa tăng giá trị vì chúng ta gán ở biến temp trước khi gọi hàm TangDonVi hàm trả về temp(tức là đang có giá trị cũ) để tham gia thực hiện cùng các toán tử khác.
 
-Các bạn hãy suy ngẫm, mình tin bạn sẽ sớm hiểu được thôi ;)
+Các bạn hãy suy ngẫm, mình tin bạn sẽ sớm hiểu được thôi ;) Các bạn làm tương tự với toán tử ``--`` nhé.
 ### Nạp chồng toán tử !
 Toán tử ``!`` được sử dụng để phủ định, nó sẽ trả về giá trị là ``true`` hoặc ``false``. Mình sẽ kiểm tra 1 phân số có phải là phân số tối giản hay không dùng toán tử ``!`` nhé.
 {% highlight cpp %}
