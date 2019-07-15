@@ -107,7 +107,7 @@ Chúng ta sẽ cài đặt như sau:
         /*
         * Toán tử bên dưới là loại: ps++
         */
-        PhanSo& operator++(int) {
+        PhanSo operator++(int) {
         PhanSo temp = *this;
         TangDonVi();
         return temp;
@@ -122,5 +122,68 @@ Chúng ta sẽ cài đặt như sau:
     	return 0;
     }
 {% endhighlight %}
+Mình sẽ giải thích thêm như sau:
+  - Đầu tiên là tham số của 2 hàm: đây chỉ là tham số giả để trình biên dịch phân biệt 2 hàm thôi.
+  - Đối với ++ps: Trước tiên chúng ta sẽ tăng đơn vị theo cách tính mình đã trình bày ở phần nhận xét bằng hàm tăng đơn vị (TangDonVi), sau đó trả về *this (implicit object) để có thể tham gia vào các toán tử khác (vd: ++ps + 2).
+  - Đối với ps++: Cũng trả về *this, nhưng lúc này ps chưa tăng giá trị vì chúng ta gán ở biến temp trước khi gọi hàm TangDonVi hàm trả về temp(tức là đang có giá trị cũ) để tham gia thực hiện cùng các toán tử khác.
 
-  
+Các bạn hãy suy ngẫm, mình tin bạn sẽ sớm hiểu được thôi ;)
+### Nạp chồng toán tử !
+Toán tử ``!`` được sử dụng để phủ định, nó sẽ trả về giá trị là ``true`` hoặc ``false``. Mình sẽ kiểm tra 1 phân số có phải là phân số tối giản hay không dùng toán tử ``!`` nhé.
+{% highlight cpp %}
+#include <iostream>
+using namespace std;
+
+class PhanSo {
+	int TuSo;
+	int MauSo;
+public:
+	PhanSo() {
+		TuSo = 1;
+		MauSo = 1;
+	}
+	PhanSo(int n, int m = 1) {
+		TuSo = n;
+		MauSo = m;
+	}
+	friend ostream& operator<< (ostream &out, const PhanSo &ps) {
+		out << ps.TuSo << "/" << ps.MauSo;
+		return out;
+	}
+	bool isHasUSCLN(int a, int b) {
+		int r;
+		while (a%b != 0)
+		{
+			r = a%b;
+			a = b;
+			b = r;
+		}
+
+		if (b == 1) {
+			return false;
+		}
+
+		return true;
+
+	}
+	// Nếu là phân số tối giản trả về true
+	bool operator!() {
+		return !isHasUSCLN(TuSo, MauSo) && MauSo;
+	}
+};
+
+int main() {
+	// your code goes here
+	PhanSo ps(4, 6);
+	if (!ps) {
+		cout << "Phan so toi gian" << endl;
+	}
+	else {
+		cout << "Phan so chua toi gian" << endl;
+	}
+	return 0;
+}
+{% endhighlight %}
+Các bạn xem và hiểu được cách mình thực hiện là chính thôi chứ thực chất công dụng mình đang sử dụng là sai so với công dụng của toán tử ! ban đầu.
+## Tổng kết
+Vậy là chúng ta đã biết thêm cách nạp chồng toán tử đơn nguyên, các bạn luyện tập thêm để nhớ cách sử dụng nhé. Có thắc mắc bạn bình luận bên dưới để tụi mình giải đáp nhé. Pie~
