@@ -37,7 +37,7 @@ Trước tiên chúng ta sẽ xem xét các toán hạng, lấy ví dụ:
   	cout << 2;
   	...
 {% endhighlight %}
-Với toán tử ```` chúng ta có 2 toán hạng:
+Với toán tử ``<<`` chúng ta có 2 toán hạng:
   - Bên trái: cout (đối tượng kiểu ostream)
   - Bên phải: 2 (đối tượng kiểu int)
 
