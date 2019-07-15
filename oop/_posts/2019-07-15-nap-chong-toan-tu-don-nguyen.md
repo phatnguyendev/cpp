@@ -38,7 +38,7 @@ int main() {
 }
 {% endhighlight %}
 OK Tiến hành nào!
-### Nạp chồng toán tử ++, --
+### Nạp chồng toán tử ++, \--
 Tư tưởng của 2 loại toán tử này lần lượt là tăng và giảm giá trị đi 1 đơn vị, đối với lớp PhanSo chúng ta sẽ +1 và -1. Ví dụ:
 {% highlight cpp %}
 	PhanSo ps = 1/2
