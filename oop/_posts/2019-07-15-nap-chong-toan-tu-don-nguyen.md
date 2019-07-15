@@ -26,7 +26,7 @@ class PhanSo {
 		TuSo = n;
 		MauSo = m;
 	}
-    friend ostream& operator<< (ostream &out, const PhanSo &ps) {
+	friend ostream& operator<< (ostream &out, const PhanSo &ps) {
     	out << ps.TuSo << "/" << ps.MauSo;
     	return out;
     }
