@@ -44,7 +44,7 @@ Với toán tử ``<<`` chúng ta có 2 toán hạng:
 Vậy để định nghĩa cho lớp PhanSo, chúng ta sẽ sử dụng hàm bạn với cách viết như sau:
 {% highlight cpp %}
 	...
-  	friend ostream& operator<< (std::ostream &out, const PhanSo &ps);
+  	friend ostream& operator<< (ostream &out, const PhanSo &ps);
   	...
 {% endhighlight %}
 Tiến hành cài đặt nào
@@ -60,7 +60,7 @@ Tiến hành cài đặt nào
     		TuSo = 1;
     		MauSo = 1;
     	}
-    	friend ostream& operator<< (std::ostream &out, const PhanSo &ps) {
+    	friend ostream& operator<< (ostream &out, const PhanSo &ps) {
     		out << ps.TuSo << "/" << ps.MauSo;
     		return out;
     	}
@@ -78,7 +78,7 @@ Các bạn chú ý phần thâm hàm, ``out`` chứ không phải ``cout`` nhé.
 Về toán hạng cũng tương tự như toán tử xuất, chỉ khác điều ``cin`` là đối tượng thuộc kiểu istream nên chúng ta sẽ viết như sau:
 {% highlight cpp %}
 	...
-  	friend istream& operator>> (std::istream &in, const PhanSo &ps);
+  	friend istream& operator>> (istream &in, const PhanSo &ps);
   	...
 {% endhighlight %}
 Và cách áp dụng:
@@ -94,11 +94,11 @@ Và cách áp dụng:
     		TuSo = 1;
     		MauSo = 1;
     	}
-    	friend ostream& operator<< (std::ostream &out, const PhanSo &ps) {
+    	friend ostream& operator<< (ostream &out, const PhanSo &ps) {
     		out << ps.TuSo << "/" << ps.MauSo;
     		return out;
     	}
-  		friend istream& operator>> (std::istream &in, PhanSo &ps) {
+  		friend istream& operator>> (istream &in, PhanSo &ps) {
   			cout << "Nhap tu so: ";
   			in >> ps.TuSo;
   			cout << "Nhap mau so: ";
