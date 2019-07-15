@@ -170,6 +170,56 @@ Chúng ta có thể tạo 1 kiểu hàm thiết lập sao chép để copy 1 s�
         }
 {% endhighlight %}
 Phân số ``ps3`` đã copy TuSo và MauSo từ ``ps2`` thông qua copy constructor.
+### Constructor member initializer lists
+Ngoài cách gán giá trị thông thường, chúng ta có thể dùng member initializer list như sau:
+{% highlight cpp %}
+    #include <iostream>
+    using namespace std;
+     
+    class Tester {
+    	public: 
+     
+    	int value;
+     	int value2;
+  
+    	Tester() {
+    		value = 0;
+    	}
+  
+     	//member initializer lists
+    	Tester(int v): value(v), value2(v) {
+    	}
+     
+    };
+     
+    int main() {
+    	Tester tes(2);
+    	cout << tes.value << "-" << tes.value2 << endl;
+    	return 0;
+    }
+{% endhighlight %}
+Chúng ta dùng toán tử ``:`` để truyền giá trị cho thuộc tính, các thuộc tính ngăn cách bằng dấu ``,``. Điều này giúp code chúng ta ngắn gọn hơn.
+
+Nhờ member initialier list, chúng ta có thể gọi constructor từ 1 constructor khác, chẳng hạn:
+{% highlight cpp %}
+    class Tester {
+    	public: 
+     
+    	int value;
+     	int value2;
+  
+    	Tester() {
+    		value = 0;
+    	}
+  
+     	//member initializer lists
+    	Tester(int v): Tester() {
+  		//do something here!
+    	}
+     
+    };
+{% endhighlight %}
+Constructor **Tester(int v)** được gọi là **delegating constructor** (constructor gọi 1 constructor khác).
 ## Destructor
 Ngược lại với constructor, hàm hủy - destructor sẽ làm nhiệm vụ dọn dẹp mọi thứ khi lớp bị hủy.
 
