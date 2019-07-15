@@ -71,7 +71,6 @@ Tư tưởng của 2 loại toán tử này lần lượt là tăng và giảm g
 </tbody>
 </table>
 
-  
 Chúng ta sẽ cài đặt như sau:
 {% highlight cpp %}
     #include <iostream>
