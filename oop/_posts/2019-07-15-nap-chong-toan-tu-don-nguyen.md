@@ -47,12 +47,30 @@ Tư tưởng của 2 loại toán tử này lần lượt là tăng và giảm g
 {% endhighlight %}
 **Nhận xét:** phân số +1 thực chất là (tử số + mẫu số) / mẫu số. Một điểm lưu ý nữa toán tử ``++`` (và ``--``) đứng trước và sau toán hạn đều có ý nghĩa khác nhau, các bạn xem bảng so sánh bên dưới nhé:
   
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-{: .table .table-striped .table-hover}
+<table>
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Toán tử</th>
+<th>Ý nghĩa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td markdown="span">temp = ++ps</td>
+<td markdown="span">Tăng ps lên 1 đơn vị trước rồi gán giá trị mới cho temp</td>
+</tr>
+<tr>
+<td markdown="span">temp = ps++</td>
+<td markdown="span">Gán giá trị ps cho temp rồi mới tăng ps lên 1 đơn vị
+</td>
+</tr>
+</tbody>
+</table>
+
   
 Chúng ta sẽ cài đặt như sau:
 {% highlight cpp %}
