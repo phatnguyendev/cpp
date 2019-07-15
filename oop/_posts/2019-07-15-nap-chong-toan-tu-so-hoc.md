@@ -13,3 +13,5 @@ Toán tử số học là toán tử được sử dụng khá nhiều trong C++
 {% highlight cpp %}
 	<kiểu dữ liệu> operator<kí hiệu toán học>(<các tham số nếu có>) {}
 {% endhighlight %}
+### Cài đặt với hàm thành phần (member function)
+Chúng ta có thể nạp chồng toán tử như 1 phương thức trong class, xem ví dụ sau:
