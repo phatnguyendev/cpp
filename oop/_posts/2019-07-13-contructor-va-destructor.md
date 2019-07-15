@@ -127,7 +127,7 @@ Chúng ta sẽ được kết quả in ra màn hình là: 1/2
         	return 0;
         }
 {% endhighlight %}
-Vậy nên khi đã khởi tạo constructor có tham số các bạn phải viết cả constructor mặc định nhé. Còn nếu các bạn không định nghĩa constructor nào, 1 constructor mặc định sẽ được ngầm tạo ra (và bên trong thân hàm không có gì cả).
+Vậy nên khi đã khởi tạo constructor có tham số các bạn nên phải viết cả constructor mặc định trong trường hợp muốn khởi tạo đối tượng mà không truyền tham số. Còn nếu các bạn không định nghĩa constructor nào, 1 constructor mặc định sẽ được ngầm tạo ra (và bên trong thân hàm không có gì cả).
 ### Copy constructor
 Chúng ta có thể tạo 1 kiểu hàm thiết lập sao chép để copy 1 số đặc điểm (do chúng ta quyết định) từ đối tượng này sang đối tượng khác.
 {% highlight cpp %}
