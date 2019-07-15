@@ -8,8 +8,47 @@ lesson: 12
 excerpt_separator: <!--more-->
 ---
 Trong bài học này chúng ta sẽ cùng tìm hiểu cách nạp chồng 1 số toán tử khác như toán tử so sánh, toán tử định vị,... Nào cố lên!<!--more-->
+### Nạp chồng toán tử gán
+Toán tử gán (assignment operator - kí hiệu: ``=``) là toán tử thường thấy nhất trong mọi câu lệnh, chúng ta sẽ dùng nó để gán giá trị cho đối tượng lớp PhanSo. Code nào:
+{% highlight cpp %}
+    #include <iostream>
+    using namespace std;
+     
+    class PhanSo {
+    	int TuSo;
+    	int MauSo;
+    public:
+    	PhanSo() {
+    		TuSo = 1;
+    		MauSo = 1;
+    	}
+    	PhanSo(int n, int m = 1) {
+    		TuSo = n;
+    		MauSo = m;
+    	}
+    	friend ostream& operator<< (ostream &out, const PhanSo &ps) {
+    		out << ps.TuSo << "/" << ps.MauSo;
+    		return out;
+    	}
+    	PhanSo& operator=(const PhanSo& ps) {
+    		TuSo = ps.TuSo;
+    		MauSo = ps.MauSo;
+    		return *this;
+    	}
+    };
+     
+    int main() {
+    	// your code goes here
+    	PhanSo ps1(3, 2);
+    	PhanSo ps2;
+    	ps2 = ps1;
+    	cout << ps2 << endl;
+    	return 0;
+    }
+{% endhighlight %}
+Cũng không có gì để giải thích, nhìn qua thì giống copy constructor thôi, lưu ý trả về đối tượng ``*this`` nhé.
 ### Nạp chồng toán tử so sánh
-Các toán tử so sánh thường gặp như: ==, !=, <=, >=. Cách cài đặt chúng không quá khó, các bạn chỉ cần nắm được logic hoạt động của nó là được, chúng ta sẽ cài đặt chúng 1 lần nữa trên lớp PhanSo và mình sẽ lấy 2 toán tử là ``==`` và ``>=`` để cài đặt, các toán tử kia các bạn tự triển khai nha!
+Các toán tử so sánh thường gặp như: ==, !=, <=, >=. Cách cài đặt chúng không quá khó, các bạn chỉ cần nắm được logic hoạt động của nó là được, chúng ta sẽ cài đặt chúng 1 lần nữa trên lớp PhanSo và mình sẽ lấy 2 toán tử là ``==`` và ``>`` để cài đặt, các toán tử kia các bạn tự triển khai nha!
 {% highlight cpp %}
 #include <iostream>
 using namespace std;
