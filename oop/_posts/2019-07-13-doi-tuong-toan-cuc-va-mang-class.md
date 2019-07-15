@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Đối tượng toàn cục
+title: Đối tượng toàn cục và mảng class
 categories: oop
 img: bai26.png
 lesson: 7
