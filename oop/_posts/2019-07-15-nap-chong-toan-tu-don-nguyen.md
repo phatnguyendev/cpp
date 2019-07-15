@@ -47,7 +47,7 @@ Tư tưởng của 2 loại toán tử này lần lượt là tăng và giảm g
 {% endhighlight %}
 **Nhận xét:** phân số +1 thực chất là (tử số + mẫu số) / mẫu số. Một điểm lưu ý nữa toán tử ``++`` (và ``--``) đứng trước và sau toán hạn đều có ý nghĩa khác nhau, các bạn xem bảng so sánh bên dưới nhé:
   
-<table>
+<table class="table">
 <colgroup>
 <col width="30%" />
 <col width="70%" />
