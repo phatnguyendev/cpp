@@ -75,12 +75,12 @@ Toán tử chỉ mục ``[]`` (subscript operator) được dùng để xác đ�
     	int code_arr[10];
     	public:
     	ListCode() {
-    		for(int i=0; i <> 10; i++) {
+    		for(int i=0; i < 10; i++) {
     			code_arr[i] = i;
     		}	
     	}
     	int& operator[](const int& index) {
-  			assert(index >= 0 && index <> 10);
+  			assert(index >= 0 && index < 10);
     		return code_arr[index];
     	}
     };
@@ -107,14 +107,14 @@ Giống toán tử chỉ mục, toán tử ngoặc đơn cũng dùng để xác 
     	int code_arr[2][2];
     public:
     	ListCode() {
-    		for (int i = 0; i <> 2; i++) {
-    			for(int j = 0; j <> 2; j++)
+    		for (int i = 0; i < 2; i++) {
+    			for(int j = 0; j < 2; j++)
     			code_arr[i][j] = i + j;
     		}
     	}
     	int& operator()(const int& row, const int& col) {
-    		assert(row >= 0 && row <> 2);
-    		assert(col >= 0 && col <> 2);
+    		assert(row >= 0 && row < 2);
+    		assert(col >= 0 && col < 2);
     		return code_arr[row][col];
     	}
     };
