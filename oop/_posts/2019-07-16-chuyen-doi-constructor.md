@@ -82,6 +82,7 @@ Việc ép kiểu ngầm định như ở trên cũng gây ra 1 số nguy hiểm
     }
 {% endhighlight %}
 Kết quả chương trình: wrong step!
+  
 Chúng ta thấy C++ đã chuyển đổi "nhầm" chữ z sang constructor có tham số int. Vì sao vậy? Trong khi chúng ta cũng đã có 1 constructor kiểu ``char*`` tại sao lại không chuyển đổi bằng constructor này, đó là vì kí tự (char) là 1 phần của họ số nguyên vì vậy trình biên dịch đã chuyển nó sang cho constructor version số nguyên kết quả là ``iData`` không có gì cả (ngoài mong muốn của chúng ta).
  
 Để giải quyết vấn đề trên, chúng ta sẽ làm cho các constructor (và các hàm chuyển đổi) được rõ ràng hơn thông qua từ khóa ``explicit``. Constructor (và hàm chuyển đổi) với từ khóa này sẽ không thể sử dụng cho chuyển đổi ngầm định hay sao chép khởi tạo. Cùng quay lại chương trình trên với từ khóa ``explicit``:
