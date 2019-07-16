@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Kiểu dữ liệu struct
-categories: cpp
+categories: basic
 img: bai24.png
 excerpt_separator: <!--more-->
 ---
