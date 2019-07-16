@@ -8,5 +8,20 @@ Direct3D sử dụng surface cho rất nhiều thứ. Màn hình sẽ hiển th�
 Card đồ họa sẽ chứa thông tin mà chúng ta muốn hiển thị lên màn hình. Khi bạn muốn hiển thị thứ gì đó, card đồ họa sẽ lấy dữ liệu cần hiển thị tại vùng nhớ đệm được gọi là Front buffer (Frame buffer) sau đó sẽ gửi những thông tin đã lấy được đến màn hình để hiển thị. Màn hình sẽ cập nhật những phần mới và vẽ lại từ trên xuống dưới.
 
 Front buffer nằm ở bộ nhớ đồ họa và biểu thị hình ảnh lên màn hình. Do đó, để thay đổi hiển thị trên màn hình theo ý muốn, cách đơn giản nhất là thay đổi trực tiếp dữ liệu trên Front buffer. Tuy nhiên, chúng ta sẽ không muốn vẽ trực tiếp lên Front buffer vì màn hình sẽ bị giật lag khi ta vẽ. Hiện tượng xảy ra là do một chương trình nào đó cập nhật trên Front buffer trong khi màn hình đang trong quá trình refresh. Cách giải quyết là ta sẽ vẽ mọi thứ lên một vùng nhớ ngoài màn hình chính là back buffer (double buffer) và chuyển nó lên màn hình rất nhanh. Kỹ thuật này người ta gọi là "double buffering".
+
 Dưới đây là hình minh họa cho khái niệm "double buffering"
 ![](https://1.bp.blogspot.com/-EKq3uOOcFdA/XS1LMMECRbI/AAAAAAAAEDQ/sPKxMHqeumUjIoS-_cQRqdKWJc_Lg8wuACLcBGAs/s1600/double%2Bbuffering.PNG)
+
+## Tạo surface
+{% highlight cpp %}
+LPDIRECT3DSURFACE9 surface = NULL;
+
+//Xóa những thứ ta đang vẽ, dùng hàm Color Fill
+HRESULT ColorFill(
+	IDirect3Dsurface9* pSurface,
+    CONST RECT* pRect,
+    D3DCOLOR color);
+    
+//example
+d3ddev->ColorFill(surface, NULL, D3DCOLOR_XRGB(255,0,0));
+{% endhighlight %}
