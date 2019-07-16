@@ -3,7 +3,7 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
 {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
-{% for crumb in crumbs offset: 1 %}
+{% for crumb in crumbs %}
    {% if forloop.first %}
         <li class="breadcrumb-item"><a href="/cpp/">Home</a></li>
   {% elsif forloop.last %}
