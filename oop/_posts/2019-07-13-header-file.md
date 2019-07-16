@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Làm việc với header file
 categories: oop
-img: bai26.png
+img: bai102.png
 lesson: 3
 excerpt_separator: <!--more-->
 ---
