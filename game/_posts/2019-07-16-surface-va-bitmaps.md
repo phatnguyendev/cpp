@@ -25,3 +25,248 @@ HRESULT ColorFill(
 //example
 d3ddev->ColorFill(surface, NULL, D3DCOLOR_XRGB(255,0,0));
 {% endhighlight %}
+## Vẽ lên surface
+Để vẽ một surface lên một surface ta dùng hàm **StretchRect**.
+{% highlight cpp %}
+HRESULT StretchRect(
+	IDirect3DSurface9 *pSourceSurface,
+    CONST RECT *pSourceRect,
+    IDirect3DSurface9 *pDestSurface,
+    CONST RECT *pDestRect,
+    D3DTEXTEFILTERTYPE Filter);
+    
+//example
+d3ddev->StretchRect(surface, NULL, backbuffer, NULL, D3DTEXF_NONE);
+{% endhighlight %}
+<div class="alert alert-info">
+Hai surface đó phải cùng kích thước. Nếu surface nguồn nhỏ hơn surface đích thì nó sẽ được vẽ tại phía trên - bên trái của surface đích.
+</div>
+Rect nguồn có thể nhỏ hơn rect đích và bạn có thể vẽ surface nguồn lên bất kỳ nơi nào trên surface đích. Ví dụ:
+{% highlight cpp %}
+rect.left = 100;
+rect.top = 90;
+rect.right = 200;
+rect.bottom = 180;
+d3ddev->StretchRect(surface, NULL, backbuffer, &rect, D3DTEXF_NONE);
+{% endhighlight %}
+Để lấy con trỏ đến backbuffer ta dùng hàm **GetBackBuffer**.
+{% highlight cpp %}
+HRESULT GetBackBuffer(
+	UINT iSwapChain,
+    UINT BackBuffer,
+    D3DBACKBUFFER_TYPE Type,
+    IDirect3DSurface **ppBackBuffer);
+    
+//example
+LPDIRECT3DSURFACE9 backbuffer = NULL;
+d3ddev->GetBackBuffer(0, 0, D3DBACKBUFFER_TYPE_NONE, &backbuffer);
+{% endhighlight %}
+## Ví dụ Create_Surface
+Đây là ví dụ minh họa cách dùng ColorFill, StretchRect, GetBackBuffer, cách sử dụng surface, cách kết hợp các hàm trên với nhau. Kết quả chương trình như hình dưới đây:
+![](https://1.bp.blogspot.com/-NlEMKJTk5n0/XS3kIPVDiSI/AAAAAAAAEDo/lFYQlFetGF0I0kIVAR8XV5FR4EmK2zOEQCLcBGAs/s1600/Create_Surface.PNG)
+
+Tạo một project tên "Create_Surface" và thêm các file vào project "winmain.cpp". Nhớ thêm thư viện "d3d9.lib".
+{% highlight cpp %}
+//Các file header
+#include<d3d9.h>
+#include<time.h>
+
+//Tiêu đề ứng dụng
+#define APPTITLE "Create_Surface"
+
+//Các macro để đọc phím - Chế độ full màn hình
+#define KEY_DOWN(vk_code) ((GetAsyncKeyState(vk_code) & 0x8000)?1:0)
+#define KEY_UP(vk_code) ((GetAsyncKeyState(vk_code) & 0x8000)?1:0)
+
+//Độ phân giải màn hình
+#define SCREEN_WIDTH 640
+#define SCREEN_HEIGHT 480
+
+//Các khai báo hàm
+LRESULT WINAPI WinProc(HWND, UINT, WPARAM, LPARAM);
+ATOM MyRegisterClass(HINSTANCE);
+int Game_Init(HWND);
+void Game_Run(HWND);
+void Game_End(HWND);
+
+//Các đối tượng của Direct3D
+LPDIRECT3D9 d3d = NULL;
+LPDIRECT3DDEVICE9 d3ddev = NULL;
+
+LPDIRECT3DSURFACE9 backbuffer = NULL;
+LPDIRECT3DSURFACE9 surface = NULL;
+
+//window event callback function
+LRESULT WINAPI WinProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
+	switch (msg)
+	{
+	case WM_DESTROY:
+		Game_End(hWnd);
+		PostQuitMessage(0);
+		return 0;
+	}
+	return DefWindowProc(hWnd, msg, wParam, lParam);
+}
+
+//Các hàm hỗ trợ để khởi động Window
+ATOM MyRegisterClass(HINSTANCE hInstance)
+{
+	//Create the window class structure
+	WNDCLASSEX wc;
+	wc.cbSize = sizeof(WNDCLASSEX);
+
+	//điền tham số hàm vào struct
+	wc.style = CS_HREDRAW | CS_VREDRAW;
+	wc.lpfnWndProc = (WNDPROC)WinProc;
+	wc.cbClsExtra = 0;
+	wc.cbWndExtra = 0;
+	wc.hInstance = hInstance;
+	wc.hIcon = NULL;
+	wc.hCursor = LoadCursor(NULL, IDC_ARROW);
+	wc.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
+	wc.lpszMenuName = NULL;
+	wc.lpszClassName = APPTITLE;
+	wc.hIconSm = NULL;
+
+	//đăng ký lớp cửa sổ
+	return RegisterClassEx(&wc);
+}
+
+//Đầu vào ứng dụng Window
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+{
+	MSG msg;
+
+	//Đăng ký lớp cửa sổ
+	MyRegisterClass(hInstance);
+	//khởi động ứng dụng
+	HWND hWnd;
+	//Tạo một cửa sổ
+	hWnd = CreateWindow(APPTITLE,
+		APPTITLE,
+		WS_OVERLAPPED, //WINDOW STYLE
+		CW_USEDEFAULT, //X POSITION OF WINDOW
+		CW_USEDEFAULT, //Y POSITION OF WINDOW
+		SCREEN_WIDTH,
+		SCREEN_HEIGHT,
+		NULL, //PARENT WINDOW
+		NULL, //MENU
+		hInstance, //application instance
+		NULL);
+	//Kiểm tra lỗi nếu không mở được cửa sổ
+	if (!hWnd)
+		return false;
+	//hiển thị cửa sổ
+	ShowWindow(hWnd, nCmdShow);
+	UpdateWindow(hWnd);
+
+	//Khởi tạo game
+	if (!Game_Init(hWnd))
+		return 0;
+
+	//vòng lặp thông điệp chính
+	int done = 0;
+	while (!done)
+	{
+		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
+		{
+			//kiểm tra điều kiện thoát
+			if (msg.message == WM_QUIT)
+				done = 1;
+			//giải mã thông điệp và chuyển lại cho WinProc
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
+		}
+		else
+			//xử lý game
+			Game_Run(hWnd);
+	}
+	return msg.wParam;
+}
+
+int Game_Init(HWND hWnd)
+{
+	HRESULT result;
+	//initialize direct3d
+	d3d = Direct3DCreate9(D3D_SDK_VERSION);
+	if (d3d == NULL)
+	{
+		MessageBox(hWnd, "Error initializing Direct3D device", "Error", MB_OK);
+		return 0;
+	}
+	//set Direct3D presentation paramaters
+	D3DPRESENT_PARAMETERS d3dpp;
+	ZeroMemory(&d3dpp, sizeof(d3dpp));
+	d3dpp.Windowed = true;
+	d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
+	d3dpp.BackBufferFormat = D3DFMT_X8R8G8B8;
+	d3dpp.BackBufferCount = 1;
+	d3dpp.BackBufferWidth = SCREEN_WIDTH;
+	d3dpp.BackBufferHeight = SCREEN_HEIGHT;
+	d3dpp.hDeviceWindow = hWnd;
+
+	//create Direct3D device
+	d3d->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd, D3DCREATE_SOFTWARE_VERTEXPROCESSING, &d3dpp, &d3ddev);
+	if (d3ddev == NULL)
+	{
+		MessageBox(hWnd, "Error creating Direct3D device", "Error", MB_OK);
+		return 0;
+	}
+
+	//set random number seed
+	srand(time(NULL));
+
+	//clear the backbuffer to black
+	d3ddev->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(0, 0, 0), 1.0f, 0);
+
+	//create pointer to the back buffer
+	d3ddev->GetBackBuffer(0, 0, D3DBACKBUFFER_TYPE_MONO, &backbuffer);
+
+	//create surface
+	result = d3ddev->CreateOffscreenPlainSurface(100, 100, D3DFMT_X8R8G8B8, D3DPOOL_DEFAULT, &surface, NULL);
+	if (!result)
+		return 1;
+	//return OK
+	return 1;
+}
+
+void Game_Run(HWND hwnd)
+{
+	RECT rect;
+	int r, g, b;
+	//make sure the Direct3D device is valid
+	if (d3ddev == NULL)
+		return;
+	//start rending
+	if (d3ddev->BeginScene())
+	{
+		//fill the surface with random color
+		r = rand() % 255;
+		g = rand() % 255;
+		b = rand() % 255;
+		d3ddev->ColorFill(surface, NULL, D3DCOLOR_XRGB(r, g, b));
+		//copy the surface to the backbuffer
+		rect.left = rand() % SCREEN_WIDTH / 2;
+		rect.right = rect.left + rand() % SCREEN_WIDTH / 2;
+		rect.top = rand() % SCREEN_HEIGHT;
+		rect.bottom = rect.top + rand() % SCREEN_HEIGHT / 2;
+		d3ddev->StretchRect(surface, NULL, backbuffer, &rect, D3DTEXF_NONE);
+		//stop rendering
+		d3ddev->EndScene();
+	}
+	//display the back buffer on the screen
+	d3ddev->Present(NULL, NULL, NULL, NULL);
+	//check for escape key(to exit program)
+	if (KEY_DOWN(VK_ESCAPE))
+		PostMessage(hwnd, WM_DESTROY, 0, 0);
+}
+
+void Game_End(HWND hwnd)
+{
+	surface->Release();
+	if (d3ddev != NULL)
+		d3ddev->Release();
+	if (d3d != NULL)
+		d3d->Release();
+{% endhighlight %}
