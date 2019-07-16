@@ -3,7 +3,8 @@ published: true
 layout: post
 title: Cấu trúc chương trình Windows bằng C++
 categories: game
-img: bai24.png
+img: bai222.png
+lesson: 2
 excerpt_separator: <!--more-->
 ---
 Một chương trình Windows tối thiểu phải có một hàm tên là **WinMain**. Ngoài ra, hầu hết còn có một hàm call back gọi là **WinProc** để xử lý một số các sự kiện do hệ điều hành Windows gửi đến. DirectX hoạt động theo cơ chế "kéo" (polled) - nghĩa là chúng ta đi lấy dữ liệu thay vì chờ nhận dữ liệu gửi đến từ đâu đó. Chẳng hạn: khi làm việc với bàn phím, chúng ta sẽ phải liên tục gọi hàm để biết trạng thái phím nào đã bị thay đổi.
