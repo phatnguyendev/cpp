@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Thành viên tĩnh
 categories: oop
-img: bai26.png
+img: bai105.png
 lesson: 6
 excerpt_separator: <!--more-->
 ---
