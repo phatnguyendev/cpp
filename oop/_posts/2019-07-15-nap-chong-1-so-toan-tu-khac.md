@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Nạp chồng 1 số toán tử khác
 categories: oop
-img: bai26.png
+img: bai111.png
 lesson: 12
 excerpt_separator: <!--more-->
 ---
