@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Vấn đề nhập xuất và thư viện iostream
-categories: cpp
+categories: basic
 img: bai5.png
 excerpt_separator: <!--more-->
 ---
