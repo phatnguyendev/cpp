@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Đọc ghi file
-categories: cpp
+categories: basic
 img: bai26.png
 published: true
 excerpt_separator: <!--more-->
