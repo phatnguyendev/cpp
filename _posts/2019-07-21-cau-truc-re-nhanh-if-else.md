@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Cấu trúc rẽ nhánh (If - else statement)
-categories: cpp
+categories: basic
 img: bai6.png
 excerpt_separator: <!--more-->
 ---
