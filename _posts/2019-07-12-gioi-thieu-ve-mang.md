@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Giới thiệu về mảng (array)
-categories: cpp
+categories: basic
 img: bai15.png
 excerpt_separator: <!--more-->
 ---
