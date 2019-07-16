@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Hàm bạn và lớp bạn
 categories: oop
-img: bai26.png
+img: bai104.png
 lesson: 5
 excerpt_separator: <!--more-->
 ---
