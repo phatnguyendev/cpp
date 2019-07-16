@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Cơ bản về biến
-categories: cpp
+categories: basic
 img: bai3.png
 excerpt_separator: <!--more-->
 ---
