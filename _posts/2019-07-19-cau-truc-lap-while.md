@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Cấu trúc lặp WHILE (while statement)
-categories: cpp
+categories: basic
 img: bai8.png
 excerpt_separator: <!--more-->
 ---
