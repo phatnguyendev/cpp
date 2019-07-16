@@ -380,3 +380,5 @@ void Game_Run(HWND hwnd)
 }
 {% endhighlight %}
 Kết quả chương trình sẽ hiển thị ảnh theo đường dẫn bạn truyền vào.
+## Tổng kết
+Chúng ta đã cùng nhau tìm hiểu về surface và bitmap, đặc biệt là 2 **chương trình Create_Surface** và **Load_Bitmap**...Các bạn hãy luyện tập code lại 2 chương trình này trong bài để nắm và hiểu rõ hơn về cách hoạt động của nó nhé, hơn thế các đoạn code này về sau sẽ sử dụng rất nhiều đến lúc đó các bạn chỉ cần coppy sử dụng lại thôi.😉 Hãy truy cập vào [Series Make Game - TuiTuCode](https://tuitucode.github.io/cpp/game/) để học tiếp những bài thú vị khác nữa. Nếu có thắc mắc các bạn cứ bình luận bên dưới hoặc gửi thắc mắc về page [TuiTuCode](https://www.facebook.com/shareAboutIT/) để các ad giải đáp. Pie~
