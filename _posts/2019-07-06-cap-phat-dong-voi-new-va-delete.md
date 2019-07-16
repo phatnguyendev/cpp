@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cấp phát động với new và delete
-categories: cpp
+categories: basic
 img: bai21.png
 published: true
 excerpt_separator: <!--more-->
