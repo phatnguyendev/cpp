@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Chuyển đổi thông qua constructor
 categories: oop
-img: bai1.png
+img: bai221.png
 lesson: 13
 excerpt_separator: <!--more-->
 ---
