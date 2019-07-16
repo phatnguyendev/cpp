@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Kiểu dữ liệu enum
-categories: cpp
+categories: basic
 img: bai23.png
 published: true
 excerpt_separator: <!--more-->
