@@ -1,4 +1,13 @@
+---
+layout: post
+categories: game
+img: bai222.png
+lesson: 5
+excerpt_separator: <!--more-->
+---
 Direct3D sử dụng surface cho rất nhiều thứ. Màn hình sẽ hiển thị những thứ mà card đồ họa gửi đến nó và card đồ họa sẽ lấy dữ liệu vùng nhớ đệm (frame buffer) và gửi tới màn hình.
+<!--more-->
+
 ## Một số khái niệm
 - Frame buffer / Front buffer (bề mặt chính): là một vùng trên bộ nhớ được bộ xử lý hiển thị trực tiếp lên màn hình. Trong Direct3D, các chương trình sẽ không được thao tác trực tiếp lên Front buffer. Frame buffer được back buffer sao chép lên trong mỗi vòng lặp.
 - Back buffer: là một vùng trên bộ nhớ, các chương trình có thể thao tác trực tiếp lên đây hoặc sao chép từ surface khác. Back buffer sẽ không hiển thị trực tiếp lên màn hình.
