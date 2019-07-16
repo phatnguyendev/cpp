@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Phạm vi truy xuất
 categories: oop
-img: bai26.png
+img: bai101.png
 lesson: 2
 excerpt_separator: <!--more-->
 ---
