@@ -29,3 +29,93 @@ Có khó hiểu quá không? Lấy ví dụ thực tế để giải thích kĩ 
 Sau khi đã nắm được lí thuyết chúng ta sẽ tiến hành cài đặt nó trên class, có 1 câu nói thế này:
 > Nếu bạn có thể thiết kế lớp sử dụng composition, bạn nên thiết kế như vậy. Nó sẽ giúp lớp chúng ta đơn giản, linh hoạt và mạnh mẽ (trong việc dọn dẹp). - learncpp.com
 
+Vậy nên cùng đến với cách thiết kế lớp sử dụng composition thôi nào (Chúng ta sẽ tạo thêm file .h riêng cho các lớp vì chúng ta có nhiều lớp cần cài đặt).
+#### Diem.h
+{% highlight cpp %}
+    #ifndef DIEM_H
+    #define DIEM_H
+     
+    #include <iostream>
+     
+    using namespace std;
+     
+    class Diem
+    {
+    private:
+     
+        int x;
+        int y;
+     
+    public:
+     
+    	Diem() {
+    		x = y = 0;
+        }
+     
+        Diem(int x, int y) {
+        	this->x = x;
+        	this->y = y;
+        }
+     
+        friend std::ostream& operator<<(std::ostream& out, const Diem &d)
+        {
+            out << "(" << d.x << ", " << d.y << ")";
+            return out;
+        }
+        
+        friend std::istream& operator>>(istream& in, Diem &d)
+		{
+		in >> d.x;
+		in >> d.y;
+
+		return in;
+		}
+    };
+    #endif
+{% endhighlight %}
+#### DoanThang.h
+{% highlight cpp %}
+    #ifndef DOAN_THANG_H
+    #define DOAN_THANG_H
+     
+    #include "Diem.h"
+     
+    class DoanThang
+    {
+    private:
+     
+        Diem A;
+        Diem B;
+     
+    public:
+     
+    	DoanThang() : A(0,0), B(0,0) {
+        }
+     
+        DoanThang(const Diem& a, const Diem& b) : A(a), B(b) {
+        }
+     
+        friend std::ostream& operator<<(std::ostream& out, const DoanThang &dt)
+		{
+		out << dt.A << "->" << dt.B;
+		return out;
+		}
+    };
+    #endif
+{% endhighlight %}
+Và file **source.cpp** chứa hàm main cho chương trình
+{% highlight cpp %}
+    #include "DoanThang.h"
+     
+    int main() {
+    	Diem xx, yy;
+     
+    	cin >> xx;
+    	cin >> yy;
+     
+    	DoanThang dt(xx, yy);
+     
+    	cout << dt << endl;
+    	return 0;
+    }
+{% endhighlight %}
