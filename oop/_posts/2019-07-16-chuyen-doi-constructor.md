@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Constructor và Destructor
+title: Chuyển đổi thông qua constructor
 categories: oop
 img: bai112.png
 lesson: 13
