@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Cấu trúc rẽ nhánh tiếp theo (switch - case statement)
-categories: cpp
+categories: basic
 img: bai7.png
 excerpt_separator: <!--more-->
 ---
