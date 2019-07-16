@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Cấu trúc lặp do - while (do - while statement)
-categories: cpp
+categories: basic
 img: bai9.png
 excerpt_separator: <!--more-->
 ---
