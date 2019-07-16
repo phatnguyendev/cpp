@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Cơ bản về hàm phần 3
-categories: cpp
+categories: basic
 img: bai14.png
 excerpt_separator: <!--more-->
 ---
