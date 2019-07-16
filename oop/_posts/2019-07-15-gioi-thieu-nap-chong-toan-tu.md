@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Giới thiệu nạp chồng toán tử
 categories: oop
-img: bai26.png
+img: bai107.png
 lesson: 8
 excerpt_separator: <!--more-->
 ---
