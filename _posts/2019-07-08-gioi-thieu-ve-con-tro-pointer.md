@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: 'Giới thiệu về con trỏ '
-categories: cpp
+categories: basic
 img: bai19.png
 excerpt_separator: <!--more-->
 ---
