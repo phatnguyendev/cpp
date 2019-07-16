@@ -61,7 +61,7 @@ HRESULT GetBackBuffer(
 LPDIRECT3DSURFACE9 backbuffer = NULL;
 d3ddev->GetBackBuffer(0, 0, D3DBACKBUFFER_TYPE_NONE, &backbuffer);
 {% endhighlight %}
-## Ví dụ Create_Surface
+## Chương trình Create_Surface
 Đây là ví dụ minh họa cách dùng ColorFill, StretchRect, GetBackBuffer, cách sử dụng surface, cách kết hợp các hàm trên với nhau. Kết quả chương trình như hình dưới đây:
 ![](https://1.bp.blogspot.com/-NlEMKJTk5n0/XS3kIPVDiSI/AAAAAAAAEDo/lFYQlFetGF0I0kIVAR8XV5FR4EmK2zOEQCLcBGAs/s1600/Create_Surface.PNG)
 
@@ -270,3 +270,113 @@ void Game_End(HWND hwnd)
 	if (d3d != NULL)
 		d3d->Release();
 {% endhighlight %}
+## Load Bitmap
+Cuối cùng là cách tải ảnh bitmap lên surface từ ổ cứng và vẽ nó lên màn hình thông qua backbuffer.
+Yêu cầu: 
+- Thêm thư viện "d3dx9.lib" (tương tự như thêm d3d9.lib) và thêm "#include <d3dx9.h>.
+- Hàm cần dùng:
+
+{% highlight cpp %}
+HRESULT D3DXLoadSurfaceFromFile(
+	LPDIRECT3DSURFACE9 pDestSurface,
+    const PALETTEENTRY *pDestPalette,
+    const RECT *pDestRect,
+    LPCTSTR pSrcFile,
+    const RECT *pSrcRect,
+    DWORD Filter,
+    D3DCOLOR ColorKey,
+    D3DXIMAGE_INFO *pSrcInfo);
+{% endhighlight %}
+
+## Chương trình Load_Bitmap
+Hãy viết một chương trình đơn giản nạp một ảnh bitmap vào surface và vẽ nó lên màn hình.
+Ta sẽ chỉ thay đổi vãi chỗ so với chương trình Create_Surface, nên chỉ cần thay đổi chỗ cần thay đổi, không cần viết lại toàn bộ code. Nhớ thêm thư viện "d3d9.lib" và "d3dx9.lib"
+- Đầu tiên ta thêm "#include<d3dx9.h> vào đoạn code như sau:
+
+{% highlight cpp %}
+#include <d3dx9.h>
+#include <d3d9.h>
+#pragma comment(lib, "d3dx9.lib")
+#pragma comment(lib, "d3d9.lib")
+#include<time.h>
+
+//Tiêu đề ứng dụng
+#define APPTITLE "Load_Bitmap"
+{% endhighlight %}
+- Đi đến hàm **Game_Init** và thay đổi để được nội dung sau, phần còn lại không thay đổi:
+
+{% highlight cpp %}
+int Game_Init(HWND hWnd)
+{
+	HRESULT result;
+	//initialize direct3d
+	d3d = Direct3DCreate9(D3D_SDK_VERSION);
+	if (d3d == NULL)
+	{
+		MessageBox(hWnd, "Error initializing Direct3D device", "Error", MB_OK);
+		return 0;
+	}
+	//set Direct3D presentation paramaters
+	D3DPRESENT_PARAMETERS d3dpp;
+	ZeroMemory(&d3dpp, sizeof(d3dpp));
+	d3dpp.Windowed = true;
+	d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
+	d3dpp.BackBufferFormat = D3DFMT_X8R8G8B8;
+	d3dpp.BackBufferCount = 1;
+	d3dpp.BackBufferWidth = SCREEN_WIDTH;
+	d3dpp.BackBufferHeight = SCREEN_HEIGHT;
+	d3dpp.hDeviceWindow = hWnd;
+
+	//create Direct3D device
+	d3d->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd, D3DCREATE_SOFTWARE_VERTEXPROCESSING, &d3dpp, &d3ddev);
+	if (d3ddev == NULL)
+	{
+		MessageBox(hWnd, "Error creating Direct3D device", "Error", MB_OK);
+		return 0;
+	}
+
+	//set random number seed
+	srand(time(NULL));
+
+	//clear the backbuffer to black
+	d3ddev->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(0, 0, 0), 1.0f, 0);
+
+	//create surface
+	result = d3ddev->CreateOffscreenPlainSurface(640, 480, D3DFMT_X8R8G8B8, D3DPOOL_DEFAULT, &surface, NULL);
+	if (result!=D3D_OK)
+		return 1;
+	//load surface from file into newly created surface
+    //Thay đường dẫn "F:\\TOEIC.jpg" đến ảnh cần load lên
+	result = D3DXLoadSurfaceFromFile(surface, NULL, NULL, "F:\\TOEIC.jpg", NULL, D3DX_DEFAULT, 0, NULL);
+	//make sure file was loaded okay
+	if (result != D3D_OK)
+		return 1;
+	//return okay
+	return 1;
+}
+{% endhighlight %}
+- Thay đổi một chút ở hàm **Game_Run**:
+{% highlight cpp %}
+void Game_Run(HWND hwnd)
+{
+	//make sure the Direct3D device is valid
+	if (d3ddev == NULL)
+		return;
+	//start rending
+	if (d3ddev->BeginScene())
+	{
+		//create pointer to the backbuffer
+		d3ddev->GetBackBuffer(0, 0, D3DBACKBUFFER_TYPE_MONO, &backbuffer);
+		//draw surface to the backbuffer
+		d3ddev->StretchRect(surface, NULL, backbuffer, NULL, D3DTEXF_NONE);
+		//stop rendering
+		d3ddev->EndScene();
+	}
+	//display the back buffer on the screen
+	d3ddev->Present(NULL, NULL, NULL, NULL);
+	//check for escape key(to exit program)
+	if (KEY_DOWN(VK_ESCAPE))
+		PostMessage(hwnd, WM_DESTROY, 0, 0);
+}
+{% endhighlight %}
+Kết quả chương trình sẽ hiển thị ảnh theo đường dẫn bạn truyền vào.
