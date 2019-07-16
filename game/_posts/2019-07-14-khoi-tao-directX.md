@@ -3,7 +3,8 @@ published: true
 layout: post
 title: Khởi tạo DirectX
 categories: game
-img: bai25.png
+img: bai224.png
+lesson: 4
 excerpt_separator: <!--more-->
 ---
 Để lập trình với DirectX, ta cần phải download và cài đặt DirectX SDK (link hướng dẫn: [Tại đây](https://tuitucode.github.io/cpp/gioi-thieu-ve-directX/)). Đồng thời khai báo các thư viện và file header của DirectX: **d3d9.lib** và **d3d9.h**.
