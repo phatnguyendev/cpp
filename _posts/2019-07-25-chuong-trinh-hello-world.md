@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Chương trình Hello World!
-categories: cpp
+categories: basic
 img: bai2.png
 excerpt_separator: <!--more-->
 ---
