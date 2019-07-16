@@ -8,5 +8,7 @@ lesson: 15
 excerpt_separator: <!--more-->
 ---
 Chúng ta sẽ cùng tìm hiểu quan hệ hợp thành (composition) hay còn gọi là "has-a". Trong cuộc sống thực mọi cấu trúc phức tạp đều được hình thành từ những thứ cơ bản... Chiến thôi nào!
-### Composition là gì?
-Sự hợp thành (composition) là quá trình xây dựng các đối tượng phức tạp dựa trên những đối tượng đơn giản. VD: 1 người bao gồm đầu - mình - chân - tay.. v.v và mỗi bộ phận lại được cấu thành từ những mô - cơ - thịt - máu - gân .. v.v
+## Composition là gì?
+Sự hợp thành (composition) là quá trình xây dựng các đối tượng phức tạp dựa trên những đối tượng đơn giản. VD: 1 người bao gồm đầu - mình - chân - tay.. v.v và mỗi bộ phận lại được cấu thành từ những mô - cơ - thịt - máu - gân .. v.v Lớp trong C++ cũng được cấu thành từ các kiểu dữ liệu khác nhau bên trong (thuộc tính) nên được gọi là kiểu dữ liệu hỗn hợp.
+
+Đặc trưng cho composition là quan hệ "has-a". Laptop "has-a" keyboard, a car "has-a" steering wheel,...
