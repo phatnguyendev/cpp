@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Giới thiệu OOP
 categories: oop
-img: bai26.png
+img: bai100.png
 lesson: 1
 excerpt_separator: <!--more-->
 ---
