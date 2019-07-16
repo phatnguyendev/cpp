@@ -1,10 +1,11 @@
 ---
+published: true
 layout: post
+title: Surface và Bitmaps
 categories: game
 img: bai222.png
 lesson: 5
 excerpt_separator: <!--more-->
-published: true
 ---
 Direct3D sử dụng surface cho rất nhiều thứ. Màn hình sẽ hiển thị những thứ mà card đồ họa gửi đến nó và card đồ họa sẽ lấy dữ liệu vùng nhớ đệm (frame buffer) và gửi tới màn hình.
 <!--more-->
