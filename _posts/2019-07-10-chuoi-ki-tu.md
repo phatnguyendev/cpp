@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Chuỗi kí tự (C-style string)
-categories: cpp
+categories: basic
 img: bai17.png
 excerpt_separator: <!--more-->
 ---
