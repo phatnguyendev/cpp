@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: 'Goto, Break và Continue'
-categories: cpp
+categories: basic
 img: bai11.png
 excerpt_separator: <!--more-->
 ---
