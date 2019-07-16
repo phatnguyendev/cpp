@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Mảng đa chiều (multidimensional array)
-categories: cpp
+categories: basic
 img: bai16.png
 excerpt_separator: <!--more-->
 ---
