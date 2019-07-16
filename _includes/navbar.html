@@ -12,6 +12,10 @@
   {% endif %}
 {% endfor %}
       </ol>
+      {% for crumb in crumbs offset: 1 %}
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">{crumb}}</li>
+      {% endfor %}
     </nav>
   </div>
 </div>
