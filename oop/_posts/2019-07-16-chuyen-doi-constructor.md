@@ -94,7 +94,7 @@ Chúng ta thấy C++ đã chuyển đổi "nhầm" chữ z sang constructor có 
     	string iData;
     public:
      
-    	iString(int s) {
+    	explicit iString(int s) {
     		iData.resize(s);
     		cout << "wrong step!" << endl;
     	}
@@ -118,4 +118,47 @@ Chúng ta thấy C++ đã chuyển đổi "nhầm" chữ z sang constructor có 
     	return 0;
     }
 {% endhighlight %}
-Lúc này chúng ta sẽ thấy chương trình báo lỗi nhưng nó là kết quả đúng :) Vì sao? Vì nếu trình biên dịch còn nhận constructor có tham số int thì chương trình sẽ chạy bình thường nhưng không có kết quả chúng ta mong muốn, còn nếu chương trình không nhận constructor có tham số kiểu int nó sẽ không tìm thấy constructor nào thích hợp để chuyển đổi kiểu ``char`` sang kiểu iString (chúng ta còn 1 constructor có tham số kiểu ``char*`` nhưng mặc định không thể chuyển từ ``char`` sang ``char*`` được nên không thể dùng constructor này). Vậy từ khóa ``explicit`` đã hoạt động tốt.
+Lúc này chúng ta sẽ thấy chương trình báo lỗi nhưng nó là kết quả đúng :) Vì sao? Vì nếu trình biên dịch còn nhận constructor có tham số int thì chương trình sẽ chạy bình thường nhưng không có kết quả chúng ta mong muốn, còn nếu chương trình không nhận constructor có tham số kiểu int nó sẽ không tìm thấy constructor nào thích hợp để chuyển đổi kiểu ``char`` sang kiểu ``iString`` (chúng ta còn 1 constructor có tham số kiểu ``char*`` nhưng mặc định không thể chuyển từ ``char`` sang ``char*`` được nên không thể dùng constructor này). Vậy từ khóa ``explicit`` đã hoạt động tốt.
+
+Để chuyển đối được theo mong muốn (trong ví dụ trên mong muốn chuyển được kiểu ``char`` sang ``iString``) chúng ta có thể tạo thêm 1 constructor có tham số kiểu char. Ngược lại nếu hoàn toàn không muốn xảy ra việc chuyển đổi này hãy đặt constructor có tham số kiểu char ở phạm vi private (nhưng vẫn có thể truy cập được từ bên trong class do đặc tính của truy xuất private).
+### Từ khóa delete
+Ví dụ mình không muốn lớp iString của mình nhận kiểu char, đơn giản mình sẽ không viết constructor hoặc bất cứ hàm chuyển đổi nào cho kiểu char hoặc cách mình vừa nêu ở trên nhưng trong trường hợp nào đó mà bạn vẫn nghi ngờ có sự chuyển đổi này chúng ta có thể chắc chắn hơn bằng cách dùng từ khóa ``delete``.
+{% highlight cpp %}
+    #include <iostream>
+    #include <string>
+    using namespace std;
+     
+    class iString {
+    	string iData;
+    public:
+     	
+  		//bất cứ thứ gì dùng constructor này đều bị lỗi vì nó đã bị xóa bởi từ khóa delete
+  		isString(char c) = delete;
+  
+    	iString(int s) {
+    		iData.resize(s);
+    		cout << "wrong step!" << endl;
+    	}
+     
+    	iString(const char* str) {
+    		iData = str;
+    	}
+     
+    	friend ostream& operator<<(ostream& out, iString d) {
+    		out << d.iData;
+    		return out;
+    	}
+     
+     
+    };
+     
+    int main() {
+    	iString istr = 'z'; //lỗi
+     
+    	cout << istr << endl;
+    	return 0;
+    }
+{% endhighlight %}
+Chúng ta có thể dùng từ khóa ``delete`` cho copy constructor hoặc các cài đặt toán tử (overload operator) mà chúng ta không mong muốn được sử dụng.
+## Tổng kết
+Chúng ta đã hiểu hơn về constructor và tìm hiểu được 2 từ khóa mới là ``explicit`` và ``delete``. Có thắc mắc các bạn bình luận bên dưới để tụi minh giải đáp nhé. Pie~
