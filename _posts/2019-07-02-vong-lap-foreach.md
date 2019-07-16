@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Vòng lặp foreach
-categories: cpp
+categories: basic
 img: bai25.png
 excerpt_separator: <!--more-->
 ---
