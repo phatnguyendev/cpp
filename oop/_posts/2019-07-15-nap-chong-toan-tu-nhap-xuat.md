@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Nạp chồng toán tử nhập xuất
 categories: oop
-img: bai108.png
+img: bai109.png
 lesson: 10
 excerpt_separator: <!--more-->
 ---
