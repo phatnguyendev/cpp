@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Cấu trúc lặp FOR (for statement)
-categories: cpp
+categories: basic
 img: bai10.png
 excerpt_separator: <!--more-->
 ---
