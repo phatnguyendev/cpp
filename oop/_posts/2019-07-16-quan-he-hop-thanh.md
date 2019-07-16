@@ -119,3 +119,14 @@ Và file **source.cpp** chứa hàm main cho chương trình
     	return 0;
     }
 {% endhighlight %}
+Kết quả chương trình:
+{% highlight cpp %}
+	1
+    2
+    3
+    4
+    (1,2) -> (3,4)
+{% endhighlight %}
+Có thể phát biểu rằng : DoanThang "has-a" Diem
+## Tổng kết
+Done! Chúng ta đã tìm hiểu về mối quan hệ "has-a", bài sau chúng ta sẽ tìm hiểu đến "is-a" - đặc tính kế thừa trong C++, có thắc mắc về bài học các bạn bình luận bên dưới để tụi mình giải đáp nhé. Pie~
