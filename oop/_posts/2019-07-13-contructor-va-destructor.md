@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Constructor và Destructor
 categories: oop
-img: bai26.png
+img: bai103.png
 lesson: 4
 excerpt_separator: <!--more-->
 ---
