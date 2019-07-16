@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cài đặt visual studio 2015
-categories: cpp
+categories: basic
 img: bai1.jpg
 published: true
 excerpt_separator: <!--more-->
