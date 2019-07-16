@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Giới thiệu các toán tử thường gặp trong C++
-categories: cpp
+categories: basic
 img: bai4.png
 excerpt_separator: <!--more-->
 ---
