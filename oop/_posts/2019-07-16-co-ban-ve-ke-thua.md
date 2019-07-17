@@ -52,14 +52,14 @@ Mỗi loại kế thừa đều có những đặc điểm khác nhau, xem bản
 </thead>
 <tbody>
 <tr>
-<td markdown="span">Bên trong lớp</td>
-<td markdown="span">Có</td>
+<td markdown="span">Lớp kế thừa</td>
+<td markdown="span">Không</td>
 <td markdown="span">Có</td>
 <td markdown="span">Có</td>
 </tr>
 <tr>
 <td markdown="span">Lớp kế thừa</td>
-<td markdown="span">Có</td>
+<td markdown="span">Không</td>
 <td markdown="span">Có</td>
 <td markdown="span">Có</td>
 </tr>
