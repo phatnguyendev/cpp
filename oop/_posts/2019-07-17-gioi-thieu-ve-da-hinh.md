@@ -21,8 +21,82 @@ Chúng ta đến với ví dụ: quản lý danh sách các smartphone (có th�
 	- Lưu trữ: thao tác trên mảng, các thư viện (list, vector,...)
     - Thao tác xử lý: phải đảm bảo tính đa hình (vì các loại đối tượng khác nhau sẽ phải dùng thao tác xử lý khác nhau). Để thỏa mãn tính đa hình chúng ta có 2 cách: **vùng chọn kiểu** và **phương thức ảo**
     
-Trong trường hợp này chúng ta sẽ dùng con trỏ (giảm đi bước khởi tạo nhiều đối tượng vì con trỏ đối tượng của lớp cha tham chiếu được đến đối tượng kiểu lớp con thông qua con trỏ):
+Chúng ta sẽ dùng theo cách thông thường (không áp dụng đa hình) để xem có thể giải quyết được không nhé! Trong trường hợp này chúng ta sẽ dùng con trỏ (giảm đi bước khởi tạo nhiều đối tượng vì con trỏ đối tượng của lớp cha tham chiếu được đến đối tượng kiểu lớp con thông qua con trỏ):
 {% highlight cpp %}
-
+    #include <iostream>
+    #include <string>
+    using namespace std;
+     
+    class SmartPhone {
+    	protected:
+    	string Ten;
+    	string NSX;
+    	public:
+    	SmartPhone();
+    	SmartPhone(string t, string n) {
+    		Ten = t;
+    		NSX = n;
+    	}
+    	void Xuat() {
+    		cout << "Dien thoai co ten " << Ten << " thuoc hang " << NSX << endl;
+    	}
+    };
+     
+    class Android : public SmartPhone {
+    	int CHplay;
+    	public:
+    	Android(int s, string t, string n) : SmartPhone(t, n) {
+    		CHplay = s;
+    	}
+    	void Xuat() {
+    		cout << "Android co ten " << Ten << " thuoc hang " << NSX << endl;
+    	}
+    };
+     
+    class IOS : public SmartPhone {
+    	int AppleStore;
+    	public:
+    	IOS(int s, string t, string n) : SmartPhone(t, n) {
+    		AppleStore = s;
+    	}
+    	void Xuat() {
+    		cout << "IOS co ten " << Ten << " thuoc hang " << NSX << endl;
+    	}	
+    };
+     
+    class WindowPhone : public SmartPhone {
+    	int Mstore;
+    	public:
+    	WindowPhone(int s, string t, string n) : SmartPhone(t, n) {
+    		Mstore = s;
+    	}
+    	void Xuat() {
+    		cout << "WindowPhone co ten " << Ten << " thuoc hang " << NSX << endl;
+    	}	
+    };
+     
+    int main() {
+    	// your code goes here
+    	const int sl = 3; // số lượng sản phẩm
+     
+    	SmartPhone *sp[sl];
+    	sp[0] = new Android(1,"Samsung Galaxy S5","Samsung");
+    	sp[1] = new IOS(2,"Iphone XS Max","Apple");
+    	sp[2] = new WindowPhone(3,"Microsoft Lumia 535","Microsoft");
+     
+    	//xuất sản phẩm
+    	for(int i=0; i< 3;i++){
+    		sp[i]->Xuat();
+    	}
+    	return 0;
+    }
 {% endhighlight %}
-    
+Kết quả chương trình:
+{% highlight cpp %}
+	Dien thoai co ten Samsung Galaxy S5 thuoc hang Samsung
+	Dien thoai co ten Iphone XS Max thuoc hang Apple
+	Dien thoai co ten Microsoft Lumia 535 thuoc hang Microsoft
+{% endhighlight %}
+OK Trước tiên chúng ta thấy khi sử dụng con trỏ sẽ tiện lợi hơn rất nhiều cho chúng ta, ở đây mình không cần phải tạo cả 3 đối tượng cho 3 lớp mà chỉ cần 1 con trỏ đối tượng lớp cha các bạn nhớ chú ý đặc điểm này nhé!
+  
+Nhưng với kết quả chúng ta thu được, mình nhận ra: con trỏ đối tượng lớp cha chỉ gọi hàm `Xuat` của lớp cha mặc dù đã được tham chiếu đến đối tượng của lớp con (mặc dù trong lớp con chúng ta đã định nghĩa lại hàm `Xuat`)
