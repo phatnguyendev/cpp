@@ -121,7 +121,13 @@ Chúng ta sẽ xem ví dụ sau:
     }
 {% endhighlight %}
 Những dòng comment chính là cách lớp con kế thừa những thuộc tính của lớp cha và chuyển phạm vi truy xuất về tương ứng với kiểu kế thừa, chi tiết:
-  - Lớp B kế thừa private lớp A:
+  - Lớp B kế thừa private lớp A: 2 thuộc tính public và protected của lớp A (lớp cha) sẽ trở thành thuộc tính private ở lớp B.
+  - Lớp C kế thừa protected lớp A: 2 thuộc tính public và protected của lớp A (lớp cha) sẽ trở thành thuộc tính protected ở lớp C.
+  - Lớp C kế thừa protected lớp A: 2 thuộc tính public và protected của lớp A (lớp cha) sẽ được giữ nguyên (vẫn là public và protected) ở lớp C.
+
+Tại sao lại không đề cập đến thuộc tính private (aPriv) của lớp A? Theo như truy xuất theo chiều dọc (bảng phía trên) ta thấy lớp kế thừa (lớp con) không có quyền truy cập vào thuộc tính private của lớp cha.
+  
+Sau khi đã chuyển đổi phạm vi tương ứng, các thuộc tính từ lớp cha bây giờ đã trở thành thuộc tính của lớp con (với các kiểu truy xuất mới) và ở bên ngoài sẽ truy xuất dựa trên sự thay đổi này.
 ### Đơn kế thừa
 Đơn kế thừa là loại kế thừa dựa trên mối quan hệ 1 - 1. VD: 1 sinh viên cũng là 1 con người.
 
