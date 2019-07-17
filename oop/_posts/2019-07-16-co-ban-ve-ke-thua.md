@@ -37,7 +37,7 @@ Phân tích: Chúng ta sẽ dùng toán tử ``:`` để tiến hành kế thừ
 ### Phạm vi truy xuất
 Mỗi loại kế thừa đều có những đặc điểm khác nhau. Chúng ta có 2 loại truy xuất: truy xuất theo chiều ngang và truy xuất theo chiêu dọc.
 
-Truy xuất theo chiều dọc: nói về quyền truy xuất vào các thuộc tính và phương thức của lớp từ những vị trí khác nhau (như bên trong lớp, ở lớp con và bên ngoài lớp). Cùng xem bảng bên dưới để hiểu rõ:
+**Truy xuất theo chiều dọc:** nói về quyền truy xuất vào các thuộc tính và phương thức (với các kiểu private, protected và public) của lớp từ những vị trí khác nhau (như bên trong lớp, ở lớp con và bên ngoài lớp). Cùng xem bảng bên dưới để hiểu rõ:
 
 <table class="table">
 <thead>
@@ -72,6 +72,56 @@ Truy xuất theo chiều dọc: nói về quyền truy xuất vào các thuộc 
 
 _*Giải thích:_  Có: được phép truy cập, Không: không được phép truy cập. Ơ mức truy cập ngoài lớp không bao gồm hàm bạn, lớp bạn (friend function, friend class) vì đặc tính của nó là được truy cập các thuộc tính private (cũng như protected và public).
 
+_*Lưu ý:_ phạm vi truy xuất trong bản là của các thuộc tính và phương thức trong lớp chứ không phải phạm vi truy xuất phía sau toán tử ``:`` khi lớp con kế thừa lớp cha. 
+
+**Truy xuất theo chiều ngang:** nói về sự truy xuất các thành phần của lớp cha thông qua lớp con từ thế giới bên ngoài, đây chính là những phạm vi đươc lớp con sử dụng khi kế thừa lớp cha.
+{% highlight cpp %}
+	class Derived : [private/protected/public] Base {
+    	// Thành phần riêng của lớp dẫn xuất
+    };
+{% endhighlight %}
+Chúng ta sẽ xem ví dụ sau:
+{% highlight cpp %}
+    #include <iostream>
+    using namespace std;
+     
+    class A {
+    	private:
+    	int aPriv;
+    	protected:
+    	int aProt;
+    	public:
+    	int aPub;
+    };
+     
+    class B : private A {
+    	/* 
+    	* private aProt;
+    	* private aPub;
+    	*/
+    };
+     
+    class C : protected A {
+    	/* 
+    	* protected aProt;
+    	* protected aPub;
+    	*/
+    };
+     
+    class D : public A {
+    	/* 
+    	* protected aProt;
+    	* public aPub;
+    	*/
+    };
+     
+    int main() {
+    	// your code goes here
+    	return 0;
+    }
+{% endhighlight %}
+Những dòng comment chính là cách lớp con kế thừa những thuộc tính của lớp cha và chuyển phạm vi truy xuất về tương ứng với kiểu kế thừa, chi tiết:
+  - Lớp B kế thừa private lớp A:
 ### Đơn kế thừa
 Đơn kế thừa là loại kế thừa dựa trên mối quan hệ 1 - 1. VD: 1 sinh viên cũng là 1 con người.
 
