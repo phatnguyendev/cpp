@@ -218,3 +218,39 @@ Trong đơn kế thừa, lớp SinhVien được kế thừa toàn bộ thuộc 
 ### Định nghĩa lại phương thức ở lớp con
 Trong đoạn ví dụ trên chúng ta thấy ở cả lớp cha (ConNguoi) và lớp con (SinhVien) đều có phương thức giống tên nhau là phương thức **Xuat** cùng làm nhiệm vụ xuất thông tin các thuộc tính của lớp, đây là cách chúng ta định nghĩa lại phương thức đã có ở lớp cha (lúc này khi cần gọi phương thức đã có ở lớp cha chúng ta sẽ dùng toán tử phạm vi ``::``).
 ### Cách gọi constructor
+Một vấn đề khác trong kế thừa là cách gọi constructor, xem tiếp ví dụ dưới đây:
+{% highlight cpp %}
+    #include <iostream>
+    using namespace std;
+     
+    class Base {
+    	private:
+    	int value;
+    	public:
+    	Base() {
+    		cout << "call Base constructor..." << endl;
+    	}
+    };
+     
+     
+    class Derived : public Base {
+    	public:
+    	Derived() {
+    		cout << "call Derived constructor..." << endl;
+    	}
+    };
+     
+    int main() {
+    	// your code goes here
+    	Derived test;
+    	return 0;
+    }
+{% endhighlight %}
+Kết quả chương trình:
+{% highlight cpp %}
+	call Base constructor...
+	call Derived constructor...
+{% endhighlight %}
+Nhận thấy trình biên dịch đã gọi constructor của lớp cha rồi mới đến lớp con, đây là cách gọi constructor khi chúng ta sử dụng kế thừa, tương tự nếu chương trình của bạn có nhiều dẫn xuất (B kế thừa A, C kế thừa B,..) thì constructor sẽ được gọi từ lớp cha trước rồi đến lớp con.
+## Tổng kết
+Vậy là chúng ta đã tìm hiểu 1 số đặc điểm cơ bản trong kế thừa, các bạn đọc và nhớ những nội dung trên nhé. Có thắc mắc các bạn bình luận bên dưới để tụi mình giải đáp. Pie~
