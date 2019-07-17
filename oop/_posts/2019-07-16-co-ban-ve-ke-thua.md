@@ -68,5 +68,94 @@ Mỗi loại kế thừa đều có những đặc điểm khác nhau, xem bản
 </tbody>
 </table>
 
-_*Giải thích:_  Có: được phép truy cập, Không: không được phép truy cập.
+_*Giải thích:_  Có: được phép truy cập, Không: không được phép truy cập. Ơ mức truy cập ngoài lớp không bao gồm hàm bạn, lớp bạn (friend function, friend class) vì đặc tính của nó là được truy cập các thuộc tính private (cũng như protected và public).
 
+### Đơn kế thừa
+Đơn kế thừa là loại kế thừa dựa trên mối quan hệ 1 - 1. VD: 1 sinh viên cũng là 1 con người.
+
+Trong ví dụ quan hệ 1 - 1, chúng ta có thể nói chi tiết hơn: 1 sinh viên là 1 con người nhưng có thêm 1 số đặc điểm riêng biệt (đi học, làm bài tập về nhà,...). Như vậy ta sẽ biểu diễn lớp SinhVien kế thừa lớp ConNguoi như sau:
+{% highlight cpp %}
+    #include <iostream>
+    #include <string>
+    using namespace std;
+     
+    class ConNguoi {
+    	private:
+    	//Properties
+    	string CMND;
+    	string HoTen;
+    	string Tuoi;
+    	public:
+    	//Constructors
+    	ConNguoi();
+    	ConNguoi(string id, string hoten, string tuoi) {
+    		CMND = id;
+    		HoTen = hoten;
+    		Tuoi = tuoi;
+    	}
+    	//Methods
+    	void An() {
+    		cout << "Dang an..." << endl;
+    	};
+    	void Ngu() {
+    		cout << "Dang ngu..z.z" << endl;
+    	};
+    	void SinhHoat() {
+    		cout << "Dang sinh hoat..." << endl;
+    	};
+     
+    	void Xuat() {
+    		cout << "CMND: "<< CMND << endl;
+    		cout << "Ho ten: " << HoTen << endl;
+    		cout << "Tuoi: " << Tuoi << endl;
+    	}
+     
+    };
+     
+    class SinhVien : public ConNguoi  {
+    	private:
+    	//Properties
+    	string MSSV;
+    	string Lop;
+    	public:
+    	//Constructors
+    	SinhVien();
+    	SinhVien(string mssv, string lop,string id, string hoten, string tuoi) : ConNguoi(id, hoten, tuoi) {
+    		MSSV = mssv;
+    		Lop = lop;
+    	}
+    	//Methods
+    	void Hoc() {
+    		cout << "Dang hoc..." << endl;
+    	}
+    	void LamBaiTap() {
+    		cout << "Lam bai tap..." << endl;
+    	}
+    	void Xuat() {
+    		ConNguoi::Xuat();
+    		cout << "MSSV: " << MSSV << endl;
+    		cout << "Lop: " << Lop << endl;
+    	}
+    };
+     
+    int main() {
+    	// your code goes here
+    	SinhVien sv1("001","OOP","1189","Nguyen Van A","21");
+     
+    	sv1.Xuat();
+  		sv1.An();
+    	return 0;
+    }
+{% endhighlight %}
+Kết quả chương trình:
+{% highlight cpp %}
+	CMND: 1189
+	Ho ten: Nguyen Van A
+	Tuoi: 21
+	MSSV: 001
+	Lop: OOP
+	Dang an...
+{% endhighlight %}
+Trong đơn kế thừa, lớp SinhVien được kế thừa toàn bộ thuộc tính (CMND, HoTen, Tuoi) và các phương thức (An, Ngu, SinhHoat) của lớp ConNguoi nhưng riêng constructor thì không.
+### Định nghĩa lại phương thức ở lớp con
+Trong đoạn ví dụ trên chúng ta thấy ở cả lớp cha (ConNguoi) và lớp con (SinhVien) đều có phương thức giống tên nhau là phương thức **Xuat** cùng làm nhiệm vụ xuất thông tin các thuộc tính của lớp, đây là cách chúng ta định nghĩa lại phương thức đã có ở lớp cha (lúc này khi cần gọi phương thức đã có ở lớp cha chúng ta sẽ dùng toán tử phạm vi ``::``).
