@@ -32,10 +32,12 @@ Qua ví dụ trên các bạn chắc cũng đã nắm được phần nào nhữ
     };
 {% endhighlight %}
 
-Phân tích: Chúng ta sẽ dùng toán tử ``:`` để tiến hành kế thừa lớp Base theo 1 trong 3 cách kế thừa: private, protected và public.
+Phân tích: Chúng ta sẽ dùng toán tử ``:`` để tiến hành kế thừa lớp Base theo 1 trong 3 cách kế thừa: private, protected và public (phạm vi truy xuất trong kế thừa).
 
-### Kế thừa private, protected và public
-Mỗi loại kế thừa đều có những đặc điểm khác nhau, xem bảng bên dưới so sánh sự khác nhau giữa 3 loại kế thừa:
+### Phạm vi truy xuất
+Mỗi loại kế thừa đều có những đặc điểm khác nhau. Chúng ta có 2 loại truy xuất: truy xuất theo chiều ngang và truy xuất theo chiêu dọc.
+
+Truy xuất theo chiều dọc: nói về quyền truy xuất vào các thuộc tính và phương thức của lớp từ những vị trí khác nhau (như bên trong lớp, ở lớp con và bên ngoài lớp). Cùng xem bảng bên dưới để hiểu rõ:
 
 <table class="table">
 <thead>
@@ -159,3 +161,4 @@ Kết quả chương trình:
 Trong đơn kế thừa, lớp SinhVien được kế thừa toàn bộ thuộc tính (CMND, HoTen, Tuoi) và các phương thức (An, Ngu, SinhHoat) của lớp ConNguoi nhưng riêng constructor thì không.
 ### Định nghĩa lại phương thức ở lớp con
 Trong đoạn ví dụ trên chúng ta thấy ở cả lớp cha (ConNguoi) và lớp con (SinhVien) đều có phương thức giống tên nhau là phương thức **Xuat** cùng làm nhiệm vụ xuất thông tin các thuộc tính của lớp, đây là cách chúng ta định nghĩa lại phương thức đã có ở lớp cha (lúc này khi cần gọi phương thức đã có ở lớp cha chúng ta sẽ dùng toán tử phạm vi ``::``).
+### Cách gọi constructor
