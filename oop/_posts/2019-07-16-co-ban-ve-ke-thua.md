@@ -252,5 +252,7 @@ Kết quả chương trình:
 	call Derived constructor...
 {% endhighlight %}
 Nhận thấy trình biên dịch đã gọi constructor của lớp cha rồi mới đến lớp con, đây là cách gọi constructor khi chúng ta sử dụng kế thừa, tương tự nếu chương trình của bạn có nhiều dẫn xuất (B kế thừa A, C kế thừa B,..) thì constructor sẽ được gọi từ lớp cha trước rồi đến lớp con.
+### Cách gọi destructor
+Ngược lại với gọi constructor, destructor sẽ được gọi từ lớp con rồi mới đến lớp cha.
 ## Tổng kết
 Vậy là chúng ta đã tìm hiểu 1 số đặc điểm cơ bản trong kế thừa, các bạn đọc và nhớ những nội dung trên nhé. Có thắc mắc các bạn bình luận bên dưới để tụi mình giải đáp. Pie~
