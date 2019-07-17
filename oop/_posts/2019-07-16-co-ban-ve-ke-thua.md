@@ -32,7 +32,45 @@ Qua ví dụ trên các bạn chắc cũng đã nắm được phần nào nhữ
     };
 {% endhighlight %}
 
-Phân tích: Chúng ta sẽ dùng toán tử ``:`` để tiến hành kế thừa lớp Base theo 1 trong 3 cách kế thừa: private, protected và public. Cùng nhìn bảng dưới để hiểu hơn về 3 loại kế thừa này:
+Phân tích: Chúng ta sẽ dùng toán tử ``:`` để tiến hành kế thừa lớp Base theo 1 trong 3 cách kế thừa: private, protected và public.
+
+### Kế thừa private, protected và public
+Mỗi loại kế thừa đều có những đặc điểm khác nhau, xem bảng bên dưới so sánh sự khác nhau giữa 3 loại kế thừa:
+
+<table class="table">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Truy cập</th>
+<th>private</th>
+<th>protected</th>
+<th>public</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td markdown="span">Bên trong lớp</td>
+<td markdown="span">Có</td>
+<td markdown="span">Có</td>
+<td markdown="span">Có</td>
+</tr>
+<tr>
+<td markdown="span">Lớp kế thừa</td>
+<td markdown="span">Có</td>
+<td markdown="span">Có</td>
+<td markdown="span">Có</td>
+</tr>
+<tr>
+<td markdown="span">Bên ngoài lớp</td>
+<td markdown="span">Không</td>
+<td markdown="span">Không</td>
+<td markdown="span">Có</td>
+</tr>
+</tbody>
+</table>
 
 
 
