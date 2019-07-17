@@ -18,8 +18,8 @@ Ngoài trừ việc bạn muốn bỏ kế thừa để viết từng hàm tính
 Chúng ta đến với ví dụ: quản lý danh sách các smartphone (có thể) khác kiểu nhau, các smartphone có thể có kiểu Android, IOS, Blackberry hoặc Windowphone.
 
 Để giải quyết ví dụ trên, chúng ta quan tâm 2 hoạt động: lưu trữ và thao tác xử lý
-	- Lưu trữ: thao tác trên mảng, các thư viện (list, vector,...)
-    - Thao tác xử lý: phải đảm bảo tính đa hình (vì các loại đối tượng khác nhau sẽ phải dùng thao tác xử lý khác nhau). Để làm được chúng ta có 2 cách: **vùng chọn kiểu** và **phương thức ảo**
+- Lưu trữ: thao tác trên mảng, các thư viện (list, vector,...)
+- Thao tác xử lý: phải đảm bảo tính đa hình (vì các loại đối tượng khác nhau sẽ phải dùng thao tác xử lý khác nhau). Để làm được chúng ta có 2 cách: **vùng chọn kiểu** và **phương thức ảo**
     
 Chúng ta sẽ dùng theo cách thông thường (không áp dụng đa hình) để xem có thể giải quyết được không nhé! Trong trường hợp này chúng ta sẽ dùng con trỏ (giảm đi bước khởi tạo nhiều đối tượng vì con trỏ đối tượng của lớp cha tham chiếu được đến đối tượng kiểu lớp con thông qua con trỏ):
 {% highlight cpp %}
