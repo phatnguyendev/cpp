@@ -68,6 +68,6 @@ Mỗi loại kế thừa đều có những đặc điểm khác nhau, xem bản
 </tbody>
 </table>
 
-
+_*Giải thích:_ Có: được phép truy cập, Không: không được phép truy cập.
 
 
