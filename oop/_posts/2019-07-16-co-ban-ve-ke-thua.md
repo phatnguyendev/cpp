@@ -38,10 +38,6 @@ Phân tích: Chúng ta sẽ dùng toán tử ``:`` để tiến hành kế thừ
 Mỗi loại kế thừa đều có những đặc điểm khác nhau, xem bảng bên dưới so sánh sự khác nhau giữa 3 loại kế thừa:
 
 <table class="table">
-<colgroup>
-<col width="30%" />
-<col width="70%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th>Truy cập</th>
@@ -52,8 +48,8 @@ Mỗi loại kế thừa đều có những đặc điểm khác nhau, xem bản
 </thead>
 <tbody>
 <tr>
-<td markdown="span">Lớp kế thừa</td>
-<td markdown="span">Không</td>
+<td markdown="span">Bên trong lớp</td>
+<td markdown="span">Có</td>
 <td markdown="span">Có</td>
 <td markdown="span">Có</td>
 </tr>
