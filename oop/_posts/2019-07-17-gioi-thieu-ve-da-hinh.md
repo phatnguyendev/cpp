@@ -99,4 +99,5 @@ Kết quả chương trình:
 {% endhighlight %}
 OK Trước tiên chúng ta thấy khi sử dụng con trỏ sẽ tiện lợi hơn rất nhiều cho chúng ta, ở đây mình không cần phải tạo cả 3 đối tượng cho 3 lớp mà chỉ cần 1 con trỏ đối tượng lớp cha các bạn nhớ chú ý đặc điểm này nhé!
   
-Nhưng với kết quả chúng ta thu được, mình nhận ra: con trỏ đối tượng lớp cha chỉ gọi hàm `Xuat` của lớp cha mặc dù đã được tham chiếu đến đối tượng của lớp con (mặc dù trong lớp con chúng ta đã định nghĩa lại hàm `Xuat`)
+**Nhưng** với kết quả chúng ta thu được, mình nhận ra: con trỏ đối tượng lớp cha chỉ gọi hàm `Xuat` của lớp cha mặc dù đã được tham chiếu đến đối tượng của lớp con (và trong lớp con mình đã định nghĩa lại hàm `Xuat`). Đó chính là vấn đề của con trỏ đối tượng lớp cha. Cách giải quyết vấn đề trên? Dùng đa hình thôi nào :)
+### Sử dụng vùng chọn kiểu
