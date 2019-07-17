@@ -32,5 +32,8 @@ Qua ví dụ trên các bạn chắc cũng đã nắm được phần nào nhữ
     };
 {% endhighlight %}
 
+Phân tích: Chúng ta sẽ dùng toán tử ``:`` để tiến hành kế thừa lớp Base theo 1 trong 3 cách kế thừa: private, protected và public. Cùng nhìn bảng dưới để hiểu hơn về 3 loại kế thừa này:
+
+
 
 
