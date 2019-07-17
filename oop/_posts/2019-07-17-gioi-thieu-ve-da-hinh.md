@@ -206,4 +206,94 @@ Yay! Chúng ta đã có kết quả theo mong muốn, tuy nhiên :) nhìn nó kh
   
 Chúng ta hãy cùng nhìn lại vấn đề trước khi sử dụng vùng chọn kiểu: con trỏ của đối tượng lớp cha không thể truy xuất hàm `Xuat` ở lớp con -> chúng ta sẽ làm cho nó thực hiện được -> biến phương thức `Xuat` thành phương thức ảo.
 #### Cách thực hiện
-Đầu tiên
+Đầu tiên chúng ta sẽ đặt từ khóa `virtual` trước khai báo hàm (mà chúng ta muốn biến thành phương thức ảo). Trong trường hợp hiện tại chúng ta đặt `virtual` ở phần khai báo phương thức Xuat
+{% highlight cpp %}
+	virtual void Xuat() {
+		cout << "Dien thoai co ten " << Ten << " thuoc hang " << NSX << endl;
+	}
+{% endhighlight %}
+Việc còn lại là ở các lớp con, chúng ta chỉ cần **định nghĩa lại** phương thức Xuat để mỗi lớp con sẽ xuất theo cách chúng ta định nghĩa (cũng là những gì chúng ta mong muốn)
+{% highlight cpp %}
+    #include <iostream>
+    #include <string>
+    using namespace std;
+     
+    class SmartPhone {
+    protected:
+    	string Ten;
+    	string NSX;
+    public:
+    	SmartPhone();
+    	SmartPhone(string t, string n) {
+    		Ten = t;
+    		NSX = n;
+    	}
+    	virtual void Xuat() {
+    		cout << "Dien thoai co ten " << Ten << " thuoc hang " << NSX << endl;
+    	}
+    };
+     
+    class Android : public SmartPhone {
+    	int CHplay;
+    public:
+    	Android(int s, string t, string n) : SmartPhone(t, n) {
+    		CHplay = s;
+    	}
+    	void Xuat() {
+    		cout << "Android co ten " << Ten << " thuoc hang " << NSX << endl;
+    	}
+    };
+     
+    class IOS : public SmartPhone {
+    	int AppleStore;
+    public:
+    	IOS(int s, string t, string n) : SmartPhone(t, n) {
+    		AppleStore = s;
+    	}
+    	void Xuat() {
+    		cout << "IOS co ten " << Ten << " thuoc hang " << NSX << endl;
+    	}
+    };
+     
+    class WindowPhone : public SmartPhone {
+    	int Mstore;
+    public:
+    	WindowPhone(int s, string t, string n) : SmartPhone(t, n) {
+    		Mstore = s;
+    	}
+    	void Xuat() {
+    		cout << "WindowPhone co ten " << Ten << " thuoc hang " << NSX << endl;
+    	}
+    };
+     
+    int main() {
+    	// your code goes here
+    	const int sl = 3; // số lượng sản phẩm
+     
+    	SmartPhone *sp[sl];
+    	sp[0] = new Android(1, "Samsung Galaxy S5", "Samsung");
+    	sp[1] = new IOS(2, "Iphone XS Max", "Apple");
+    	sp[2] = new WindowPhone(3, "Microsoft Lumia 535", "Microsoft");
+     
+    	//xuất sản phẩm
+    	for (int i = 0; i< 3; i++) {
+    		sp[i]->Xuat();
+    	}
+     
+    	return 0;
+    }
+{% endhighlight %}
+Đoạn code vẫn như thế, chỉ thêm mỗi từ khóa `virtual` không tốn thêm dòng nào :) tuyệt cú mèo! 
+#### Lưu ý khi dùng phương thức ảo
+Tiện lợi là vậy nhưng cũng tìm ẩn khá nhiều rắc rối nếu chúng ta không thực hiện đúng, nắm 1 số ý sau:
+  - Phương thức ảo chỉ hoạt động thông qua con trỏ
+  - Để 1 phương thức trở thành phương thức ảo:
+  	- Đặt từ khóa virtual trước khai báo (ở lớp cha)
+  	- Phương thức tương ứng ở lớp cha đã là phương thức ảo
+  - Phương thức ảo chỉ hoạt động khi phương thức ở lớp cha và lớp con có nghi thức giao tiếp giống nhau (kiểu trả về, tên, tham số)
+  - Nếu ở lớp con không định nghĩa lại phương thức ảo, trình biên dịch sẽ gọi phương thức ảo gần nhất ở lớp cha.
+
+<div class="alert alert-info">
+Khi gọi một thao tác, khả năng chọn đúng phiên bản tùy theo đối tượng để thực hiện thông qua con trỏ đến lớp cơ sở được gọi là tính đa hình (polymorphisms).</div>
+## Tổng kết
+Oke vậy là chúng ta đã tìm hiểu cách cài đặt đa hình trong C++, mình sẽ giải thích cơ chế của phương thức ảo vào 1 bài gần nhất. Có thắc mắc trong quá trình học các bạn bình luận bên dưới nhé. Pie~
