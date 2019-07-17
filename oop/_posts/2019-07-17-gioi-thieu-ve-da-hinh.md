@@ -102,6 +102,7 @@ OK Trước tiên chúng ta thấy khi sử dụng con trỏ sẽ tiện lợi h
 **Nhưng** với kết quả chúng ta thu được, mình nhận ra: con trỏ đối tượng lớp cha chỉ gọi hàm `Xuat` của lớp cha mặc dù đã được tham chiếu đến đối tượng của lớp con (và trong lớp con mình đã định nghĩa lại hàm `Xuat`). Đó chính là vấn đề của con trỏ đối tượng lớp cha. Cách giải quyết vấn đề trên? Dùng đa hình thôi nào :)
 ### Sử dụng vùng chọn kiểu
 Để nhận diện được đối tượng của lớp nào, chúng ta sẽ thêm 1 vùng dữ liệu (thuộc tính) vào lớp cơ sở, sao cho giá trị của vùng chọn kiểu giữa các lớp đối tượng là khác nhau. Phổ biến trong phương pháp nào nhất chính là sử dụng kiểu dữ liệu `enum`. Làm thôi!
+#### Cách thực hiện
 {% highlight cpp %}
     #include <iostream>
     #include <string>
@@ -202,3 +203,7 @@ Kết quả chương trình:
 Yay! Chúng ta đã có kết quả theo mong muốn, tuy nhiên :) nhìn nó khá dài dòng, khó sử lỗi cũng như bảo trì, nâng cấp và đã là dân lập trình thì phải luôn tìm kiếm giải pháp tối ưu nhất đúng không nào? Vậy nên chúng ta sẽ đi đến cách thứ 2 tối ưu hơn - Phương thức ảo.
 ### Sử dụng phương thức ảo
 Đây là cách chính thống để thể hiện tính đa hình trong C++, các phương thức ở lớp cơ sở có tính đa hình phải được định nghĩa là phương thức ảo.
+  
+Chúng ta hãy cùng nhìn lại vấn đề trước khi sử dụng vùng chọn kiểu: con trỏ của đối tượng lớp cha không thể truy xuất hàm `Xuat` ở lớp con -> chúng ta sẽ làm cho nó thực hiện được -> biến phương thức `Xuat` thành phương thức ảo.
+#### Cách thực hiện
+Đầu tiên
