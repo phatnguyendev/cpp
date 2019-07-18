@@ -118,12 +118,14 @@ OK Chúng ta sẽ có 1 ví dụ đơn giản để tổng kết ngắn những 
      
     class Derived_one : public Base {
     	public:
+		Derived_one();
     	void function_1() {};
     	void function_2() {};	
     };
      
     class Derived_two : public Base {
     	public:
+		Derived_two();
     	void function_1() {};
     };
      
@@ -140,3 +142,22 @@ Nói về bảng ảo, trong ví dụ trên chúng ta có 2 hàm ảo (function_
   - Đối với lớp Base (lớp cha): đối tượng của lớp cha không thể truy cập đến các hàm của `Derived_one` và `Derived_two`, do đó chúng ta sẽ đặt đơn giản: mục cho function_1 sẽ trỏ đến **Base::function_1()** và mục cho function_2 thì trỏ đến **Base::function_2()**.
   - Đối với lớp Derived_one: đối tượng của lớp con có thể truy cập các thành phần của lớp đó và cả lớp cha, tức là mục trong bảng ảo có thể trỏ đến 2 hàm của lớp cha hoặc 2 hàm của chính lớp đó. Tuy nhiên như mình đã nói phía trên: "mục (chứa con trỏ hàm) sẽ trỏ đến phương thức ảo mà gần nó nhất (most-derived)" cho nên: mục cho function_1 sẽ trỏ đến **Derived_one::function_1()** và mục cho function_2 thì trỏ đến **Derived_one::function_2()**.
   - Đối với Derived_two: đặc điểm tương tự như lớp Derived_one, nhưng ở lớp này ta chỉ định nghĩa lại  hàm **function_1()** nên ở mục cho function_2 con trỏ hàm sẽ trỏ về **Base::function_2()**. Cụ thể: mục cho function_1 sẽ trỏ đến **Derived_two::function_1()** và mục cho function_2 thì trỏ đến **Base::function_2()**.
+
+Minh họa bằng hình ảnh:
+  
+![](https://1.bp.blogspot.com/-Rr3R43GrVnA/XTABGcxD_pI/AAAAAAAAAko/xm9shNnjzcgqArN_YvW9-kQu9R6LQkcswCLcBGAs/s1600/Capture.PNG)
+  
+Và khi chúng ta gọi phương thức ảo từ con trỏ lớp cha:
+{% highlight cpp %}
+	Base *bptr;
+	bptr = new Derived_one();
+	bptr->function_one();
+{% endhighlight %}
+Chúng ta sẽ có các bước sau:
+  - Khi trỏ đến 1 đối tượng của lớp con, con trỏ `bptr` cũng có quyền truy cập đến con trỏ `__vptr` của **Derived_one** -> cũng có quyền truy cập vào **virtual table** của lớp Derived_one thông qua `__vptr`.
+  - Khi gọi đến phương thức ảo `function_one`, chương trình nhận diện hàm này là hàm ảo -> thông qua `bptr` truy cập vào bảng ảo của lớp Derived_one -> tìm kiếm 1 phiên bản của function_one trong bảng ảo để gọi ra -> lúc này trong mục function_one đang trỏ đến **Derived_one::function_one()** -> gọi hàm Derived_one::function_one().
+  
+Đó là những gì xảy ra khi gọi hàm ảo, chúng ta có vài nhận xét: gọi hàm ảo tốn time hơn gọi hàm thường (qua nhiều bước) và đối tượng của lớp có hàm ảo có kích thước lớn hơn 1 con trỏ (do chứa `__vptr`).
+  
+## Tổng kết
+Phù ~ Các bạn đã hiểu về cơ chế hoạt động của phương thức ảo cũng như dùng virtual destructor rồi chứ? Nếu thắc mắc chỗ nào thì bình luận bên dưới để tụi mình giải đáp nha, chúc các bạn học tốt Pie~
