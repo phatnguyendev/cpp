@@ -4,6 +4,7 @@ title: Kiểu dữ liệu enum
 categories: basic
 img: bai23.png
 published: true
+lesson: 23
 excerpt_separator: <!--more-->
 ---
 

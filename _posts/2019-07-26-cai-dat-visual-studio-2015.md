@@ -4,6 +4,7 @@ title: Cài đặt visual studio 2015
 categories: basic
 img: bai1.jpg
 published: true
+lesson: 1
 excerpt_separator: <!--more-->
 ---
 Bài viết này sẽ hướng dẫn các bạn cách cài đặt và sử dụng một IDE khá quen thuộc để lập trình C++ trên Windows đó là **Visual Studio**

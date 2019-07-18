@@ -4,6 +4,7 @@ layout: post
 title: Cấu trúc lặp do - while (do - while statement)
 categories: basic
 img: bai9.png
+lesson: 9
 excerpt_separator: <!--more-->
 ---
 Một điều thú vị về vòng lặp while là nếu điều kiện vòng lặp ban đầu là sai, vòng lặp while sẽ hoàn toàn không thực thi. Vậy nếu chúng ta muốn một vòng lặp thực thi ít nhất một lần, chẳng hạn như khi hiển thị một menu thì phải làm sao? Để giúp tạo điều kiện thuận lợi cho điều đó, C ++ cung cấp vòng lặp do-while.

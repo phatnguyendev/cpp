@@ -4,6 +4,7 @@ layout: post
 title: Cơ bản về hàm
 categories: basic
 img: bai12.png
+lesson: 12
 excerpt_separator: <!--more-->
 ---
 Hi~ Hôm nay chúng ta sẽ học về hàm (function) trong C++, một trong những thứ sẽ gắn kết với các lập trình viên rất rất dài trên con đường coding :) Cùng khám phá nào

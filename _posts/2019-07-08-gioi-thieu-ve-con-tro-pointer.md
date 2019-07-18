@@ -4,6 +4,7 @@ layout: post
 title: 'Giới thiệu về con trỏ '
 categories: basic
 img: bai19.png
+lesson: 19
 excerpt_separator: <!--more-->
 ---
 Cuối cùng cũng đến phần ám ảnh nhất trong ngôn ngữ C++ đó chính là con trỏ (pointer), và trong loại bài viết sắp tới chúng ta sẽ cùng tìm hiểu con trỏ là gì? Những thứ liên quan đến con trỏ mà chúng ta nên biết để không bị "lạc lối". Thư giãn và tập trung high độ nhé :)

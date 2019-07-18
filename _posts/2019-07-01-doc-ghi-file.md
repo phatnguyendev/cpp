@@ -4,6 +4,7 @@ title: Đọc ghi file
 categories: basic
 img: bai26.png
 published: true
+lesson: 26
 excerpt_separator: <!--more-->
 ---
 Yo~ Trong bài này chúng ta sẽ cùng nhau tìm hiểu cách C++ tương tác với các file như thế nào nhé. Let's go!<!--more-->

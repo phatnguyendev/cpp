@@ -4,6 +4,7 @@ layout: post
 title: Mảng đa chiều (multidimensional array)
 categories: basic
 img: bai16.png
+lesson: 16
 excerpt_separator: <!--more-->
 ---
 Hi~! Bài trước mình đã giới thiệu với các bạn về mảng (array), chúng ta có thể tạo mảng để chứa nhiều loại kiểu giá trị khác nhau như mảng kiểu int, char, double, float... và đặc biệt là chứa chính nó. Việc mảng chứa mảng đã tạo nên cái tên cực ngầu: mảng đa chiều (multidimensional array).

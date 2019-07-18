@@ -4,6 +4,7 @@ layout: post
 title: Vòng lặp foreach
 categories: basic
 img: bai25.png
+lesson: 25
 excerpt_separator: <!--more-->
 ---
 Nếu các bạn đã học struct, foreach là 1 sự tuyệt vời khi các bạn duyệt mảng struct. Let's go :) <!--more-->

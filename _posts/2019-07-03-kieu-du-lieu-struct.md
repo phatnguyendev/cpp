@@ -4,6 +4,7 @@ layout: post
 title: Kiểu dữ liệu struct
 categories: basic
 img: bai24.png
+lesson: 24
 excerpt_separator: <!--more-->
 ---
 Bài trước chúng ta đã biết đến 1 kiểu dữ liệu tự định nghĩa rất hữu dụng và dễ dùng là enum và hôm nay chúng ta sẽ tiếp tục đến với 1 kiểu dữ liệu tự định nghĩa khác "phê" hơn nữa, đó là struct. Let's go!

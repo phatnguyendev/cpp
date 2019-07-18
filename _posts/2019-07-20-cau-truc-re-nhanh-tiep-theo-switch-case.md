@@ -4,6 +4,7 @@ layout: post
 title: Cấu trúc rẽ nhánh tiếp theo (switch - case statement)
 categories: basic
 img: bai7.png
+lesson: 7
 excerpt_separator: <!--more-->
 ---
 Hi ~ Hôm nay chúng ta sẽ cùng đến với một dạng cấu trúc rẽ nhánh khác tương tự if-else statement đó là switch-case statement dùng để làm cho code đẹp và tối ưu hơn trong nhiều trường hợp so với if-else, nào chúng ta hãy cùng xem cách nó tối ưu code như thế nào nhé.

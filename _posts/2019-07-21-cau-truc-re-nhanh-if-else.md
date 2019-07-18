@@ -4,6 +4,7 @@ layout: post
 title: Cấu trúc rẽ nhánh (If - else statement)
 categories: basic
 img: bai6.png
+lesson: 6
 excerpt_separator: <!--more-->
 ---
 Một trong những cấu trúc điều khiển đơn giản và phổ biến nhất trong lập trình là cấu trúc rẽ nhánh và hầu hết bất cứ ngôn ngữ lập trình nào cũng đều sử dụng đến nó chỉ là câu lệnh có khác hơn nhưng chức năng sử dụng là như nhau. Bạn đã từng nghe câu "cứ IF ELSE là ra thôi" chưa? Hãy cùng xem qua sức mạnh thần thánh của câu lệnh đó nhé.

@@ -4,6 +4,7 @@ layout: post
 title: Giới thiệu về mảng (array)
 categories: basic
 img: bai15.png
+lesson: 15
 excerpt_separator: <!--more-->
 ---
 Hi~! Hôm nay chúng ta sẽ tìm hiểu về mảng - một kiểu dữ liệu tổng hợp giúp chúng ta truy cập đế nhiều biến có cùng kiểu dữ liệu thông qua 1 biến duy nhất, mảng là 1 phần vô cùng quan trọng trong lập trình vì vậy các bạn hãy xem bài viết này thật kĩ nhé. Nào bắt đầu thôi. <!--more-->

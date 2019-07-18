@@ -4,6 +4,7 @@ layout: post
 title: 'Goto, Break và Continue'
 categories: basic
 img: bai11.png
+lesson: 11
 excerpt_separator: <!--more-->
 ---
 Trong bài này chúng ta sẽ cùng tìm hiểu qua 1 số câu lệnh bổ trợ trong quá trình sử dụng các cấu trúc rẽ nhánh và cấu trúc lặp như nhảy đến 1 dòng xác định, thoát khỏi vòng lặp tức thời,.. đó là các từ khóa ``goto``,``break``, ``continue``. Nào bắt đầu thôi!<!--more-->

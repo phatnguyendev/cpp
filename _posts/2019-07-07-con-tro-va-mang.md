@@ -4,6 +4,7 @@ title: Con trỏ và mảng
 categories: basic
 img: bai20.png
 published: true
+lesson: 20
 excerpt_separator: <!--more-->
 ---
 Trong bài viết này chúng ta sẽ cùng tìm hiểu về mối quan hệ giữa con trỏ và mảng nhé! Let's go.

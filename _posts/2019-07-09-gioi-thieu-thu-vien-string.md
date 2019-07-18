@@ -4,6 +4,7 @@ title: Giới thiệu thư viện string
 categories: basic
 img: bai18.png
 published: true
+lesson: 18
 excerpt_separator: <!--more-->
 ---
 Hi~! Hôm nay chúng ta sẽ cùng tìm hiểu về 1 trong những thư viện chuẩn (standard library) của C++ được sử dụng phổ biến nhất đó là thư viện **std::string**

@@ -4,6 +4,7 @@ layout: post
 title: Cơ bản về hàm phần 3
 categories: basic
 img: bai14.png
+lesson: 14
 excerpt_separator: <!--more-->
 ---
 Trong phần này chúng ta sẽ tìm hiểu về function overloading và đệ quy (recursion) - những thứ hay ho khác đến từ hàm trong C++.
