@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: ' hàm hủy ảo và cơ chế hoạt động của phương thức ảo'
+title: Hàm hủy ảo và cơ chế hoạt động của phương thức ảo
 categories: oop
 img: bai26.png
 lesson: 19
