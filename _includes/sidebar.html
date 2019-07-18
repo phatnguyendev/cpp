@@ -15,10 +15,10 @@
               <ul class="list-group">
                 <!-- Hiển thị theo categories-->
                       <li class="list-group-item list-group-item-info">fix2</li>
-                {% assign index = 0 %}
+                {% assign index = oop %}
                 {% assign handle = page.categories[0] %} {% case handle %}
                  {% when 'oop' %}
-                {% assign index = 1 %}
+                {% assign index = oop %}
                  {% endcase %}
                 {% for post in site.categories[index] | sort: 'lesson' %}
                     {% if page.categories == post.categories %}
