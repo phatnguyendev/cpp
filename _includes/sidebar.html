@@ -17,9 +17,9 @@
                       <li class="list-group-item list-group-item-info">fix2</li>
                 {% assign handle = page.categories[0] %} {% case handle %}
                  {% when 'oop' %}
-                      <li class="list-group-item list-group-item-info">oop</li>
+                {% assign index = 1 %}
                  {% endcase %}
-                {% for post in site.categories[page.categories[0]] | sort: 'lesson' %}
+                {% for post in site.categories[index] | sort: 'lesson' %}
                     {% if page.categories == post.categories %}
                       {% if(post.url == page.url) %}
                       <li class="list-group-item list-group-item-info">
