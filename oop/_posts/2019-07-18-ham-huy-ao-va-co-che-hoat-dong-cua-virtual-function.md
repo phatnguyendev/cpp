@@ -101,7 +101,7 @@ Bất cứ khi nào bạn dùng kế thừa, nên chắc chắn destructor của
 ## Cơ chế hoạt động của phương thức ảo
 Vậy là chúng ta đã tìm hiểu thêm 1 phương thức ảo nữa - hàm hủy ảo nên chúng ta ít nhất sẽ cần (hoặc tò mò) biết cách phương thức ảo thực hiện ra sao (vì chúng vô cùng hữu dụng), ok mình sẽ giải thích nó như sau:
 
-Cơ chế đa hình (phương thức ảo) được thực hiện nhờ ở mỗi đối tượng có thêm một bảng phương thức ảo (virtual table). Bảng ảo đơn giản là 1 mảng tĩnh được trình biên dịch khởi tạo ngầm định khi thiết lập đối tượng, bảng ảo sẽ chứa các mục (entry) và trong mỗi mục sẽ chứa **con trỏ hàm** (function pointer) - con trỏ hàm này sẽ trỏ đến phương thức ảo(mà gần nhất với class đó).
+Cơ chế đa hình (phương thức ảo) được thực hiện nhờ ở mỗi đối tượng có thêm một bảng phương thức ảo (virtual table). Bảng ảo đơn giản là 1 mảng tĩnh được trình biên dịch khởi tạo ngầm định khi thiết lập đối tượng, bảng ảo sẽ chứa các mục (entry) và trong mỗi mục sẽ chứa **con trỏ hàm** (function pointer) - con trỏ hàm này sẽ trỏ đến phương thức ảo(mà gần nhất với class đó - most derived).
 
 Tiếp theo, trình biên dịch sẽ tạo ra 1 con trỏ ẩn đặt trong lớp cha (với tên `__vptr`), lưu ý là con trỏ này khác với con trỏ `this` chúng ta hay dùng trong class vì thế nó sẽ khiến mỗi đối tượng của lớp đó có kích thước lớn hơn kích thước của 1 con trỏ và con trỏ `__vptr` cũng sẽ được các lớp con kế thừa.
   
@@ -125,7 +125,6 @@ OK Chúng ta sẽ có 1 ví dụ đơn giản để tổng kết ngắn những 
     class Derived_two : public Base {
     	public:
     	void function_1() {};
-    	void function_2() {};
     };
      
     int main() {
@@ -139,4 +138,5 @@ Khi 1 đối tượng của lớp được tạo, con trỏ `__vptr` sẽ trỏ 
   
 Nói về bảng ảo, trong ví dụ trên chúng ta có 2 hàm ảo (function_1, function_2) nên bảng ảo sẽ có 2 mục (1 cho function_1 và 1 cho function_2):
   - Đối với lớp Base (lớp cha): đối tượng của lớp cha không thể truy cập đến các hàm của `Derived_one` và `Derived_two`, do đó chúng ta sẽ đặt đơn giản: mục cho function_1 sẽ trỏ đến **Base::function_1()** và mục cho function_2 thì trỏ đến **Base::function_2()**.
-  -
+  - Đối với lớp Derived_one: đối tượng của lớp con có thể truy cập các thành phần của lớp đó và cả lớp cha, tức là mục trong bảng ảo có thể trỏ đến 2 hàm của lớp cha hoặc 2 hàm của chính lớp đó. Tuy nhiên như mình đã nói phía trên: "mục (chứa con trỏ hàm) sẽ trỏ đến phương thức ảo mà gần nó nhất (most-derived)" cho nên: mục cho function_1 sẽ trỏ đến **Derived_one::function_1()** và mục cho function_2 thì trỏ đến **Derived_one::function_2()**.
+  - Đối với Derived_two: đặc điểm tương tự như lớp Derived_one, nhưng ở lớp này ta chỉ định nghĩa lại  hàm **function_1()** nên ở mục cho function_2 con trỏ hàm sẽ trỏ về **Base::function_2()**. Cụ thể: mục cho function_1 sẽ trỏ đến **Derived_two::function_1()** và mục cho function_2 thì trỏ đến **Base::function_2()**.
