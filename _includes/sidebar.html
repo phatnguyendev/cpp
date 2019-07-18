@@ -15,7 +15,7 @@
               <ul class="list-group">
                 <!-- Hiển thị theo categories-->
                 {% assign list = page.categories %}
-                {% for post in site.categories.list | sort: 'lesson' %}
+                {% for post in site.categories[list] | sort: 'lesson' %}
                     {% if page.categories == post.categories %}
                       {% if(post.url == page.url) %}
                       <li class="list-group-item list-group-item-info">
