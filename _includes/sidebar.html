@@ -15,8 +15,9 @@
               <ul class="list-group">
                 <!-- Hiển thị theo categories-->
                       <li class="list-group-item list-group-item-info">teyu2</li>
-                {% if page.categories[0] == 'oop' %}                
-                   {% for post in site.categories.oop | sort: 'lesson' %}
+                {% if page.categories[0] == 'oop' %}  
+                   {% assign list = (site.categories.oop | sort: 'lesson') %}
+                   {% for post in list %}
                       {% if(post.url == page.url) %}
                       <li class="list-group-item list-group-item-info">
                       <p class ="baihoc"><a href="{{ post.url | prepend: site.baseurl }}">Bài {{post.lesson}}: {{ post.title }}</a></p>
