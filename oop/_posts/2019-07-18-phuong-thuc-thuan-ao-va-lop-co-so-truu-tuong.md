@@ -82,3 +82,7 @@ Chương trình báo lỗi:
 
 		error: cannot declare variable ‘tamgiac’ to be of abstract type ‘TamGiac’
   
+Nên hãy thận trọng khi sử dụng nhé!
+  
+## Tổng kết
+Phù ~ Bạn có để ý không? chúng ta đã học luôn đặc tính thứ 4 - trừu tượng (Abstraction) và cũng là bài học lý thuyết cuối cùng trong chuỗi series OOP rồi đó ;) Chúc mừng bạn đã kiên trì và hoàn thành được series này! Bài sau sẽ là 1 bài tập lớn - project cho series này, tự tin làm nhé ;). Đừng quên theo dõi fanpage [Tui Tự Code](https://www.facebook.com/shareAboutIT/) để cập nhật thêm những khóa học hay khác nhé. Chúc các bạn thành công trên con đường lập trình viên. Pie~
