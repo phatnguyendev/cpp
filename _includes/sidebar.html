@@ -16,7 +16,7 @@
                 <!-- Hiển thị theo categories-->
                       <li class="list-group-item list-group-item-info">teyu</li>
                 {% if page.categories == 'oop' %}                
-                {% for post in site.categories.oop | sort: 'lesson' %}
+                   {% for post in site.categories.oop | sort: 'lesson' %}
                       {% if(post.url == page.url) %}
                       <li class="list-group-item list-group-item-info">
                       <p class ="baihoc"><a href="{{ post.url | prepend: site.baseurl }}">Bài {{post.lesson}}: {{ post.title }}</a></p>
@@ -26,9 +26,9 @@
                       <p class="baihoc"><a href="{{ post.url | prepend: site.baseurl }}">Bài {{post.lesson}}: {{ post.title }}</a></p>
                       </li>
                       {% endif %}
-                 {% endif %}
 
-                {% endfor %}
+                    {% endfor %}
+                 {% endif %}
               </ul>
         </div>
         {% endif %}
