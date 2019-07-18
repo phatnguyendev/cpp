@@ -14,15 +14,15 @@
               </div>      
               <ul class="list-group">
                 <!-- Hiển thị theo categories-->
-                {% for post in site.categories | sort: 'lesson' %}
+                {% for post in site.site.posts | sort: 'lesson' %}
                     {% if page.categories == post.categories %}
                       {% if(post.url == page.url) %}
                       <li class="list-group-item list-group-item-info">
-                      <p class ="baihoc"><a href="{{ post.url | prepend: site.baseurl }}">Bài {{forloop.index}}: {{ post.title }}</a></p>
+                      <p class ="baihoc"><a href="{{ post.url | prepend: site.baseurl }}">Bài {{post.lesson}}: {{ post.title }}</a></p>
                       </li>
                       {% else %}
                       <li class="list-group-item">
-                      <p class="baihoc"><a href="{{ post.url | prepend: site.baseurl }}">Bài {{forloop.index}}: {{ post.title }}</a></p>
+                      <p class="baihoc"><a href="{{ post.url | prepend: site.baseurl }}">Bài {{post.lesson}}: {{ post.title }}</a></p>
                       </li>
                       {% endif %}
                     {% endif %}
