@@ -1,8 +1,7 @@
 
 Tạo chuyển động trong game cho các nhân vật sẽ làm cho game của bạn trở nên sinh động hơn. Ý tưởng đơn giản vẫn là vẽ tuần tự từng ảnh một theo thời gian. Tuy nhiên việc lưu trữ các ảnh rời rạc sẽ gây khó khăn trong việc quản lý các Animation, thông qua đó chúng ta sẽ sử dụng một công cụ khá hiệu quả đó là Sprite.
 
-## Một số khái niệm
-### Sprite
+##  Sprite
 - Sprite là một đối tượng đồ họa 2D được vẽ lên màn hình. Các sprite kết hợp với nhau sẽ tạo nên khung cảnh cho game. Có thể di chuyển nó thông qua cách đặt tọa độ trong hàm vẽ lên màn hình.
 - Có 2 cách vẽ sprite với Direct3D. Cả 2 phương pháp đều yêu cầu ta cung cấp các thông tin: vị trí, kích thước, tốc độ và các thuộc tính riêng khác.
 
@@ -699,3 +698,4 @@ LPDIRECT3DTEXTURE9 LoadTexture(char*, D3DCOLOR);
 LPDIRECT3DSURFACE9 LoadSurface(char*, D3DCOLOR);
 {% endhighlight %}
 **Thay đổi dxgraphics.cpp:** thêm hàm LoadTexture để chương trình có thể sử dụng nó.
+
