@@ -463,6 +463,6 @@ Trong đó:
 - D3DXVECTOR3 là một kiểu dữ liệu bao gồm 3 biến x, y, z kiểu float.
 **Dừng Sprite Handler**
 {% highlight cpp %}
-
+sprite_handler->End();
 {% endhighlight %}
-**Tải Sprite Image**
+**Tải Sprite Image thông qua texture**
