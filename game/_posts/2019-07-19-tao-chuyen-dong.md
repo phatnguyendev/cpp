@@ -434,6 +434,7 @@ back->Release();
 
 ## Vẽ sprite trong suốt
 Sử dụng D3DXSprite.
+
 **Tạo đối tượng Sprite Handler**: để quản lý, gọi hàm thao tác sprite.
 {% highlight cpp %}
 LPD3DXSPRITE sprite_handler;
@@ -461,6 +462,7 @@ Trong đó:
 - pPosition: vị trí của sprite
 - Color: màu thay thế (không ảnh hưởng khi vẽ trong suốt)
 - D3DXVECTOR3 là một kiểu dữ liệu bao gồm 3 biến x, y, z kiểu float.
+
 **Dừng Sprite Handler**
 {% highlight cpp %}
 sprite_handler->End();
