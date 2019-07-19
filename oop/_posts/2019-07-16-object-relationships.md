@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Mối quan hệ giữa các đối tượng
 categories: oop
-img: bai26.png
+img: bai116.png
 lesson: 14
 excerpt_separator: <!--more-->
 ---
