@@ -39,7 +39,7 @@ Chương trình Anim_Sprite sử dụng cách vẽ sprite thứ nhất, vẽ lê
 ![](https://1.bp.blogspot.com/-i1ScBBP8ag4/XTHLAspndrI/AAAAAAAAEE4/LtXk9wy6aXMy3fXZ_NfOU8vYerd6bO_5gCLcBGAs/s1600/cat.png)
 
 **Kết quả chương trình:**
-![]({{site.baseurl}}/https://1.bp.blogspot.com/--MqtsICBCRg/XTHhbq3ek3I/AAAAAAAAEFQ/I_G9TMh53ac12yXCFTR9PRaqKDT1BcghwCLcBGAs/s1600/anim.PNG)
+![](https://1.bp.blogspot.com/--MqtsICBCRg/XTHhbq3ek3I/AAAAAAAAEFQ/I_G9TMh53ac12yXCFTR9PRaqKDT1BcghwCLcBGAs/s1600/anim.PNG)
 
 Chúng ta sẽ tạo một project tên Anim_Sprite và thêm file source "winmain.cpp" như đã làm ở các bài trước, thêm các thư viện "d3d9.lib" và "d3d9x.lib".
 
