@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Hàm hủy ảo và cơ chế hoạt động của phương thức ảo
 categories: oop
-img: bai26.png
+img: bai117.png
 lesson: 19
 excerpt_separator: <!--more-->
 ---
