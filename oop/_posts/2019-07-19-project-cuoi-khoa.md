@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Project cuối khóa OOP
 categories: oop
-img: bai26.png
+img: bai120.png
 lesson: 21
 excerpt_separator: <!--more-->
 ---
