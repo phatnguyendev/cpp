@@ -16,3 +16,4 @@ Một số cách thức để code project:
 
 Sau khi viết xong, các bạn có thể chạy chương trình với bộ testcase mình đưa sẵn hoạc nén file zip đưa lên drive và để link dưới phần bình luận (hoặc inbox fanpage [Tui Tự Code](https://www.facebook.com/shareAboutIT/)). Chúc các bạn thành công!
 ### Project 1 - Quản lý dịch vụ khách sạn
+#### Mức độ: cơ bản
