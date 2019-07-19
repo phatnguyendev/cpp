@@ -29,6 +29,9 @@ typedef struct
 Chương trình Anim_Sprite sử dụng cách vẽ sprite thứ nhất, vẽ lên màn hình con mèo chuyển động. Con mèo chuyển động có 6 khung hình và có dạng giống như đang chuyển động đi qua màn hình. 6 khung hình (frame) "cat.bmp" với kích thước 96x96 và có một nền màu đen với giá trị RGB(0,0,0) sẽ lần lượt được vẽ lên surface để tạo chuyển động.
 ![](https://1.bp.blogspot.com/-i1ScBBP8ag4/XTHLAspndrI/AAAAAAAAEE4/LtXk9wy6aXMy3fXZ_NfOU8vYerd6bO_5gCLcBGAs/s1600/cat.png)
 
+**Kết quả chương trình:**
+![]({{site.baseurl}}/https://1.bp.blogspot.com/--MqtsICBCRg/XTHhbq3ek3I/AAAAAAAAEFQ/I_G9TMh53ac12yXCFTR9PRaqKDT1BcghwCLcBGAs/s1600/anim.PNG)
+
 Chúng ta sẽ tạo một project tên Anim_Sprite và thêm file source "winmain.cpp" như đã làm ở các bài trước, thêm các thư viện "d3d9.lib" và "d3d9x.lib".
 
 Code "winmain.cpp"
@@ -698,5 +701,7 @@ LPDIRECT3DTEXTURE9 LoadTexture(char*, D3DCOLOR);
 LPDIRECT3DSURFACE9 LoadSurface(char*, D3DCOLOR);
 {% endhighlight %}
 **Thay đổi dxgraphics.cpp:** thêm hàm LoadTexture để chương trình có thể sử dụng nó.
+**Kết quả chương trình:**
+![](https://1.bp.blogspot.com/-4FCflhPFKHo/XTHhbgQtJMI/AAAAAAAAEFU/_I-gTHkh2NEcp92ywuWlIyUU4Ibd6PWRACLcBGAs/s1600/trans.PNG)
 ## Tổng kết
 Chúng ta đã cùng nhau tìm hiểu việc tạo chuyển động trong game với kỹ thuật load Sprite, đặc biệt là 2 **chương trình Anim_Sprite** và **Trans_Sprite**...Các bạn hãy luyện tập code lại 2 chương trình này trong bài để nắm và hiểu rõ hơn về cách hoạt động của nó.😉 Hãy truy cập vào [Series Make Game - TuiTuCode](https://tuitucode.github.io/cpp/game/) để học tiếp những bài thú vị khác nữa. Nếu có thắc mắc các bạn cứ bình luận bên dưới hoặc gửi thắc mắc về page [TuiTuCode](https://www.facebook.com/shareAboutIT/) để các ad giải đáp. Pie~
