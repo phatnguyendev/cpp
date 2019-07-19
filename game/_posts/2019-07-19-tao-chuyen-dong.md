@@ -159,7 +159,7 @@ extern LPDIRECT3DSURFACE9 backbuffer;
 {% endhighlight %}
 
 {% highlight cpp %}
-//dxgraphics.h - direct3d framework source code file
+//dxgraphics.cpp - direct3d framework source code file
 #include <d3dx9.h>
 #include <d3d9.h>
 #pragma comment(lib, "d3dx9.lib")
