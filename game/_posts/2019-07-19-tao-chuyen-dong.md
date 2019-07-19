@@ -711,8 +711,8 @@ LPDIRECT3DTEXTURE9 LoadTexture(char*, D3DCOLOR);
 LPDIRECT3DSURFACE9 LoadSurface(char*, D3DCOLOR);
 {% endhighlight %}
 **Thay đổi dxgraphics.cpp:** thêm hàm LoadTexture để chương trình có thể sử dụng nó.
-**Kết quả chương trình:**
 
+**Kết quả chương trình:**
 ![](https://1.bp.blogspot.com/-4FCflhPFKHo/XTHhbgQtJMI/AAAAAAAAEFU/_I-gTHkh2NEcp92ywuWlIyUU4Ibd6PWRACLcBGAs/s1600/trans.PNG)
 ## Tổng kết
 Chúng ta đã cùng nhau tìm hiểu việc tạo chuyển động trong game với kỹ thuật load Sprite, đặc biệt là 2 **chương trình Anim_Sprite** và **Trans_Sprite**...Các bạn hãy luyện tập code lại 2 chương trình này trong bài để nắm và hiểu rõ hơn về cách hoạt động của nó.😉 Hãy truy cập vào [Series Make Game - TuiTuCode](https://tuitucode.github.io/cpp/game/) để học tiếp những bài thú vị khác nữa. Nếu có thắc mắc các bạn cứ bình luận bên dưới hoặc gửi thắc mắc về page [TuiTuCode](https://www.facebook.com/shareAboutIT/) để các ad giải đáp. Pie~
