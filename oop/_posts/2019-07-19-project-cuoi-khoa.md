@@ -24,3 +24,21 @@ Một khách sạn cung cấp hai loại dịch vụ là: giặt ủi và thuê 
 
 -> Dịch vụ thuê xe: tiền thuê xe = số giờ thuê * đơn giá. Nếu thuê quá 12 giờ giảm
 10%.
+#### Yêu cầu:
+Xây dựng lớp HoaDon cho phép thực hiện nhập thông tin hóa đơn và xuất giá trị của
+hóa đơn tính tiền sử dụng dịch vụ khách sạn. Thông tin hóa đơn gồm makh (mã khách
+hàng), tenkh (họ tên khách hàng), và n (0<n<200) dịch vụ mà khách hàng đã sử dụng,
+trigia (trị giá hóa đơn).
+Hàm main phải thỏa mãn dạng tương tự như sau:
+{% highlight cpp %}
+int main()
+{
+HoaDon h; // tạo đối tượng hóa đơn
+h.Nhap(); // nhập vào thông tin hóa đơn
+h.xuat(); //in ra thông tin hóa đơn bao gồm makh, tenkh, thông tin n
+//dịch vụ tương ứng với số tiền phải trả cho từng dịch vụ đã sử dụng, in
+//ra tổng trị giá của hóa đơn.
+system(“pause”);
+return 0;
+{% endhighlight %}
+
