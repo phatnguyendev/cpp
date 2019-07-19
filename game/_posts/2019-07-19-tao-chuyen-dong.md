@@ -431,3 +431,38 @@ d3ddev->StretchRect(back, NULL, backbuffer, NULL, D3DTEXF_NONE);
 {% highlight cpp %}
 back->Release();
 {% endhighlight %}
+
+## Vẽ sprite trong suốt
+Sử dụng D3DXSprite.
+**Tạo đối tượng Sprite Handler**: để quản lý, gọi hàm thao tác sprite.
+{% highlight cpp %}
+LPD3DXSPRITE sprite_handler;
+result = D3DXCreateSprite(d3ddev, &sprite_handler);
+{% endhighlight %}
+**Bắt đầu Sprite Handler:** Việc đầu tiên phải làm đó là khóa surface để sprite có thể vẽ bằng cách gọi hàm D3DXSprite.Begin. D3DXSPRITE_ALPHABLEND hỗ trợ vẽ trong suốt nếu không thì để giá trị NULL. Ví dụ:
+{% highlight cpp %}
+sprite_handler->Begin(D3DXSPRITE_ALPHABLEND);
+{% endhighlight %}
+**Vẽ sprite**: sử dụng hàm Draw(). Cách khai báo như sau:
+{% highlight cpp %}
+HRESULT Draw
+(
+	LPDIRECT3DTEXTURE9 pTexture,
+    CONST RECT *pSrcRect,
+    CONST D3DXVECTOR3 *pCenter,
+    CONST D3DXVECTOR3 *pPosition,
+    D3DCOLOR Color
+);
+{% endhighlight %}
+Trong đó:
+- pTexture: texture chứa sprite
+- pSrcRect: diện tích cần hiển thị
+- pCenter: tâm dùng để vẽ, xoay (NULL: mặc định là góc trên bên trái hình ảnh).
+- pPosition: vị trí của sprite
+- Color: màu thay thế (không ảnh hưởng khi vẽ trong suốt)
+- D3DXVECTOR3 là một kiểu dữ liệu bao gồm 3 biến x, y, z kiểu float.
+**Dừng Sprite Handler**
+{% highlight cpp %}
+
+{% endhighlight %}
+**Tải Sprite Image**
