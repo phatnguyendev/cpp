@@ -468,3 +468,234 @@ Trong đó:
 sprite_handler->End();
 {% endhighlight %}
 **Tải Sprite Image thông qua texture**
+Trong game, thường ta sẽ sử dụng surface để hiển thị hình nền và sử dụng texture cho những sprite thể hiện các đối tượng game, nhân vật, phi thuyền, kẻ thù. Ta cần thực hiện hàm LoadTexture để được trả về texture cho mình.
+{% highlight cpp %}
+LPDIRECT3DTEXTURE9 LoadTexture(char *filename, D3DCOLOR transcolor)
+{
+	//con trỏ texture
+	LPDIRECT3DTEXTURE9 texture = NULL;
+    
+    //struct để đọc thông tin file ảnh
+	D3DXIMAGE_INFO info;
+    
+    //trả về giá trị windows thông thường
+	HRESULT result;
+
+	//get width and height from bitmap file
+	result = D3DXGetImageInfoFromFile(filename, &info);
+	if (result != D3D_OK)
+		return NULL;
+
+	//create new texture by loading file bitmap
+	result = D3DXCreateTextureFromFileEx(
+    	d3ddev, //đối tượng Direct3D
+		filename, //tên tệp ảnh
+		info.Width,
+		info.Height,
+		1, //kết nối level
+		D3DPOOL_DEFAULT, //kiểu surface
+		D3DFMT_UNKNOWN, //định dạng surface
+		D3DPOOL_DEFAULT, //lớp bộ nhớ cho texture
+		D3DX_DEFAULT, //bộ lọc hình ảnh
+		D3DX_DEFAULT, //bộ lọc mip
+		transcolor, //màu chỉ ra trong suốt
+		&info, //thông tin tệp ảnh
+		NULL, //đổ màu
+		&texture //texture đích
+	);
+	//make sure file was loaded okay
+	if (result != D3D_OK)
+		return NULL;
+	//return okay
+	return texture;
+}
+{% endhighlight %}
+
+## Chương trình Trans_Sprite
+Chương trình Trans_Sprite giải thích rõ hơn cách vẽ sprite trong suốt với Direct3D. Ta cần sao chép những tập tin sau từ Anim_Sprite vào project mới tạo: winmain.cpp, dxgraphics.h, dxgraphics.cpp. Sau đó tạo thêm các file "game.h" và "game.cpp" như sau:
+**game.h**
+{% highlight cpp %}
+//Anim_Sprite program header file
+#ifndef _GAME_H
+#define _GAME_H
+#include <d3d9.h>
+#include <d3dx9.h>
+#include <d3dx9math.h>
+#pragma comment(lib, "d3d9.lib")
+#include<time.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include"dxgraphics.h"
+
+//application title
+#define APPTITLE "Trans_Sprite"
+
+//screen setup
+#define FULLSCREEN 0  //1=fullscreen	0=windowed
+#define SCREEN_WIDTH 640
+#define SCREEN_HEIGHT 480
+
+//Các macro để đọc phím - Chế độ full màn hình
+#define KEY_DOWN(vk_code) ((GetAsyncKeyState(vk_code) & 0x8000)?1:0)
+#define KEY_UP(vk_code) ((GetAsyncKeyState(vk_code) * 0x8000)?1:0)
+
+//function prototypes
+int Game_Init(HWND);
+void Game_Run(HWND);
+void Game_End(HWND);
+
+//sprite structure
+typedef struct
+{
+	int x, y;
+	int width, height;
+	int movex, movey;
+	int curframe, lastframe;
+	int animdelay, animcount;
+} SPRITE;
+#endif // !_GAME_H
+
+{% endhighlight %}
+
+**game.cpp**
+{% highlight cpp %}
+#include"game.h"
+
+LPDIRECT3DTEXTURE9 kitty_image[7];
+SPRITE kitty;
+LPDIRECT3DSURFACE9 back;
+LPD3DXSPRITE sprite_handler;
+
+HRESULT result;
+
+//timing variable
+long start = GetTickCount();
+
+//initialize the game
+int Game_Init(HWND hwnd)
+{
+	char s[20];
+	int n;
+
+	//set random number seed
+	srand(time(NULL));
+
+	//create sprite handler
+	result = D3DXCreateSprite(d3ddev, &sprite_handler);
+	if (result != D3D_OK)
+		return 0;
+
+	//load the sprite animation
+	for (n = 0; n < 6; n++)
+	{
+		sprintf_s(s, "cat%d.bmp", n + 1);
+		//tải texture với màu hồng là màu trong suốt
+		kitty_image[n] = LoadTexture(s, D3DCOLOR_XRGB(0, 0, 0));
+		if (kitty_image[n] == NULL)
+			return 0;
+	}
+
+	//tải hình nền
+	back = LoadSurface("background.bmp", NULL);
+
+	//initialize the sprite's properties
+	kitty.x = 100;
+	kitty.y = 150;
+	kitty.width = 96;
+	kitty.height = 96;
+	kitty.curframe = 0;
+	kitty.lastframe = 5;
+	kitty.animdelay = 2;
+	kitty.animcount = 0;
+	kitty.movex = 8;
+	kitty.movey = 0;
+
+	return 1;
+}
+
+//the main game loop
+void Game_Run(HWND hwnd)
+{
+	RECT rect;
+
+	//make sure the Direct3d device is valid
+	if (d3ddev == NULL)
+		return;
+
+	//after short delay, ready for next frame?
+	//this keeps the game running at a steady frame rate
+	if (GetTickCount() - start >= 30)
+	{
+		//reset timing
+		start = GetTickCount();
+
+		//move the sprite
+		kitty.x += kitty.movex;
+		kitty.y += kitty.movey;
+
+		//"wrap"the sprite at screen edges
+		if (kitty.x > SCREEN_WIDTH - kitty.width)
+			kitty.x = 0;
+		if (kitty.x < 0)
+			kitty.x = SCREEN_WIDTH - kitty.width;
+
+		//has animation delay reached threshold?
+		if (++kitty.animcount > kitty.animdelay)
+		{
+			//reset counter
+			kitty.animcount = 0;
+
+			//animate the sprite
+			if (++kitty.curframe > kitty.lastframe)
+				kitty.curframe = 0;
+		}
+	}
+
+	//start rendering
+	if (d3ddev->BeginScene())
+	{
+		//erase the entire background
+		d3ddev->StretchRect(back, NULL, backbuffer, NULL, D3DTEXF_NONE);
+
+		//start sprite handler
+		sprite_handler->Begin(D3DXSPRITE_ALPHABLEND);
+		//Tạo vector để cập nhật ví trí của sprite
+		D3DXVECTOR3 position((float)kitty.x, (float)kitty.y, 0);
+		//draw sprite
+		sprite_handler->Draw(kitty_image[kitty.curframe], NULL, NULL, &position, D3DCOLOR_XRGB(255, 255, 255));
+		//stop drawing
+		sprite_handler->End();
+		//stop rendering
+		d3ddev->EndScene();
+
+	}
+
+	//display the back buffer on the screen
+	d3ddev->Present(NULL, NULL, NULL, NULL);
+	//check for escape key(to exit program)
+	if (KEY_DOWN(VK_ESCAPE))
+		PostMessage(hwnd, WM_DESTROY, 0, 0);
+}
+
+void Game_End(HWND hwnd)
+{
+	int n;
+
+	//free the surface
+	for (n = 0; n < 6; n++)
+		if (kitty_image[n] != NULL)
+			kitty_image[n]->Release();
+	if (back != NULL)
+		back->Release(); 
+	if (sprite_handler != NULL)
+		sprite_handler->Release();
+}
+{% endhighlight %}
+
+**Thay đổi dxgraphics.h:** thêm những dòng sau vào _dxgraphics.h_ để được như sau
+{% highlight cpp %}
+int Init_Direct3D(HWND, int, int, int);
+LPDIRECT3DTEXTURE9 LoadTexture(char*, D3DCOLOR);
+LPDIRECT3DSURFACE9 LoadSurface(char*, D3DCOLOR);
+{% endhighlight %}
+**Thay đổi dxgraphics.cpp:** thêm hàm LoadTexture để chương trình có thể sử dụng nó.
