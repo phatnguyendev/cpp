@@ -13,4 +13,4 @@ Chúng ta sẽ đi qua cả 2 cách trong 2 chương trình mẫu tiếp theo.
 
 Chương trình Anim_Sprite
 
-![Cat1.bmp](https://1.bp.blogspot.com/-wAYzMs4i7Uo/XTHHXDiVUhI/AAAAAAAAEEA/X3bSCudQyaUmeSh5BWZWSl5LxScQmcrCQCLcBGAs/s1600/cat1.bmp)
+![Cat1.bmp](https://1.bp.blogspot.com/-wAYzMs4i7Uo/XTHHXDiVUhI/AAAAAAAAEEA/X3bSCudQyaUmeSh5BWZWSl5LxScQmcrCQCLcBGAs/s1600/cat1.bmp) ![Cat2.bmp](https://1.bp.blogspot.com/-yO71r4c_aK8/XTHHXIWC9xI/AAAAAAAAEEE/9_s4hk1wBvw7P7nnuDWWu8-4SmS4MsYHQCLcBGAs/s1600/cat2.bmp)
