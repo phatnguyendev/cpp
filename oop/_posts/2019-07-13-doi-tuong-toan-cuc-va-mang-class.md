@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Đối tượng toàn cục và mảng class
 categories: oop
-img: bai26.png
+img: bai114.png
 lesson: 7
 excerpt_separator: <!--more-->
 ---
