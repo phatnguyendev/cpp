@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Quan hệ hợp thành (composition)
 categories: oop
-img: bai26.png
+img: bai119.png
 lesson: 15
 excerpt_separator: <!--more-->
 ---
