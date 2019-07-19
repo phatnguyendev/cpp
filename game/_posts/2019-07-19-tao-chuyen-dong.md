@@ -10,9 +10,24 @@ Tạo chuyển động trong game cho các nhân vật sẽ làm cho game của 
 
 **Cách 2:** Sử dụng D3DXSprite để giữ những sprite trong Direct3D. Đây là cách thường được sử dụng nhất. D3DXSprite sử dụng texture thay vì surface để chứa bức ảnh làm sprite.
 Chúng ta sẽ đi qua cả 2 cách trong 2 chương trình mẫu tiếp theo.
+- SPRITE Struct:
 
+{% highlight cpp %}
+//sprite structure
+typedef struct
+{
+	//các biến dùng để update tọa độ x, y cảu sprite suốt quá trình update khung hình (frame)
+	int x, y;
+	int width, height;
+	int movex, movey;
+    //biến dùng để giữ giá trị frame hiện tại của chuyển động, curframe được update liên tục trong vòng lặp game và khi nó đạt giá trị lastframe nó sẽ gán lặp lại giá trị 0, cứ thế lặp lại liên tục.
+	int curframe, lastframe;
+    //giới hạn thời gian hiển thị của mỗi frame
+	int animdelay, animcount;
+} SPRITE;
+{% endhighlight %}
 ## Chương trình Anim_Sprite
-Chương trình Anim_Sprite vẽ lên màn hình con mèo chuyển động. Con mèo chuyển động có 6 khung hình và có dạng giống như đang chuyển động đi qua màn hình. 6 khung hình (frame) "cat.bmp" với kích thước 96x96 và có một nền màu đen với giá trị RGB(0,0,0) sẽ lần lượt được vẽ lên surface để tạo chuyển động.
+Chương trình Anim_Sprite sử dụng cách vẽ sprite thứ nhất, vẽ lên màn hình con mèo chuyển động. Con mèo chuyển động có 6 khung hình và có dạng giống như đang chuyển động đi qua màn hình. 6 khung hình (frame) "cat.bmp" với kích thước 96x96 và có một nền màu đen với giá trị RGB(0,0,0) sẽ lần lượt được vẽ lên surface để tạo chuyển động.
 ![](https://1.bp.blogspot.com/-i1ScBBP8ag4/XTHLAspndrI/AAAAAAAAEE4/LtXk9wy6aXMy3fXZ_NfOU8vYerd6bO_5gCLcBGAs/s1600/cat.png)
 
 Chúng ta sẽ tạo một project tên Anim_Sprite và thêm file source "winmain.cpp" như đã làm ở các bài trước, thêm các thư viện "d3d9.lib" và "d3d9x.lib".
@@ -234,4 +249,185 @@ LPDIRECT3DSURFACE9 LoadSurface(char *filename, D3DCOLOR transcolor)
 	//return okay
 	return image;
 }
+{% endhighlight %}
+Tiếp tục thêm vào project một file header "game.h" và file cpp "game.cpp". Code lần lượt cho 2 hàm trên:
+{% highlight cpp %}
+//Anim_Sprite program header file
+#ifndef _GAME_H
+#define _GAME_H
+#include <d3d9.h>
+#pragma comment(lib, "d3d9.lib")
+#include<time.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include"dxgraphics.h"
+
+//application title
+#define APPTITLE "Anim_Sprite"
+
+//screen setup
+#define FULLSCREEN 0  //1=fullscreen	0=windowed
+#define SCREEN_WIDTH 640
+#define SCREEN_HEIGHT 480
+
+//Các macro để đọc phím - Chế độ full màn hình
+#define KEY_DOWN(vk_code) ((GetAsyncKeyState(vk_code) & 0x8000)?1:0)
+#define KEY_UP(vk_code) ((GetAsyncKeyState(vk_code) & 0x8000)?1:0)
+
+//function prototypes
+int Game_Init(HWND);
+void Game_Run(HWND);
+void Game_End(HWND);
+
+//sprite structure
+typedef struct
+{
+	int x, y;
+	int width, height;
+	int movex, movey;
+	int curframe, lastframe;
+	int animdelay, animcount;
+} SPRITE;
+#endif // !_GAME_H
+
+{% endhighlight %}
+
+{% highlight cpp %}
+//Anim_Sprite program source code file
+#include"game.h"
+
+LPDIRECT3DSURFACE9 kitty_image[7];
+SPRITE kitty;
+
+//timing variable
+long start = GetTickCount();
+
+//initialize the game
+int Game_Init(HWND hwnd)
+{
+	char s[20];
+	int n;
+
+	//set random number seed
+	srand(time(NULL));
+
+	//load the sprite animation
+	for (n = 0; n < 6; n++)
+	{
+		sprintf_s(s, "cat%d.bmp", n + 1);
+		kitty_image[n] = LoadSurface(s, D3DCOLOR_XRGB(255, 0, 255));
+		if (kitty_image[n] == NULL)
+			return 0;
+	}
+
+	//initialize the sprite's properties
+	kitty.x = 100;
+	kitty.y = 150;
+	kitty.width = 96;
+	kitty.height = 96;
+	kitty.curframe = 0;
+	kitty.lastframe = 5;
+	kitty.animdelay = 2;
+	kitty.animcount = 0;
+	kitty.movex = 8;
+	kitty.movey = 0;
+
+	return 1;
+}
+
+//the main game loop
+void Game_Run(HWND hwnd)
+{
+	RECT rect;
+
+	//make sure the Direct3d device is valid
+	if (d3ddev == NULL)
+		return;
+
+	//after short delay, ready for next frame?
+	//this keeps the game running at a steady frame rate
+	if (GetTickCount() - start >= 30)
+	{
+		//reset timing
+		start = GetTickCount();
+
+		//move the sprite
+		kitty.x += kitty.movex;
+		kitty.y += kitty.movey;
+
+		//"wrap"the sprite at screen edges
+		if (kitty.x > SCREEN_WIDTH - kitty.width)
+			kitty.x = 0;
+		if (kitty.x < 0)
+			kitty.x = SCREEN_WIDTH - kitty.width;
+
+		//has animation delay reached threshold?
+		if (++kitty.animcount > kitty.animdelay)
+		{
+			//reset counter
+			kitty.animcount = 0;
+
+			//animate the sprite
+			if (++kitty.curframe > kitty.lastframe)
+				kitty.curframe = 0;
+		}
+	}
+
+	//start rendering
+	if (d3ddev->BeginScene())
+	{
+		//erase the entire background
+		d3ddev->ColorFill(backbuffer, NULL, D3DCOLOR_XRGB(0, 0, 0));
+
+		//set the sprite's rect for drawing
+		rect.left = kitty.x;
+		rect.top = kitty.y;
+		rect.right = kitty.x + kitty.width;
+		rect.bottom = kitty.y + kitty.height;
+
+		//draw sprite
+		d3ddev->StretchRect(kitty_image[kitty.curframe], NULL, backbuffer, &rect, D3DTEXF_NONE);
+
+		//stop rendering
+		d3ddev->EndScene();
+
+	}
+
+	//display the back buffer on the screen
+	d3ddev->Present(NULL, NULL, NULL, NULL);
+	//check for escape key(to exit program)
+	if (KEY_DOWN(VK_ESCAPE))
+		PostMessage(hwnd, WM_DESTROY, 0, 0);
+}
+
+void Game_End(HWND hwnd)
+{
+	int n;
+
+	//free the surface
+	for (n = 0; n < 6; n++)
+		kitty_image[n]->Release();
+}
+{% endhighlight %}
+
+Giờ là đến phần load background. Nếu chúng ta muốn con mèo được vẽ lên một nền không phải đen. Ta có thêm file "background.bmp" vào project.
+- Đầu tiên, thêm dòng này ở gần trên cùng của "game.cpp" với một vài biến được khai báo.
+
+{% highlight cpp %}
+LPDIRECT3DSURFACE9 back;
+{% endhighlight %}
+- Trong "Game_Init()", thêm vài dòng để load ảnh nền lên một surface mới:
+
+{% highlight cpp %}
+back = LoadSurface("background.bmp", NULL);
+{% endhighlight %}
+- Trong "Game_Run()", ẩn dòng "ColorFill" và thay bằng lời gọi hàm "StretchRect" như sau:
+
+{% highlight cpp %}
+d3ddev->StretchRect(back, NULL, backbuffer, NULL, D3DTEXF_NONE);
+{% endhighlight %}
+- Cuối cùng, thêm 1 dòng ở "Game_End()" để giải phóng bộ nhớ đã sử dụng bởi background surface.
+
+{% highlight cpp %}
+back->Release();
 {% endhighlight %}
