@@ -1,5 +1,14 @@
-
+---
+published: true
+layout: post
+title: Tạo chuyển động
+categories: game
+img: bai222.png
+lesson: 6
+excerpt_separator: <!--more-->
+---
 Tạo chuyển động trong game cho các nhân vật sẽ làm cho game của bạn trở nên sinh động hơn. Ý tưởng đơn giản vẫn là vẽ tuần tự từng ảnh một theo thời gian. Tuy nhiên việc lưu trữ các ảnh rời rạc sẽ gây khó khăn trong việc quản lý các Animation, thông qua đó chúng ta sẽ sử dụng một công cụ khá hiệu quả đó là Sprite.
+<!--more-->
 
 ##  Sprite
 - Sprite là một đối tượng đồ họa 2D được vẽ lên màn hình. Các sprite kết hợp với nhau sẽ tạo nên khung cảnh cho game. Có thể di chuyển nó thông qua cách đặt tọa độ trong hàm vẽ lên màn hình.
