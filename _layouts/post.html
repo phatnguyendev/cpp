@@ -22,6 +22,7 @@ layout: default
 {% for category in site.categories %}
     {% assign catg_name = category.first %}
                <li>1 {{catg_name}}</li>
+               <li>2 {{page.categories}}</li>               
     {% if catg_name == page.categories %}
         {% assign catg_posts = category.last %}
                 <li>{{catg_name}}</li>
