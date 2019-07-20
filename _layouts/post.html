@@ -32,12 +32,12 @@ layout: default
         {% unless forloop.last %}
             {% assign next = catg_posts[forloop.index] %}
             <li>
-            <a class="next" href="{{ site.baseurl }}{{ next.url }}">&larr;{{ next.title }}</a>
+            <a class="next" href="{{ site.baseurl }}{{ next.url }}">{{ next.title }}&larr;</a>
             </li>
         {% endunless %}
         {% unless forloop.first %}
             <li>
-            <a class="previous" href="{{ site.baseurl }}{{ prev.url }}">{{ prev.title }}&rarr;</a>
+            <a class="previous" href="{{ site.baseurl }}{{ prev.url }}">&rarr;{{ prev.title }}</a>
             </li>
         {% endunless %}
     {% endif %}
