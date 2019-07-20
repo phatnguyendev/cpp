@@ -23,6 +23,7 @@ Dựa trên tập tin Sprite sheet ta cho hiển thị từng Sprite chuyển ti
 Là một ảnh nguồn được tạo thành từ những dòng và cột tile. Ta phải nắm được góc trên bên trái của từng tile nằm trong hình tiled bitmap và sao chép lại khung hình đó dựa trên width và height của sprite.
 
 ![](https://1.bp.blogspot.com/-WUZPhcwWYc8/XTKNNwoVTbI/AAAAAAAAEGk/ZsB6EdrrQY08PpeXPfETJxjYBL9XhJxYQCLcBGAs/s1600/ninja1.PNG)
+
 Đầu tiên, ta cần chỉ ra được left (x), vị trí của tile bằng toán tử % (chia lấy dư).
 {% highlight cpp %}
 left = (frame hiện tại % số lượng cột) * sprite width;
