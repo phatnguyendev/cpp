@@ -1,4 +1,14 @@
+---
+published: true
+layout: post
+title: Tạo chuyển động với Tiled Sprite
+categories: game
+img: bai222.png
+lesson: 7
+excerpt_separator: <!--more-->
+---
 Cho đến lúc này, ta đã học được về cách tạo, đóng gói, vẽ chỉ bằng một hình bitmap đối với mỗi frame của animation. Nhưng đây không phải là cách hiệu quả. Giờ game của ta sẽ có hàng trăm tập tin ảnh để tải, sẽ tốn thời gian dài. Một cách để quản lý sprite tốt hơn là lưu trữ những hình sprite trong một hình tiled bitmap.
+<!--more-->
 
 ## Tiled Sprite (Sprite sheet)
 Là tập hợp nhiều Tile (Sprite) đơn lẻ thành một tập tin duy nhất, giúp tăng tốc độ hiển thị hình ảnh lên màn hình.
