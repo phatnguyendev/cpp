@@ -25,7 +25,7 @@ layout: default
                <li>2 {{page.categories}}</li>               
     {% if catg_name == page.categories %}
         {% assign catg_posts = category.last %}
-                <li>{{catg_name}}</li>
+                <h4>{{catg_name}}</h4>
     {% endif %}
 {% endfor %}
             </ul>
