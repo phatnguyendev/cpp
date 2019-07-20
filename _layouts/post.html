@@ -23,23 +23,8 @@ layout: default
     {% assign catg_name = category.first %}
     {% if catg_name == page.categories %}
         {% assign catg_posts = category.last %}
+                <li>{{catg_name}}</li>
     {% endif %}
-{% endfor %}
-{% for post in catg_posts %}
-    {% if post.title == page.title %}
-        {% unless forloop.last %}
-            {% assign next = catg_posts[forloop.index] %}
-            <li>
-            <a class="next" href="{{ site.baseurl }}{{ next.url }}">&larr;{{ next.title }}</a>
-            </li>
-        {% endunless %}
-        {% unless forloop.first %}
-            <li>
-            <a class="previous" href="{{ site.baseurl }}{{ prev.url }}">{{ prev.title }}&rarr;</a>
-            </li>
-        {% endunless %}
-    {% endif %}
-    {% assign prev = post %}
 {% endfor %}
             </ul>
     </div>
