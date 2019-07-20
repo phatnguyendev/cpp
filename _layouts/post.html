@@ -18,7 +18,6 @@ layout: default
     </article>
 
        <div class="row">
-           <p>tes</p>
             <ul class="pager">
 {% for category in site.categories %}
     {% assign catg_name = category.first %}             
@@ -29,14 +28,14 @@ layout: default
 {% for post in catg_posts %}
     {% if post.title == page.title %}
         {% unless forloop.first %}
-            <li>
-            <a class="previous" href="{{ site.baseurl }}{{ prev.url }}">&laquo; {{ prev.title }}</a>
+            <li class="previous">
+            <a href="{{ site.baseurl }}{{ prev.url }}">&laquo; {{ prev.title }}</a>
             </li>
         {% endunless %}
         {% unless forloop.last %}
             {% assign next = catg_posts[forloop.index] %}
-            <li>
-            <a class="next" href="{{ site.baseurl }}{{ next.url }}">{{ next.title }} &raquo;</a>
+            <li class="next">
+            <a href="{{ site.baseurl }}{{ next.url }}">{{ next.title }} &raquo;</a>
             </li>
         {% endunless %}
     {% endif %}
