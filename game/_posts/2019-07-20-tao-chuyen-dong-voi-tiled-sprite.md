@@ -15,6 +15,7 @@ Là tập hợp nhiều Tile (Sprite) đơn lẻ thành một tập tin duy nh�
 Ví dụ tiled sprite con mèo chuyển động ở bài trước:
 
 ![](https://1.bp.blogspot.com/-aPX5dfdbR8I/XTKGfo4T3FI/AAAAAAAAEFw/NrgQfuXsdRoHAm0ElhMWtLDasgp37H5_wCLcBGAs/s1600/cat.bmp)
+
 Thay vì phải load lên 6 file bitmap, ta chỉ cần load lên hình tiled của nó. Điều này sẽ giúp game chạy nhanh hơn.
 
 Dựa trên tập tin Sprite sheet ta cho hiển thị từng Sprite chuyển tiếp nhau một cách liên tục khi đó sẽ tạo ra cảm giác đối tượng như đang chuyển động.
