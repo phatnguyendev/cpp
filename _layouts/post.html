@@ -19,12 +19,28 @@ layout: default
 
        <div class="row">
             <ul class="pager">
-             {% if page.next.url %}
-                    <li><a class="next" href="{{page.next.url | prepend: site.baseurl}}">&laquo; {{page.next.title}}</a></li>
-              {% endif %}
-              {% if page.previous.url %}
-                <li><a class="previous" href="{{page.previous.url | prepend: site.baseurl}}">{{page.previous.title}} &raquo;</a></li>
-              {% endif %}
+{% for category in site.categories %}
+    {% assign catg_name = category.first %}
+    {% if catg_name == page.category %}
+        {% assign catg_posts = category.last %}
+    {% endif %}
+{% endfor %}
+{% for post in catg_posts %}
+    {% if post.title == page.title %}
+        {% unless forloop.last %}
+            {% assign next = catg_posts[forloop.index] %}
+            <li>
+            <a class="next" href="{{ site.baseurl }}{{ next.url }}">&larr;{{ next.title }}</a>
+            </li>
+        {% endunless %}
+        {% unless forloop.first %}
+            <li>
+            <a class="previous" href="{{ site.baseurl }}{{ prev.url }}">{{ prev.title }}&rarr;</a>
+            </li>
+        {% endunless %}
+    {% endif %}
+    {% assign prev = post %}
+{% endfor %}
             </ul>
     </div>
     
