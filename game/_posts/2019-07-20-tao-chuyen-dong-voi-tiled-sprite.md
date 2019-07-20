@@ -17,7 +17,8 @@ Ví dụ tiled sprite con mèo chuyển động ở bài trước:
 ![](https://1.bp.blogspot.com/-aPX5dfdbR8I/XTKGfo4T3FI/AAAAAAAAEFw/NrgQfuXsdRoHAm0ElhMWtLDasgp37H5_wCLcBGAs/s1600/cat.bmp)
 Thay vì phải load lên 6 file bitmap, ta chỉ cần load lên hình tiled của nó. Điều này sẽ giúp game chạy nhanh hơn.
 
-Dựa trên tập tin Sprite sheet ta cho hiển thị từng Sprite chuyển tiếp nhau một cách liên tục khi đó sẽ tạo ra cảm giác đối tượng như đang chuyển động
+Dựa trên tập tin Sprite sheet ta cho hiển thị từng Sprite chuyển tiếp nhau một cách liên tục khi đó sẽ tạo ra cảm giác đối tượng như đang chuyển động.
+
 ![](https://1.bp.blogspot.com/-p3UwOLEx4YE/XTKI-IceR_I/AAAAAAAAEF8/hmlcQDZfvBsK8ThLiI9g9nhv1fZWnZPBgCLcBGAs/s1600/RyuRunningL.gif)
 ### Hiểu về Tile
 Là một ảnh nguồn được tạo thành từ những dòng và cột tile. Ta phải nắm được góc trên bên trái của từng tile nằm trong hình tiled bitmap và sao chép lại khung hình đó dựa trên width và height của sprite.
