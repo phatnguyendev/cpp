@@ -21,7 +21,7 @@ layout: default
             <ul class="pager">
 {% for category in site.categories %}
     {% assign catg_name = category.first %}
-    {% if catg_name == page.category %}
+    {% if catg_name == page.categories %}
         {% assign catg_posts = category.last %}
     {% endif %}
 {% endfor %}
