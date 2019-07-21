@@ -25,7 +25,8 @@ layout: default
         {% assign catg_posts = category.last %}
     {% endif %}
 {% endfor %}
-{% for post in catg_posts %}
+{% assign sorted = (catg_posts | sort: 'lesson') %}
+{% for post in sorted %}
     {% if post.title == page.title %}
         {% unless forloop.first %}
             <li class="previous">
