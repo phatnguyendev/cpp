@@ -19,3 +19,21 @@ View Port là một khung nhìn, và nó chỉ thể hiện được 1 phần c�
 
 ![](https://1.bp.blogspot.com/-ShGOO2139PM/XTPgqgWqIBI/AAAAAAAAEH8/N4hySddc8LM_RFH7gboCJlgdefZuOFVSACLcBGAs/s1600/vp3.PNG)
 ![](https://1.bp.blogspot.com/-tfuwA-OFOsQ/XTPgrpseA3I/AAAAAAAAEIA/xXQ65Mwzntgk_KDWpt9yRMLjpBCA9_iUACEwYBhgL/s1600/vp4.PNG)
+
+## Code biến đổi từ world sang view port
+{% highlight cpp %}
+D3DXMATRIX mt;
+D3DXMatrixIdentity (&mt);
+mt.\_22 = -1.0f;
+mt.\_41 = -cameraX;
+mt.\_42 = 600;
+D3DXVECTOR4 vp_pos;
+D3DXVec3Transform(&vp_pos, &position, &mt);
+
+D3DXVECTOR3 pos(vp_pos.x, vp_pos.y, 0);
+D3DXVECTOR3 center((float)p_texture->getWidth()/2, (float)p_texture->getHeight()/2, 0);
+
+this->spriteHandler->Draw(p_texture->getTexture(), &srect, &center, &pos, D3DCOLOR_XRGB(255,255,255));
+{% endhighlight %}
+## Tổng kết
+Bài hôm nay đã giúp các bạn hiểu được thế giới tọa độ trong game...Ở bài sau chúng mình sẽ tiếp tục tạo camera cho game của mình.😉 Hãy truy cập vào [Series Make Game - TuiTuCode](https://tuitucode.github.io/cpp/game/) để học tiếp những bài thú vị khác nữa. Nếu có thắc mắc các bạn cứ bình luận bên dưới hoặc gửi thắc mắc về page [TuiTuCode](https://www.facebook.com/shareAboutIT/) để các ad giải đáp. Pie~
