@@ -1,4 +1,15 @@
+---
+published: true
+layout: post
+title: Các phép biến đổi
+categories: game
+img: bai222.png
+lesson: 8
+excerpt_separator: <!--more-->
+---
 Các đối tượng trong game có 2 loại tọa độ mà chúng ta cần lưu ý: tọa độ World (đây là tọa độ của thế giới game và nó là tọa độ thực) và tọa độ của View Port (View Port là một khung nhìn trong game và nó cũng là một tọa độ trong thế giới game). Nếu tọa độ view port nằm ở vị trí nào đó ngoài khu vực thế giới game thì tất cả các đối tượng của game sẽ không được thể hiện lên màn hình. Vì vậy, chúng ta sẽ phải chuyển tọa độ World sang tọa độ View Port để có thể nhìn được các đối tượng trong game. Tuy nhiên, việc này có rất nhiều khó khăn nên ta sẽ tìm cách chuyển tọa độ View Port về tọa độ World.
+<!--more-->
+
 Vấn đề: tọa độ thực và tọa độ trong game có sự khác biệt về hướng trục Y. Xem hình dưới đây để thấy được tọa độ view port trong game và thế giới thực.
 
 ![](https://1.bp.blogspot.com/-33Rfq2ASfCg/XTPcYXy7AwI/AAAAAAAAEHU/uIWDSq6sfF8Kkvy-UKTny5syYW1AUflNQCLcBGAs/s1600/vp.PNG)
