@@ -35,9 +35,9 @@ View Port là một khung nhìn, và nó chỉ thể hiện được 1 phần c�
 {% highlight cpp %}
 D3DXMATRIX mt;
 D3DXMatrixIdentity (&mt);
-mt.\_22 = -1.0f;
-mt.\_41 = -cameraX;
-mt.\_42 = 600;
+mt._22 = -1.0f;
+mt._41 = -cameraX;
+mt._42 = 600;
 D3DXVECTOR4 vp_pos;
 D3DXVec3Transform(&vp_pos, &position, &mt);
 
