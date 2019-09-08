@@ -240,7 +240,7 @@ Dong 2
 - Nên viết hoa từng chữ cái đầu dòng. Ví dụ: int SoLuong, int HoTen...
 - Nên đặt tên biến sao cho ngắn gọn nhưng thể hiện được ý nghĩa của biến
 - Có thể sử dụng ký tự gạch chân khi đặt tên biến. Ví dụ: int So_Luong, int Ho_Ten...
-- C++ không phân biệt chữ hoa và chữ thường nên hai biến sau int count và int Count là hai biến khác nhau.
+- C++ phân biệt chữ hoa và chữ thường nên hai biến sau int count và int Count là hai biến khác nhau.
 - Trong một khối lệnh {} không được có 2 biến trùng nhau.
   
 ## Tổng kết
